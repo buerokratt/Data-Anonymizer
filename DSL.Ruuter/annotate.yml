@@ -1,0 +1,13 @@
+upsert_corpora_task:
+  call: http.post
+  args:
+    url: http://resql:8082/upsert_corpora_task
+    body:
+      id: ${incoming.body.id}
+      annotated_text: ${incoming.body.annotated_text}
+      corpora_id: ${incoming.params.project}
+      sentences_annotations: ${incoming.body.sentences_annotations}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
