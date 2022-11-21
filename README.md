@@ -13,3 +13,12 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/regex.yml
 
 ```
 ```
+
+### Train a custom model
+
+https://github.com/buerokratt/Data-Anonymizer/issues/65
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/train.yml
+
+```
+```
