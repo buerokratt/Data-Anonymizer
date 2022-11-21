@@ -12,4 +12,13 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.s
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/regex.yml
 
 ```
+``` 
+
+### Anonymize/pseudonymize a sentence
+
+https://github.com/buerokratt/Data-Anonymizer/issues/64
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/pseudonymise.yml
+
+```
 ```
