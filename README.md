@@ -13,3 +13,17 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/regex.yml
 
 ```
 ```
+
+### Upload private corpus to the database
+
+https://github.com/buerokratt/Data-Anonymizer/issues/69
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_corpora_task.sql
+
+```
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/corpora.yml
+
+```
+```
