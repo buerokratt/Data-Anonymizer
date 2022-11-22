@@ -12,4 +12,18 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.s
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.yml
 
 ```
+``` 
+
+### View list of Regex patterns added by user
+
+https://github.com/buerokratt/Data-Anonymizer/issues/60
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_regex.sql
+
+```
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/regex.yml
+
+```
 ```
