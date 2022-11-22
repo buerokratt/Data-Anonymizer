@@ -1,4 +1,4 @@
-train_model:
+get_status:
   call: http.get
   args:
     url: http://ml-service:8000/status
