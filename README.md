@@ -18,7 +18,7 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.ym
 
 https://github.com/buerokratt/Data-Anonymizer/issues/65
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/train.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/train.yml
 
 ```
 ```
