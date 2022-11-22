@@ -1,0 +1,1 @@
+SELECT * FROM list_corpora_tasks_paginated(:where_condition, :sort_condition, :page, :page_size);
