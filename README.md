@@ -12,4 +12,18 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.s
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/regex.yml
 
 ```
+``` 
+
+### Delete added Regex pattern from database
+
+https://github.com/buerokratt/Data-Anonymizer/issues/63
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/delete_regex.sql
+
+```
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/delete_regex.yml
+
+```
 ```
