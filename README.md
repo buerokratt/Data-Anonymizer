@@ -23,7 +23,7 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/delete_regex.s
 ```
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/delete_regex.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/delete_regex.yml
 
 ```
 ```
