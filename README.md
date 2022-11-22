@@ -9,7 +9,7 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.s
 ```
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/regex.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.yml
 
 ```
 ``` 
