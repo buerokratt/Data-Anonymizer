@@ -22,3 +22,9 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/train.ym
 
 ```
 ```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/training_status.yml
+
+```
+```
+

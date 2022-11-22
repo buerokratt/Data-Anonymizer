@@ -1,0 +1,8 @@
+train_model:
+  call: http.get
+  args:
+    url: http://ml-service:8000/status
+  result: request_response
+  
+return:
+  return: ${request_response.response.body}
