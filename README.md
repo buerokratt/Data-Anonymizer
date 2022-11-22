@@ -23,7 +23,7 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_corpora
 ```
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/corpora.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/corpora.yml
 
 ```
 ```
