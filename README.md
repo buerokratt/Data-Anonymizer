@@ -13,3 +13,14 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.ym
 
 ```
 ```
+
+### Describe Data Model for Application
+
+https://github.com/buerokratt/Data-Anonymizer/issues/75
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/create_schema.sql
+
+```
+```
+
+
