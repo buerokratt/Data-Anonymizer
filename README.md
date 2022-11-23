@@ -13,3 +13,13 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.ym
 
 ```
 ```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_entity.sql
+
+```
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/entity.yml
+
+```
+```
