@@ -19,9 +19,9 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.ym
 https://github.com/buerokratt/Data-Anonymizer/issues/75
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/create_schema.sql
-Sample Curl Request: curl -X "POST" "http://localhost:8082/create_schema
 
 ```
+curl -X "POST" "http://localhost:8082/create_schema"
 ```
 
 
