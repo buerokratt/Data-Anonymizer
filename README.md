@@ -21,9 +21,11 @@ https://github.com/buerokratt/Data-Anonymizer/issues/60
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_regex.sql
 
 ```
+curl -X "POST" "http://localhost:8082/list_regex"
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/regex.yml
 
 ```
+curl "http://localhost:8080/regex"
 ```
