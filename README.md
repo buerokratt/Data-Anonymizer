@@ -21,10 +21,12 @@ https://github.com/buerokratt/Data-Anonymizer/issues/65
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/train.yml
 
 ```
+curl -X "POST" "http://localhost:8080/train"
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/training_status.yml
 
 ```
+curl "http://localhost:8080/training_status"
 ```
 
