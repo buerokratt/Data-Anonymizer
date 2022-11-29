@@ -16,13 +16,13 @@ Sample Curl Request: curl -H "Content-Type: application/json" -X "POST" "http://
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_entity.sql
-Sample Curl Request: curl -X "POST" "http://localhost:8082/list_entity
 
 ```
+curl -X "POST" "http://localhost:8082/list_entity"
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/entity.yml
-Sample Curl Request: curl "http://localhost:8080/entity
 
 ```
+curl "http://localhost:8080/entity"
 ```
