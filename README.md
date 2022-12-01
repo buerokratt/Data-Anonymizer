@@ -27,3 +27,19 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/entity.ym
 ```
 curl "http://localhost:8080/entity"
 ```
+
+### Add new entity
+
+https://github.com/buerokratt/Data-Anonymizer/issues/89
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_entity.sql
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/insert_entity" --data '{"name": "NAME", "description": "Name of a person"}'
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/entity.yml
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/entity" --data '{"name": "NAME", "description": "Name of a person"}'
+```
