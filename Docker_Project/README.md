@@ -155,3 +155,15 @@ Add [Anonymizer Service](anonymisation_internal), docker-compose configurations 
 https://github.com/buerokratt/Data-Anonymizer/issues/66
 
 Add Ruuter DSL Files to to [pre-label list of corpora sentences](Ruuter/DSL/POST/annotate_corpora.yml) and [get prelabelling status](Ruuter/DSL/GET/prelabelling_status.yml), and a [ReSQL](Resql/templates/production/get_latest_corpora.sql) query to get full corpora. The annotation endpoint (/annotate_corpora) in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).
+
+### Make script to upload a new public NER corpus
+
+https://github.com/buerokratt/Data-Anonymizer/issues/73
+
+Add [script](Upload_Corpora_Git_Script) to upload latest corpora to GitHub. Steps to execute the script:
+
+```
+cd Upload_Corpora_Git_Script
+npm install
+GIT_OWNER="<GIT_OWNER_ID>" GIT_REPO="<GIT_REPO_ID>" GIT_TOKEN="<GIT_PERSONAL_ACCESS_TOKEN>" API_URL="<RUUTER_URL>" node index.js
+```
