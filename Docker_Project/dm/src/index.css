@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Aino";
+  src: local("Aino"),
+    url(./assets/fonts/Aino/AinoWeb-Regular.woff) format("woff");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "Aino";
+  font-weight: bold;
+  src: local("Aino"), url(./assets/fonts/Aino/AinoWeb-Bold.woff) format("woff");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "Aino-Headline";
+  src: local("Aino"), url(./assets/fonts/Aino/Aino-Headline.woff) format("woff");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Aino" !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.ant-modal-title {
+  font-family: "Aino" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  line-height: 32px !important;
+  color: #323334 !important;
+  width: calc(100% - 30px) !important;
+}
+
+.ant-table-cell {
+  padding-left: 0 !important;
+}
+.ant-table-thead .ant-table-cell {
+  background-color: transparent;
+}
+
+.ant-modal-header {
+  padding: 32px 32px 0px 32px !important;
+}
+
+.ant-modal-close-x {
+  position: relative !important;
+  right: 10px !important;
+  top: 20px !important;
+}
+
+.ant-modal-body {
+  padding: 32px 32px 24px 32px !important;
+}
+
+.ant-modal-footer {
+  padding: 0px 16px 32px 32px !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .ant-modal {
+    top: 0px !important;
+    margin: unset !important;
+    width: 100% !important;
+    max-width: unset !important;
+  }
+  #regexTable colgroup {
+    display: none !important;
+  }
+  .ant-modal-header {
+    padding: 24px 16px 0px 16px !important;
+  }
+  .ant-modal-close-x {
+    top: 12px !important;
+  }
+  .ant-modal-body {
+    padding: 24px 16px 24px 16px !important;
+  }
+  .ant-modal-footer {
+    padding: 0px 16px 24px 16px !important;
+  }
+}
+
+.ant-modal-header,
+.ant-modal-footer {
+  border: none !important;
+}
+
+.ant-modal-wrap {
+  overflow: hidden !important;
+}
+
+.ant-table-column-title {
+  flex: unset !important;
+  margin-right: 3px !important;
+}
+
+.ant-table-column-sorters {
+  justify-content: flex-start !important;
+}
+
+.ant-table-column-sorter-up.active,
+.ant-table-column-sorter-down.active {
+  color: #0000e6 !important;
+}
+
+.ant-table-thead th.ant-table-column-sort {
+  background: transparent !important;
+}
+.ant-table-cell:hover {
+  background: transparent !important;
+}
+td.ant-table-column-sort {
+  background: transparent !important;
+}
+td.ant-table-cell-row-hover {
+  background: transparent !important;
+}
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  background: none !important;
+}
+
+.ant-select-item {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+}
+
+.ant-select-item-option-content {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: #323334 !important;
+}
+
+.ant-select-item-option-selected {
+  background: white !important;
+}
+
+.ant-select-item-option-selected .ant-select-item-option-content {
+  color: #0000f0 !important;
+}
+
+.ant-notification-notice-description {
+  margin: 0px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: #000000 !important;
+}
+
+.ant-notification-notice {
+  background-color: #e8f7ee !important;
+  width: 100% !important;
+}

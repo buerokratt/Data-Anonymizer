@@ -90,3 +90,9 @@ Define [routes](dm/src/App.js) for [Anonymizer](dm/src/components/Anonymizer.js)
 https://github.com/buerokratt/Data-Anonymizer/issues/95
 
 Add UI Components for [Header](dm/src/components/Header.js), [Navigation Mobile Drawer](dm/src/components/Drawer.js), [Footer](dm/src/components/Footer.js) and [Github Section](dm/src/components/GithubSection.js)
+
+### Implement UI Design for Anonymizer Page
+
+https://github.com/buerokratt/Data-Anonymizer/issues/98
+
+Add UI Component for [Anonymizer](dm/src/components/Anonymizer.js) Page.
