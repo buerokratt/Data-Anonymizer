@@ -32,3 +32,9 @@ https://github.com/buerokratt/Data-Anonymizer/issues/69
 https://github.com/buerokratt/Data-Anonymizer/issues/86
 
 Add [Ruuter DSL File](Ruuter/DSL/GET/regex.yml) and [Resql Query](Resql/templates/production/list_regex.sql) to list regex patterns.
+
+### Delete added Regex pattern from database
+
+https://github.com/buerokratt/Data-Anonymizer/issues/63
+
+Add [Ruuter DSL File](Ruuter/DSL/GET/delete_regex.yml) and [Resql Query](Resql/templates/production/delete_regex.sql) to delete a regex pattern.
