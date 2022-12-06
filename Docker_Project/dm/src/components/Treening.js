@@ -624,6 +624,18 @@ function Treening() {
   };
 
   useEffect(() => {
+    if (uploadingState === 4) {
+      setInterval(() => {
+        fetchTrainingStatus().then((status) => {
+          if (status.status === "Done" || status.status === "Standby") {
+            setUploadingState(1);
+          }
+        });
+      }, 10000);
+    }
+  }, [uploadingState]);
+
+  useEffect(() => {
     fetchTrainingStatus().then((status) => {
       if (status.status !== "Done" && status.status !== "Standby") {
         setUploadingState(4);
