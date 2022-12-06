@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Container = styled.div`
   background: #000090;
@@ -25,11 +26,12 @@ const GihubLink = styled.a`
 `;
 
 function GithubSection() {
+  const { t } = useTranslation("common");
   return (
     <Container>
       <Heading>
-        Täisfunktsionaalse rakenduse kasutamiseks lae endale alla täisversioon
-        meie <GihubLink>Githubi repositooriumist</GihubLink>.
+        {t("githubSection.text")}{" "}
+        <GihubLink>{t("githubSection.link")}</GihubLink>.
       </Heading>
     </Container>
   );

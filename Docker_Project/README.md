@@ -108,3 +108,9 @@ Add UI Component for [Training](dm/src/components/Treening.js) Page.
 https://github.com/buerokratt/Data-Anonymizer/issues/97
 
 Add [Services](dm/src/RestService.js) to call Backend REST APIs, integrate Anonymizer and Training Pages, and add website url of this application to list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.
+
+### Add i18n support to Data Management Interface front end app
+
+https://github.com/buerokratt/Data-Anonymizer/issues/79
+
+Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) packages, add [translations](dm/src/translations/et.json), and transform all text in the UI utilize the translations. Languages can be modfied [here](dm/src/index.js#L10).
