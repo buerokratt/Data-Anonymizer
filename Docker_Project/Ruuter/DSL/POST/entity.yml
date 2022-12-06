@@ -1,0 +1,10 @@
+insert_entity:
+  call: http.post
+  args:
+    url: http://resql:8082/insert_entity
+    body:
+      name: ${incoming.body.name}
+      description: ${incoming.body.description}
+
+return_value:
+  return: "success"
