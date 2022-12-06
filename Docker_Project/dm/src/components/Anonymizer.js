@@ -6,6 +6,7 @@ import GithubSection from "./GithubSection";
 import CloseIcon from "../assets/close.svg";
 import RightIcon from "../assets/Right_Icon.svg";
 import { pseudonymiseText, getEntities } from "../RestService";
+import { useTranslation } from "react-i18next";
 
 function pickTextColorBasedOnBgColorAdvanced(bgColor, lightColor, darkColor) {
   var color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor;
@@ -306,11 +307,12 @@ function Anonymizer() {
   const [entityModalOpened, setEntityModalOpened] = useState(false);
   const [pseudonymisedWords, setPseudonymisedWords] = useState([]);
   const [entities, setEntities] = useState([]);
+  const { t } = useTranslation("common");
   const columns = [
     {
       dataIndex: "vaartus",
       key: "vaartus",
-      title: "VAARTUS",
+      title: t("anonymizerPage.entityTableColumn"),
       width: 175,
       render(text, record, index) {
         return {
@@ -334,14 +336,13 @@ function Anonymizer() {
       },
     },
     {
-      title: "KIRJELDUS",
+      title: t("anonymizerPage.entityTableDescription"),
       dataIndex: "kirjeldus",
       key: "kirjeldus",
       defaultSortOrder: "descend",
       sorter: (a, b) => a.kirjeldus.localeCompare(b.kirjeldus),
     },
   ];
-
   useEffect(() => {
     getEntities().then((x) =>
       setEntities(
@@ -388,11 +389,11 @@ function Anonymizer() {
         width={679}
         close
         onCancel={() => setEntityModalOpened(false)}
-        title={"Anonümiseerimise legend"}
+        title={t("anonymizerPage.entityModalTitle")}
         open={entityModalOpened}
         footer={
           <ThemeButton onClick={() => setEntityModalOpened(false)}>
-            SULGE
+            {t("anonymizerPage.entityModalClose")}
           </ThemeButton>
         }
       >
@@ -406,15 +407,12 @@ function Anonymizer() {
         />
       </Modal>
       <Container>
-        <Title>anonüümi teksti</Title>
-        <Description>
-          Rakendus töötab vaid eestikeelsete tekstidega. Tähemärgipiirang kuni
-          500 sümbolit koos tühikutega
-        </Description>
+        <Title>{t("anonymizerPage.title")}</Title>
+        <Description>{t("anonymizerPage.description")}</Description>
         <AnonymizerTextContainer>
           <AnonymizerTextCardContainer>
             <div>
-              <InputHeading>Sisend</InputHeading>
+              <InputHeading>{t("anonymizerPage.input")}</InputHeading>
               {showAnonymizedText && !editAnonymizedText ? (
                 <AnonymizerTextCard
                   onClick={() => {
@@ -450,13 +448,14 @@ function Anonymizer() {
                   }
                   onChange={(ev) => setInputText(ev.target.value)}
                   value={inputText}
-                  placeholder={"Sisesta sila"}
+                  placeholder={t("anonymizerPage.inputPlaceholder")}
                   rows={10}
                   maxLength={500}
                 />
               )}
               <AnonymizerTextCount>
-                {500 - inputText.length} tähemärki jäänud
+                {500 - inputText.length}{" "}
+                {t("anonymizerPage.inputCharacterLimit")}
               </AnonymizerTextCount>
             </div>
             <ActionButtons
@@ -468,13 +467,13 @@ function Anonymizer() {
                 onMouseDown={getPseudonymiseText}
                 size={"large"}
               >
-                ANONÜMISEERI TEKST
+                {t("anonymizerPage.anonymizeButton")}
               </AnonymizeActionButton>
               <ActionButton
                 onClick={() => setEntityModalOpened(true)}
                 size={"large"}
               >
-                VAATA LEGENDI
+                {t("anonymizerPage.showEntitiesButton")}
               </ActionButton>
             </ActionButtons>
           </AnonymizerTextCardContainer>
@@ -483,7 +482,7 @@ function Anonymizer() {
           </AnonymizerTextAreaGap>
           <AnonymizerTextCardContainer>
             <div>
-              <InputHeading>Väljund</InputHeading>
+              <InputHeading>{t("anonymizerPage.output")}</InputHeading>
               <AnonymizerTextCard
                 isEditing={!(showAnonymizedText && !editAnonymizedText)}
               >
@@ -492,14 +491,15 @@ function Anonymizer() {
             </div>
             {showAnonymizedText ? (
               <ActionButtons>
+                {/* või */}
                 <ActionButton onClick={downloadTxtFile} size={"large"}>
-                  LAE ALLA .TXT FALINA
+                  {t("anonymizerPage.downloadTextFile")}
                 </ActionButton>
                 <ActionButton
                   onClick={() => {
                     navigator.clipboard.writeText(outputText);
                     notification.info({
-                      description: "Anonüümitud tekst kopeeritud",
+                      description: t("anonymizerPage.anonymizedTextCopied"),
                       placement: "bottomLeft",
                       icon: <div />,
                       closeIcon: <div />,
@@ -507,7 +507,7 @@ function Anonymizer() {
                   }}
                   size={"large"}
                 >
-                  KOPEERI VÄLJUNDTEKST
+                  {t("anonymizerPage.copyOutputText")}
                 </ActionButton>
               </ActionButtons>
             ) : (
@@ -516,13 +516,13 @@ function Anonymizer() {
                   onMouseDown={getPseudonymiseText}
                   size={"large"}
                 >
-                  ANONÜMISEERI TEKST
+                  {t("anonymizerPage.anonymizeButton")}
                 </AnonymizeActionButton>
                 <ActionButton
                   onClick={() => setEntityModalOpened(true)}
                   size={"large"}
                 >
-                  VAATA LEGENDI
+                  {t("anonymizerPage.showEntitiesButton")}
                 </ActionButton>
               </ActionButtons>
             )}
