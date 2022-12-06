@@ -1,0 +1,5 @@
+venv/
+anonymisation_api/anonymise/models
+celery/
+anonymisation_api/anonymise/training/model
+anonymisation_api/celery

@@ -1,0 +1,6752 @@
+!! Abja-Paluoja
+Abja tee
+Aia tänav
+Aiandi tänav
+Hariduse tänav
+Jaama tänav
+Järve tänav
+Kaare tänav
+Kangru tänav
+Karja tänav
+Kastani tänav
+Kirsi tänav
+Kivi tänav
+Koidu tänav
+Kooli tänav
+Lille tänav
+Lina tänav
+Lühike tänav
+Metsa tänav
+Mäe tänav
+Männi tänav
+Nuia tee
+Valga - Uulu tee
+Nurme tänav
+Oru tänav
+Pargi tänav
+Pilve tänav
+Posti tänav
+Pärnu maantee
+Põhja tänav
+Põllu tänav
+Raudtee tänav
+Roheline tänav
+Rohu tänav
+Sarja tee
+Soo tänav
+Staadioni tänav
+Tiigi tänav
+Tikuti tänav
+Toome tänav
+Uus tänav
+Veski tänav
+Viljandi tee
+!! Elva
+Aasa tänav
+Aia tänav
+Aiandi tänav
+Allika tänav
+Ao tänav
+Apteegi tänav
+Arbimäe tänav
+Betooni tänav
+Eha tänav
+Hugo Raudsepa tänav
+Heina tänav
+Herne tänav
+Hämariku tänav
+Jaama tänav
+Jaani tänav
+Jaan Kärneri tänav
+Juhan Liivi tänav
+Jõe tänav
+Järve tänav
+Kadaka tänav
+Kaja tänav
+Kalda tänav
+Kanarbiku tänav
+Kase tänav
+Kesk tänav
+Kingu tänav
+Kirde tänav
+Kirde põik
+Kirdekaare tänav
+Kirsi tänav
+Kitsas tänav
+Koidu tänav
+Kreegi tänav
+Kruusa tänav
+Kruusa põik
+Kullese tänav
+Kure tänav
+Kuuse tänav
+Kõrre tänav
+Käo tee
+Käärdi tee
+
+Laane tänav
+Lauliku tänav
+Lepa tänav
+Liiva tänav
+Lille tänav
+Lohu tänav
+Lokuta tee
+Loode tänav
+Lootuse tänav
+Lõuna tänav
+
+Mahlamäe tänav
+Marja tänav
+Metsa tänav
+Muru tänav
+Mäe tänav
+Männa tänav
+
+Nooruse tänav
+Nurme tänav
+Nuti tänav
+Nõlvaku tänav
+Nõmme tänav
+
+Oja tänav
+Oru tänav
+
+Paju tänav
+Palu tee
+Palupera tee
+Pargi tänav
+Peedu tee
+Pikk tänav
+Ploomi tänav
+Puiestee tänav
+Purde tänav
+Põhja tänav
+Põik tänav
+Põllu tänav
+Pärna tänav
+Rahu tänav
+Raja tänav
+Raudtee tänav
+Ristiku tänav
+Saare tänav
+Side tänav
+Sireli tänav
+Soo tänav
+Supelranna tänav
+Suvila tänav
+Tamsa tee
+Tartu maantee
+Tiigi tänav
+Tulbi tänav
+Tuletõrje tänav
+Turuplatsi tänav
+Tähe tänav
+Tööstuse tänav
+
+Ujula tänav
+Urva tänav
+Uus tänav
+Uuta tee
+
+Vahe tänav
+Vahtra tänav
+Vaikne tänav
+Valga maantee
+Vambola tänav
+Vana-Koidu tänav
+Vapramäe tänav
+Vapramäe põik
+Vellavere tee
+Veski tänav
+Videviku tänav
+Vikerkaare tänav
+Väike tänav
+Väike-Nõlvaku tänav
+Väike-Tähe tänav
+
+Õie tänav
+Õuna tänav
+
+Ääre tänav
+
+!! Anstla
+F.R.Kreutzwaldi tänav
+
+Haigla tänav
+Hämariku tänav
+
+Jaani tänav
+Järve tänav
+Järveääre tänav
+
+Kaare tänav
+Kalda tänav
+Kanarbiku tänav
+Karjasoo tänav
+Kooli tee
+Kähri tänav
+
+Liiva tänav
+Lõuna tänav
+
+Metsa tänav
+Mäe tänav
+Männi puiestee
+
+Nurme tänav
+
+Oru tänav
+Oru põik
+
+Pargi tänav
+Posti tänav
+Pumba tänav
+Põik tänav
+Põllu tänav
+Pärna tänav
+Pärna tänav II
+
+Raudtee tänav
+
+Saare tänav
+Soo tänav
+
+Tamme tänav
+Tehnika tänav
+Tiigi tänav
+Tsooru maantee
+Tuleviku tänav
+Tööstuse tänav
+
+Uus tänav
+
+Veski tänav
+Villaliina tänav
+Võidu tänav
+
+Ööbiku tänav
+
+Ülase tänav
+Ülesõidu tänav
+
+!! Haapsalu
+Aia
+Aiavilja
+Aida
+
+O. Cheri
+
+Eha
+Ehte
+Endla
+
+Haava
+Haava põik
+Holmi
+Holmi kallas
+Hommiku kallas
+
+Jaama
+Jaani
+Jalaka
+Jüriöö
+
+Kaardiväe
+Kadaka
+Kalda
+Kalevi
+Kalmistu
+Kaluri
+Karja
+Kase
+Kastani
+Kauba
+Kiltsi tee
+V. Kingissepa
+Koidu
+L. Koidula
+Komsomoli
+Kooli
+Kopli
+Krahvi puiestee
+F. R. Kreutzwaldi
+Kuuse
+Kõlakoja
+Kõrkja
+Kõver
+Käbi
+
+Lahe
+Lai
+Lao
+Laskuri
+J. Lauristini
+Lehe
+Lehise
+Lembitu
+Lepa
+Lihula maantee
+Lille
+Linda
+Lossiplats
+Luha
+Lühike
+
+Mere puiestee
+Metsa
+Mihkli
+Mulla
+Mulla põik
+Mõtuse
+Mäe
+Mängu
+Männi
+Männiku tee
+
+Neidude
+Niine
+Niine põik
+Nurme
+Nõukogude
+
+Oja
+Osmussaare Kaitsjate väljak
+
+Paju
+Pargi
+Pargi põik
+Partisani
+Pihlaka
+Pioneeri
+Posti
+Potissepa
+Promenaadi
+Põllu
+Pärna
+Pääsukese
+
+Rahu
+Ranna tee
+Raudtee
+Raudteetammi tee
+Roo
+Räägu
+Rüütli
+Rüütli põik
+
+Saare
+Sadama
+Sambla
+Saue
+Sauna põik
+Sireli
+Staadioni
+Supeluse
+Surnuaia
+Suur-Liiva
+Suur-Lossi
+Suur-Mere
+
+Tallinna maantee
+Tamme
+A. H. Tammsaare
+Tankisti
+Tedre
+Tellisetehase
+Tihase
+Tiigi
+Toominga
+P. Tšaikovski puiestee
+Turu
+Tööstuse
+Tüve
+
+Ungru tee
+Uus
+Uus-Mihkli
+Uus-Põllu
+Uus-Sadama
+
+Vaba
+Vahtra
+Vahtra põik
+Vaikne
+Vaikne kallas
+Vee
+E. Vilde
+Võidu
+Võidu väljak
+Võitleja
+Võnnu
+Väike-Liiva
+Väike-Lossi
+Väike-Mere
+Väike-Viigi
+
+Westmeri
+F. J. Wiedemanni
+
+Õhtu kallas
+Õpetaja
+
+Ööbiku
+
+!! Jõgeva
+Aasa tänav
+Aia tänav
+Allika tänav
+
+Betti Alveri tänav
+
+Energia tänav
+Estakaadi tänav
+
+Julius Aamisepa tänav
+Jaama tänav
+Jõe tänav
+
+Kalda tänav
+Kesk tänav
+Kingu tänav
+Kirsi tänav
+Kivi tänav
+Kooli tänav
+Kruusa tänav
+Kuuse tänav
+
+Lai tänav
+Lao tänav
+Lepiku tänav
+Liiva tänav
+Lille tänav
+
+Mustvee maantee
+
+Niidu tänav
+Nurme tänav
+
+Pae tänav
+Pargi tänav
+Piiri tänav
+Puiestee tänav
+Pärna tänav
+Põik tänav
+Põllu tänav
+
+Ravila tänav
+Ristiku tee
+Ristiku tänav
+Rohu tänav
+Roosi tänav
+
+Sarapuu tänav
+Sauna tänav
+Staadioni tänav
+Suislepa tänav
+Suur tänav
+Suvila tänav
+Sõnajala tänav
+
+Tallinna maantee
+Tamme tänav
+Tartu maantee
+Tellise tänav
+Tellissaare tänav
+Toominga tänav
+Tulika tänav
+Turu tänav
+Tähe tänav
+
+Uus tänav
+
+Vainu tänav
+Välja tänav
+
+Ülase tänav
+
+!! Jõhvi
+Aasa
+Allika
+
+Eha
+
+Hariduse
+Voldemar Härma tänav
+
+Jaani
+Jaama
+
+Kaare
+Kaasiku
+Kalmistu
+Keskväljak
+Kevade
+Kirde
+Kirsi
+Kivi
+Koidu
+Kooli
+Kraavi
+Kruusa
+Kungla
+Kutse
+Küti
+
+Lennuki
+Lepa
+Lille
+Linda
+Loode
+Lääne
+
+Malmi
+Marja
+Mooni
+Mulla
+Mureli
+Muru
+Mäe
+
+Narva maantee
+Nelgi
+Niidu
+Nõmme
+Nooruse
+
+Oja
+Oru
+Oru põik
+
+Pae
+Pargi
+Pirni
+Ploomi
+Puru tee
+Põllu
+
+Rahu
+Rahu põik
+Raja
+Rakvere
+Raudtee tee
+Ristiku
+Rohu
+Roosi
+
+Salme
+Side
+Sihi
+Sompa
+Soo
+Soo põik
+II Soo põik
+Sulevi
+Sütiste
+Säde
+
+A. H. Tammsaare
+Tartu maantee
+II Tartu põik
+III Tartu põik
+Tiigi
+Tulbi
+Toila
+
+Uus tee
+Uus Võsa
+
+Vaarika
+Vahe
+Veski
+Vilja
+Viru
+Välja
+
+Ülesõidu
+
+!! Kallaste
+Aasa tänav
+Aia tänav
+
+Jaani tänav
+
+Kalda tänav
+Kase tänav
+Kevade tänav
+Kesa tänav
+Keskväljak
+Kiriku tänav
+
+Liiva tänav
+
+1.Mai tänav
+Mäe tänav
+
+Niidu tänav
+
+Oja tänav
+Oktoobri tänav
+
+Pihlaka tänav
+Põhja tänav
+Põllu tänav
+
+Rahu tänav
+Roheline tänav
+
+Sadama tänav
+Sillaotsa tänav
+Staadioni tänav
+Sõpruse tänav
+
+Toominga tänav
+Turu tänav
+Tööstuse tänav
+
+Uus tänav
+
+Võidu tänav
+
+Õnne tänav
+!! Kärdla
+Aia
+Aia põik
+Alato tänav
+Allika
+
+Eha
+
+Hausma tee
+Heltermaa maantee
+Hiiu
+
+Kaare
+Kabeli
+Kajaka
+Kalamaja
+Kalda
+Kanarbiku
+Karja
+Kase
+Keskväljak
+Koidu
+Kooli
+Kopli
+Kraavi
+Kõrgessaare maantee
+Käina maantee
+Künka
+
+Ladva
+Leigri väljak
+Lepiku
+Liiva
+Linnumäe
+Lodju
+Loigu
+Lubjaahju
+Luite
+
+Marja
+Mere
+Metsa
+Metsa põik
+Männiku
+
+Nuutri
+Nõmme
+
+Oja
+
+Padu
+Pae
+Paju
+Pargi
+Pikk
+Posti
+Posti põik
+Põllu
+
+Rahu
+Ranna
+Rehemäe tee
+Rookopli
+Rootsi
+
+Sadama
+Sambliku
+Sanglepa
+Seene
+Sireli
+Sõnajala
+
+Tiigi
+Tiigi põik
+Tormi
+Tüve
+
+Uus
+
+Vabaduse
+Vabaduse põik
+Vabrikuväljak
+Valli
+Vesiroosi
+Väike-Aia
+Väike-Liiva
+Väike-Sadama
+Väike-Tiigi
+
+Ümarmäe
+
+!! Karksi-Nuia
+Aasa tänav
+Aia tänav
+Arumäe tänav
+
+Eha tänav
+Ettevõtluse tänav
+
+Heina tänav
+
+Jüri Kivistiku tänav
+
+Kaare tänav
+Kalda tänav
+Kase tänav
+Kassepa tänav
+Kivi tänav
+Kiviaia tänav
+Koidu tänav
+Kooli tänav
+
+Lepiku tänav
+Lilli tee
+Loigu tänav
+Loode tänav
+Lossi tänav
+Lossimäe tänav
+Lõuna tänav
+
+Metsa tänav
+Mäe tänav
+Männiku tänav
+
+Niidu tänav
+Niine tänav
+Nurme tänav
+
+Oru tänav
+
+Piiri tänav
+Polli tee
+Pärnu maantee
+Põhja tänav
+Põllu tänav
+
+Rahumäe tänav
+
+Soo tänav
+
+Tartu maantee
+Tehase tänav
+Tiigi tänav
+Tööstuse tänav
+
+Umb tänav
+Uus tänav
+
+Veetorni tänav
+Viljandi maantee
+Väike tänav
+Väike-Aia tänav
+Võidu tänav
+
+!! Kehra
+Aasa tänav
+Aia tänav
+Aiandi tänav
+Anija maantee
+
+Carl Robert Jakobsoni tänav
+Friedrich Reinhold Kreutzwaldi tänav
+Jaama tänav
+Janis Rainise tänav
+Jõe tänav
+
+Kalda tänav
+Kase tänav
+Kauba tänav
+Keskuse tänav
+Keskuse põik
+Kooli tänav
+Kooli põik
+Kose maantee
+
+Laane tänav
+Laste tänav
+Laste põik
+Luha tänav
+Lõhmuse tänav
+Lydia Koidula tänav
+
+Metsa tänav
+Mulla tänav
+Mõisa tänav
+
+Niidu tänav
+Nurme tänav
+
+Paberi tänav
+Pargi tee
+Puidu tänav
+Pärna tänav
+Põhja tänav
+Põllu tänav
+Põrguvälja tänav
+
+Raja põik
+Raja tänav
+Roopa tänav
+
+Salo tänav
+Silla tänav
+Spordi tänav
+Sõpuse väljak
+
+Tallinna maantee
+Tamme tänav
+Tehase tänav
+Tisleri tänav
+Torni tänav
+Tselluloosi tänav
+Tuleviku tänav
+Turu tänav
+
+Välja tänav
+
+!! Keila
+Luha tänav
+Haapsalu maantee
+Tallinna maantee
+Kalda tänav
+Tiiru tänav
+Tuula tee
+Roheline tänav
+Keskväljak
+Ülejõe tee
+Heina tänav
+Niidu tänav
+Põhja tänav
+Pae tänav
+Posti tänav
+Allika tänav
+Piiri tänav
+Vasara tänav
+Paldiski maantee
+Geoloogide tänav
+Kullerkupu tänav
+Piibelehe tänav
+Kanarbiku tänav
+Ülase tänav
+Kannikese tänav
+Nurmenuku tänav
+Ehitajate tee
+Pargi tänav
+Jaama tänav
+Vaikne tänav
+Uus tänav
+Raudtee tänav
+Haapsalu tänav
+Kooli tänav
+Niine tänav
+Metsa tänav
+Oksa tänav
+Männiku tänav
+Lõuna tänav
+Kuuse tänav
+Tamme tänav
+Tamme põik
+Kruusa tänav
+Kruusa põik
+Tammiku tänav
+Ülesõidu tänav
+Aiandi tänav
+Jõe tänav
+Tähe tänav
+Kaare tänav
+Teaduse tänav
+Teaduse põik
+Koidu tänav
+Aia tänav
+Ohtu tee
+Eha tänav
+Sireli tänav
+Kadaka tänav
+Lepa tänav
+Toominga tänav
+Vahtra tänav
+Kastani tänav
+Pärna tänav
+Pärna põik
+Kase tänav
+Linnamäe tee
+Raba tänav
+Pihlaka tänav
+Saare tänav
+Hommiku tänav
+Linnuse tänav
+Aukamäe tänav
+Ringtee tänav
+Tööstuse tänav
+Barsbütteli tänav
+Tervise tänav
+Tervise põik
+Põllu tänav
+Sopsu-Tooma tänav
+Mäe tänav
+Liiva tänav
+Vasara põik
+Kirsi tänav
+Kevade tänav
+Suve tänav
+Sügise tänav
+
+!! Kilingi-Nõmme
+Aia tänav
+Aru tänav
+
+Eha tänav
+
+Hommiku tänav
+
+Jaama tänav
+Jõe tänav
+Järve tänav
+Järve põik
+
+Kantsi tänav
+Karja tänav
+Kase tänav
+Kirde tänav
+Kiriku tänav
+Kitsas tänav
+Kivi tänav
+Koidu tänav
+Kooli tänav
+Kõrge tänav
+Künka tänav
+
+Laada tänav
+Levalohu tänav
+Luha tänav
+
+Mäe tänav
+Mängu tänav
+Muru tänav
+
+Nõmme tänav
+
+Oja tänav
+
+Pargi tänav
+Piiri tänav
+Põllu tänav
+Pärnu tänav
+
+Raba tänav
+Raekoja tänav
+Raja tänav
+Ringpuiestee
+
+Saarde tänav
+Sambla tänav
+Savi tänav
+Soo tänav
+
+Tiigi tänav
+Turu tänav
+Turuplats
+
+Urve tänav
+Uus tänav
+
+Vana tänav
+Vainu tänav
+Veski tänav
+Villa tänav
+
+Õ
+Õhtu tänav
+
+!! Kiviõli
+Aasa tänav
+Aia tänav
+Alutaguse tänav
+
+Ehitajate tänav
+Elektri tänav
+
+Graniidi tänav
+
+Heina tänav
+Hospidali tänav
+
+Irvala tee
+
+Jaama tänav
+Jõe tänav
+
+Kaare tänav
+Kaevurite tänav
+Kalda tänav
+Kalevi tänav
+Kalju tänav
+Kallaku tänav
+Karja tänav
+Kastani tänav
+Kauba tänav
+Kesa tänav
+Kivi tänav
+Keskpuiestee
+Koidu tänav
+Kooli tänav
+Kraavi tänav
+Kruusa tänav
+Kuuse tänav
+Kuusiku tänav
+Künka tänav
+Küttejõu tänav
+
+Laste tänav
+Lehe tänav
+Lepa tee
+Liiva põik
+Liiva tänav
+Lõuna tänav
+
+Maidla tee
+Metsa tänav
+Muru tänav
+Mäe tänav
+Mäealuse põik
+Mäealuse tee
+Mäepealse tee
+Männiku tänav
+
+Niidu tänav
+Niine tänav
+Nurme tänav
+Nõmme tänav
+
+Oja tänav
+Oru tänav
+
+Pae tänav
+Pae põik
+Paju tänav
+Papli tänav
+Pargi tänav
+Piiri tänav
+Pikk tänav
+Posti tänav
+Põiktänav
+Põllu tänav
+Põõsa tänav
+
+Rahvamaja tänav
+Raja tänav
+Raudtee tänav
+Ristiku tänav
+Rohu tänav
+
+Sambla tänav
+Savi tänav
+Sireli tänav
+Sonda tee
+Soo tänav
+Spordi tänav
+Sõnajala tänav
+Säde tänav
+
+Turu tänav
+
+Uus tänav
+
+Vabaduse puiestee
+Vahe tänav
+Vahtra tänav
+Viru tänav
+Võidu tänav
+Võsa tänav
+
+Õle tänav
+
+!! Kohtla-Järve
+
+Ahtme maantee
+Altserva tänav
+Altserva põik
+Aru tänav
+
+Estonia puiestee
+
+Hobuseraua tänav
+
+Ilmajaama tänav
+
+Jaaniku tänav
+
+Kaare tänav
+Kadri tänav
+Kaja tänav
+Kalda tänav
+Kandle tänav
+Kastani tänav
+Kasteheina tänav
+Kiige tänav
+Kodu tänav
+
+Lasteaia tänav
+Lehola tänav
+Looga tänav
+
+Maleva tänav
+Mardi tänav
+
+Pargi tänav
+Pargitaguse tänav
+Pihla tänav
+Puru tee
+
+Ridaküla tänav
+Ritsika tänav
+
+Salu tänav
+Sõnajala tänav
+Sõpruse tänav
+
+Tabori tänav
+Tammiku tänav
+Tammiku põik
+Tartu maantee
+Tervise tänav
+Toome puiestee
+
+Vilja tänav
+Väike tänav
+
+Õpetajate tänav
+
+Järve linnaosa
+Aia tänav
+
+Eduard Vilde tänav
+Ehitajate tänav
+Elektriku tänav
+Endla tänav
+
+Friedrich Reinhold Kreutzwaldi tänav
+
+Gaasi tänav
+
+Ida tänav
+Inseneri tänav
+
+Järve tänav
+Järve põik
+Järveküla tee
+
+Kaevuri tänav
+Kalevi tänav
+Karja tänav
+Karja põik
+Karl Lutsu tänav
+Katse tänav
+Kauba tänav
+Keemia tänav
+Keskallee
+Kivi tee
+Kuu tänav
+Käva tänav
+
+Lai tänav
+Lembitu tänav
+Lille tänav
+Lille põik
+Lydia Koidula tänav
+Lõuna tänav
+
+Marsi tänav
+Metsa tänav
+Metsapargi tänav
+Mõisa tee
+
+Niidu tänav
+Noorte tänav
+
+Oktoobri tänav
+Olevi tänav
+Outokumpu tänav
+Outokumpu põik
+
+Pavandu tänav
+Piiri tänav
+Pikk tänav
+Pioneeri tänav
+Pisuhänna tänav
+Päikese tänav
+Pärna tänav
+Põhja allee
+Põllu tänav
+
+Raudtee tänav
+Ravi tänav
+Rea tänav
+Ringi tänav
+Roheline tänav
+
+Sakala tänav
+Sakala põik
+Siidisuka tänav
+Sinivoore tänav
+Spordi tänav
+
+Tehase tänav
+Tehnika tänav
+Tehnika põik
+Torujõe tänav
+Turu tänav
+Tuuslari tänav
+Tööstuse tänav
+
+Uus tänav
+Uus-Tehase tänav
+
+Vabaduse tänav
+Vabriku tänav
+Vahtra tänav
+
+Õuna tänav
+
+Kukruse linnaosa
+Hoovi tänav
+
+Jõhvi maantee
+
+Lehe tänav
+Lehe põik
+
+Mäe tänav
+
+Nurga tänav
+
+Paate tänav
+Põhja tänav
+
+Staadioni tänav
+
+Võsa tänav
+
+Õnne tänav
+Õnne põik
+
+Oru linnaosa
+Briketi tänav
+Briketi tänav
+
+Kase tänav
+Kesk tänav
+
+Männi tänav
+
+Vikerkaare tänav
+Virmalise tänav
+
+!! Kunda
+Aia tänav
+Aiamaa tee
+Astangu tänav
+
+Eha tänav
+Ehitajate tänav
+
+Jaama tänav
+Jõe tänav
+
+Kalda tänav
+Kalevi tänav
+Kalmistu tee
+Kasemäe põik
+Kasemäe tänav
+Klubi tänav
+Koidu põik
+Koidu tänav
+Kungla tänav
+
+Laane tänav
+Lasteaia tänav
+Lembitu tänav
+Lepiku tee
+Lontova tee
+Loode tänav
+Lähta tee
+
+Maakoha tee
+Mageranna tee
+Mere tänav
+Metsa tänav
+Mäe põik
+Mäe tänav
+
+Pargi põik
+Pargi tänav
+Pioneeri tänav
+Posti tänav
+
+Rahvamaja tänav
+Rakvere maantee
+Ranna tee
+Raudkatku tänav
+
+Sadama tee
+Sadama tänav
+Sauna tänav
+Selja tee
+Spordi tänav
+Staadioni tänav
+
+Tammiku põik
+Toolse tee
+Turu tänav
+Tähe tänav
+Tööstuse tänav
+
+Uus-Sadama tee
+
+Videviku tänav
+Võidu tänav
+
+!! Kuressaare
+Abaja tänav
+Aia tänav
+Allee tänav
+Anton Lutsu tänav
+Arhiivi tänav
+August Kitzbergi tänav
+
+Eha
+
+Garnisoni
+
+Haigla
+Hariduse
+Heina tänav
+Humala tänav
+
+Ida tänav
+
+Jaama tänav
+Juhan Smuuli tänav
+Jõe tänav
+
+Kaare tänav
+Kadaka tänav
+Kaevu tänav
+Kalda puiestee
+Kalevi põik
+Kalevi tänav
+Kaluri tee
+Kannikese tänav
+Karikakra põik
+Karikakra tänav
+Karja tänav
+Karl Ojassoo tänav
+Kase tänav
+Kastani tänav
+Kauba tänav
+Kelluka tänav
+Kesk tänav
+Kevade tänav
+Kihelkonna maantee
+Kiivitaja tänav
+Kingu tänav
+Kirde tänav
+Kiriku tänav
+Kitsas tänav
+Kivi tänav
+Kohtu tänav
+Koidu tänav
+Komandandi tänav
+Kopli tänav
+Kotkapoja tänav
+Kraavi tänav
+Kullerkupu tänav
+Kungla tänav
+Kuressaare tee
+Kuuse tänav
+Kõrre tänav
+Kõver tänav
+
+Lagle tänav
+Lahe tee
+Lasteaia tänav
+Laugu tänav
+Lehe tänav
+Liiva tänav
+Lillevälja tänav
+Loojangu tänav
+Lootsi tänav
+Lossi tänav
+Lossihoov
+Lossipark
+Luha tänav
+Luige tänav
+Lydia Koidula tänav
+
+Marientali tee
+Martin Körberi tänav
+Meierei tänav
+Mere tänav
+Merikotka tänav
+Metsa tänav
+Mooni tänav
+Muru tänav
+
+Niidu tänav
+Nooruse tänav
+Nurme tänav
+Nõmme tänav
+
+Odra tänav
+
+Pae tänav
+Papli tänav
+Pargi tänav
+Piibelehe tänav
+Pihtla tee
+Pikk tänav
+Põhja tänav
+Põik tänav
+Pärna tänav
+
+Raekoja tänav
+Raiekivi tee
+Rehe tänav
+Rohu tänav
+Roomassaare tee
+Roopa tänav
+Rootsi tänav
+
+Sepa tänav
+Sinilille tänav
+Staadioni tänav
+Suur-Põllu tänav
+Suur-Sadama põik
+Suur-Sadama tänav
+Suuresilla tänav
+Suve tänav
+Sügise tänav
+
+Tallinna tänav
+Talve tänav
+Talve põik
+Tolli põik
+Tolli tänav
+Tori tänav
+Torni tänav
+Traktori tänav
+Transvaali tänav
+Turu tänav
+Tuule tänav
+Töökoja tänav
+
+Uus tänav
+Uus-Roomassaare tänav
+Uus-Karja tänav
+
+Vahtra tänav
+Vana-Roomassaare tänav
+Valguse tänav
+Vallimaa tänav
+Varju tänav
+Veski tänav
+Vete tänav
+Videviku tänav
+Vikerkaare tänav
+Vuti tänav
+Väike-Sadama tänav
+Väike-Põllu tänav
+Väljaku tänav
+
+Õie tänav
+
+Ülase tänav
+
+!! Lihula
+Aia tänav
+Allika tänav
+
+Heina tänav
+Hiie tänav
+
+Jaama tänav
+
+Kalmu tänav
+Karja tänav
+Kivi tänav
+Kopli tänav
+
+Lasteaia tänav
+Lasteaia põik
+Linnuse tee
+
+Niidu tänav
+Nurme tänav
+
+Metsa tänav
+Mulla tänav
+Mäe tänav
+
+Nõlva tänav
+
+Oja tänav
+
+Pargi tänav
+Penijõe tee
+Piiri tänav
+Pioneeri tänav
+Põllu põik
+Põllu tänav
+Pärna tänav
+Pärnu maantee
+
+Raudtee tänav
+Ristiku tänav
+
+Saue tänav
+Soo tänav
+Sooaluse tee
+Staadioni tänav
+
+Tallinna maantee
+Tiigi tee
+Tööstuse põik
+Tööstuse tänav
+
+Uus tänav
+Uus-Pärnu maantee
+
+Vahtra tänav
+Valuste tee
+Valuste põik
+Vee tänav
+Veski tänav
+
+!! Loksa
+Biopuhasti
+Gümnaasiumi
+Jõe
+Lasteaia
+Lasteaia 5
+Lasteaia — Posti
+Lille
+Loksa Rand
+Loksa Rand 2
+Lõuna
+Maleva
+Metsa
+Männi
+Nooruse
+Nooruse 8
+Nooruse — Tallinna
+Nurme
+Papli
+Papli — Tallinna
+Pargi
+Posti
+Posti
+Posti — Rohuaia
+Posti — Tallinna
+Puhkekeskus
+Pärna
+Pärna — Papli
+Ranna
+Rohuaia põik
+Tallinna 35
+Tallinna 39
+Tööstuse
+Tööstuse põik
+Uus
+
+!! Maardu
+Aasnurmiku tee
+Altmetsa tee
+Aruheina tee
+Avar tänav
+Haigla tänav
+Haljasmaa tänav
+Hanerohu tee
+Haugi tänav
+Hellerheina põik
+Hellerheina tee
+Hiireherne tee
+Hiirekõrva tee
+Hundiaugu tee
+Hundioa tee
+Huulheina põik
+Huulheina tee
+Härgheina tee
+Kaalika tee
+Kallasmaa tänav
+Kallavere tee
+Kardheina tee
+Karikakra tee
+Karitsa tänav
+Karjääri tänav
+Karpkala tänav
+Kassikulla tänav
+Kassitatra põik
+Kassitatra tee
+Keemikute tänav
+Keerispea tee
+Kellamäe tänav
+Kikkaputke tee
+Kirsipuu puiestee
+Kitsekakra tee
+Kivileete tänav
+Kivilille tänav
+Kogre tänav
+Kombinaadi tänav
+Kreegipuu puiestee
+Kroodi tänav
+Kukeharja põik
+Kukeharja tee
+Kukemarja tee
+Kuldvitsa tee
+Kuuskheina põik
+Kuuskheina tee
+Kütte tänav
+Küüslaugu tänav
+Langu tänav
+Laukasoo tänav
+Liivakivi tänav
+Linaski tänav
+Lubika tee
+Lupiini tee
+Lutserni tee
+Lõikheina tee
+Maardu tee
+Maarjaheina tee
+Maltsa tee
+Mudamaimu tänav
+Murelipuu puiestee
+Murulaugu tänav
+Murumetsa tänav
+Muuga tee
+Mäeotsa tänav
+Noorte tänav
+Nurga tänav
+Ohaka tee
+Orasheina tee
+Oravasaba tee
+Orumetsa tänav
+Paelrohu tee
+Paemurru tänav
+Paeseljaku tänav
+Paluülase põik
+Paluülase tee
+Parkheina tee
+Peedi tee
+Peterselli tänav
+Pirnipuu puiestee
+Pirnipuu põik
+Ploomipuu puiestee
+Porgandi tee
+Porrulaugu tänav
+Putke tee
+Põldheina tee
+Põldosja tee
+Päevakivi tänav
+Päevalille tee
+Rabakivi tänav
+Raiheina tee
+Rajaniidu tänav
+Raudheina tee
+Raudkivi tänav
+Raudürdi tee
+Rebaseheina põik
+Rebaseheina tee
+Ringi tänav
+Rõikheina tee
+Ränikivi tänav
+Saha-Loo tee
+Saluheina tee
+Sibula tee
+Sooheina tee
+Sookase tänav
+Sookolli tänav
+Sooputke tee
+Soosalu tänav
+Spinati tänav
+Stardi tänav
+Sugapea tee
+Sõlmheina tee
+Sõõrkakra põik
+Sõõrkakra tee
+Säina tänav
+Tihasheina tee
+Tilli tee
+Tudra tee
+Tuliheina tee
+Tõlviku tee
+Tähtheina tee
+Tähtpea põik
+Tähtpea tee
+Ubalehe tee
+Uus-Muuga puiestee
+Vana-Narva maantee
+Varsakabja tee
+Veehoidla tänav
+Veeru tänav
+Veriheina tee
+Vesiheina tee
+Vesiliiva tänav
+Vilgukivi tänav
+Viljapuu puiestee
+Virvatule tänav
+Võha tee
+Võhumõõga tee
+Võikannu tee
+Võilille tee
+Võtmeheina tee
+Vägiheina tee
+Väriheina tee
+Õisiku tee
+Õnneheina tee
+Õunapuu puiestee
+Äiatari tänav
+
+!! Mõisaküla
+Aia tänav
+
+Heinamaa tänav
+Heki tänav
+Hommiku tänav
+
+Jaama tänav
+
+Kalda tänav
+Karjamaa tänav
+Kase tänav
+Kesk tänav
+Kiikre tänav
+Kivi tänav
+Koidu tänav
+Kooli tänav
+
+Lille tänav
+Loode tänav
+
+Mäe tänav
+
+Nurme tänav
+
+Paju tänav
+Piiri tänav
+Posti tänav
+Põllu tänav
+Pärnu tänav
+
+Raudtee tänav
+Riia tänav
+Ringpuiestee
+Roheline tänav
+
+Soo tänav
+
+Uus tänav
+
+Vabriku tänav
+Valga tänav
+Viljandi tänav
+
+Õhtu tänav
+Õnne tänav
+
+!! Mustvee
+Ahvena tänav
+Aia tänav
+
+Benito Agirre tänav
+
+Jõe tänav
+Järve tänav
+
+Kalda tänav
+Kaluri tänav
+Kastani tänav
+Kivi tänav
+Kooli tänav
+Kraavi tänav
+Kruusa tänav
+
+Liiva tänav
+Lille tänav
+Lohu tänav
+
+Marja tänav
+Metsa tänav
+
+Narva tänav
+Nurme tänav
+Nurme põik
+
+Pargi tänav
+Peipsi tänav
+Pihkva tänav
+Pihlaka tänav
+Põik tänav
+Põllu tänav
+Pärna tänav
+
+Raudtee tänav
+Rohu tänav
+Roosi tänav
+
+Sireli tänav
+Sputniku tänav
+
+Tartu tänav
+Toominga tänav
+Tähe tänav
+
+Umb tänav
+Uus tänav
+
+Vahtra tänav
+
+Õnne tänav
+Õuna tänav
+
+!! Narva
+Aasa
+Alajaama
+
+Bastrakovi
+Betooni
+
+Daumani
+
+Elektrijaama tee
+Energia põik
+Energia
+
+Fama põik
+Fama tänav
+
+Gerassimovi
+Gorbatši
+Grafovi
+Gümnaasiumi
+
+Haigla
+Hariduse
+Heinaturu
+
+Jaama plats
+Jalgratta tee
+Joala
+Jõe
+Jõesuu
+Jõe põik
+Jõe
+Jõesuu
+Juhhanovi
+Juhkentali
+
+Kadastiku
+Kalda
+Kalmistu
+Kanali
+Kanepi
+Kangelaste prospekt
+Kangelaste põik
+Karja
+Karjamaa
+Kase
+Paul Kerese
+Paul Kerese väljak
+Kevade
+Kiige
+Kiriku
+Koidula
+Kooli põik
+Kose
+Kosmonaudi
+Kraavi
+Kreenholmi
+Kulgu
+Kulgu sadam
+Kulgusadama tee
+
+Lasteaia
+Lavretsovi
+Lembitu
+Lepa
+Liiva
+Lina
+Linda
+Linda park
+Linnuse
+Lossiaed
+Luha
+Lääne
+
+Mai
+Maleaed
+Malmi
+Maslovi
+Metsa
+Moonalao
+Mõisa
+Mõisa park
+Mängu
+Männi
+Männiku
+Mätta
+
+Nahavabriku
+
+Orase
+Oru
+
+Paadi
+Paemurru
+Paju
+Palli
+Pargi põik
+Pargi
+Partisani
+Parve
+Peaalajaama
+Peetri plats
+Peterburi maantee
+Pikse põik
+Pikse
+Pilve
+Pimeaed
+Pimeaia
+Pinna
+Proletariaadi
+Puhangu
+Purje
+Puškini
+Puuvilla
+Pähklimäe
+Päikese
+
+Raekoja plats
+Rahu
+Rahvavälja
+Raja
+Rakvere
+Raudsilla
+Raudtee
+3. Roheline
+4. Roheline
+5. Roheline
+Rüütli
+
+Sadama
+Salmeaed
+Savi
+Sepa põik
+Sepa
+Soldino tee
+Spordi
+Staadioni
+Sutthoffi park
+Suur
+Suur-Aguli
+Süsiaugu
+
+Taime
+Tallinna maantee
+Tapamaja
+Tehase
+Tekstiili
+Tiigi
+Tiimani
+Tolli põik
+Tolli
+Tuha põik
+Tuha
+Tuisu
+Tuleviku
+Turu
+Tuule
+Tuuleveski
+Tähe
+
+Uus põik
+Uusküla
+
+Vabaduse
+Vaeselapse
+Vahtra
+Vaikne põik
+Vaivara
+Vaksali
+Vana-Joala tee
+Vee tee
+Vepsküla
+Vestervalli
+Vihma
+Vikerkaare
+Viru
+Võidu park
+Võidu prospekt
+
+Weizenbergi
+
+Õhu
+
+Äkkeküla tee
+
+!! Narva-Jõesuu
+Adolf Hahni tänav
+Aia tänav
+Auga tänav
+
+Eduard Vilde tänav
+Eha tänav
+
+Hirve tänav
+Hoole tee
+
+Jaan Poska tänav
+Jõe tänav
+Jüri tänav
+
+Kalda tänav
+Kalevi tänav
+Karja tänav
+Kesk tänav
+Kiriku tänav
+Koidu tänav
+Kudruküla tänav
+Kungla tänav
+
+Lydia Koidula tänav
+Lembitu tänav
+Lennuki tänav
+Liiva tänav
+Linda tänav
+Lootuse tänav
+
+Mere tänav
+Metsa tänav
+Metsaraja tee
+Mäe tänav
+Männimetsa tänav
+
+Nurme tänav
+
+Olevi tänav
+Orava tänav
+
+Pargi tänav
+Piiri tee
+Pähkli tee
+
+Rahu tänav
+Raja tänav
+Roheline tänav
+Richard William Gendti põik
+
+Sepa tänav
+Sulevi tänav
+Supeluse tänav
+Suur-Lootsi tänav
+Suvilate tee
+
+Tuletorni tänav
+
+Uus tänav
+
+Vabaduse tänav
+Vabriku tänav
+Vaikne tänav
+Vambola tänav
+Vambola põik
+Vana tänav
+Viljatera tee
+
+Õnne tänav
+Õnne põik
+
+!! Otepää
+Aia tänav
+
+Hariduse tänav
+Hundisoo tänav
+
+Jaani tänav
+Jakob Hurda tänav
+
+Kaasiku tänav
+Kadaka tänav
+Kalda tänav
+Kase tänav
+Kastani tänav
+Kesk tänav
+Keskuse tänav
+Kevade tänav
+Kirsi tänav
+Kolga tee
+Koolitare tänav
+Kopli tänav
+
+Lille tänav
+Linnamäe tee
+Lipuväljak
+
+Niidu tänav
+Nurme tänav
+
+Metsa tänav
+Munamäe tänav
+Mäe tänav
+Männi tänav
+
+Oru tänav
+
+Paju tänav
+Palupera tee
+Pargi tänav
+Pedaja tee
+Pihlaka tänav
+Piiri tänav
+Pikk tänav
+Põllu tänav
+Pärna tänav
+Pühajärve tee
+
+Ranna tee
+
+Saare tänav
+Savikoja tänav
+Sireli tänav
+Sulaoja tee
+
+Tamme puiestee
+Tartu maantee
+Tehase tänav
+Tehvandi tänav
+Tehvandi põik
+Tennisevälja tänav
+Tiigi tänav
+Tähe tänav
+
+Uus tänav
+
+Vahe tänav
+Vahtra tänav
+Valga maantee
+Valga põik
+Virulombi tänav
+Võidu tänav
+Võru maantee
+
+Õuna tänav
+
+!! Paide
+Aasa
+Aiavilja
+
+Eha
+Ehitajate
+
+Jaama
+Jõe
+Järve tee
+
+Kaevu
+Karja
+Kase
+Kastani
+Keskväljak
+Kevade
+Kitsas
+Kivimurru
+Koidu
+Kooli
+Kure
+Kuu
+
+Lai
+Lembitu puiestee
+Liiva
+Looduse
+Luige
+Lühike
+
+Nooruse
+Nurme
+
+Parkali
+Peetri
+Pikk
+Posti
+Põllu
+Prääma tee
+Puuvilja
+Pärna
+Pärnu
+Pärnuvälja
+
+Rahu
+Raja
+Raudtee
+Ringtee
+Ristiku
+Roheline
+Ruubassaare tee
+Rüütli
+
+Soo
+Suur-Aia
+Suur-Kaare
+Sõpruse
+
+Tallinna
+Telliskivi
+Tiigi
+Tähe
+Tööstuse
+
+Uus
+
+Vahe
+Vainu
+Vaksali
+Valli
+Veski
+Väike-Aia
+
+!! Paldiski
+Amandus Adamsoni
+Ingeri tee
+Jaama - Jaani tee - Salavat Julajevi tee
+Kadaka - Kalmistu - Kivi
+Leetse tänav - Lepiku - Lõuna
+Majaka tee - Marina - Mere - Mereäär - Muuli
+Paekaare - Pakri - Pargi - Peetri - Põhja - Põllu
+Rae - Rae põik
+Sadama - Soomepoiste
+Tallinna maantee - Tuule
+Vana-Tallinna maantee
+
+!! Pärnu
+Aasa tänav
+Aeru tänav
+Aia tänav
+Aida tänav
+Aisa tänav
+Akadeemia tänav
+Allika tänav
+Amandus Adamsoni tänav
+Angerja tänav
+Ankru tänav
+A. H. Tammsaare puiestee
+Aru tänav
+Arukase tänav
+Astri tänav
+Auli tänav
+
+Betooni tänav
+
+Edela tänav
+Eha tänav
+Ehitajate tee
+Emajõe tänav
+Energia tänav
+Esplanaadi tänav
+
+Gildi tänav
+
+Haapsalu maantee
+Haava tänav
+Haraka tänav
+Hariduse tänav
+Harju tänav
+Havi tänav
+Heina tänav
+Henno tänav
+Hiie tänav
+Hirve tänav
+Hoburaua tänav
+Hobuse tänav
+Hommiku tänav
+Hospidali tänav
+Humala tänav
+Hõbe tänav
+Härma tänav
+
+Ilvese tänav
+
+Jaama tänav
+Jaani tänav
+Jakobi tänav
+Jalaka tänav
+Johann Voldemar Jannseni tänav
+Junga tänav
+1. Jõe tänav
+2. Jõe tänav
+3. Jõe tänav
+4. Jõe tänav
+Jõekääru tänav
+Järva tänav
+Jüri tänav
+
+Kaarli tänav
+Kaasiku tänav
+Kadaka tänav
+Kadri tänav
+Kaevu põik
+Kaevu tänav
+Kajaka tänav
+Kakuami tänav
+Kalamehe tänav
+Kalda tänav
+Kaldapealse tänav
+Kalevi puiestee
+Kaluri tänav
+Kana tänav
+Kanali tänav
+Kanepi tänav
+Kapteni tänav
+Karikakra tänav
+Karja tänav
+Karjamaa tänav
+Karu tänav
+Karusselli tänav
+Kasarmu tänav
+Kase tänav
+Kastani põik
+Kastani tänav
+Kauba tänav
+Kaubasadama tee
+Kesk tänav
+Keskväljak
+Kevade tänav
+Kibuvitsa tänav
+Kiige tänav
+Kilgi tänav
+Killustiku tänav
+Kiltri tänav
+Kirsi tänav
+Kitse põik
+Kitse tänav
+Kivi tänav
+Kodara tänav
+Koidu tänav
+Kolde tänav
+Kooli tänav
+Kopli tänav
+Kreegi tänav
+Kroomi tänav
+Kuldse Kodu tänav
+Kulla tänav
+Kuninga tänav
+Kuremarja tänav
+Kutsari tänav
+Kuu tänav
+Kuuse tänav
+Kõrkja tänav
+Kõrtsi tänav
+Käbi tänav
+Kännu tänav
+Käo tänav
+Köie tänav
+
+Laane tänav
+Laatsareti tänav
+Laeva tänav
+Lahe tänav
+Lai tänav
+Laine tänav
+Laiu tänav
+Laki tänav
+Lao tänav
+Lauka tänav
+Lehe tänav
+Lehola tänav
+Lembitu tänav
+Lennuki tänav
+Lennuvälja tee
+Lepa tänav
+Lepiku tänav
+Liblika tänav
+Liilia tänav
+Liiva tänav
+Liivajõe tänav
+Liivi tee
+Lille tänav
+Lina tänav
+Linda tänav
+Lodja tee
+Loode tänav
+Looga tänav
+Lootsi põik
+Lootsi tänav
+Lubja tänav
+Luha tänav
+Luite tänav
+Luule tänav
+Lõhe tänav
+Lõo tänav
+Lõuna tänav
+Lätte tänav
+Lääne tänav
+
+Maagi tänav
+Maarja tänav
+Madara tänav
+Madruse tänav
+Mai tänav
+Majaka tänav
+Maleva tänav
+Malmö tänav
+Mardi tänav
+Mari tänav
+Marjametsa tee
+Meelise tänav
+Mere puiestee
+Mere tänav
+Merekalda tänav
+Merimetsa tänav
+Metalli tänav
+Metsa tänav
+Mihkli tänav
+Mooni tänav
+Munga tänav
+Muraka tänav
+Mureli tänav
+Muru tänav
+Muuli tänav
+Mõisavahe tänav
+Mõrra tänav
+Mäe tänav
+Männi tänav
+Männiku tänav
+Männimetsa tee
+Männituka tänav
+Möldri tänav
+Mündi tänav
+
+Neeme tänav
+Nelgi tänav
+Niidu tänav
+Niidumõisa tänav
+Niidupargi tänav
+Niine tänav
+Nikli tänav
+Nikolai tänav
+Nooda tänav
+Noorte väljak
+Nurme tee
+Nurme tänav
+Nurmenuku tänav
+Nõmme tänav
+
+Oja tänav
+Okka tänav
+Olevi tänav
+Orava tänav
+
+Pae tänav
+Paide maantee
+Paju tänav
+Pala tänav
+Papiniidu tänav
+Papli tänav
+Pappsaare tee
+Pardi tänav
+Pargi tänav
+Parmu tänav
+Paul Kerese tänav
+Peetri tänav
+Pesa tänav
+Pihlaka tänav
+Piiri tänav
+Piirikivi tänav
+Pikanõmme tee
+Pikk tänav
+Pilli tänav
+Pilve tänav
+Pirni tänav
+Ploomi tänav
+Pohla tänav
+Pootsmani tänav
+Pronksi tänav
+Purje tänav
+Põdra tänav
+Põhja tänav
+Põllu tänav
+Pärja tänav
+Pärlimõisa tee
+Pärna tänav
+Pühavaimu tänav
+Püssi tänav
+
+Raba tänav
+Rahu tänav
+Raja tänav
+Ranna puiestee
+Ranna tänav
+Rannametsa tee
+Raua tänav
+Ravi tänav
+Ree tänav
+Rehepapi tänav
+Reideni tänav
+Remmelga tänav
+Riia maantee
+Riisika tänav
+Ringi tänav
+Ristiku tänav
+Roheline tänav
+Rohu tänav
+Roo tänav
+Roosi tänav
+Roostiku tänav
+Ruudu tänav
+Rõugu tänav
+Rääma tänav
+Rähni tänav
+Rävala tänav
+Rüütli tänav
+
+Saare tänav
+Sadama tänav
+Sakala tänav
+Salme tänav
+Salu tänav
+Sambla tänav
+Sarve tänav
+Sauga-Jõekalda tänav
+Saugamõisa tee
+Savi tänav
+Saviaugu tänav
+Seedri tänav
+Side tänav
+Siili tänav
+Sillutise tänav
+Sireli tänav
+Soo tänav
+Sulevi tänav
+Supeluse tänav
+Suur-Jõe tänav
+Suur-Jõekalda tänav
+Suur-Kuke tänav
+Suur-Posti tänav
+Suur-Sepa tänav
+Suur-Toome tänav
+Suur-Veski tänav
+Suvituse tänav
+Sõeru tänav
+Sõstra tänav
+Sääse tänav
+Söödi tänav
+
+Talli tänav
+Tallinna maantee
+Tamme tänav
+Tammiste tee
+Tare tänav
+Tarva tänav
+Tedre tänav
+Telliskivi tänav
+Terase tänav
+Tihniku tänav
+Tiiru tänav
+Tikri tänav
+Timuti tänav
+Tina tänav
+Toominga tänav
+Tormi tänav
+Tui tänav
+Tuisu tänav
+Tulbi tänav
+Tulepaagi tee
+Tulika tänav
+Turba tänav
+Turu tänav
+Tuule tänav
+Tõlla tänav
+Tähe tänav
+Tüürimehe tänav
+
+Ugandi tänav
+Uku põik
+Uku puiestee
+Urva tänav
+Uuemetsa tee
+Uus tänav
+Uus-Sauga tänav
+
+Vahe tänav
+Vambola tänav
+Vanapargi tänav
+Vana-Rääma tänav
+Vana-Sauga tänav
+Vana-Savi tänav
+Vana-Tallinna tänav
+Vase tänav
+Vastla tänav
+Vee tänav
+Veetorni tänav
+Vesiroosi tänav
+Videviku tänav
+Viire tänav
+Vikerkaare tänav
+Vilja tänav
+Villa tänav
+Vingi tänav
+Viru tänav
+Voorimehe põik
+Voorimehe tänav
+Võimlemise tänav
+Võrgu tänav
+Väike-Aru tänav
+Väike-Jõe tänav
+Väike-Kuke tänav
+Väike-Posti tänav
+Väike-Sepa tänav
+Väike-Toome tänav
+Väike-Veski tänav
+Väina tänav
+
+Õhtu põik
+Õhtu tänav
+Õie tänav
+Õli tänav
+Õuna tänav
+
+Ülase tänav
+Ümera tänav
+
+!! Põltsamaa
+Aasa tänav
+Aia tänav
+Allika tänav
+
+Eha tänav
+
+Gaasi tänav
+
+Haava tänav
+
+Jaama tänav
+Julius Kuperjanovi tänav
+Jõe tänav
+Jõgeva maantee
+
+Kaare tänav
+Kadaka tee
+Kalda tänav
+Kalevi tänav
+Kannikese tänav
+Karja tänav
+Karl August Hermanni tänav
+Kase tänav
+Kastani tänav
+Kellukese tänav
+Kesk tänav
+Kesk tänav
+Kibuvitsa tee
+Kingu tänav
+Kirde tänav
+Kivi tänav
+Kooli tänav
+Friedrich Reinhold Kreutzwaldi tänav
+Kungla tänav
+Kuuse tänav
+Käo tänav
+
+Lembitu tänav
+Lepa tänav
+Lille tänav
+Linnu tänav
+Lossi tänav
+Luha tänav
+Lääne tänav
+Lühike tänav
+
+Marja tänav
+Metsa tänav
+Mäe tänav
+Männi tänav
+
+Niidu tänav
+Nurme tänav
+
+Paala tänav
+Pajusi maantee
+Pargi tänav
+Pikk tänav
+Põhja-Kaare tänav
+Põhja-Kaare põik
+Põllu tänav
+Pärna tänav
+
+Rahu tänav
+Ranna tänav
+Ringi tänav
+Ringtee tänav
+Ristiku tänav
+Roheline tänav
+Rohu tänav
+
+Saare tänav
+Sepa tänav
+Silla tänav
+Sireli tänav
+Sõpruse tänav
+
+Tallinna maantee
+Tamme tänav
+Tartu maantee
+Tehnika tänav
+Tehnika põik
+Tuleviku põik
+Tuleviku tänav
+Tööstuse tee
+
+Uus tänav
+
+Vahe tänav
+Veski tänav
+Viljandi maantee
+Välja tänav
+
+Õnne tänav
+Õuna tänav
+
+Ööbiku tänav
+
+Ülase tänav
+
+!! Põlva
+Jaama
+
+Kase
+Kesk
+
+Maarja
+Mammaste
+Mäe
+
+Oja
+Oru
+
+Puuri
+Pärna
+
+Uus
+
+Vallamaja
+
+!! Püssi
+Aia tänav
+August Kitzbergi tänav
+
+Eduard Vilde tänav
+Energeetika tänav
+
+Hõbepaju tänav
+
+Jõe tänav
+
+Kalevi tänav
+Kivitee tänav
+Kooli tänav
+
+Maidla tee
+Metsa tänav
+Männiku tänav
+
+Pargi tänav
+Põllu tänav
+
+Raudtee tänav
+Rohu tänav
+
+Viru tänav
+
+!! Rakvere
+Aasa tänav
+Aia tänav
+Alevi tänav
+Allika tänav
+Annemäe tee
+Arkna tee
+
+Bastioni tänav
+
+C. R. Jakobsoni tänav
+
+Edela tänav
+Eduard Vilde tänav
+Eha tänav
+Ehituse tänav
+
+F. G. Adoffi tänav
+F. R. Kreutzwaldi tänav
+
+Heina tänav
+Herne tänav
+Härma tänav
+
+Ilu puiestee
+
+Juhan Kunderi tänav
+Jaama puiestee
+
+Kaevu tänav
+Kagu tänav
+Kaja tänav
+Kajaka tänav
+Kalda tänav
+Kalevi tänav
+Kanarbiku tänav
+Karja tänav
+Kasarmu tänav
+Kase tänav
+Kastani puiestee
+Kauba tänav
+Kauri tänav
+Kesa tänav
+Kesk põik
+Kesk tänav
+Kevade tänav
+Kibuvitsa tänav
+Kiire tänav
+Killustiku tänav
+Kindluse tänav
+Kirsi tänav
+Kivi tänav
+Kodu tänav
+Koidu põik
+Koidu tänav
+Kooli tänav
+Kopteri tänav
+Kotka tänav
+Kraavi tänav
+Kriidisoo tänav
+Kruusa tänav
+Kuke tänav
+Kuldnoka tänav
+Kulli tänav
+Kungla tänav
+Kure tänav
+Kuusiku tänav
+Kõrre tänav
+Küti tänav
+Kütuse tänav
+
+Lydia Koidula tänav
+Laada tänav
+Lai tänav
+Laskeraja tänav
+Lehe tänav
+Lembitu tänav
+Lenduri tänav
+Lennuki tänav
+Lepa tänav
+Lepiku tänav
+Liiva tänav
+Lille põik
+Lille tänav
+Lilleoru tänav
+Lina tänav
+Linda tänav
+Linnu tee
+Linnuse tänav
+Looduse tänav
+Lubja tänav
+Luha tänav
+Lõuna põik
+Lõuna tänav
+Lõõtspilli tänav
+Lääne põik
+Lääne tänav
+
+Maasika tänav
+Mahla tänav
+Maidla tänav
+Malmi tänav
+Metsa põik
+Metsa tänav
+Metsise tänav
+Mooni tänav
+Mulla tänav
+Murru tänav
+Muru tänav
+Mõisavälja tänav
+Mädapea tee
+Mäe tänav
+Mäekalda tänav
+Narva tänav
+
+Navi tänav
+Nelgi tänav
+Niidu tänav
+Niine tänav
+Nisu tänav
+Nortsu tee
+Nurme tänav
+Nõlvaku tänav
+Nõmme tänav
+Näituse tänav
+
+Oja tänav
+Olevi tänav
+Orase tänav
+Oru põik
+Oru tänav
+
+Pae tänav
+Paemurru tänav
+Paju tänav
+Palermo tänav
+Papiaru tänav
+Parkali plats
+Parkali tänav
+Parmupilli tänav
+Peoleo tänav
+Pere tänav
+Pihlaka tänav
+Piiri tänav
+Pikk tänav
+
+Pilve tänav
+Posti tänav
+Propelleri tänav
+Purde tänav
+Põhja põik
+Põhja tänav
+Põllu tänav
+Päeva tänav
+Pähkli tänav
+Päikese tänav
+Pääsukese tänav
+
+Rabakivi tänav
+Radari tänav
+Rahu tänav
+Raja tänav
+Raua tänav
+Raudtee tänav
+Ristiku tänav
+Rohu tänav
+Rohuaia tänav
+Roo tänav
+Roosi tänav
+Rukki tänav
+Rägavere tee
+Rähni tänav
+Räägu tänav
+
+Salme tänav
+Sambla tänav
+Saue tänav
+Saueaugu tänav
+Sauna tänav
+Seene tänav
+Seminari tänav
+Sepa tänav
+Side tänav
+Sihi tänav
+Sikupilli tänav
+Silla tänav
+Sinilille tänav
+Siu tänav
+Soo tänav
+Sooserva tänav
+Sulevi tänav
+Suupilli tänav
+Suurtüki tänav
+Suve tänav
+Sõbra tänav
+Söödi tänav
+Sügise tänav
+
+Taara tänav
+Tallinna tänav
+Tamme tänav
+Tammetõru tänav
+Tammiku tänav
+Tartu tänav
+Tedre tänav
+Tehase tänav
+Teliku tänav
+Tellise tänav
+Terase tänav
+Tiigi tänav
+Tiiviku tänav
+Tikri tänav
+Timuti tänav
+Tootmise tänav
+Tormi tänav
+Torupilli põik
+Torupilli tänav
+Tulbi tänav
+Tuleviku tänav
+Tulika tänav
+Turu plats
+Tuule tänav
+Tuuslari tänav
+Tuvi tänav
+
+Tõru tänav
+Tõusu tänav
+Tähe tänav
+Tööstuse tänav
+
+Urva tänav
+Ussikuninga tänav
+Ussimäe tänav
+Uus tänav
+
+Vaarika tänav
+Vabaduse tänav
+Vabriku tänav
+Vahtra puiestee
+Vainu tänav
+Valguse tänav
+Valli tänav
+Vallikraavi tänav
+Vallimäe tee
+Varju tänav
+Varsakopli tänav
+Vase tänav
+Vee tänav
+Veere tänav
+Vene tänav
+Vesiveski tänav
+Veski tänav
+Viadukti tänav
+Videviku tänav
+Vilepilli tänav
+Viru tänav
+Võidu tänav
+Võimla tänav
+Väike tänav
+Väike-Karja tänav
+Välja tänav
+Värvu põik
+Värvu tänav
+Västriku tänav
+
+Õie tänav
+Õli tänav
+Õllepruuli tänav
+
+Ööbiku tänav
+
+Ülase tänav
+
+!! Räpina
+Aia tänav
+Aianduse tänav
+Apteegi tänav
+
+Hariduse tänav
+
+Jõe tänav
+Järve tänav
+
+Kaare tänav
+Kalda tänav
+Kalevi tänav
+Kalevi põik
+Karja tänav
+Kastani tänav
+Kastani põik
+Koidu tänav
+Kooli tänav
+Kultuurimaja tänav
+Kuuse tänav
+
+Luha tänav
+
+Meeksi maantee
+Metsa tänav
+Mäe tänav
+Männi tänav
+
+Nooruse tänav
+Nurga tänav
+Nurme tänav
+
+Oja tänav
+
+Pargi tänav
+Penijõe tee
+Piiri tänav
+Põllu tänav
+Pärna tänav
+Pärna põik
+Pääsu tänav
+
+Rahu tänav
+
+Sireli tänav
+
+Tamme tänav
+
+Vabaduse tänav
+Võhandu tänav
+Võru maantee
+Võõpsu maantee
+Väike tänav
+
+Ülase tänav
+
+!! Rapla
+Aasa tänav
+Aia tänav
+Alu tee
+Ao tänav
+
+Edela tänav
+Edela põik
+Eha tänav
+Ehitaja tänav
+
+Hariduse tänav
+Heina tänav
+
+Jaama tänav
+Jõe tänav
+Jõekaare tänav
+Jürna tänav
+
+Kadaka tänav
+Kalda tänav
+Karja tänav
+Kase tänav
+Kastani tänav
+Kauba tänav
+Keskkooli tänav
+Kevade tänav
+Kodu tänav
+Kohtu tänav
+Koidu tänav
+Kooli tänav
+Krookuse tänav
+Kuuse tänav
+Kuusiku tee
+
+Lasteaia tänav
+Laulu tänav
+Lehe tänav
+Lepa tänav
+Lepiku tänav
+Liiva tänav
+Lille tänav
+Linda tänav
+Loo tänav
+Lõuna tänav
+
+Mahlamäe tänav
+Metsa tänav
+Metsapargi tänav
+Metsavahi tänav
+Muruplatsi tänav
+Mäe tänav
+Männi tänav
+Märjamaa tee
+
+Nelgi tänav
+Niidu tänav
+Nurme tänav
+Nurmenuku tänav
+
+Olevi tänav
+
+Paju tänav
+Palli tänav
+Pargi tänav
+Piiri tänav
+Puukooli tänav
+Põllu tänav
+
+Ristiku tänav
+Rohu tänav
+
+Saare tänav
+Salu tänav
+Sauna tänav
+Savi tänav
+Side tänav
+Silla tänav
+Soo tänav
+Sulupere tänav
+Suve tänav
+Sügise tänav
+
+Taara tänav
+Tallinna maantee
+Talve tänav
+Tammemäe tänav
+Telliskivi tänav
+Tulbi tänav
+Tutimäe tänav
+
+Uus tänav
+
+Vahe tänav
+Vahtra tänav
+Vee tänav
+Veetorni tänav
+Viljandi maantee
+Välja tänav
+Väljataguse tänav
+Võsa tänav
+
+Ööbiku tänav
+
+Ülejõe tänav
+
+!! Saue
+Aedniku
+Aiamaa
+Aniisi
+Ale
+Istiku
+Juure
+Kadakamarja
+Kakao
+Kasesalu
+Kauguse
+Kesa
+Kivikangru
+Kiviloo
+Kivipõllu
+Kivipõllu põik
+Kohvi
+Koondise
+Koore
+Kuuma
+Kuuseheki
+Kuusemetsa
+Kütise
+Laanesoo
+Laastu
+Ladva
+Lati
+Laua
+Lehtla
+Lehtmetsa
+Maamõõtja
+Maastiku
+Meistri
+Melissi
+Muskaadi
+Mõõdu
+Männi
+Nurgakivi
+Nurmesalu
+Nõmmiku
+Paju
+Palgi
+Peenra
+Perve
+Puidu
+Pärnasalu
+Pärnasalu põik
+Raiesmiku
+Rauna
+Rauna põik
+Ridva
+Ridva põik
+Salu
+Sarapiku
+Sauepargi
+Segu
+Sooja
+Suurevälja tee
+Taimla
+Tammelehe
+Tammepargi
+Tammesalu
+Tammetõru
+Telje
+Tule
+Tule põik
+Tõkke
+Tõkke põik
+Tähise
+Töö puiestee
+Uusaru
+Uusaru põik
+Vana-Keila maantee
+Viigimarja
+Viida
+Välja
+
+!! Sillamäe
+Anton Tšehhovi tänav
+
+Ehitajate tänav
+
+Geoloogia tänav
+
+Ivan Krõlovi tänav
+Ivan Pavlovi tänav
+
+Juri Gagarini tänav
+Jõe tänav
+
+Kajaka tänav
+Kalda tänav
+Kauba põik
+Kesk tänav
+Kooli tänav
+
+Lev Tolstoi tänav
+
+Maksim Gorki tänav
+Mere puiestee
+Mihhail Rumjantsevi tänav
+
+Nikolai Nekrassovi tänav
+
+Ranna tänav
+Roheline tee
+
+Sõtke tänav
+
+Tallinna maantee
+Tervise tee
+Tööstuse tänav
+
+Valeri Tškalovi tänav
+Veski tänav
+Viru puiestee
+Vladimir Majakovski tänav
+
+!! Sindi
+Aia tänav
+Aru tee
+Auli tänav
+
+Eha tänav
+
+Hariduse tänav
+
+Jaama tänav
+Johann Cristoph Wöhrmanni puiestee
+Jõe tänav
+Jänese tänav
+
+Kanarbiku tänav
+Kalamaja tee
+Kalda tee
+Karja põik
+Karja tänav
+Karu tänav
+Kase tänav
+Kauri tänav
+Keskpõik
+Kesktänav
+Kevade tänav
+Kiivitaja tänav
+Kirsi tänav
+Koidu tänav
+Kooli tänav
+Kotka puiestee
+Kuldnoka tänav
+Kure tänav
+Kännu tänav
+Käo tänav
+
+Lai tänav
+Lauka tänav
+Leevikese tänav
+Lehe tänav
+Liiva tänav
+Linnu tee
+Lohu tänav
+Luha tänav
+Luige tänav
+Lõokese tänav
+Lõuna tänav
+Lühike tänav
+
+Metsa tänav
+Muraka tänav
+Mureli tänav
+Mänguvälja põik
+Mänguvälja tänav
+Männi tänav
+
+Niidu tänav
+Nooruse tänav
+Nurga tänav
+Nurme tänav
+
+Orava tänav
+
+Paide maantee
+Paikuse tee
+Pardi tänav
+Pargi tänav
+Peoleo tänav
+Piiri tänav
+Pikk tänav
+Pirni tänav
+Pioneeride puiestee
+Pistriku tänav
+Ploomi tänav
+Pohla tänav
+Põdra tänav
+Põhja tänav
+Põllu tänav
+Pärna tänav
+Pärnu maantee
+
+Raba tänav
+Rahu tänav
+Raudtee tänav
+Rebase tänav
+Ringi tänav
+Roheline tänav
+Roheline põik
+Rähni tänav
+
+Sambla tänav
+Seene tänav
+Side tänav
+Silla tänav
+Sireli tänav
+Soo tänav
+Supluse tänav
+Suve tänav
+
+Tamme tänav
+Tedre tänav
+Tihase tänav
+Tiigi tänav
+Tiigi põik
+Tiiru tänav
+Turba tänav
+Tõela tänav
+Tööstuse tänav
+
+Uus tänav
+
+Vabriku tänav
+Vahtra tänav
+Vee tänav
+Veetorni tänav
+Veski põik
+Veski tänav
+Viira põik
+Viira tänav
+Vindi tänav
+Vuti tänav
+Väike-Karja tänav
+Väike-Lohu tänav
+Väike-Põllu tänav
+Väike-Viira tänav
+
+Õie tänav
+
+
+!! Suure-Jaani
+Aasa tänav
+Aia tänav
+
+Heina tänav
+
+Ilmatari tänav
+
+Jaama tänav
+Johann Köleri tänav
+Järve tänav
+
+Karja tänav
+Kingu tänav
+Kõrge tänav
+
+Lai tänav
+Lasketiiru tänav
+Lembitu puiestee
+Liiva tänav
+Lille tänav
+Lina tänav
+
+Mäe tänav
+Männiku tee
+
+Nurme tänav
+
+Oja tänav
+
+Pargi tänav
+Pihlaka puiestee
+Põllu tänav
+Pärnu tänav
+
+Raba tänav
+Raja tänav
+Ringpuiestee
+Rohu tänav
+Ruusi tee
+
+Sangari tänav
+Sepa tänav
+Siimu tee
+Supeluse tänav
+
+Tallinna tänav
+Tamme tänav
+Tööstuse tänav
+
+Uus tänav
+
+Vambola tänav
+Veski tänav
+Väike tänav
+Välja tänav
+
+!! Tallinn
+Aafrika
+Aarde
+Aasa
+Aate
+Abaja
+Abaja põik
+Abara
+Amandus Adamsoni
+Admiraliteedi väljak
+Adra
+Aedvere
+Aedvilja
+Aegna puiestee
+Ahingu
+Ahju
+Ahtri
+Ahvena
+Aia
+Aiandi
+Aianduse tee
+Aia tee
+Aida
+Aisa
+Akadeemia tee
+Alajaama
+Alasi
+Alberti
+Alemaa
+Alendri
+Alevi
+Algi
+Algi põik
+August Alle
+Allika
+Allika tee
+Alliksoo
+Alliksoo põik
+Allveelaeva
+Alvari
+Amburi
+Andrekse
+Angerja
+Angerpisti
+Angervaksa
+Ankru
+Anne
+Anni
+Ao
+Apteegi
+Arbu
+Armatuuri
+Arnika tee
+Artelli
+Aru
+Arukaskede puiestee
+Asfaldi
+Elisabeth Aspe
+Astangu
+Astla tee
+Astri
+Asula
+Asula põik
+Asunduse
+Auli
+Auna
+Auru
+Auru põik
+
+Baikovi ja Viktooria sild
+Bensiini
+Betooni
+Betooni põik
+Eduard Bornhöhe
+Bremeni käik
+Börsi käik
+
+Drevingi
+Dunkri
+
+Edela
+Edu
+Eerikneeme tee
+Eevardi
+Eha
+Ehitajate tee
+Ehte
+Elektri
+Elektroni
+Endla
+Enela
+Energia
+Erbe
+Erika
+Esku
+Estonia puiestee
+
+Friedrich Robert Faehlmanni
+Falgi tee
+Falkpargi
+Filmi
+Filtri tee
+Forelli
+
+Gaasi
+Gildi
+Nikolai von Glehni
+Nikolai von Glehni põik
+Gonsiori
+Graniidi
+Grigori
+Gümnaasiumi
+
+Haabersti
+Haava
+Haava põik
+Haaviku tee
+Haaviku põik
+Hagudi
+Haigru
+Haki
+Haldja
+Haljas tee
+Halla
+Hallikivi
+Hallivanamehe
+Halsi
+Halu
+Hane
+Hange
+Hanijala
+Hansu
+Hao
+Haraka
+Hargi
+Hariduse
+Harju
+Harksaba
+Harku
+Harkumetsa tee
+Hauka
+Havi
+Heeringa
+Heina
+Heinamaa
+Heinavälja
+Heki tee
+Helbe
+Heli
+Helme
+Helmiku tee
+Helmiku põik
+Herilase
+Karl August Hermanni
+Herne
+Hiidtamme
+Hiie
+Hiie põik
+Hiiela tee
+Hiiepuu
+Hiiu
+Hiiu-Maleva
+Hiiumetsa tee
+Hiiu-Suurtüki
+Hipodroomi
+Hirve
+Hirve põik
+Hobujaama
+Hoburaua
+Hobusepea
+Hollandi
+Hollandi põik
+Hommiku
+Hoo
+Hooldekodu tee
+Hospitali
+Humala
+Hundipea
+Hunditubaka tee
+Hõbeda
+Hõbekuuse tee
+Hõberebase
+Hõimu
+Häilu
+Hälli
+Hälli põik
+Hämar tee
+Hämariku
+Härgmäe
+Härjapea
+Miina Härma
+Härmatise
+Hüübi
+
+Ida tee
+Idakaare
+Idakaare põik
+Iirise
+Ilmarise
+Ilo
+Ilvese
+Imanta
+Inseneri
+Invaliidi
+Iru tee
+Irusilla
+Islandi väljak
+Israeli
+Iva
+
+Jaagu
+Jaama
+Jaani
+Jaaniku
+Jaanilille tee
+Jaanilille põik
+Jahe tee
+Jahimehe tee
+Jahimehe põik
+Jahu
+Jakobi
+Carl Robert Jakobsoni
+Jalaka
+Jalami
+Jalgpalli tee
+Jalgpalli
+Johann Voldemar Jannseni
+Jasmiini tee
+Joa
+Joone
+Joostimäe
+Jugapuu tee
+Jugapuu põik
+Juhkentali
+Juhtme
+Jumika tee
+Jussikalda
+Juure
+Juurdeveo
+Jõe
+Jõekalda
+Jõeküla tee
+Jõemäe
+Jõeoti
+Jõesaare
+Jõesuu tee
+Jõhvika
+Järve
+Järveaasa
+Järvekalda tee
+Järveotsa tee
+Järvevana tee
+Jäägri tee
+Jääraku tee
+Jääraku põik
+Jüri
+Jürilille tee
+
+Kaabli
+Kaare
+Kaare tee
+Kaarla
+Kaarlepere
+Kaarli puiestee
+Kaarna
+Kaaruti
+Kaasani
+Kaasiku
+Kabli
+Kadaka puiestee
+Kadaka tee
+Kadri tee
+Kaera
+Kaeravälja
+Kaevu
+Kaevuri
+Kagu
+Kaheküla tee
+Kahlu
+Kahu
+Kahva
+Kai
+Kailu tee
+Kaisla
+Kaitse
+Kaja
+Kajaka
+Kakumäe tee
+Kaladi
+Kalamehe tee
+Kalaranna
+Kalasadama
+Kalavälja tee
+Kalda
+Kaldapealse
+Kalevala
+Kalevi
+Kalevipoja
+Kalevipoja põik
+Kaljase
+Kalju
+Kalju põik
+Kallaku
+Kallaste
+Kalma
+Kalmistu tee
+Kalmuse tee
+Kaluri
+Kammelja
+Kampri
+Kana
+Kanali tee
+Kanarbiku
+Kandle
+Kanepi
+Kangru
+Kannikese
+Kannustiiva
+Kantsi
+Kanuti
+Artur Kapi
+Johannes Kappeli
+Karamelli
+Kari
+Karjamaa
+Karjamaa põik
+Karjatse
+Karjavälja
+Karnapi tee
+Karsti
+Karu
+Karukella tee
+Karusambla
+Karuse
+Karuslase
+Karusmarja
+Kasarmu
+Kase
+Kaskede puiestee
+Kassi
+Kassikäpa tee
+Kastani
+Kaste
+Kasteheina
+Kastevarre tee
+Kastiku tee
+Kasvu
+Katariina käik
+Katla
+Katleri
+Katusepapi
+Kauba
+Kaubamaja
+Kauge
+Kauka
+Kauna
+Kaunis
+Kaupmehe
+Kauri
+Keava
+Kedriku
+Keemia
+Keeru tee
+Keevise
+Keldrimäe
+Kelluka tee
+Kentmanni
+Kentmanni põik
+Paul Kerese
+Kesa
+Kesalille tee
+Keskküla
+Kesk-Ameerika
+Kesk-Kalamaja
+Kesk-Liiva
+Kesk-Luha
+Kesk-Kompassi
+Kesk-Sõjamäe
+Kesktee
+Keskuse
+Kessi
+Ketraja
+Ketta
+Kevade
+Kibuvitsa
+Kihnu
+Kiige
+Kiikri
+Kiili
+Kiini
+Kiire
+Kiisa
+Kiive
+Kikkapuu tee
+Kilbi
+Kilde
+Killustiku
+Kilu
+Kinga
+Kirde
+Kiriku
+Kiriku plats
+Kiriku põik
+Kirilase
+Kirsi
+Kitsarööpa tee
+Kitsas
+Kitseküla
+August Kitzbergi
+Kiuru
+Kivi
+Kiviaia tee
+Kivikülvi
+Kivila
+Kivimurru
+Kivimäe
+Kivinuka
+Kivipere
+Kiviranna tee
+Kiviriku
+Kiviräha
+Kivisilla
+Klaasi
+Kloostri tee
+Kloostrimetsa tee
+Kodu
+Koge
+Kohila
+Kohtu
+Koidiku
+Koidu
+Lydia Koidula
+Kolde puiestee
+Koldrohu tee
+Kollane
+Komandandi tee
+Komeedi
+Kompassi plats
+Kontpuu tee
+Koogu
+Kooli
+Koolme
+Jaan Koorti
+Koovitaja
+Kopli
+Kopliranna
+Korese
+Korgi
+Kose tee
+Kose põik
+Kosemetsa
+Koskla
+Kotermaa
+Kotka
+Kotkapoja
+Kotlepi
+Kotzebue
+Kraavi
+Kreegi
+Kreegi põik
+Kressi tee
+Friedrich Reinhold Kreutzwaldi
+Kriidi
+Kristeni
+Kristiina
+Krookuse
+Krooni
+Kruusa
+Kruusaranna tee
+Krüüsli
+Kubu
+Kudu
+Kuhja
+Friedrich Kuhlbarsi
+Kuiv
+Kuke
+Kukermiidi
+Kuklase
+Kukulinnu tänav
+Kuldnoka
+Kuldtiiva
+Kuljuse
+Kullamaa
+Kullassepa
+Kullerkupu
+Kullese
+Kulli
+Kumalase
+Kume
+Kummeli tee
+Juhan Kunderi
+Juhan Kunderi põik
+Kungla
+Kuninga
+Kupra tee
+Kura
+Kure
+Kurekatla tee
+Kuremarja
+Kurepõllu
+Kurereha tee
+Kurikneeme tee
+Kuristiku
+Kurmu
+Kurni
+Kurni põik
+Kursi
+Kuru
+Kuslapuu
+Kuukivi
+Kuukressi tee
+Kuuli
+Kuunari
+Kuuse
+Kuusenõmme tee
+Kuusiku tee
+Kvartsi
+Kvartsliiva
+Kõdra tee
+Kõivu tee
+Kõivu põik
+Kõla
+Kõlviku tee
+Kõlviku põik
+Kõnnu
+Kõrge
+Kõrgepinge
+Kõrkja tee
+Kõrre
+Kõue
+Kõver
+Käba
+Käbi
+Käbliku
+Käia
+Kännu
+Kännu põik
+Käo
+Käo põik
+Käokannu tee
+Käokeele tee
+Käokäpa tee
+Käolina
+Käopoja
+Kristjan Kärberi
+Kärbi
+Kärestiku
+Kärje
+Kärneri
+Käru
+Kätki
+Käänu
+Köie
+Johann Köleri
+Köömne
+Külaniidu tee
+Külma
+Külmallika
+Külmallika põik
+Külvi
+Künka
+Künkamaa
+Künnapuu
+Künni
+Küti
+Küüvitsa tee
+
+Laagna tee
+Laane
+Laanelille
+Laaniku
+Laboratooriumi
+Laeva
+Laeva väljak
+Laevastiku
+Lagedi tee
+Lageloo
+Lagle puiestee
+Lahe
+Lahepea
+Lahesuu
+Lai
+Laiaküla tee
+Ants Laikmaa
+Laine
+Laki
+Lambi
+Lammi
+Landi
+Laose
+Lasnamäe
+Laste
+Lastekodu
+Latika
+Laugu
+Lauka
+Lauliku
+Laulu
+Laulupeo
+Lauri tee
+Laurimaa
+Lauripere
+Ants Lauteri
+Lavamaa
+Lee
+Leediku
+Leedri tee
+Leegi
+Leesika
+Leete
+Leevikese
+Lehe
+Lehiku tee
+Lehise
+Lehiste puiestee
+Lehola
+Lehtmäe
+Lehtpuu
+Lehtri tänav
+Leigeri
+Leina
+Leiva
+Lelle
+Lembitu
+Lemle
+Lemmiku
+Lemmiku põik
+Lennujaama tee
+Lennuki
+Lennusadama
+Lennuse
+Lepa
+Lepa põik
+Lepatriinu
+Lepiku tee
+Lesta
+Lible
+Liblika
+Liikuri
+Liilia tee
+Liimi
+Liinivahe
+Liipri
+Liiva
+Liivaaugu tee
+Liivalaia
+Liivalao
+Liivaluite
+Liivamadala
+Liivametsa
+Liivamäe
+Liivaoja
+Liivaranna tee
+Liiviku
+Lille
+Lilleherne tee
+Lillevälja
+Lina
+Linda
+Lindakivi puiestee
+Linnamäe tee
+Linnu tee
+Linnuse tee
+Lobjaka
+Lodjapuu tee
+Lodumetsa tee
+Logi
+Lohu
+Loigu
+Loite
+Loitsu
+Loo
+Loode
+Loode põik
+Looga
+Looklev tee
+Loometsa
+Loomuse
+Loopealse puiestee
+Lootsi
+Lootuse puiestee
+Lootuse põik
+Lossi
+Lossi plats
+Lubja
+Luha
+Luige
+Luise
+Luisu
+Luite
+Luite põik
+Luku
+Lume
+Lumikellukese tee
+Lumiku
+Lummu
+Luste
+Lutheri
+Lutheri
+Lõhe
+Lõhmuse tee
+Lõhmuse põik
+Lõikuse
+Lõime
+Lõimise
+Lõkke
+Lõo
+Lõokese
+Lõosilma
+Lõuka
+Lõuna
+Lõvi
+Lõõtsa
+Läike
+Lätte
+Lääne tee
+Läänekaare
+Läänemere tee
+Läätspuu tee
+Lühike
+Lühike jalg
+Lükati tee
+Lüli
+Lüüsi
+
+Maakri
+Maarjaheina
+Maarjamäe
+Maasika
+Madala
+Madalmaa
+Madara
+Madli
+Magasini
+Magdaleena
+Mahla
+Mahtra
+Mai
+Mai põik
+Maikellukese tee
+Mailase tee
+Maimu
+Maisi
+Majaka
+Majaka põik
+Male
+Maleva
+Maleva põik
+Malmi
+Maneeži
+Manufaktuuri
+Marana
+Marati
+Mardi
+Mardipere
+Marja
+Marjamaa
+Märjamaa
+Marsi
+Marta
+Martsa
+Masina
+Masti
+Matka tee
+Meeliku
+Meeruse
+Meeta
+Mehaanika
+Mehaanika põik
+Meika
+Meistri
+Meleka
+Mere puiestee
+Merelahe tee
+Meremehe tee
+Merihärja
+Merekalju
+Merikanni
+Merimetsa tee
+Merinõela
+Merirahu
+Meriski
+Merivälja tee
+Mesika tee
+Mesika põik
+Mesila
+Metalli
+Metsa
+Metsa põik
+Metsakooli tee
+Metsakooli põik
+Mait Metsanurga
+Metsavahi tee
+Metsavahi põik
+Metsaveere
+Metsise
+Metsniku tee
+Mihkli
+Miinisadama
+Miku tee
+Mineraali
+Mingi
+Mirta
+Moonalao
+Mooni
+Moora
+Moora põik
+Moora umbtänav
+Mootori
+Moskva puiestee
+Mugula tee
+Muhu
+Muldvalge
+Mulla
+Mulla põik
+Mullamaa
+Munga
+Muraka
+Mureli
+Muru
+Mustakivi tee
+Mustamäe tee
+Mustasõstra
+Mustika
+Mustjuure
+Mustjõe
+Mustjõe põik
+Muti
+Muuga tee
+Muuluka
+Mõigu
+Mõisa
+Mõisapõllu
+Mõrra tee
+Mõtuse
+Mõõna tee
+Mäe
+Mäealuse
+Mäekalda
+Mäekõrtsi
+Mäeküla
+Mäepealse
+Mäepere
+Mäevälja
+Mägra
+Mähe tee
+Mähe põik
+Mähe-Kaasiku tee
+Jakob Mändmetsa
+Mängu
+Männi
+Männiku tee
+Männiliiva
+Männimetsa tee
+Männimetsa põik
+Mänsaku
+Märtsikellukese tee
+Möldre tee
+Mündi
+Müta
+Müürivahe
+
+Naadi tee
+Naaritsa
+Nabra
+Naeri
+Nafta
+Naistepuna tee
+Narva maantee
+Nata
+Neeme
+Neeme põik
+Neemiku
+Neiuvaiba tee
+Nelgi
+Nepi
+Nigli
+Niguliste
+Niidi
+Niidi põik
+Niidu tee
+Niine
+Niine põik
+Nirgi
+Nisu
+Nooda tee
+Noole
+Noorkuu
+Nugise
+Nuia
+Nulu
+Nunne
+Nurklik
+Nurme
+Nurmenuku tee
+Nurmiku tee
+Nurmiku põik
+Nõelasilma
+Nõeliku
+Nõgikikka
+Nõlva
+Nõmme tee
+Nõmme põik
+Nõmme-Kase
+Nõo tee
+Nõva
+Näituse
+Näsiniine tee
+
+Oa
+Oblika tee
+Oda
+Odra
+Ogaliku
+Oja
+Ojakääru
+Ojaveere
+Okka
+Oksa
+Olevi
+Olevi põik
+Olevimägi
+Oleviste
+Oomi
+Orase
+Orava
+Oru
+Osja tee
+Osmussaare
+Oti
+Georg Otsa
+Otsatalu
+Otse
+
+Paabusilma
+Paadi
+Paagi
+Paakspuu tee
+Paasiku
+Paavli
+Paberi
+Padriku tee
+Padu
+Pae
+Paekaare
+Paekalda
+Paekivi
+Paepargi
+Paevälja puiestee
+Pagari
+Pagi
+Paide
+Paiste
+Paisu
+Paju
+Pajude puiestee
+Pajulille tee
+Pajustiku tee
+Pakase
+Palderjani tee
+Paldiski maantee
+Paljandi
+Paljassaare tee
+Paljassaare põik
+Pallasti
+Palli
+Palu
+Paluka
+Palusambla
+Paneeli
+Panga
+Papli
+Paplite puiestee
+Parda
+Pardi
+Pardiloigu
+Pargi
+Parmu
+Parve
+Patriarh Aleksius II väljak
+Pebre
+Pedaja
+Peetri
+Pelguranna
+Pendi
+Pesa
+Peterburi tee
+Petrooleumi
+Pidu
+Pihlaka
+Pihlamarja
+Pihlametsa tee
+Piibelehe
+Piibri
+Piima
+Piimamehe
+Piipheina tee
+Piiri
+Piiritsa
+Piiskopi
+Pikakase
+Pikaliiva
+Pikk
+Pikk jalg
+Pikksilma
+Pikri
+Pikse
+Piksepeni
+Pille
+Pilliroo
+Pilve
+Pilvetee
+Pilviku
+Paul Pinna
+Pinu
+Pirita tee
+Pirni
+Plaasi
+Planeedi
+Plangu
+Plasti
+Ploomi
+Pohla
+Pojengi tee
+Polaari
+Poldri
+Poordi
+Poru
+Jaan Poska
+Postitalu
+Preesi
+Prii
+Priimula tee
+Priimurru
+Priisle tee
+Printsu tee
+Pronksi
+Pruuali tee
+Puhangu
+Puhke
+Puhkekodu tee
+Puhma
+Puju
+Puki tee
+Pukspuu tee
+Punane
+Pune tee
+Punga
+Puraviku
+Purde
+Purje
+Puu
+Puusepa
+Puuvilja
+Puuvilla
+Põdra
+Põdrakanepi tee
+Põdrasambla
+Põhja puiestee
+Põhjakaare
+Põhjakants
+Põlde
+Põlde põik
+Põldma
+Põldmarja
+Põlendiku
+Põllu
+Põllu põik
+Põllumäe
+Põõsa tee
+Päevakoera
+Päevalille
+Pähkli
+Päikese puiestee
+Pärituule
+Pärja
+Jakob Pärna
+Pärnade puiestee
+Pärnamäe tee
+Pärnaõie tee
+Pärniku tee
+Pärnu maantee
+Pärnulõuka
+Pääsküla
+Pääsukese
+Pääsusaba
+Pääsusilma tee
+Pöialpoisi
+Pöörise
+Pühavaimu
+Püssirohu
+Püü
+Püü põik
+
+Raadiku
+Raba
+Rabaküla
+Rabaveere
+Raekoja
+Raekoja plats
+Raevalla
+Rahe
+Rahu
+Rahu tee
+Rahukohtu
+Rahumäe tee
+Rahvakooli tee
+Raiduri tee
+Raie
+Raja
+Rajametsa
+Rajapere
+Rakise
+Raku
+Randla
+Randvere tee
+Rangu
+Ranna tee
+Rannamõisa tee
+Rannamäe tee
+Rannaniidu
+Ranniku tee
+Ranniku põik
+Rao
+Rapla
+Rataskaevu
+Ratta
+Raua
+Raua põik
+Kristjan Raua
+Rauakooli tee
+Raudosja tee
+Raudsüdame
+Raudtee
+Ravi
+Ravila
+Rebase
+Rebasesaba tee
+Regati puiestee
+Reha
+Rehe
+Rehe põik
+Rehelepa
+Rehelepa põik
+Reidi tee
+Villem Reimani
+Ado Reinvaldi
+Reisijate
+Reketi
+Remmelga
+Reseeda
+Retke tee
+Riida
+Riisika
+Ristaia tee
+Risti
+Ristiku
+Ristiku põik
+Rivi
+Rocca al Mare
+Roheline
+Roheline aas
+Rohu
+Rohula
+Rohumaa
+Ronga
+Roo
+Roolahe
+Roopa
+Roosi
+Roosikrantsi
+Roostiku
+Roseni
+Rotermanni
+Rukki
+Rukkilille tee
+Rulkoviuse
+Rulli
+Rumbi
+Rummu tee
+Russovi
+Rutu
+Ruunaoja
+Rõika
+Rõugu
+Rõõmu
+Räga
+Rähkloo
+Rähni
+Räime
+Räitsaka
+Rändrahnu tee
+Ränduri
+Räni
+Räniliiva
+Rännaku puiestee
+Rästa
+Rästa põik
+Rätsepa tee
+Rävala puiestee
+Räägu
+Ründi
+Rünga
+Rüütli
+
+Saadu
+Saagi
+Saali
+Saani
+Saare
+Saaremaa puiestee
+Saarepiiga puiestee
+Saarepuu
+Saariku tee
+Saarma
+Saarma põik
+Saarvahtra puiestee
+Sadama
+Saeveski
+Sagari
+Saha põik
+Saha
+Saiakang
+Sakala
+Saku
+Salme
+Salu tee
+Salve
+Sambla
+Sambliku
+Sammu
+Sanatooriumi
+Sanglepa
+Sarapiku tee
+Sarapuu
+Sarra
+Sarruse
+Sarve
+Saturni
+Saue
+Sauna
+Saviliiva tee
+Seebi
+Seedri põik
+Seedri
+Seemne
+Seene
+Seli puiestee
+Selise
+Selja
+Seljaku
+Seltersi
+Sepa
+Sepapaja
+Sepapere
+Sepapoisi
+Sepise
+Septembri
+Serva
+Side
+Siduri
+Sihi tänav
+Siia
+Siidisaba
+Siili
+Siimeoni
+Siire
+Sikupilli
+Sikuti
+Silde
+Silgu
+Silikaadi
+Silikaltsiidi
+Silla
+Silluse
+Silmiku
+Silmu
+Sinika
+Siniladva
+Sinilille
+Sinimäe
+Sininuku
+Sinirebase
+Sinitiiva
+Sipelga
+Sirbi
+Sireli
+Sirge
+Sisaski
+Sitsi
+Juhan Smuuli tee
+Sompa tee
+Soo
+Soodi
+Sookailu tee
+Sookaskede puiestee
+Soolahe tee
+Soone põik
+Soone
+Sooranna
+Sootaga
+Sooviku
+Soovildiku
+Soovõha tee
+Spordi
+Staadioni
+Staapli
+Suislepa tee
+Suitsu
+Suitsu põik
+Suklema
+Sule
+Sulevi
+Sulevimägi
+Sumba
+Supluse puiestee
+Suru
+Suur Rannavärav
+Suur-Ameerika
+Suurekivi
+Suurevälja
+Suurgildi plats
+Suur-Karja
+Suur-Karjamaa tänav
+Suur-Kloostri
+Suur-Kompassi
+Suur-Laagri
+Suur-Laevaehituse
+Suur-Lasnamäe
+Suur-Männiku
+Suur-Paala
+Suur-Patarei
+Suur-Pääsukese
+Suur-Raevalla
+Suur-Sõjamäe
+Suur-Sõjamäe põik
+Suur-Söörensi
+Suur-Tartu
+Suurtüki
+Suusa
+Suve
+Suvila
+Sõbra põik
+Sõbra
+Sõjakooli
+Sõle
+Sõlme
+Sõmera
+Sõnajala
+Sõpruse puiestee
+Sõstra
+Sõstramäe
+Sõudebaasi tee
+Sõõru
+Sädeme
+Säina
+Ernst Särgava allee
+Särje
+Särjesilma
+Sääse
+Söe
+Söödi
+Peeter Süda
+Sügise
+Sügislase
+Süsta
+Juhan Sütiste tee
+
+Taagi tee
+Taara
+Taela
+Taevakivi
+Taevastiiva
+Tagala
+Tagamaa tee
+Taime
+Tala
+Talli
+Tallinna
+Taludevahe
+Talve
+Talviku
+Tambeti
+Tamme
+Tammede puiestee
+Tammepärja
+Tammetõru
+Tammiku
+A. H. Tammsaare tee
+Tanuma
+Tapri
+Tare
+Tarja
+Tarna
+Tartu maantee
+Tasandi
+Tasuja
+Tasuja puiestee
+Tatari
+Teaduspargi
+Teatri väljak
+Tedre
+Tedre põik
+Tedrepere
+Teelehe tee
+Teelise
+Teemeistri
+Tehnika
+Teisepere
+Teivi
+Telliskivi
+Tendri
+Terase
+Tervise
+Tihase
+Tihniku
+Tiigi
+Tiiru
+Tiiu
+Tiiva
+Tikutaja
+Tildri
+Tildri põik
+Timuti
+Tina
+Tindi
+Tipi tee
+Tirdi
+Tirgu
+Tiskrevälja
+Rudolf Tobiase
+Tohu
+Tolli
+Tolmuka tee
+Tondi
+Tondiraba
+Tominga
+Toodri tee
+Tooma
+Toomapere
+Toome puiestee
+Toome põik
+Toomiku tee
+Toominga
+Toom-Kooli
+Toom-Kuninga
+Toompea
+Toompuiestee
+Toom-Rüütli
+Toonela tee
+Topi
+Tormi
+Torni
+Tornimäe
+Torupilli ots
+Trahteri
+Treiali
+Trepi
+Trummi põik
+Trummi
+Truubi
+Tselluloosi tänav [viide?]
+Tuha
+Tuhkpuu tee
+Tuhkru
+Tuiskliiva tänav
+Tuisu
+Tuki
+Tulbi
+Tulekivi
+Tuleraua
+Tuletorni
+Tulika
+Tulika põik
+Tulimulla
+Tuluste
+Tulva
+Tungla
+Tupsi tee
+Turba
+Tursa
+Turu
+Turu plats
+Turvise
+Tuudi
+Tuukri
+Tuukri põik
+Tuulemaa
+Tuulemäe
+Tuulenurga
+Tuuleveski
+Tuuliku tee
+Tuvi
+Tõivu
+Tõkke
+Tõllu
+Tõnismägi
+Tõnu
+Tõru
+Tõrviku
+Tõusu tee
+Tähe
+Tähesaju tee
+Tähetorni
+Tähistaeva
+Täpiku
+Töökoja
+Tööstuse
+Türi
+Konstantin Türnpu
+Tüve
+
+Ubalehe tee
+Udu
+Udeselja
+Ugala
+Uime
+Ujuki
+Uku
+Umboja
+Uneliblika
+Unistuse
+Unna
+Urva
+Ussilaka tee
+Ussimäe tee
+Uue Maailma
+Uuepere
+Uueristi
+Uus
+Uus-Kalamaja
+Uuslinna
+Uus-Hollandi
+Uus-Maleva
+Uus-Sadama
+Uus-Tatari
+Uus-Tui
+Uus-Volta
+
+Vaablase
+Vaagi
+Vaalu
+Vaari
+Vaarika
+Vaate põik
+Vaate tee
+Vabaduse puiestee
+Vabaduse väljak
+Vabarna tee
+Vabaõhukooli tee
+Vabe
+Vabriku
+Vaestepatuste
+Vahe
+Vahepere
+Vahtra
+Vahtramäe tee
+Vahtriku tee
+Vahulille tee
+Vahuri
+Vaigu
+Vaikne
+Vaimu
+Vainu
+Vainutalu põik
+Vainutalu
+Vaksiku
+Valdeku
+Valge
+Valgevase
+Valguse
+Valguta
+Valli
+Valukoja
+Valve
+Vambola
+Vana-Kalamaja
+Vana-Keldrimäe
+Vanakuu
+Vana-Kuuli
+Vana-Liivamäe
+Vana-Lõuna
+Vana-Merivälja tee
+Vana-Mustamäe
+Vana-Posti
+Vana-Pärnu maantee
+Vana-Tartu maantee
+Vanaturu kael
+Vana-Umboja
+Vana-Veerenni
+Vana-Viru
+Vana turg
+Vanemuise tänav
+Vaniku
+Vaprate tee
+Varblase
+Varbola
+Varese
+Varese põik
+Varju tee
+Varjulille tee
+Varraku
+Varre
+Varsaallika
+Varsaallika põik
+Vasara
+Vase
+Vati
+Vedru
+Veduri
+Vee
+Veerenni
+Veerenni põik
+Veeriku tee
+Veerise
+Veerme
+Veetorni
+Vene
+Versta
+Vesikaare
+Vesilennuki
+Vesioina
+Vesipapi
+Vesiravila
+Vesiveski
+Vesivärava
+Veski
+Veskilise
+Veskimetsa
+Veskimäe
+Veskiposti
+Vesse
+Vesse põik
+Vete
+Viadukti
+Videviku
+Vibu
+Vigla
+Vihitaja
+Vihu
+Vihuri
+Viige
+Viimsi põik
+Viimsi tee
+Eduard Viiralti
+Viirpuu tee
+Viisi
+Vikerkaare tänav
+Vikerlase
+Eduard Vilde tee
+Vile
+Vilisuu
+Viljandi maantee
+Villardi
+Villkäpa
+Villpea
+Jüri Vilmsi
+Vilu tee
+Vimma
+Vindi
+Vineeri
+Vinkli
+Virbi
+Virmalise
+Viru
+Viru väljak
+Virve
+Visase
+Vismeistri
+Viu
+Viu põik
+Volta
+Voo
+Voolu
+Voorimehe
+Vormsi
+Vuti
+Võidu
+Võidu põik
+Võidujooksu
+Võistluse
+Võlvi
+Võra tee
+Võrgu
+Võrgukivi
+Võrse
+Võrsiku
+Võru
+Võsa tee
+Võsara
+Võsu
+Võtme
+Vähi
+Väike
+Väike Rannavärav
+Väikese Illimari
+Väike-Ameerika
+Väike-Erika
+Väike-Gonsiori
+Väike-Karja
+Väike-Karjamaa
+Väike-Kloostri
+Väike-Kompassi
+Väike-Laagri
+Väike-Laevaehituse
+Väike-Lasnamäe
+Väike-Männiku
+Väike-Paala
+Väike-Patarei
+Väike-Pärnu maantee
+Väike-Pääsukese
+Väike-Raevalla
+Väike-Roosikrantsi
+Väike-Sõjamäe
+Väike-Söörensi
+Väike-Tartu maantee
+Väina tee
+Välgu
+Välja
+Väo tee
+Väomurru
+Värava
+Värsi
+Värvi
+Västriku
+Vääna
+Vööri
+
+August Weizenbergi
+Ferdinand Johann Wiedemanni
+Wismari
+
+Õhtu
+Õie
+Õie põik
+Õilme
+Õismäe tee
+Õitse
+Õle
+Õllepruuli
+Õnne
+Õpetajate
+Õuna
+
+Ädala
+Äigrumäe tee
+Äkke
+Ämariku
+Ääre
+Ääsi
+
+Ööbiku
+Öölase
+
+Ülase
+Ülemiste tee
+Ülem-Jõe
+Ülem-Luha
+Üliõpilaste tee
+Ümera
+
+!! Tamsalu
+A. H. Tammsaare tänav
+A. Haava tänav
+Alasi tänav
+
+Betooni tänav
+
+Energia tänav
+
+G. Lurichi tänav
+
+Heina tänav
+
+Kalmistu põik
+Kandle tänav
+Kase tänav
+Kesk tänav
+Koidu tänav
+Kolde tänav
+Kooli tänav
+Kungla tänav
+Kändliku tänav
+
+Laane tänav
+Lubja tänav
+
+Metsa tänav
+Mäe tänav
+
+Niidu tänav
+Nurme tänav
+Nõlva tänav
+
+O. Müntheri tänav
+
+Paide maantee
+Pargi tänav
+Piiri tänav
+Põllu tänav
+Pärna tänav
+Pääsukese tänav
+
+Rahu tänav
+Rahu põik
+Raudtee tänav
+
+Saare tänav
+Sireli tänav
+Sireli põik
+Sõpruse tänav
+
+Tamme tänav
+Tehase tänav
+Tehnika tänav
+Toome tänav
+Toome põik
+Tähise tänav
+Tähise põik
+Tööstuse tänav
+
+Uus tänav
+Uus põik
+
+Vahtra tänav
+Vasara tänav
+
+Ääsi tänav
+
+!! Tapa
+Aasa tänav
+Aia tänav
+Ambla maantee
+
+Depoo tänav
+
+Eduard Vilde tänav
+Eha tänav
+Ehituse tänav
+
+Hiie tänav
+Hommiku puiestee
+Hundi tänav
+
+Ivaste tänav
+
+Jaani tänav
+Jakobi tänav
+
+Kabala tänav
+Kalda tänav
+Kalevi tänav
+Karja tänav
+Kase tänav
+Kastani tänav
+Kauba tänav
+Kauba põik
+Kesk tänav
+Kevade tänav
+Kiire tänav
+Kitsas tänav
+Kivi tänav
+Kivilo tänav
+Koidu tänav
+Kooli tänav
+Kuke tänav
+Kuu tänav
+Kuusiku tänav
+Künka tänav
+Küüni tänav
+
+Laane tänav
+Lai tänav
+Lasketiiru tänav
+Lehtse tee
+Leina tänav
+Lembitu puiestee
+Lepiku tänav
+Liblika tänav
+Lille tänav
+Linda tänav
+Loode tänav
+Lõuna tänav
+
+Maie tänav
+Malle tänav
+Metsa tänav
+Metsa põik
+Männiku tänav
+Männikumäe tänav
+
+Nooruse tänav
+
+Paide maantee
+Paju tänav
+Pargi tänav
+Pargi põik
+Pihlaka tänav
+Piiri tänav
+Pikk tänav
+Päikese tänav
+Põllu tänav
+Pärna tänav
+Pääsukese tänav
+
+Rahu tänav
+Rakvere tee
+Rauakõrve tee
+Ristiku tänav
+Roheline tänav
+Rooba tänav
+
+Sauna tänav
+Side tänav
+Spordi tänav
+Suve tänav
+Sügise tänav
+
+Taara puiestee
+Turu maantee
+Tähe tänav
+Tööstuse tänav
+
+Uus tänav
+
+Vabriku tänav
+Vahtra tänav
+Valgejõe puiestee
+Valve tänav
+Veski tänav
+Virve tänav
+Võidu puiestee
+Väike tänav
+Väike-Põllu tänav
+Välja tänav
+
+Õhtu puiestee
+Õie tänav
+Õuna tänav
+
+Ööbiku tänav
+
+Ülesõidu tänav
+Üleviste tänav
+
+!! Tartu
+Aardla
+Aardlavälja
+Aasa
+Adra
+Aianduse
+Aiaääre
+Aida
+Akadeemia
+Akvarelli
+Alasi
+Aleksandri
+Alevi
+Allika
+Anne
+Annemõisa
+Arbi
+P. Areni
+Arhitekti
+Aroonia
+Aru
+Arukase
+Aruküla tee
+Astri
+
+K. E. von Baeri
+Bajadeeri
+Betooni
+Bordoo
+
+Eha
+Ehitaja
+A. Elleri
+Elulõnga
+Elva
+Emajõe
+Era
+
+Filosoofi
+B. G. Forseliuse
+Fortuuna
+
+Gildi
+
+A. Haava
+Haki
+Haraka
+Heina
+Heki
+K. A. Hermanni
+Herne
+J. W. F. Hezeli
+Hiie
+Hipodroomi
+Hobuseraua tänav
+Hommiku
+J. Hurda
+
+Ida
+Ihaste põik
+Ihaste tee
+Ilmatari
+Ilmatsalu
+
+Jaama
+Jaamamõisa
+Jaani
+Jakobi
+C. R. Jakobsoni
+Jalaka
+Jalakakuru
+Jalakakuru põik
+J. V. Jannseni
+A. Johani
+Jõe
+Jänese
+
+Kaare
+Kabeli
+Kadaka
+Kalda tee
+Kalevi
+Kalmistu
+Kaluri
+Kanarbiku
+Kannikese
+Kapsa
+Kapteni
+Karikakra
+Karmiini
+Kartuli
+Kasarmu
+Kase
+Kase põik
+Kasesalu
+Kastani
+Kasteheina
+Kauba
+Kauna tänav
+Kaunase puiestee
+Kesa
+Kesa põik
+Kesakanni
+Kesk
+Kesk kaar
+Kibuvitsa
+Kiigemäe
+Kiire
+Killustiku
+Kingu
+Kirde
+Kirsi
+Kitsas
+E. Kitse
+A. Kitzbergi
+Kivi
+Klaasi
+Kloostri
+Kodukolde
+Koidu
+L. Koidula
+Koidutähe
+Kolde
+Kompanii
+A. Kongo
+Kooli
+J. Koorti
+Kopli
+Kotka
+Kraavi
+Kraavikalda
+Kreegi
+Kressi
+F. R. Kreutzwaldi
+Kroonuaia
+Kruusa
+Kruusakuru
+Kruusamäe
+Kruusavälja
+Kuldnoka
+Kuljuse
+Kullerkupu
+Kummeli
+Kungla
+J. Kuperjanovi
+Kure
+Kuru
+Kuu
+Kuuse
+Kvartsi
+Kvissentali põik
+Kvissentali tee
+E. Kõksi
+Kõrvitsa
+Käbi
+Käo
+Käo põik
+Künni
+Küüni
+Küütri
+
+Laane
+Ladva
+Lai
+A. Laigo
+Lammi
+Lao
+Laseri
+Laulupeo puiestee
+Leegi
+Leesika
+Leete
+Leevikese
+Lehe
+Lehola
+Lembitu
+Lemmatsi
+Lemmatsi põik
+Lepa
+Lepalinnu
+Lepiku
+K. Liimandi
+Liiva
+Liivakuru
+Liivamäe
+J. Liivi
+Lille
+Lina
+Linda
+Linnu
+Loode
+Lootsi
+Lootuse
+Lossi
+Lubja
+Luha
+Luige
+Luigelahe
+Lumimarja
+N. Lunini põik
+N. Lunini tänav
+Lutsu
+Lõhmuse
+Lõkketule
+Lõo
+Lõuendi
+Lõuna
+Lääne
+Lüübeki
+
+Maarjaturg
+Maasika
+Madruse
+Magasini
+Magistri
+Maisi
+Malmi
+Marja
+Marta
+V. Melliku
+Meloni
+Mesika
+Metalli
+Metshaldja
+Metshirve
+Molberti
+Mooni
+H. Mugasto
+Munga
+Muraka
+Mureli
+Muru
+Muuluka
+Muuseumi tee
+Mõisavahe
+Mäe
+Männi
+Männimetsa tee
+
+Narva maantee
+Nelgi
+Nigula
+Niidu
+Nisu
+Nooruse
+Nurme
+Nõlvaku
+Nõmme
+Nõmmeliiva
+Nõva
+Näituse
+Näsiniine
+
+Oa
+Odra
+Oksa
+Ookri
+Optika
+Orava
+V. Ormissoni
+Oru
+W. Ostwaldi
+
+Paju
+Palderjani
+Pallase puiestee
+Palsami
+Palusambla
+Papli
+Pargi
+Pastelli
+Peedu
+Peetri
+Peetriturg
+Pepleri tänav
+Pihlaka
+Piima tänav
+Piiri
+Pikk
+Pintsli
+Piparmündi
+Pirni
+Pirni põik
+Pliiatsi
+Ploomi
+Poe
+Pohla
+Pootsmani
+Promenaadi
+Puhkekodu
+Puidu
+Puiestee
+Punga
+Purde
+Purpuri
+L. Puusepa
+Põhja puiestee
+Põhjatamme puiestee
+Põhjatähe
+Põik
+Põldmarja
+Põllu
+Päeva
+Pärna
+Pääsukese
+Pääsusilma
+
+Raatuse
+Raekoja plats
+Raeremmelga
+Rahu
+Raja
+Ranna puiestee
+Ranna tee
+Rannakajaka
+Raua
+Raudtee
+Ravila
+Rebase
+Remmelga
+Riia
+Ringtee
+Risti
+Ristiku
+Rohu
+Roopa
+Roosi
+Ropka
+Ropka tee
+Ropkamõisa
+Rukki
+Rukkilille
+Rõõmu tee
+Räni
+Räni põik
+Ränikivi
+Rästa
+Räägu
+Rüütli
+
+Saare
+Sadama
+Saekoja
+Saialille
+Sakala
+Salme
+Salutähe
+Sambla
+Sanatooriumi
+Sangla
+Sangviini
+Sarapuu
+Sassi
+Sauna
+Savi
+Selleri
+Sepa
+Sepakuru tänav
+Sepavälja tänav
+Sepikoja tänav
+Side
+Sihi
+Siili
+Sinika
+Sinilille
+Sirbi
+Sirbi kaar
+Sireli
+Soinaste
+Soola
+Staadioni
+A. Starkopfi
+W. Struve
+Supelranna
+Surnuaia
+Suur kaar
+Sõbra
+Sõnajala
+Sõpruse puiestee
+Säde
+Sälu
+
+Taara puiestee
+Talutare
+Tamme puiestee
+Tamme põik
+Tammekuru
+Tammekuru põik
+Tammelehe
+Tammeoksa
+Tammepärja
+Tammetõru
+Tammeõie
+Tammiku
+A. H. Tammsaare
+Tasuja
+Tedre
+Teelehe
+Teguri
+Tehase
+Tehnika
+Tempera
+Tervise
+Tervishoiu
+Tihase
+Tiigi
+Timuti
+L. Tolstoi
+Toominga
+N. Triigi
+F. Tuglase
+Tulbi
+Tulika
+Tungla
+Turu
+Tuule
+Tuvi
+J. Tõnissoni
+Tõrviku
+Tähe
+Tähtvere
+Tüve
+Tüürimehe
+
+Ujula
+Ultramariini
+Uppsala
+Urva
+Uueturu
+Uus
+
+Vaarika
+Vaba
+Vabaduse puiestee
+A. Vabbe
+Vabriku
+Vahe
+Vahi
+Vahi põik
+Vahtra
+Vaikne
+Vainu
+Vaksali
+Vallikraavi
+Vambola
+Vanemuise
+Vao
+Vapramäe
+A. Vardi
+Variku
+Varju
+Varsa
+Vasara
+Vasara põik
+Vase tänav
+Kuno Veeberi tänav
+Veeriku tänav
+Vene
+Veski
+Vikerkaare
+Vilja
+Viljandi maantee
+Vindi tänav
+Vitamiini
+Voolu
+Võru
+Võruvälja
+Väike kaar
+Väike-Emajõe tänav
+Väike-Sepa
+Väike-Turu
+Väike-Tähe
+Välja
+Välu
+Västriku
+
+E. Wiiralti
+
+Õhtu
+Õie
+Õllemeistri
+Õnne
+Õpetaja
+Õuna
+
+Ääsi
+
+Öö
+Ööbiku
+
+Ülase
+Ülenurme
+Ülikooli
+Ümera
+
+!! Tõrva
+Aasa tänav
+Aia tänav
+Aida tänav
+Araku tänav
+
+Ehitaja tänav
+
+Herne tänav
+
+Jaani tänav
+Jõe tänav
+Järve tänav
+
+Kaarlimäe tänav
+Kalda tänav
+Kalevi tänav
+Kalmistu tänav
+Kanarbiku tee
+Kangro tänav
+Karja tänav
+Kase tänav
+Keisripalu tänav
+Kevade tänav
+Kitsas tänav
+Kitse tänav
+Koidu tänav
+Kooli tänav
+Kopli tänav
+Kruusa tänav
+Kungla tänav
+Kuusiku tänav
+
+Lauka tänav
+Lembitu tänav
+Liiva põik
+Liiva tänav
+Loosi tänav
+Luha tänav
+Lõuna tänav
+
+Madise tänav
+Metsa tänav
+Mäe tänav
+Männiku tänav
+
+Nooruse tänav
+Nurme tänav
+Nõmme tänav
+
+Oa tänav
+Oja tänav
+Oru tänav
+
+Palu tänav
+Pargi tänav
+Patküla tänav
+Piima tänav
+Pikk tänav
+Puiestee tänav
+Põllu tänav
+Pärna tänav
+
+Raba tänav
+Raja tänav
+Raudtee tänav
+Ravila tänav
+Riiska tänav
+Ringi tänav
+Roosi tänav
+
+Spordi tänav
+Staadioni tänav
+Sõpruse tänav
+
+Tamme tänav
+Tammiku tänav
+Tartu tänav
+Tiigi tänav
+Tikste tänav
+Transpordi tänav
+Tööstuse tänav
+
+Umb tänav
+
+Vahtra tänav
+Valga tänav
+Vanamõisa tänav
+Veski tänav
+Viljandi tänav
+Võlli tänav
+Väike-Aia tänav
+Väike-Vahtra tänav
+Välja tänav
+
+Õhne tänav
+
+!! Türi
+Aia tänav
+Aiamaa tänav
+A.Kurrikoffi tänav
+Allika tänav
+Anna Haava tänav
+
+Eduard Vilde tänav
+
+F.R.Kreutzwaldi tänav
+F.J.Wiedemanni tänav
+
+Hariduse tänav
+Heina tänav
+
+Jaama tänav
+Jõe tänav
+
+Kaare tänav
+Kalda tänav
+Kalevi tänav
+Kastani tänav
+Kevade tänav
+Kohtu tänav
+Kraavi tänav
+Kooli tänav
+Kungla tänav
+Küti tänav
+
+Lai tänav
+Lembitu tänav
+Liiva tänav
+Lille tänav
+Linnu tänav
+Loode tänav
+Luha tänav
+Lutsu tänav
+Lõuna tänav
+Lydia Koidula tänav
+Lydia Koidula põik
+
+Marjamaa tänav
+Marjamaa põik
+Mehaanika tänav
+Metsa tänav
+Mäe tänav
+Mäekalda tänav
+Mäekalda põik
+Männiku tänav
+
+Nooruse tänav
+Nõmme tänav
+Näituse tänav
+
+Ollivere tänav
+
+Paide tänav
+Paju tänav
+Pargi puiestee
+Pikk tänav
+Puiestee tänav
+Põhja-Puiestee tänav
+Põik tänav
+Põllu tänav
+Päikese tänav
+Pärna tänav
+
+Raadiojaama tänav
+Raja tänav
+Raua tänav
+Ravila tänav
+Raudtee tänav
+Ristiku tänav
+Roheline tänav
+Rohu tänav
+Roopa tänav
+
+Savi tänav
+Staadioni tänav
+Suur-Puiestee tänav
+Sõpruse tänav
+
+Tallinna tänav
+Tehnika tänav
+Telliskivi tänav
+Tiigi tänav
+Tolli tänav
+Tsemendi tänav
+Turuplatsi tänav
+Tähe tänav
+
+Uus tänav
+
+Vabaduse tänav
+Vabriku tänav
+Vabriku puiestee
+Vainu tänav
+Vambola tänav
+Vanemuise tänav
+Viljandi tänav
+Väike-Pärnu tänav
+
+!! Valga
+Alfred Neulandi tänav
+Aasa tänav
+Aia tänav
+Allika tänav
+Andrese tänav
+Antsla tänav
+Astra tänav
+
+Ernst Enno tänav
+Edela tänav
+Eha tänav
+Energia tänav
+
+Haava tänav
+Haru tänav
+Heina tänav
+Herne tänav
+Hiie tänav
+Hommiku tänav
+Hämariku tänav
+
+Iirise tänav
+Ilmajaama tänav
+
+Jaama puiestee
+Jakobi tänav
+Julius Kuperjanovi tänav
+Järve tänav
+Jõe tänav
+
+Kadaka tänav
+Kaevu tänav
+Kagu tänav
+Kalda tänav
+Kalevi tänav
+Kanepi tänav
+Karja tänav
+Kase tänav
+Kesk tänav
+Kesva tänav
+Kevade tänav
+Kibuvitsa tänav
+Kirde tänav
+Kirsipuu tänav
+Koidu tänav
+Kolde tänav
+Kreegi tänav
+Kreegipuu tänav
+Kullerkupu tänav
+Kungla tänav
+Kuuse tänav
+Köie tänav
+
+Laatsi tänav
+Lai tänav
+Leiva tänav
+Lembitu tänav
+Lepa tänav
+Liiva tänav
+Lille tänav
+Loode tänav
+Luha tänav
+Lõuna tänav
+Lühike tänav
+
+Maasika tänav
+Maleva tänav
+Mee tänav
+Mesipuu tänav
+Metsa tänav
+Muru tänav
+Mädarõika tänav
+Mäe tänav
+Männi tänav
+Männiku tänav
+Männipuu tänav
+Märdi tänav
+Mööbli tänav
+
+Narva tänav
+Nelgi tänav
+Nurme tänav
+
+Odra tänav
+Oja tänav
+Ojaperve tänav
+Oru tänav
+
+Pagari tänav
+Paju tänav
+Palu põik
+Pargi tänav
+Pedeli tänav
+Peebu tänav
+Peetri tänav
+Perve tänav
+Petseri tänav
+Pihlaka tänav
+Piiri tänav
+Pikk tänav
+Pipra tänav
+Pirni tänav
+Pirnipuu tänav
+Ploomi tänav
+Ploomipuu tänav
+Puiestee tänav
+Puu tänav
+Pärna puiestee
+Pärnu tänav
+Pääsusilma tänav
+Põhja tänav
+Põik tänav
+Põllu tänav
+
+Rahu tänav
+Raja tänav
+Raudtee tänav
+Ravila tänav
+Redise tänav
+Riia tänav
+Riisali tänav
+Roheline tänav
+Roosi tänav
+Räni tänav
+Rükkeli tänav
+
+Saare tänav
+Sambla tänav
+Savi tänav
+Saviaugu tänav
+Sepa tänav
+Siguri tänav
+Sinepi tänav
+Sinilille tänav
+Sireli tänav
+Soo tänav
+Spordi tänav
+Sulevi tänav
+Suve tänav
+Sõpruse tänav
+Sügise tänav
+
+Talve tänav
+Tambre tänav
+Tartu tänav
+Tehase tänav
+Tehnika tänav
+Telliskivi tänav
+Tibina tänav
+Tiigi tänav
+Tolli tänav
+Toogi tänav
+Toogi põik
+Toominga tänav
+Torni tänav
+Transpordi tänav
+Tulbi tänav
+Turu tänav
+Tuubi tänav
+Tuule tänav
+Tähe tänav
+Tõrva tänav
+Tööstuse tänav
+
+Umb tänav
+Uus tänav
+Uus-Koidu tänav
+
+Vaarika tänav
+Vabaduse tänav
+Vahe tänav
+Vahtra tänav
+Vaikne tänav
+Vainu tänav
+Valguse tänav
+Valli tänav
+Vana-Tambre tänav
+Vee tänav
+Veski tänav
+Viadukti tänav
+Videviku tänav
+Viinamarja tänav
+Viljandi tänav
+Võnnu tänav
+Võru tänav
+Võsa tänav
+Väike-Köie tänav
+Väike-Laatsi tänav
+Väike-Lepa tänav
+Väike-Nelgi tänav
+Välja tänav
+
+Õhtu tänav
+Õunapuu tänav
+
+Ülase tänav
+
+!! Viljandi
+Aasa tänav
+Aia tänav
+Allika põik
+Allika tänav
+Anton Irve tänav
+August Maramaa puiestee
+Carl Robert Jakobsoni tänav
+Edela tänav
+Eha tänav
+Endla tänav
+Hariduse tänav
+Heina tänav
+Hiie puiestee
+Hiire tänav
+Huntaugu tänav
+Ida tänav
+Ilmarise tänav
+Itaalia tänav
+Jalaka tänav
+Johann Köleri tänav
+Johan Laidoneri plats
+Juhan Kunderi tänav
+Juhan Liivi tänav
+Järve tänav
+Järveotsa puiestee
+Kaalu tänav
+Kaevu tänav
+Kagu tänav
+Kaja tänav
+Kalda puiestee
+Kalda põik
+Kalevi tänav
+Kalmu tänav
+Kalvi tänav
+Kanepi tänav
+Karja tänav
+Kase tänav
+Kastani tänav
+Kauba tänav
+Kauge tänav
+Kesk-Kaare tänav
+Keskuse tänav
+Kevade tänav
+Kiriku tänav
+Kirsi põik
+Kirsi tänav
+Kivi tänav
+Kodu tänav
+Koidu tänav
+Kolde tänav
+Kooli tänav
+Kooliaia tänav
+Kopli tänav
+Kraavi tänav
+Kreegi tänav
+Kullamäe tänav
+Kungla tänav
+Kõpu tänav
+Kõrgemäe tänav
+Kõue tänav
+Köstri tänav
+Külvi tänav
+Künni tänav
+Lembitu puiestee
+Lennuki tänav
+Leola tänav
+Lepa tänav
+Liiva tänav
+Lille tänav
+Lina põik
+Lina tänav
+Linnu tänav
+Lohu tänav
+Loode tänav
+Looga tänav
+Loojangu tänav
+Lossi tänav
+Luha tänav
+Lutsu tänav
+Lõikuse tänav
+Lõuna tänav
+Lääne tänav
+Lühike tänav
+Lydia Koidula tänav
+Maasika tänav
+Mai tänav
+Malmi tänav
+Marmori tänav
+Meeme tänav
+Metalli tänav
+Metsküla tee
+Mihkel Veske puiestee
+Mooni tänav
+Munga tänav
+Mureli tänav
+Musta tee
+Mäe tänav
+Männi tänav
+Männimäe tee
+Niidu tänav
+Nisu tänav
+Nurme tänav
+Näituse põik
+Näituse tänav
+Oja tee
+Oru tänav
+Paala tee
+Paistu tänav
+Paisu tänav
+Papli tänav
+Pargi tänav
+Pihlaka tänav
+Piiri põik
+Piiri tänav
+Pikk tänav
+Pirni tänav
+Planeedi tänav
+Ploomi tänav
+Posti tänav
+Puidu tänav
+Puiestee tänav
+Põhja puiestee
+Põllu tänav
+Põltsamaa tee
+Pähkli tänav
+Päikese tänav
+Pärna tänav
+Pärnu maantee
+Ranna puiestee
+Raua tänav
+Raudtee tänav
+Ravila tänav
+Rehe tänav
+Reinu põik
+Reinu tee
+Riia maantee
+Roheline tänav
+Roo tänav
+Roosi tänav
+Saare tänav
+Savi tänav
+Sepa tänav
+Supeluse tänav
+Suur-Kaare tänav
+Suve tänav
+Sõstra tänav
+Talli tänav
+Tallinna tänav
+Tamme tänav
+Tammela tänav
+Tare tänav
+Tartu tänav
+Tasuja puiestee
+Tehnika tänav
+Terase tänav
+Tina tänav
+Toome tänav
+Trepimägi
+Tuisu tänav
+Turu tänav
+Tuule tänav
+Tuule põik
+Tähe tänav
+Tööstuse tänav
+Ugala puiestee
+Uku tänav
+Uueveski tee
+Uus tänav
+Vabarna tänav
+Vabriku tänav
+Vahe tänav
+Vahtra tänav
+Vaikuse tänav
+Vaksali tänav
+Valuoja puiestee
+Vana-Vaksali tänav
+Vase tänav
+Veere tänav
+Vene tänav
+Vesiflirdi allee
+Vikerkaare tänav
+Vilja tänav
+Väike tänav
+Väike-Kaare tänav
+Väike-Turu tänav
+Õie tänav
+Õuna tänav
+
+!! Võhma
+Aasa tänav
+Aia tänav
+
+Eha tänav
+
+Heina tänav
+
+Jaama tänav
+
+Kalevi tänav
+Kase tänav
+Kastani tänav
+Kauba tänav
+Kirsi tänav
+Koidu tänav
+Kreegi tänav
+
+Lai tänav
+Lille põik
+Lille tänav
+Loigu tänav
+
+Metsa tänav
+Mooni tänav
+
+Niidu tänav
+
+Pargi tänav
+Ploomi tänav
+Pärna tänav
+
+Raudtee tänav
+Ristiku tänav
+Rukkille tänav
+
+Sepa tänav
+Silla tänav
+Soo tänav
+Spordi tänav
+
+Tallinna tänav
+Tartu tänav
+Tooma tänav
+
+Veski tänav
+Viljandi tänav
+Väike tänav
+
+Õuna tänav
+
+!! Võru
+Aasa tänav
+Aida tänav
+Allika tänav
+
+Ekspordi tänav
+Eterniidi tänav
+
+Friedrich Reinhold Kreutzwaldi tänav
+
+Heina tänav
+Heina põik
+Herne tänav
+Humala tänav
+
+Jaama tänav
+Jalaka tänav
+Jõe tänav
+Jõhvika tänav
+Järve tänav
+Järve põik
+Jüri tänav
+
+
+Kaare tänav
+Kadaka tänav
+Kaevu tänav
+Kalda tänav
+Kalevi põik
+Kalevipoja
+Kalmuse tänav
+Kanarbiku tänav
+Kanepi tänav
+Karja tänav
+Karja põik
+Kase tänav
+Katariina allee
+Kesa tänav
+Kesk tänav
+Kevade tänav
+Kirsi tänav
+Kivi tänav
+Kivimurru tänav
+Kooli tänav
+Koreli tänav
+Kose tee
+Kraavi tänav
+Kruusa tänav
+Kubja põik
+Kubja tee
+Kuuse tänav
+Käbi tänav
+
+Laane tänav
+Lauluväljaku tänav
+Leesika tänav
+Lembitu tänav
+Lepa tänav
+Liitva tänav
+Liiva tänav
+Lille tänav
+Lina tänav
+Linda tänav
+Linnu tänav
+Loo tänav
+Lubja tänav
+Luha tänav
+Lydia Koidula tänav
+Lühike tänav
+
+Madara tänav
+Metsa tänav
+Mulla tänav
+Muraka tänav
+Mäe tänav
+Mäe põik
+Männiku tänav
+Mündi tänav
+
+Niidu tänav
+Niine tänav
+Nõgese tänav
+Nõmme tänav
+
+Oja tänav
+Okka tänav
+Oksa tänav
+Olevi tänav
+Orase tänav
+
+Pae tänav
+Paju tänav
+Petseri tänav
+Piiri tänav
+Pikk tänav
+Punga tänav
+Pärna tänav
+Põllu tänav
+
+Raami tänav
+Raba tänav
+Raudtee tänav
+Ringtee tänav
+Roo tänav
+Roo põik
+Roopa tänav
+Roosi tänav
+Roosi põik
+Räpina maantee
+
+Salme tänav
+Savi tänav
+Seminari tänav
+Silikaadi tänav
+Sinika tänav
+Soo tänav
+Sulevi tänav
+Sügise tänav
+
+Taara tänav
+Tallinna maantee
+Tamme tänav
+Tamula tänav
+Tartu tänav
+Telliskivi tänav
+Tiigi tänav
+Toome tänav
+Tulbi tänav
+Tulika tänav
+Turba tänav
+Tööstuse tänav
+
+Uus tänav
+
+Vabaduse tänav
+Vabriku tänav
+Vee tänav
+Veski tänav
+Veskijärve tänav
+Veskioja tänav
+Viki tänav
+Vilja tänav
+Vindi tänav
+Väike tänav
+Võlsi põik
+Võlsi tee
+
+Ülase tänav

@@ -117,3 +117,9 @@ Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) 
 https://github.com/buerokratt/Data-Anonymizer/issues/65
 
 Add [Model Training Service](ml-long-process-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/POST/train.yml).
+
+### Anonymize/pseudonymize a sentence
+
+https://github.com/buerokratt/Data-Anonymizer/issues/64
+
+Add [Anonymizer Service](anonymisation_internal), docker-compose configurations and Ruuter [DSL File](Ruuter/DSL/POST/pseudonymise.yml) to pseudonymise a sentence. The prediction endpoint in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).

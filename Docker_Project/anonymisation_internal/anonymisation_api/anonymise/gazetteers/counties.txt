@@ -1,0 +1,28 @@
+Harju maakond
+Hiiu maakond
+Ida-Viru maakond
+Jõgeva maakond
+Järva maakond
+Lääne maakond
+Lääne-Viru maakond
+Põlva maakond
+Pärnu maakond
+Rapla maakond
+Saare maakond
+Tartu maakond
+Valga maakond
+Viljandi maakond
+Võru maakond
+Harjumaa
+Hiiumaa
+Jõgevamaa
+Järvamaa
+Läänemaa
+Põlvamaa
+Pärnumaa
+Raplamaa
+Saaremaa
+Tartumaa
+Valgamaa
+Viljandimaa
+Võrumaa

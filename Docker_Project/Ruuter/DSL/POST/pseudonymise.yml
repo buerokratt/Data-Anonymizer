@@ -1,0 +1,14 @@
+pseudonymise:
+  call: http.post
+  args:
+    url: http://web:5001/predict
+    body:
+      pseudonymise: ${incoming.body.pseudonymise}
+      tokenize: ${incoming.body.tokenize}
+      truecase: ${incoming.body.truecase}
+      thresholds: ${incoming.body.thresholds}
+      texts: ${incoming.body.texts}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
