@@ -33,6 +33,7 @@ https://github.com/buerokratt/Data-Anonymizer/issues/86
 
 Add [Ruuter DSL File](Ruuter/DSL/GET/regex.yml) and [Resql Query](Resql/templates/production/list_regex.sql) to list regex patterns.
 
+
 ### Delete added Regex pattern from database
 
 https://github.com/buerokratt/Data-Anonymizer/issues/63
@@ -43,5 +44,11 @@ Add [Ruuter DSL File](Ruuter/DSL/GET/delete_regex.yml) and [Resql Query](Resql/t
 
 https://github.com/buerokratt/Data-Anonymizer/issues/59
 
-- Add [Ruuter DSL File](Ruuter/DSL/POST/regex.yml) and [Resql Query](Resql/templates/production/insert_regex.sql) to add a regex pattern.
-- Add [Ruuter DSL File](Ruuter/DSL/GET/entity.yml) and [Resql Query](Resql/templates/production/list_entity.sql) to list entities.
+ - Add [Ruuter DSL File](Ruuter/DSL/POST/regex.yml) and [Resql Query](Resql/templates/production/insert_regex.sql) to add a regex pattern.
+ - Add [Ruuter DSL File](Ruuter/DSL/GET/entity.yml) and [Resql Query](Resql/templates/production/list_entity.sql) to list entities.
+
+### Add new entity
+
+https://github.com/buerokratt/Data-Anonymizer/issues/89
+
+Add [Ruuter DSL File](Ruuter/DSL/POST/entity.yml) and [Resql Query](Resql/templates/production/insert_entity.sql) to add an entity.
