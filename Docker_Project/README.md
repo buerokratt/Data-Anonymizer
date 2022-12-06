@@ -69,3 +69,9 @@ Add [Ruuter DSL File](Ruuter/DSL/POST/annotate.yml) and [Resql Query](Resql/temp
 https://github.com/buerokratt/Data-Anonymizer/issues/45
 
 Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](Label-Studio/.env.defaults). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.
+
+### Setup React Application for Data Management Frontend Application
+
+https://github.com/buerokratt/Data-Anonymizer/issues/93
+
+Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration.
