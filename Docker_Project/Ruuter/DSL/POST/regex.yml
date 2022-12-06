@@ -1,0 +1,11 @@
+insert_regex:
+  call: http.post
+  args:
+    url: http://resql:8082/insert_regex
+    body:
+      regex: ${incoming.body.regex}
+      entity: ${incoming.body.entity}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
