@@ -25,7 +25,7 @@ public class DslController {
     private final ApplicationProperties properties;
 
     @RequestMapping(value = "/{dsl}")
-    @CrossOrigin(origins = {"https://ria-label-studio.mindtitan.com"})
+    @CrossOrigin(origins = {"https://ria-label-studio.mindtitan.com", "https://ria-data-management.mindtitan.com"})
     public ResponseEntity<RuuterResponse> queryDsl(@PathVariable String dsl,
                                                              @RequestBody(required = false) Map<String, Object> requestBody,
                                                              @RequestParam(required = false) Map<String, Object> requestQuery,

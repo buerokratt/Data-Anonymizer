@@ -20,6 +20,17 @@ import CloseIcon from "../assets/close.svg";
 import CloseRedIcon from "../assets/close_red.svg";
 import CopyIcon from "../assets/Copy.svg";
 import LoopIcon from "../assets/Loop.svg";
+import {
+  uploadCorpus,
+  startTraining,
+  fetchTrainingStatus,
+  annotateCorpora,
+  listRegex,
+  deleteRegex,
+  createRegex,
+  getEntities,
+  createEntity,
+} from "../RestService";
 
 function uuidv4() {
   return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
@@ -561,11 +572,75 @@ function Treening() {
   const [entities, setEntities] = useState([]);
   const [tableData, setTableData] = useState([]);
 
-  const deleteRegexRecord = async (record) => {};
+  const deleteRegexRecord = async (record) => {
+    let response = await deleteRegex(record.id);
+    if (response === "success") {
+      notification.info({
+        description: "Regexi muster eemaldatud",
+        placement: "bottomLeft",
+        icon: <div />,
+        closeIcon: <div />,
+      });
+      let tempData = JSON.parse(JSON.stringify(tableDataRef.current));
+      tempData = tempData.filter((regexRecord) => regexRecord.id !== record.id);
+      setTableData(tempData);
+      tableDataRef.current = tempData;
+    }
+  };
 
-  const createEntityRecord = async () => {};
+  const createEntityRecord = async () => {
+    const response = await createEntity(entityText, entityDescription);
+    if (response === "success") {
+      setEntities([
+        ...JSON.parse(JSON.stringify(entities)),
+        {
+          name: entityText,
+          description: entityDescription,
+        },
+      ]);
+    }
+  };
 
-  const createRegexRecord = async () => {};
+  const createRegexRecord = async () => {
+    let response = await createRegex(createRegexText, selectedEntity);
+    if (response?.[0]?.id) {
+      let tempData = JSON.parse(JSON.stringify(tableDataRef.current));
+      tempData.push({
+        id: response[0].id,
+        muster: createRegexText,
+        nimetus: selectedEntity,
+        confirmingDelete: false,
+      });
+      setTableData(tempData);
+      tableDataRef.current = tempData;
+      setCreateRegexText("");
+      notification.info({
+        description: "Regexi muster salvestatud!",
+        placement: "bottomLeft",
+        icon: <div />,
+        closeIcon: <div />,
+      });
+    }
+  };
+
+  useEffect(() => {
+    fetchTrainingStatus().then((status) => {
+      if (status.status !== "Done" && status.status !== "Standby") {
+        setUploadingState(4);
+      }
+    });
+    listRegex().then((regexes) => {
+      tableDataRef.current = regexes.map((regexRecord) => ({
+        id: regexRecord.id,
+        muster: regexRecord.regex,
+        nimetus: regexRecord.entity,
+        confirmingDelete: false,
+      }));
+      setTableData(tableDataRef.current);
+    });
+    getEntities().then(setEntities);
+  }, []);
+
   const tableDataRef = useRef(tableData);
 
   const [columns, setColumns] = useState([
@@ -688,7 +763,43 @@ function Treening() {
     },
   ]);
 
-  const handleUpload = async (file) => {};
+  const handleUpload = async (file) => {
+    const reader = new FileReader();
+
+    reader.onload = async (e) => {
+      try {
+        setUploadingState(2);
+        let corpus = e.target.result.split("\n");
+        let corpusId = uuidv4();
+        let totalChunks = corpus.length / 100;
+        let currentChunk = 0;
+        setUploadProgress(0);
+        const timestamp = new Date(Date.now()).toISOString();
+        for (let i = 0; i < corpus.length; i += 100) {
+          let chunk = corpus.slice(i, i + 100);
+          chunk = {
+            tasks: chunk.map((sentence) => ({
+              raw_text: sentence,
+              corpora_id: corpusId,
+              is_private: true,
+              created_at: timestamp,
+            })),
+          };
+          if (chunk.tasks.length) await uploadCorpus(chunk);
+          currentChunk++;
+          setUploadProgress(Math.round((currentChunk / totalChunks) * 100));
+        }
+        setUploadProgress(100);
+        setUploadingState(3);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    reader.readAsText(file);
+    setFile(file);
+    return false;
+  };
+
   return (
     <>
       <Modal
@@ -816,7 +927,7 @@ function Treening() {
           <ThemeButtonContainer style={{ marginTop: 48 }}>
             <ThemeButton
               onClick={() => {
-                annotateCorpora;
+                startTraining();
                 setUploadingState(4);
               }}
               disabled={uploadingState === 4}
@@ -825,10 +936,11 @@ function Treening() {
             </ThemeButton>
             <UploadText style={{ marginRight: 16 }}>või</UploadText>
             <ThemeButton2
+              onClick={() => annotateCorpora()}
               disabled={uploadingState === 4}
               style={{ marginRight: 16 }}
             >
-              EELMÄRGENDA KORPUS"
+              EELMÄRGENDA KORPUS
             </ThemeButton2>
             <ThemeButton2
               onClick={() =>
