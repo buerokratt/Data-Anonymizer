@@ -1,0 +1,44 @@
+version: "3.4"
+
+
+services:
+
+  redis:
+    image: redis
+    build:
+      context: redis/
+      dockerfile: Dockerfile
+    ports:
+      - 6378:6378
+
+
+  worker:
+    image: worker
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+    volumes:
+      - ./celery/logs:/app/logs
+
+  web:
+    image: anonymise
+    build:
+      context: anonymise/
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+    ports:
+      - 5001:5001
+
+  test:
+    image: test
+    build:
+      context: tests/
+      dockerfile: Dockerfile
+    depends_on:
+      - web
+      - worker
+    command: ["bash", "wait-for-it.sh", "-t", "600", "http://0.0.0.0:5001",  "--", "pytest", "test_api.py"]
+

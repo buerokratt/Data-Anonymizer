@@ -73,3 +73,36 @@ services:
       - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
     ports:
       - 8000:8000
+
+  redis:
+    image: redis
+    build:
+      context: ./anonymisation_internal/anonymisation_api/redis/
+      dockerfile: Dockerfile
+    ports:
+      - 6378:6378
+
+  worker:
+    image: worker
+    build:
+      context: ./anonymisation_internal/anonymisation_api/
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+    volumes:
+      - ./celery/logs:/app/logs
+      - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
+
+  web:
+    image: anonymise
+    build:
+      context: ./anonymisation_internal/anonymisation_api/anonymise/
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+    ports:
+      - 5001:5001
+    volumes:
+      - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
+      - ./anonymisation_internal/anonymisation_api/anonymise/logs:/app/logs
+      - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
