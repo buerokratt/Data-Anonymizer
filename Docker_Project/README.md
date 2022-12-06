@@ -63,3 +63,9 @@ https://github.com/buerokratt/Data-Anonymizer/issues/47
 https://github.com/buerokratt/Data-Anonymizer/issues/43
 
 Add [Ruuter DSL File](Ruuter/DSL/POST/annotate.yml) and [Resql Query](Resql/templates/production/upsert_corpora_task.sql) to annotate a particular sentence with labels.
+
+### Set up Label Studio
+
+https://github.com/buerokratt/Data-Anonymizer/issues/45
+
+Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](Label-Studio/.env.defaults). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.
