@@ -1,0 +1,4 @@
+rig/sqlms/controller/HeartBeatControllerIntegrationTest.class
+rig/sqlms/controller/DataSourceControllerIntegrationTest.class
+rig/sqlms/BaseIntegrationTest.class
+rig/sqlms/controller/QueryControllerIntegrationTest.class
