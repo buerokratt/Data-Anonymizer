@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS debt
+(
+    id      BIGSERIAL PRIMARY KEY,
+    user_id BIGINT         NOT NULL,
+    amount  DECIMAL(20, 2) NOT NULL,
+    due_by  TIMESTAMP WITH TIME ZONE
+);
+
+DELETE
+FROM debt;
