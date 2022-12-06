@@ -81,3 +81,9 @@ Set up [Data Management Frontend](dm/) React Application, and add docker-compose
 https://github.com/buerokratt/Data-Anonymizer/issues/94
 
 Define [routes](dm/src/App.js) for [Anonymizer](dm/src/components/Anonymizer.js) and [Training](dm/src/components/Treening.js) components.
+
+### Implement UI Design for Page Header, Navigation, Drawer and Footer
+
+https://github.com/buerokratt/Data-Anonymizer/issues/95
+
+Add UI Components for [Header](dm/src/components/Header.js), [Navigation Mobile Drawer](dm/src/components/Drawer.js), [Footer](dm/src/components/Footer.js) and [Github Section](dm/src/components/GithubSection.js)
