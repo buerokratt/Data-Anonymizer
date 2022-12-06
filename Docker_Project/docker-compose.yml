@@ -20,6 +20,8 @@ services:
       - ./Resql/:/src/app
     environment:
       - JDBC_URL=jdbc:postgresql://db:5432/ria-db
+      - PING_ENDPOINT=http://localhost:8082/healthz
+      - STARTUP_ENDPONT=http://localhost:8082/create_schema
     entrypoint:
       - /src/app/entrypoint.sh
 
