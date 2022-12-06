@@ -114,3 +114,9 @@ Add [Services](dm/src/RestService.js) to call Backend REST APIs, integrate Anony
 https://github.com/buerokratt/Data-Anonymizer/issues/79
 
 Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) packages, add [translations](dm/src/translations/et.json), and transform all text in the UI utilize the translations. Languages can be modfied [here](dm/src/index.js#L10).
+
+### Train a custom model
+
+https://github.com/buerokratt/Data-Anonymizer/issues/65
+
+Add [Model Training Service](ml-long-process-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/POST/train.yml).
