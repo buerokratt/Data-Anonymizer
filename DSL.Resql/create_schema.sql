@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS Entity (name varchar NOT NULL UNIQUE, description varchar NULL);
 CREATE TABLE IF NOT EXISTS Regex_Entity (id SERIAL, regex varchar NOT NULL, entity varchar NOT NULL, active BOOLEAN DEFAULT TRUE, created_at timestamp NOT NULL DEFAULT NOW());
-CREATE TABLE IF NOT EXISTS Corpora_Tasks (id SERIAL, corpora_id VARCHAR, is_private BOOLEAN, raw_text VARCHAR, preannotated_text VARCHAR, annotated_text VARCHAR, sentences_annotations JSON, created_at timestamp NOT NULL DEFAULT NOW());
+CREATE TABLE IF NOT EXISTS Corpora_Tasks (id SERIAL, corpora_id VARCHAR, is_private BOOLEAN, raw_text VARCHAR, sentences_annotations JSON, created_at timestamp NOT NULL DEFAULT NOW());
 CREATE OR REPLACE FUNCTION list_corpora_tasks_paginated(where_condition varchar, sort_condition varchar, page varchar, page_size varchar )
 RETURNS TABLE(id int, corpora_id varchar, is_private boolean, raw_text varchar, created_at timestamp, full_count bigint, predictions text) AS $$
 BEGIN
