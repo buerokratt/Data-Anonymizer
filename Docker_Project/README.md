@@ -75,3 +75,9 @@ Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-
 https://github.com/buerokratt/Data-Anonymizer/issues/93
 
 Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration.
+
+### Define routes for Anonymizer and Training Pages
+
+https://github.com/buerokratt/Data-Anonymizer/issues/94
+
+Define [routes](dm/src/App.js) for [Anonymizer](dm/src/components/Anonymizer.js) and [Training](dm/src/components/Treening.js) components.
