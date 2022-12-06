@@ -30,7 +30,6 @@ https://github.com/buerokratt/Data-Anonymizer/issues/86
 
 Add [Ruuter DSL File](Ruuter/DSL/GET/regex.yml) and [Resql Query](Resql/templates/production/list_regex.sql) to list regex patterns.
 
-
 ### Delete added Regex pattern from database
 
 https://github.com/buerokratt/Data-Anonymizer/issues/63
@@ -41,11 +40,20 @@ Add [Ruuter DSL File](Ruuter/DSL/GET/delete_regex.yml) and [Resql Query](Resql/t
 
 https://github.com/buerokratt/Data-Anonymizer/issues/59
 
- - Add [Ruuter DSL File](Ruuter/DSL/POST/regex.yml) and [Resql Query](Resql/templates/production/insert_regex.sql) to add a regex pattern.
- - Add [Ruuter DSL File](Ruuter/DSL/GET/entity.yml) and [Resql Query](Resql/templates/production/list_entity.sql) to list entities.
+- Add [Ruuter DSL File](Ruuter/DSL/POST/regex.yml) and [Resql Query](Resql/templates/production/insert_regex.sql) to add a regex pattern.
+- Add [Ruuter DSL File](Ruuter/DSL/GET/entity.yml) and [Resql Query](Resql/templates/production/list_entity.sql) to list entities.
 
 ### Add new entity
 
 https://github.com/buerokratt/Data-Anonymizer/issues/89
 
 Add [Ruuter DSL File](Ruuter/DSL/POST/entity.yml) and [Resql Query](Resql/templates/production/insert_entity.sql) to add an entity.
+
+### Show list of sentences and Filter sentences by ID
+
+https://github.com/buerokratt/Data-Anonymizer/issues/46
+https://github.com/buerokratt/Data-Anonymizer/issues/47
+
+- Add [Ruuter DSL File](Ruuter/DSL/GET/tasks.yml) and [Resql Query](Resql/templates/production/get_corpora.sql) to list corpora tasks based on pagination and filters.
+- Add [Ruuter DSL File](Ruuter/DSL/GET/task.yml) and [Resql Query](Resql/templates/production/get_task.sql) to get a particular task detail.
+- Add [Ruuter DSL File](Ruuter/DSL/GET/project.yml) and [Resql Query](Resql/templates/production/project.sql) to get latest corpora id.
