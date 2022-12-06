@@ -5,6 +5,7 @@ import KeywordTag from "./KeywordTag";
 import GithubSection from "./GithubSection";
 import CloseIcon from "../assets/close.svg";
 import RightIcon from "../assets/Right_Icon.svg";
+import { pseudonymiseText, getEntities } from "../RestService";
 
 function pickTextColorBasedOnBgColorAdvanced(bgColor, lightColor, darkColor) {
   var color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor;
@@ -340,6 +341,18 @@ function Anonymizer() {
       sorter: (a, b) => a.kirjeldus.localeCompare(b.kirjeldus),
     },
   ];
+
+  useEffect(() => {
+    getEntities().then((x) =>
+      setEntities(
+        x.map((entity, index) => ({
+          vaartus: entity.name,
+          kirjeldus: entity.description,
+          color: entityColors[index % entityColors.length],
+        }))
+      )
+    );
+  }, []);
 
   const downloadTxtFile = () => {
     const element = document.createElement("a");
