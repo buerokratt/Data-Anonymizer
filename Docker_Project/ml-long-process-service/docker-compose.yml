@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  sample-api:
+    image: sample-api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always
+    env_file: sample.env
+    entrypoint: "/bin/sh -c \"uvicorn main:app --host $${API_HOST} --port $${API_PORT}\""
+
+
+
+#  postgres_source:
+#    image: postgres:15
+#    env_file: sample.env
+#    environment:
+#      PGDATA: /data/postgres
+#    volumes:
+#      - vol_postgres_source:/data/postgres
+#    restart: always
+#
+#volumes:
+#  vol_postgres_source:

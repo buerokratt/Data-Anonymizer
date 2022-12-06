@@ -1,0 +1,8 @@
+train_model:
+  call: http.post
+  args:
+    url: http://ml-service:8000/task
+  result: request_response
+  
+return:
+  return: ${request_response.response.body}
