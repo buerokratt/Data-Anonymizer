@@ -93,3 +93,9 @@ Add UI Components for [Header](dm/src/components/Header.js), [Navigation Mobile 
 https://github.com/buerokratt/Data-Anonymizer/issues/98
 
 Add UI Component for [Anonymizer](dm/src/components/Anonymizer.js) Page.
+
+### Implement UI Design for Training Page
+
+https://github.com/buerokratt/Data-Anonymizer/issues/96
+
+Add UI Component for [Training](dm/src/components/Treening.js) Page.
