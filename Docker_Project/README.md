@@ -1,6 +1,6 @@
 ## Functionalities
 
-### Add new Regex pattern to the database
+### Set up Ruuter instance
 
 https://github.com/buerokratt/Data-Anonymizer/issues/61
 
@@ -11,3 +11,9 @@ Set up [Ruuter](Ruuter/) instance with a [docker-compose](docker-compose.yml) co
 https://github.com/buerokratt/Data-Anonymizer/issues/62
 
 Set up [Resql](Resql/) instance, and added docker-compose containers for Resql and Postgres Database.
+
+### Set up Data Model
+
+https://github.com/buerokratt/Data-Anonymizer/issues/74
+
+Add [Resql Query](Resql/templates/production/create_schema.sql) and a [bash script](Resql/listen_server.sh) to create database schema automatically.
