@@ -122,7 +122,7 @@ Add [Model Training Service](ml-long-process-service), [docker-compose configura
 
 https://github.com/buerokratt/Data-Anonymizer/issues/64
 
-Add [Anonymizer Service](anonymisation_internal), docker-compose configurations and Ruuter [DSL File](Ruuter/DSL/POST/pseudonymise.yml) to pseudonymise a sentence. The prediction endpoint in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).
+Add [Anonymizer Service](anonymisation_internal), docker-compose configurations and Ruuter [DSL File](Ruuter/DSL/POST/pseudonymise.yml) to pseudonymise a sentence. The prediction endpoint in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py). Relevant models should be placed inside [models folder](anonymisation_internal/anonymisation_api/anonymise/models/).
 
 ### Automatically pre-label uploaded corpus
 

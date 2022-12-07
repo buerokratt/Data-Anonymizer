@@ -2,20 +2,23 @@ from anonymise import predict_ne
 from flask import Flask, request, jsonify, make_response
 from tasks import train
 import logging
+import traceback
 import json
 import requests
 from random import choice
 from string import ascii_uppercase
-
+from worker import celery
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
-
+gunicorn_logger = logging.getLogger('gunicorn.error')
+app.logger.handlers = gunicorn_logger.handlers
+app.logger.setLevel(gunicorn_logger.level)
 
 @app.route("/predict", methods=["POST"])
 def predict(data=None):
     """
-    :return: {"sisendtekst": text, "Mapping": dict vms, "anonümiseeritud tekst": text, "pseudonümiseeritud tekst":text}
+    :return: {"sisendtekst": text, "Mapping": dict , "anonümiseeritud tekst": text, "pseudonümiseeritud tekst":text}
     """
     request_obj = data if data else request.get_json()
     if "texts" not in request_obj.keys():
@@ -26,13 +29,15 @@ def predict(data=None):
         if type(texts) == str:
             texts = [texts]
         else:
-            return jsonify({"Message":"'texts' should be a list not a {}".format(type(texts))})
-
+            return jsonify({"Message": "'texts' should be a list not a {}".format(type(texts))}), 400
 
     if "thresholds" not in request_obj.keys():
-        return jsonify({"Message": "'thresholds' not in request"}), 400
+        thresholds = {}
+    else:
+        thresholds = request_obj.get("thresholds")
+    if type(thresholds) != dict:
+        return jsonify({"Message": "'thresholds' should be a dictionary not a {}".format(type(texts))}), 400
 
-    thresholds = request_obj.get("thresholds")
 
     if "detokenize" not in request_obj.keys():
         detokenize = True
@@ -62,15 +67,25 @@ def predict(data=None):
     else:
         truecase = request_obj.get("truecase")
 
-    app.logger.info("Anonymisation started.")
+    app.logger.debug(
+        "Anonymisation started with following parameters\ntokenize: {}, do_pseudonymisation: {}, thresholds: {}, disabled_entities: {}, do_detokenize: {}".format(
+             tokenize, pseudonymise, thresholds, disabled_entities, detokenize))
     outputs = []
 
     for text in texts:
-        anonymised_text, pseudonymised_text, mapping, tokenized_text = predict_ne(
+        try:
+            anonymised_text, pseudonymised_text, mapping, tokenized_text = predict_ne(
             text=text,
-            tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds, disabled_entities=disabled_entities, do_detokenize=detokenize)
-        outputs.append({"sisendtekst":tokenized_text, "Mapping":mapping, "anonümiseeritud_tekst":anonymised_text, "pseudonümiseeritud_tekst":pseudonymised_text})
-    app.logger.info("Anonymisation ended.")
+            tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds,
+            disabled_entities=disabled_entities, do_detokenize=detokenize)
+            outputs.append({"sisendtekst": tokenized_text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
+                        "pseudonümiseeritud_tekst": pseudonymised_text})
+        except Exception as e:
+
+            app.logger.debug("Error occurred : {}, in input: {}".format(e, text) )
+            app.logger.debug(traceback.format_exc())
+            outputs.append({"Message":"Could not anonymise text: {}".format(text)})
+    app.logger.debug("Anonymisation ended.")
 
     return outputs if data else make_response(jsonify(outputs), 200)
 
@@ -125,8 +140,11 @@ def annotate_corpora():
 
 @app.route("/train", methods=["POST"])
 def train_model():
+    app.logger.debug("Training is starting.")
     train.delay()
-    return jsonify({"Message":'Training started'}), 200
+
+    return jsonify({"Message": 'Training started'}), 200
+
 
 @app.route("/health_check", methods=["GET"])
 def health_check():
@@ -134,5 +152,4 @@ def health_check():
 
 
 if __name__ == "__main__":
-
     app.run(host="0.0.0.0", port=5001, debug=True)

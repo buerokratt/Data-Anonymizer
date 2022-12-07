@@ -8,7 +8,7 @@ def test_predict_simple():
     url = URL + 'predict'
     request_body = {"texts": [
 
-        "Mu email on peeter@gmail.com ja see on kõik"
+        "Mu email on peeter@gmail.com"
 
     ], "tokenize": True, "truecase": True, "pseudonymise": True, "thresholds": {}, "disabled_entities": [],
         "detokenize": True}
@@ -16,8 +16,8 @@ def test_predict_simple():
     response = r.text
     res = json.loads(response)
     assert len(res) == 1
-    assert res[0].get('sisendtekst') == "Mu email on peeter@gmail.com ja see on kõik"
-    assert res[0].get('anonümiseeritud_tekst') == "mu email on [Email] ja see on kõik"
+    assert res[0].get('sisendtekst') == "Mu email on peeter@gmail.com"
+    assert res[0].get('anonümiseeritud_tekst') == "mu email on [Email]"
     assert 'Mapping' in res[0].keys()
 
 
@@ -61,13 +61,13 @@ def test_predict_negative_too_many_input_text():
     res = json.loads(response)
     assert res.get("Message") == "Maximum limit of 100 texts is exceeded, current amount 101."
 
-def test_train():
-    url = URL + 'train'
-    request_body = {}
-    r = requests.post(url = url, json=request_body)
-    response = r.text
-    res = json.loads(response)
-    assert res.get("Message") == "Training started"
+#def test_train():
+#    url = URL + 'train'
+#    request_body = {}
+#    r = requests.post(url = url, json=request_body)
+#    response = r.text
+#    res = json.loads(response)
+#    assert res.get("Message") == "Training started"
 
 
 

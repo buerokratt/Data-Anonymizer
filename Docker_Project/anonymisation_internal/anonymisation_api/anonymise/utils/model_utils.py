@@ -1,51 +1,68 @@
 import  torch
 from transformers import BertTokenizer, BertForTokenClassification
+from collections import defaultdict
+import logging
+from flask import Flask
+app = Flask(__name__)
+gunicorn_logger = logging.getLogger('gunicorn.error')
+app.logger.handlers = gunicorn_logger.handlers
+app.logger.setLevel(gunicorn_logger.level)
 
-
-CONVERSIONS = {'B-ORG': 'B-Asutus', 'I-ORG': 'I-Asutus', 'B-LOC': 'B-Aadress', 'I-LOC': 'I-Aadress',
-                            'B-PER': 'B-Nimi', 'I-PER': 'I-Nimi', 'B-TIME': 'B-Aeg', 'I-TIME': 'I-Aeg',
-                            'B-DATE': 'B-Aeg',
-                            'I-Date': 'I-Aeg'}
-ALL_LABELS = {0: 'B-Nimi',
-                                    1: 'I-Nimi',
-                                    2: 'B-Asutus',
-                                    3: 'I-Asutus',
-                                    4: 'B-Aadress',
-                                    5: 'I-Aadress',
-                                    6: 'O'}
+ALL_LABELS = {0: 'O',
+                                    1: 'B-Nimi',
+                                    2: 'I-Nimi',
+                                    3: 'B-Asutus',
+                                    4: 'I-Asutus',
+                                    5: 'B-Aadress',
+                                    6: 'I-Aadress',
+                                    7: 'B-GPE',
+                                    8: 'I-GPE',
+                                    9: 'B-Toode',
+                                    10: 'I-Toode',
+                                    11: 'B-Tiitel',
+                                    12: 'I-Tiitel',
+                                    13: 'B-Sündmus',
+                                    14: 'I-Sündmus',
+                                    15: 'B-Kuupäev',
+                                    16: 'I-Kuupäev',
+                                    17: 'B-Aeg',
+                                    18: 'I-Aeg',
+                                    19: 'B-Raha',
+                                    20: 'I-Raha',
+                                    21: 'B-Protsent',
+                                    22: 'I-Protsent'}
 
 OLD_LABELS = {0: 'O',
-                                1: 'B-PER',
-                                2: 'I-PER',
-                                3: 'B-ORG',
-                                4: 'I-ORG',
-                                5: 'B-LOC',
-                                6: 'I-LOC'}
+                                1: 'B-Nimi',
+                                2: 'I-Nimi',
+                                3: 'B-Asutus',
+                                4: 'I-Asutus',
+                                5: 'B-Aadress',
+                                6: 'I-Aadress'}
 
-NEW_LABELS = {0: 'B-PROD',
-                                1: 'I-PROD',
-                                2: 'B-DATE',
-                                3: 'I-DATE',
-                                4: 'B-TIME',
-                                5: 'I-TIME',
-                                6: 'B-EVENT',
-                                7: 'I-EVENT',
-                                8: 'B-MONEY',
-                                9: 'I-MONEY',
-                                10: 'B-PERCENT',
-                                11: 'I-PERCENT',
-                                12: 'O',
-                                13: 'B-PER',
-                                14: 'I-PER',
-                                15: 'B-ORG',
-                                16: 'I-ORG',
-                                17: 'B-LOC',
-                                18: 'I-LOC',
-                                19: 'B-TITLE',
-                                20: 'I-TITLE',
-                                21: 'B-GPE',
-                                22: 'I-GPE',
-                                23: ''}
+NEW_LABELS = {0: "B-Toode",
+1: "I-Toode",
+2: "B-Tiitel",
+3: "I-Tiitel",
+4: "I-Asutus",
+5: "B-Protsent",
+6: "I-Kuupäev",
+7: "B-Sündmus",
+8: "B-Kuupäev",
+9: "B-GPE",
+10: "I-Aeg",
+11: "B-Raha",
+12: "B-Aeg",
+13: "I-Protsent",
+14: "I-Sündmus",
+15: "I-Aadress",
+16: "O",
+17: "B-Aadress",
+18: "I-Nimi",
+19: "B-Nimi",
+20: "I-Raha",
+21: "B-Asutus",
+22: "I-GPE"}
 
 TC_LABELS = {0: 'Upper', 1: 'Lower'}
 
@@ -75,7 +92,7 @@ bert_all_res_tokenizer = BertTokenizer.from_pretrained(model_path + 'gdpr_model'
 
 
 
-def predict_all(sentence: list, bert_tokenizer, bertner, labelmap, thresholds: dict, device:str) -> list:
+def predict_all(sentence: list, bert_tokenizer, bertner, labelmap, thresholds: dict, device:str) -> (list, list):
     grouped_inputs = [torch.LongTensor([bert_tokenizer.cls_token_id])]
     subtokens_per_token = []
     for token in sentence:
@@ -96,6 +113,7 @@ def predict_all(sentence: list, bert_tokenizer, bertner, labelmap, thresholds: d
         with torch.no_grad():
             predictions_tensor = bertner(flattened_inputs)[0]
     except Exception as e:
+        app.logger.debug("Unknown token in input, sentence: {}, error: {}".format(sentence, e))
         print(sentence, e)  # unknwon token triggers it
         return ['O' for _ in sentence]
     predictions_tensor = predictions_tensor.to('cpu')
@@ -122,26 +140,22 @@ def predict_all(sentence: list, bert_tokenizer, bertner, labelmap, thresholds: d
         values_predictions_first.append(first_values[ptr:ptr + size])
         ptr += size
     predicted_labels = []
-
+    confs = []
     for token, prediction_group, prediction_group_second, values, first_value in zip(sentence, aligned_predictions,
                                                                                          aligned_predictions_second,
                                                                                          values_predictions_second,
                                                                                          values_predictions_first):
         try:
+            en_values_dic = defaultdict(list)
+
             label = prediction_group[0]
-            if label in CONVERSIONS.keys():
-                label = CONVERSIONS.get(label)
-            else:
-                label = 'O'
+            en_values_dic[label] = first_value[0]
             threshold = thresholds.get(label.split('-')[-1])
             if threshold is not None:
                 if first_value[0] < threshold:
                     label = 'O'
             label_alt = prediction_group_second[0]
-            if label_alt in CONVERSIONS.keys():
-                label_alt = CONVERSIONS.get(label_alt)
-            else:
-                label_alt = 'O'
+            en_values_dic[label_alt] = values[0]
             if label == 'O':
                 threshold = thresholds.get(label_alt.split('-')[-1])
                 if threshold is not None:
@@ -149,11 +163,12 @@ def predict_all(sentence: list, bert_tokenizer, bertner, labelmap, thresholds: d
                         label = label_alt
 
             predicted_labels.append(label)
+            confs.append((token, en_values_dic))
         except Exception as e:
-            print(e)
+            app.logger.debug("Exception in predict_all, error: {}, token: {}, assigning entity O.".format(e, token))
             predicted_labels.append('O')
-
-    return predicted_labels
+    #app.logger.debug(confs)
+    return predicted_labels, confs
 
 
 def predict_na(sentence: list, bert_tokenizer, bertner, labelmap: dict, thresholds: dict, device:str) -> list:
@@ -177,7 +192,7 @@ def predict_na(sentence: list, bert_tokenizer, bertner, labelmap: dict, threshol
         with torch.no_grad():
             predictions_tensor = bertner(flattened_inputs)[0]
     except Exception as e:
-        print(sentence, e)  # unknwon token triggers it
+        app.logger.debug("Unknown token in input, sentence: {}, error: {}".format(sentence, e))
         return ['O' for _ in sentence]
     predictions_tensor = predictions_tensor.to('cpu')
     pred_values, pred_indices = predictions_tensor.topk(2, axis=2)
@@ -216,20 +231,14 @@ def predict_na(sentence: list, bert_tokenizer, bertner, labelmap: dict, threshol
                                                                                          values_predictions_first):
         try:
             label = prediction_group[0]
-            if label in CONVERSIONS.keys():
-                label = CONVERSIONS.get(label)
-            else:
-                label = 'O'
+
             threshold = thresholds.get(label.split('-')[-1])
             if threshold is not None:
                 if first_value[0] < threshold:
                     label = 'O'
 
             label_alt = prediction_group_second[0]
-            if label_alt in CONVERSIONS.keys():
-                label_alt = CONVERSIONS.get(label_alt)
-            else:
-                label_alt = 'O'
+
             if label == 'O':
                 threshold = thresholds.get(label_alt.split('-')[-1])
                 if threshold is not None:
@@ -241,7 +250,8 @@ def predict_na(sentence: list, bert_tokenizer, bertner, labelmap: dict, threshol
                 label = 'B-' + base
             previous = label
             predicted_labels.append(label)
-        except:
+        except Exception as e:
+            app.logger.debug("Exception in predict_all, error: {}, token: {}, assigning entity O.".format(e, token))
             predicted_labels.append('O')
     return predicted_labels
 
@@ -266,7 +276,7 @@ def do_truecase(sentence: list) -> str:
         with torch.no_grad():
             predictions_tensor = bert_truecase_model(flattened_inputs)[0]
     except Exception as e:
-        print(sentence, "truecase", e)  # unknwon token triggers it
+        app.logger.debug("Unknown token in input, sentence: {}, error: {}".format(sentence, e))
         return ' '.join(sentence)
     predictions_tensor = predictions_tensor.to('cpu')
     predictions_tensor = torch.argmax(predictions_tensor, dim=2)[0]
@@ -288,6 +298,7 @@ def do_truecase(sentence: list) -> str:
 
             predicted_labels.append(label)
         except Exception as e:
+            app.logger.debug("Exception in assigning truecasing label, token: {}, label: {}, error: {}".format(token,prediction_group, e))
             predicted_labels.append('Lower')
     truecased = [token if label == 'Lower' else token.upper() if label == 'AUpper' else token.capitalize() for
                     label, token in
@@ -300,7 +311,7 @@ def find_ne(text, thresholds):
     words = text.split()
     predicted_tags1 = predict_na(words, bert_new_tokenizer, bert_new_model, NEW_LABELS, thresholds, 'cpu')  # new
     predicted_tags2 = predict_na(words, bert_old_tokenizer, bert_old_model, OLD_LABELS, thresholds, 'cpu')  # old
-    predicted_tags3 = predict_all(words, bert_all_res_tokenizer, bert_all_model_res, ALL_LABELS, thresholds, 'cpu')  # all
+    predicted_tags3, confs = predict_all(words, bert_all_res_tokenizer, bert_all_model_res, ALL_LABELS, thresholds, 'cpu')  # all
     new_sentence = []
     for token1, token2, token3, w in zip(predicted_tags1, predicted_tags2, predicted_tags3,
                                          words):
@@ -326,4 +337,4 @@ def find_ne(text, thresholds):
             tag = tag1
 
         new_sentence.append((w.strip(), tag))
-    return new_sentence
+    return new_sentence, confs
