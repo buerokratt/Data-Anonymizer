@@ -1,7 +1,34 @@
 import re
 from collections import defaultdict
-
-
+from flask import Flask
+import logging
+app = Flask(__name__)
+gunicorn_logger = logging.getLogger('gunicorn.error')
+app.logger.handlers = gunicorn_logger.handlers
+app.logger.setLevel(gunicorn_logger.level)
+"""
+OLEMID: 
+Nimi - M
+GPE  - M 
+Aadress - M 
+Asutus - M + R
+Toode - M
+Sündmus - M
+Kuupäev - M 
+Aeg - M 
+Tiitel  - M
+Raha  - M 
+Protsent - M
+Dokumendinr - R -
+Kaardinr - R 
+IBAN - R 
+Isikudocumendinr -R 
+Isikukood - R
+Email  - R
+Telefon - R
+Parool  - R 
+Autonumber  - R 
+"""
 def read_companies_ner():
     replacements = {'Osaühing': 'OÜ', 'OÜ': 'Osaühing', 'MTÜ': 'Mittetulundusühing',
                     'FIE': 'Füüsilisest isikust ettevõtja', 'Füüsilisest isikust ettevõtja': 'FIE',
@@ -41,7 +68,6 @@ def read_file(file):
     with open(file, 'r', encoding='utf-8') as f:
         for line in f:
             ents.append(line.strip())
-            ents.append(line.strip().lower())
     return ents
 
 
@@ -58,7 +84,7 @@ def read_names(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.split('\t')
-            name = line[1]
+            name = line[1].strip()
             names.append(name)
     return names
 
@@ -125,8 +151,8 @@ def find_nr(text):
     return dic
 
 
-BN_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))[A-Za-z]{2}[0-9\s]{18,}(?=[.|,|;|:|\s|!|?]|$)"""
-BN_ENT = 'Muu'
+BN_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))[A-Za-z]{2}[0-9]{18,}(?=[.|,|;|:|\s|!|?]|$)"""
+BN_ENT = 'IBAN'
 
 CAR_NR_REGEX = r"""(?:^|(?<=[±|.|,|;|:|\s|!|?|\W)|(]))([0-9]{2,3}\s{0,1}[a-zA-Z]{3}?)(?=[.|,|;|:|\s|!|?]|$)"""
 CAR_NR_ENT = 'Autonumber'
@@ -134,7 +160,15 @@ CAR_NR_ENT = 'Autonumber'
 ID_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))[1-6][0-9]{2}(01|02|03|04|05|06|07|08|09|10|11|12)(01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)[0-9]{3}[0-9](?=[.|,|;|:|\s|!|?]|$)"""
 ID_ENT = 'Isikukood'
 
+CARD_MAESTRO_NR_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390|6759)\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}(?=[.|,|;|:|\s|!|?]|$)"""
+CARD_OTHER_NR_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}(?=[.|,|;|:|\s|!|?]|$)"""
+CARD_ENT = "Kaardinr"
 
+ID_DOC_NR_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))(AA|AB|AC|EA|EB|EC|N|NA|N|UA|PB|PC|BD|BE|FB|FC|FD|FE|KD|KE|KF|VD|VE|VF|MD|ME|MF|SD|SE|SF|RD|RE|RF|CD|CF)[0-9]{7}(?=[.|,|;|:|\s|!|?]|$)"""
+ID_DOC_NR_ENT = "Isikudokumendinr"
+
+DOC_NR_REGEX = r"""(?:^|(?<=[.|,|;|:|\s|!|?]))[A-Za-z-_]{2,}\s?[0-9]{3,}(?=[.|,|;|:|\s|!|?]|$)"""
+DOC_NR_ENT = "Dokumendinr"
 def find_match(text, regex, ent):
     dic = {}
     for match in re.finditer(regex, text):
@@ -181,29 +215,39 @@ def get_expression_company(companies):
     return string
 
 
-def find_companies(lemma_text, text):
+def find_companies(lemma_text, text, confs):
     dic = {}
-    lemma_to_form = {}
-    for lemma, word in zip(lemma_text.split(), text.split()):
-        lemma_to_form[lemma] = word
+    lemma_to_form = defaultdict()
+    for lemma, word, conf_dic in zip(lemma_text.split(), text.split(), confs):
+        lemma_to_form[lemma] = (word, conf_dic)
     for match in re.finditer(get_expression_company(read_companies()), lemma_text):
         start, end = match.span()
         found = lemma_text[start:end]
         if len(found.split()) > 1:
             bi = 'B'
             for part in found.split():
-                part = lemma_to_form.get(part)
-                if part is not None:
-                    start = text.index(part)
-                    dic[start] = (bi + '-Asutus', start + len(part), part)
-                    start += len(part) + 1
-                    bi = 'I'
+                temp = lemma_to_form.get(part)
+                if temp is None:
+                    conf_dic = {}
+                else:
+                    part, conf_dic = temp[0], temp[1][1]
+                if 'B-Asutus' in conf_dic.keys() or 'I-Asutus' in conf_dic.keys():
+                    if part is not None:
+                        start = text.index(part)
+                        dic[start] = (bi + '-Asutus', start + len(part), part)
+                        start += len(part) + 1
+                        bi = 'I'
         else:
-            found = lemma_to_form.get(found)
+            temp = lemma_to_form.get(found)
+            if temp is None:
+                conf_dic = {}
+            else:
+                part, conf_dic = temp[0], temp[1][1]
             if found is not None:
-                start = text.index(found)
-                end = start + len(found)
-                dic[start] = ('B-Asutus', end, found)
+                if 'B-Asutus' in conf_dic.keys() or 'I-Asutus' in conf_dic.keys():
+                    start = text.index(found)
+                    end = start + len(found)
+                    dic[start] = ('B-Asutus', end, found)
     return dic
 
 
@@ -216,33 +260,52 @@ def get_expression_streets(streets):
     return string
 
 
-def find_ad(text):
+def find_ad(text, confs):
     dic = {}
+    form_to_dic = {}
+    for word, conf_dic in zip(text.split(), confs):
+        form_to_dic[word] = conf_dic
     for match in re.finditer(get_expression_streets(read_streets()), text):
         start, end = match.span()
         found = text[start:end]
+
         if len(found.split()) > 1:
             bi = 'B'
             for part in found.split():
-                dic[start] = (bi + '-Aadress', start + len(part), part)
-                start += len(part) + 1
-                bi = 'I'
+                conf_dic = form_to_dic.get(found)
+                if conf_dic is None:
+                    conf_dic = {}
+                else:
+                    conf_dic = conf_dic[1]
+
+                if 'B-Aadress' in conf_dic.keys() or 'I-Aadress' in conf_dic.keys():
+                    dic[start] = (bi + '-Aadress', start + len(part), part)
+                    start += len(part) + 1
+                    bi = 'I'
         else:
-            dic[start] = ('B-Aadress', end, found)
+            conf_dic = form_to_dic.get(found)[1]
+            if conf_dic is None:
+                conf_dic = {}
+            if 'B-Aadress' in conf_dic.keys() or 'I-Aadress' in conf_dic.keys():
+                dic[start] = ('B-Aadress', end, found)
     return dic
 
 
-def find_regex_entities(text, text_lemmatized):
+def find_regex_entities(text, text_lemmatized, confs):
     regex_entities = {}
-    regex_entities.update(find_match(text, CAR_NR_REGEX, CAR_NR_ENT))
+    regex_entities.update(find_match(text, DOC_NR_REGEX, DOC_NR_ENT))
     regex_entities.update(find_match_split(text, NUMERIC_REGEX, NUMERIC_ENT))
     regex_entities.update(find_match_split(text, OTHER_REGEX, OTHER_ENT))
-    regex_entities.update(find_match_split(text, EMAIL_REGEX, EMAIL_ENT))
     regex_entities.update(find_match_split(text, PI_REGEX, PI_ENT))
     regex_entities.update(find_nr(text))
-    regex_entities.update(find_match(text, BN_REGEX, BN_ENT))
-    regex_entities.update(find_companies(text_lemmatized, text))
+    regex_entities.update(find_companies(text_lemmatized, text, confs))
+    regex_entities.update(find_match(text, CARD_MAESTRO_NR_REGEX, CARD_ENT))
+    regex_entities.update(find_match(text, CARD_OTHER_NR_REGEX, CARD_ENT))
     regex_entities.update(find_match(text, ID_REGEX, ID_ENT))
+    regex_entities.update(find_match(text, BN_REGEX, BN_ENT))
+    regex_entities.update(find_match_split(text, EMAIL_REGEX, EMAIL_ENT))
+    regex_entities.update(find_match(text, CAR_NR_REGEX, CAR_NR_ENT))
+    regex_entities.update(find_ad(text, confs))
     return regex_entities
 
 
@@ -281,7 +344,7 @@ def connect_tags(ner_tagged, disabled_entities, regex_entities, url_dic):
                     word_start += len(word) + 1
                     continue
 
-        elif tag != 'O' and 'Aeg' not in tag and not important_regex:
+        elif tag != 'O' and not important_regex:
             if tag not in disabled_entities:
                 new_text.append('[' + tag + ']')
                 word_start += len(word) + 1
@@ -295,10 +358,7 @@ def connect_tags(ner_tagged, disabled_entities, regex_entities, url_dic):
             new_text.append(word)
             word_start += len(word) + 1
             continue
-        elif 'Aeg' in tag and not important_regex:
-            new_text.append(word)
-            word_start += len(word) + 1
-            continue
+
         word_end_true = word_start + len(word)
 
         if word_start in regex_entities.keys():

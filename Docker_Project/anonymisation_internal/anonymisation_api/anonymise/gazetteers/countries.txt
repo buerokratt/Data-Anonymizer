@@ -1,389 +1,285 @@
 Afganistan
-
-Afganistani Islamivabariik
+Afganistani Islam
 Kabul
-
 Ahvenamaa
-
-
 Ahvenamaa maakond
 Maarianhamina
-
 Albaania
-
-Albaania Vabariik
+Albaania
 Tirana
-
 Alžeeria
-
-Alžeeria Demokraatlik Rahvavabariik
+Alžeeria Demokraatlik Rahv
 Alžiir
-
 Ameerika Samoa
 Ida-Samoa
-
-
 Ameerika Samoa
 Pago Pago
 Ameerika Ühendriigid
 Ühendriigid
-
 Ameerika Ühendriigid
-
 Washington
 Andorra
-
 Andorra Vürstiriik
 Andorra la Vella
 Angola
-Angola Vabariik
+Angola
 Luanda
 Anguilla
-
 Anguilla
 The Valley
 Antarktis
-
-
 Antigua ja Barbuda
-
 Antigua ja Barbuda
 Saint John’s
 Araabia Ühendemiraadid
-
 Araabia Ühendemiraadid
-
 Abu Dhabi
-
 Argentina
  Argentiina
-Argentina Vabariik
+Argentina
 Buenos Aires
 Armeenia
-
-Armeenia Vabariik
+Armeenia
 Jerevan
 Aruba
-
 Aruba
 Oranjestad
 Aserbaidžaan
-
-Aserbaidžaani Vabariik
+Aserbaidžaani
 Bakuu
-
 Austraalia
-
 Austraalia
 Canberra
 Austria
-
-Austria Vabariik
+Austria
 Viin
-
 Bahama
  Bahama saared
-
-Bahama Ühendus
+ Bahama Ühendus
 Nassau
 Bahrein
-
 Bahreini Kuningiik
 Manama
-
 Bangladesh
-
-Bangladeshi Rahvavabariik
+Bangladeshi Rahv
 Dhaka
-
 Barbados
 Barbados
 Bridgetown
 Belau
  Palau
-Belau Vabariik
+Belau
 Ngerulmud
 Belgia
-
 Belgia Kuningriik
 Brüssel
-
 Belize
 Belize
 Belmopan
 Benin
-
-Benini Vabariik
+Benini
 Porto-Novo
 Bermuda
-
 Bermuda
 Hamilton
 Bhutan
-
 Bhutani Kuningriik
 Thimphu
 Boliivia
-
 Boliivia Paljurahvuseline Riik
 La Paz, Sucre
 Bonaire, Sint Eustatius ja Saba
-
 Bonaire, Sint Eustatius ja Saba
 –
 Bosnia ja Hertsegoviina
-
 Bosnia ja Hertsegoviina
 Sarajevo
 Botswana
-Botswana Vabariik
+Botswana
 Gaborone
 Bouvet’ saar
-
-
 Bouvet’ saar
-–
 Brasiilia
-
-Brasiilia Liitvabariik
+Brasiilia Lii
 Brasília
 Briti India ookeani ala
-
 Briti India ookeani ala
 –
 Briti Neitsisaared
-
 Neitsisaared
 Road Town
 Brunei
 Brunei Darussalami Riik
 Bandar Seri Begawan
 Bulgaaria
-
-Bulgaaria Vabariik
+Bulgaaria
 Sofia
 Burkina Faso
 Burkina Faso
 Ouagadougou
 Burundi
-Burundi Vabariik
+Burundi
 Gitega
 Colombia
  Kolumbia
-Colombia Vabariik
+Colombia
 Bogotá
 Cooki saared
-
-
 Cooki saared
 Avarua
 Costa Rica
-Costa Rica Vabariik
+Costa Rica
 San José
 Curaçao
-
 Curaçao
 Willemstad
 Djibouti
-
-Djibouti Vabariik
+Djibouti
 Djibouti
 Dominica
 Dominica Ühendus
 Roseau
-Dominikaani Vabariik
+Dominikaani
  Dominikaani
-
-Dominikaani Vabariik
+ Dominikaani
 Santo Domingo
 Ecuador
-Ecuadori Vabariik
+Ecuadori
 Quito
 Eesti
-Eesti Vabariik
+Eesti
 Tallinn
 Egiptus
-
-Egiptuse Araabia Vabariik
+Egiptuse Araabia
 Kairo
-
 Ekvatoriaal-Guinea
-
-Ekvatoriaal-Guinea Vabariik
+Ekvatoriaal-Guinea
 Malabo
 Elevandiluurannik
  Côte d’Ivoire
-Côte d’Ivoire’i Vabariik
+Côte d’Ivoire’i
 Yamoussoukro
 El Salvador
  Salvador
-El Salvadori Vabariik
+El Salvadori
 San Salvador
 Eritrea
-
 Eritrea Riik
 Asmara
 Etioopia
-
-Etioopia Demokraatlik Liitvabariik
+Etioopia Demokraatlik Lii
 Addis Abeba
 Falklandi
  saared
-
-
-Falklandi saared
+ Falklandi saared
 Port Stanley
 Fidži
-
-Fidži Vabariik
+Fidži
 Suva
 Filipiinid
-
-Filipiini Vabariik
+Filipiini
 Manila
 Fääri saared
-
-
 Fääri saared
 Tórshavn
 Gabon
-Gaboni Vabariik
+Gaboni
 Libreville
 Gambia
-
-Gambia Vabariik
+Gambia
 Banjul
 Ghana
-Ghana Vabariik
+Ghana
 Accra
 Gibraltar
-
 Gibraltar
-–
 Grenada
 Grenada
 Saint George’s
 Gruusia
  Georgia
-
-Gruusia
+ Gruusia
 Thbilisi
  Tbilisi
 Gröönimaa
-
-
 Gröönimaa
 Nuuk
 Guadeloupe
-
 Guadeloupe’i ja sõltkondade departemang
 Basse-Terre
 Guam
-
-
 Guami ala
 Hagåtña
 Guatemala
-Guatemala Vabariik
+Guatemala
 Guatemala
  Ciudad de Guatemala
 Guernsey
-
 Guernsey foogtkond
 Saint Peter Port
 Guinea
-
-Guinea Vabariik
+Guinea
 Conakry
 Guinea-Bissau
-
-Guinea-Bissau Vabariik
+Guinea-Bissau
 Bissau
 Guyana
-Guyana Kooperatiivne Vabariik
+Guyana Kooperatiivne
 Georgetown
 Haiti
-
-Haiti Vabariik
+Haiti
 Port-au-Prince
 Heard ja McDonald
-
-
 Heardi ja McDonaldi saarte ala
-–
 Hiina
-
-Hiina Rahvavabariik
-
+Hiina Rahv
 Peking
-
 Hispaania
-
 Hispaania Kuningriik
 Madrid
 Holland
  Madalmaad
-
-Madalmaade Kuningriik
+ Madalmaade Kuningriik
  Hollandi Kuningriik
 Amsterdam, Haag
-
 Honduras
-Hondurase Vabariik
+Hondurase
 Tegucigalpa
 Hongkong
-
-
 Hongkongi erihalduspiirkond
-
 Horvaatia
-
-Horvaatia Vabariik
+Horvaatia
 Zagreb
 Ida-Timor
  Timor-Leste
-
-Timor-Leste Demokraatlik Vabariik
+ Timor-Leste Demokraatlik
 Dili
 Iirimaa
  Iiri
-
-Iirimaa
+ Iirimaa
 Dublin
-
 Iisrael
-
 Iisraeli Riik
 Tel Aviv
 India
-
-India Vabariik
+India
 New Delhi
 Indoneesia
-
-Indoneesia Vabariik
+Indoneesia
 Jakarta
 Iraak
-
-Iraagi Vabariik
+Iraagi
 Bagdad
-
 Iraan
-
-Iraani Islamivabariik
+Iraani Islam
 Teheran
-
 Island
-
-Islandi Vabariik
+Islandi
 Reykjavík
 Itaalia
-
-Itaalia Vabariik
+Itaalia
 Rooma
-
 Jaapan
-
 Jaapan
 Tōkyō
  Tokio
@@ -392,423 +288,305 @@ Jamaica
 Jamaica
 Kingston
 Jan Mayen
-
 Jan Mayen
 Olonkinbyen
 Jeemen
-
-Jeemeni Vabariik
+Jeemeni
 Sanaa
-
 Jersey
-
 Jersey foogtkond
 Saint Helier
 Jordaania
-
 Jordaania Hašimiidi Kuningriik
 Amman
-
 Jõulusaar
-
-
 Jõulusaare ala
 Flying Fish Cove
 Kaimanisaared
-
-
 Kaimanisaared
 George Town
 Kambodža
-
 Kambodža Kuningriik
 Phnom Penh
-
 Kamerun
-
-Kameruni Vabariik
+Kameruni
 Yaoundé
 Kanada
-
 Kanada
 Ottawa
 Kasahstan
-
-Kasahstani Vabariik
+Kasahstani
 Nur-Sultan
 Katar
-
 Katari Riik
 Doha
-
 Keenia
  Kenya
-Keenia Vabariik
+Keenia
 Nairobi
-Kesk-Aafrika Vabariik
-
-Kesk-Aafrika Vabariik
-
+Kesk-Aafrika
+Kesk-Aafrika
 Bangui
-
 Kiribati
-Kiribati Vabariik
+Kiribati
 Bairiki/Tarawa
 Komoorid
  Komoori saared
-
-Komoori Liit
+ Komoori Liit
 Moroni
 Kongo DV
  Kongo-Kinshasa
  Kinshasa Kongo
-
-Kongo Demokraatlik Vabariik
+ Kongo Demokraatlik
 Kinshasa
-Kongo Vabariik
+Kongo
  Kongo-Brazzaville
  Brazzaville’i Kongo
-
-Kongo Vabariik
+ Kongo
 Brazzaville
 Kookossaared
  Keelingi saared
-
-
-Kookossaarte ala
+ Kookossaarte ala
 West Island
 Kosovo
-
-Kosovo Vabariik
+Kosovo
 Priština
-
 Kreeka
-
-Kreeka Vabariik
+Kreeka
 Ateena
-
 Kuuba
-
-Kuuba Vabariik
+Kuuba
 Havanna
-
 Kuveit
-
 Kuveidi Riik
 Al-Kuwayt
 Kõrgõzstan
  Kirgiisia
-Kirgiisi Vabariik
+Kirgiisi
 Biškek
 Küpros
-
-Küprose Vabariik
+Küprose
 Nikosia
-
 Laos
-
-Laose Demokraatlik Rahvavabariik
-
+Laose Demokraatlik Rahv
 Vientiane
-
 Leedu
-
-Leedu Vabariik
+Leedu
 Vilnius
 Lesotho
 Lesotho Kuningriik
 Maseru
 Libeeria
-
-Libeeria Vabariik
+Libeeria
 Monrovia
 Liechtenstein
 Liechtensteini Vürstiriik
 Vaduz
 Liibanon
-
-Liibanoni Vabariik
+Liibanoni
 Beirut
-
 Liibüa
-
 Liibüa Riik
 Tripoli
-
 Luksemburg
-
 Luksemburgi Suurhertsogiriik
 Luxembourg
-Lõuna-Aafrika Vabariik
-
-Lõuna-Aafrika Vabariik
-
+Lõuna-Aafrika
+Lõuna-Aafrika
 Pretoria, Kaplinn
-
 Lõuna-Georgia ja Lõuna-Sandwichi saared
-
-
 Lõuna-Georgia ja Lõuna-Sandwichi saared
-
 Lõuna-Korea
-
-Korea Vabariik
+Korea
 Soul
-
 Lõuna-Sudaan
-
-Lõuna-Sudaani Vabariik
+Lõuna-Sudaani
 Juba
 Läti
-
-Läti Vabariik
+Läti
 Riia
-
 Lääne-Sahara
-
 Lääne-Sahara
 –
 Macau
-
-
 Macau erihalduspiirkond
-
 Madagaskar
-
-Madagaskari Vabariik
+Madagaskari
 Antananarivo
 Malaisia
-
 Malaisia
 Kuala Lumpur
 Malawi
-
-Malawi Vabariik
+Malawi
 Lilongwe
 Maldiivid
-
-Maldiivi Vabariik
+Maldiivi
 Male
-
 Mali
-Mali Vabariik
+Mali
 Bamako
 Malta
-Malta Vabariik
+Malta
 Valletta
 Mani saar
-
-
 Mani saar
 Douglas
 Maroko
-
 Maroko Kuningriik
 Rabat
-
 Marshalli Saared
-
-Marshalli Saarte Vabariik
+Marshalli Saarte
 Uliga/Majuro
 Martinique
-
 Martinique’i departemang
 Fort-de-France
 Mauritaania
-
-Mauritaania Islamivabariik
+Mauritaania Islam
 Nouakchott
-
 Mauritius
-
-Mauritiuse Vabariik
+Mauritiuse
 Port Louis
 Mayotte
-
 Mayotte
 Mamoudzou
 Mehhiko
-
 Mehhiko Ühendriigid
 México
  Ciudad de México
 Mikroneesia
-
 Mikroneesia Liiduriigid
 Palikir
 Moldova
  Moldaavia
-Moldova Vabariik
+Moldova
 Chișinău
 Monaco
 Monaco Vürstiriik
 Monaco
 Mongoolia
-
 Mongoolia
 Ulaanbaatar
 Montenegro
-
 Montenegro
 Podgorica
 Montserrat
-
 Montserrat
 Plymouth
 Mosambiik
-
-Mosambiigi Vabariik
+Mosambiigi
 Maputo
 Myanmar
  Birma
-Myanmari Liidu Vabariik
+Myanmari Liidu
 Naypyidaw
  Nay Pyi Taw
 Namiibia
-
-Namiibia Vabariik
+Namiibia
 Windhoek
 Nauru
-
-Nauru Vabariik
+Nauru
 Yaren
 Nepal
  Nepaal
-
-Nepal
+ Nepal
 Katmandu
-
 Nicaragua
-Nicaragua Vabariik
+Nicaragua
 Managua
 Nigeeria
-
-Nigeeria Liitvabariik
+Nigeeria Lii
 Abuja
 Niger
-Nigeri Vabariik
+Nigeri
 Niamey
 Niue
-
 Niue
 Alofi
 Norfolk
-
 Norfolki saare ala
 Kingston
 Norra
-
 Norra Kuningriik
 Oslo
 Omaan
-
 Omaani Sultaniriik
 Masqaţ
 Paapua Uus-Guinea
-
 Paapua Uus-Guinea Iseseisvusriik
 Port Moresby
 Pakistan
-
-Pakistani Islamivabariik
+Pakistani Islam
 Islamabad
-
 Palestiina
-
 Palestiina Riik
 Rām Allāh
 Panama
-
-Panama Vabariik
+Panama
 Panamá
 Paraguay
  Paraguai
-Paraguay Vabariik
+Paraguay
 Asunción
 Peruu
-
-Peruu Vabariik
+Peruu
 Lima
 Pitcairn
-
 Pitcairni, Hendersoni, Ducie ja Oeno saar
 Adamstown
 Poola
-
-Poola Vabariik
+Poola
 Varssavi
-
 Portugal
-Portugali Vabariik
+Portugali
 Lissabon
-
 Prantsuse Guajaana
-
 Guajaana departemang
 Cayenne
 Prantsuse Lõunaalad
-
 Prantsuse Lõunaalad
 Port-aux-Français
 Prantsuse Polüneesia
-
 Prantsuse Polüneesia
 Papeete
 Prantsusmaa
-
-Prantsuse Vabariik
+Prantsuse
 Pariis
-
 Puerto Rico
-
 Puerto Rico Ühendus
 San Juan
 Põhja-Korea
-
-Korea Rahvademokraatlik Vabariik
-
+Korea Rahvademokraatlik
 Pyongyang
-
 Põhja-Makedoonia
-
-Põhja-Makedoonia Vabariik
+Põhja-Makedoonia
 Skopje
 Põhja-Mariaanid
-
-
 Põhja-Mariaani Ühendus
 Capitol Hill / Saipan
 Réunion
-
 Réunioni departemang
 Saint-Denis
 Roheneemesaared
  Cabo Verde
-Cabo Verde Vabariik
+Cabo Verde
 Praia
 Rootsi
-
 Rootsi Kuningriik
 Stockholm
 Rumeenia
-
 Rumeenia
 Bukarest
-
 Rwanda
  Ruanda
-Rwanda Vabariik
+Rwanda
 Kigali
 Saalomoni Saared
-
 Saalomoni Saared
 Honiara
 Saint-Barthélemy
-
 Saint-Barthélemy territoriaalühendus
 Gustavia
 Saint Helena
-
 Saint Helena, Ascension ja Tristan da Cunha
 Jamestown
 Saint Kitts ja Nevis
@@ -818,893 +596,433 @@ Saint Lucia
 Saint Lucia
 Castries
 Saint-Martin
-
 Saint-Martini ühendus
 Marigot
 Saint-Pierre ja Miquelon
-
-
 Saint-Pierre’i ja Miqueloni territoriaalühendus
 Saint-Pierre
 Saint Vincent ja Grenadiinid
-
 Saint Vincent ja Grenadiinid
 Kingstown
 Saksamaa
-
-Saksamaa Liitvabariik
-
+Saksamaa Lii
 Berliin
-
 Sambia
-
-Sambia Vabariik
+Sambia
 Lusaka
 Samoa
-
 Samoa Iseseisvusriik
 Apia
 San Marino
-San Marino Vabariik
+San Marino
 San Marino
 São Tomé ja Príncipe
-
-São Tomé ja Príncipe Demokraatlik Vabariik
+São Tomé ja Príncipe Demokraatlik
 São Tomé
 Saudi Araabia
-
 Saudi Araabia Kuningriik
 Ar-Riyāḑ
 Seišellid
-
-Seišelli Vabariik
+Seišelli
 Victoria
 Senegal
-
-Senegali Vabariik
+Senegali
 Dakar
 Serbia
-
-Serbia Vabariik
+Serbia
 Belgrad
-
 Sierra Leone
-Sierra Leone Vabariik
+Sierra Leone
 Freetown
 Singapur
-
-Singapuri Vabariik
+Singapuri
 Singapur
-
 Sint Maarten
-
 Sint Maarten
 Philipsburg
 Slovakkia
-
-Slovaki Vabariik
+Slovaki
 Bratislava
 Sloveenia
-
-Sloveenia Vabariik
+Sloveenia
 Ljubljana
 Somaalia
-
-Somaalia Liitvabariik
+Somaalia Lii
 Muqdisho
  Mogadishu
 Soome
-
-Soome Vabariik
+Soome
 Helsingi
-
 Sri Lanka
-
-Sri Lanka Demokraatlik Sotsialistlik Vabariik
+Sri Lanka Demokraatlik Sotsialistlik
 Colombo
 , Sri Jayawardenepura Kotte
-
 Sudaan
-
-Sudaani Vabariik
+Sudaani
 Hartum
-
 Suriname
-Suriname Vabariik
+Suriname
 Paramaribo
 Suurbritannia
  Inglismaa
  Ühendkuningriik
-
-Suurbritannia ja Põhja-Iiri Ühendkuningriik
+ Suurbritannia ja Põhja-Iiri Ühendkuningriik
 London
 Svaasimaa
  eSwatini
-
-eSwatini Kuningriik
+ eSwatini Kuningriik
 Mbabane, Lobamba
 Svalbard
  Teravmäed
-
-Svalbard
+ Svalbard
 Longyearbyen
 Süüria
-
-Süüria Araabia Vabariik
+Süüria Araabia
 Damaskus
-
 Šveits
  Helveetsia
-
-Šveitsi Konföderatsioon
+ Šveitsi Konföderatsioon
 Bern
-
 Zimbabwe
-Zimbabwe Vabariik
+Zimbabwe
 Harare
 Taani
-
 Taani Kuningriik
 Kopenhaagen
-
 Tadžikistan
-
-Tadžikistani Vabariik
+Tadžikistani
 Dušanbe
 Tai
  Taimaa
-
-Tai Kuningriik
+ Tai Kuningriik
 Bangkok
-
 Taiwan
-
 Taiwani provints
 Taibei
  Taipei
 Tansaania
-
-Tansaania Ühendvabariik
+Tansaania Ühen
 Dodoma
 Togo
-Togo Vabariik
+Togo
 Lomé
 Tokelau
  Tokelau saared
-
-Tokelau
+ Tokelau
 –
 Tonga
 Tonga Kuningriik
 Nuku‘alofa
 Trinidad ja Tobago
-
-Trinidadi ja Tobago Vabariik
+Trinidadi ja Tobago
 Port of Spain
 Tšaad
-
-Tšaadi Vabariik
+Tšaadi
 N’Djamena
 Tšehhi
  Tšehhimaa
-
-Tšehhi Vabariik
+ Tšehhi
 Praha
 Tšiili
-
-Tšiili Vabariik
+Tšiili
 Santiago
 Tuneesia
-
-Tuneesia Vabariik
+Tuneesia
 Tunis
-
 Turks ja Caicos
-
-
 Turksi ja Caicose saared
 Cockburn Town
 Tuvalu
 Tuvalu
 Vaiaku/Funafuti
 Türgi
-
-Türgi Vabariik
+Türgi
 Ankara
 Türkmenistan
  Turkmeenia
 Türkmenistan
 Aşgabat
 Uganda
-Uganda Vabariik
+Uganda
 Kampala
 Ukraina
-
 Ukraina
 Kiiev
-
 Ungari
-
 Ungari
 Budapest
 Uruguay
  Uruguai
-Uruguay Idavabariik
+Uruguay Id
 Montevideo
 USA Neitsisaared
-
 Ühendriikide Neitsisaared
 Charlotte Amalie
 Usbekistan
-
-Usbekistani Vabariik
+Usbekistani
 Taškent
-
 Uus-Kaledoonia
-
-
 Uus-Kaledoonia
 Nouméa
 Uus-Meremaa
-
 Uus-Meremaa
 Wellington
 Valgevene
-
-Valgevene Vabariik
+Valgevene
 Minsk
 Vanuatu
-Vanuatu Vabariik
+Vanuatu
 Port Vila
 Vatikan
-
 Püha Tool
  Vatikani Linnriik
-
-Venemaa
+ Venemaa
  Vene
-
-Venemaa Föderatsioon
+ Venemaa Föderatsioon
 Moskva
 Venezuela
  Venetsueela
-Venezuela Bolívari Vabariik
+Venezuela Bolívari
 Caracas
 Vietnam
-
-Vietnami Sotsialistlik Vabariik
+Vietnami Sotsialistlik
 Hanoi
-
 Wallis ja Futuna
-
-
 Wallise ja Futuna ala
 Mata Utu
 Ühendriikide hajasaared
-
-
 Ühendriikide väikesed hajasaared
-
-
 Afganistan
 afgaan
-
 Afgaani
 Ahvenamaa
-
-
 Albaania
-
-
 Alžeeria
-
-
 Ameerika Samoa
-
-
 Ameerika Ühendriigid
 
-
-
-
 Andorra
-
-
 Angola
-
-
 Anguilla
-
-
 Antarktis
-
-
 Antigua ja Barbuda
-
-
 Araabia Ühendemiraadid
-
-
 Argentina
-
-
 Armeenia
-
-
 Aruba
-
-
 Aserbaidžaan
-
-
 Austraalia
-
-
 Austria
-
-
 Bahama
-
-
 Bahrein
-
-
 Bangladesh
-
-
 Barbados
-
-
 Belau
-
-
-
 Belgia
-
-
 Belize
-
-
 Benin
-
-
 Bermuda
-
-
 Bhutan
-
-
 Boliivia
-
-
 Bonaire, Sint Eustatius ja Saba
-
-
 Bosnia ja Hertsegoviina
-
-
 Botswana
-
  tsvana
-
-Bouvet’ saar
-
-
+ Bouvet’ saar
 Brasiilia
-
-
 Briti India ookeani ala
-
-
 Briti Neitsisaared
-
-
 Brunei
-
-
 Bulgaaria
-
-
 Burkina Faso
-
-
 Burundi
-
  rundi
-
-Colombia
-
-
-
-Cooki saared
-
-
+ Colombia
+ Cooki saared
 Costa Rica
-
-
 Curaçao
-
-
 Djibouti
-
-
 Dominica
-
-
-Dominikaani Vabariik
-
-
+Dominikaani
 Ecuador
-
-
 Eesti
-
-
 Egiptus
-
-
 Ekvatoriaal-Guinea
-
-
 Elevandiluurannik
-
-
-
 El Salvador
-
-
 Eritrea
-
-
 Etioopia
-
-
 Falklandi
  saared
-
-
-Fidži
-
-
-Filipiinid
-
-Filipiini
+ Fidži
+ Filipiinid
+ Filipiini
 Fääri saared
-
 Fääri
 Gabon
-
-
 Gambia
-
-
 Ghana
-
-
 Gibraltar
-
-
 Grenada
-
-
 Gruusia
 grusiin
-
-
 Gröönimaa
-
 Grööni
 Guadeloupe
-
-
 Guam
-
-
 Guatemala
-
-
 Guernsey
-
-
 Guinea
-
-
 Guinea-Bissau
-
-
 Guyana
-
-
 Haiti
-
-
 Heard ja McDonald
 –
-
 Hiina
-
-
 Hispaania
-
-
 Holland
-
-
-
 Honduras
-
-
 Hongkong
-
-
 Horvaatia
 horvaat
-
 Ida-Timor
-
-
-
 Iirimaa
-
-
 Iisrael
-
-
 India
-
-
 Indoneesia
-
-
 Iraak
-
-
 Iraan
-
-
 Island
-
-
 Itaalia
-
-
 Jaapan
-
-
 Jamaica
-
-
-
 Jan Mayen
-
-
 Jeemen
-
-
 Jersey
-
-
 Jordaania
-
-
 Jõulusaar
-
-
 Kaimanisaared
-
-
 Kambodža
-
-
 Kamerun
-
-
 Kanada
-
-
 Kasahstan
 kasahh
-
 Kasahhi
 Katar
-
-
 Keenia
-
-
-
-Kesk-Aafrika Vabariik
-
-
-
+Kesk-Aafrika
 Kiribati
 kiribati
-
 Komoorid
-
 Komoori
 Kongo DV
-
-
-
-Kongo Vabariik
-
-
-
+Kongo
 Kookossaared
-
-
 Kosovo
-
-
 Kreeka
-
-
 Kuuba
-
-
 Kuveit
-
-
 Kõrgõzstan
-
 Kirgiisi
 Küpros
-
-
 Laos
-
-
 Leedu
-
 Lesotho
-
 Libeeria
-
 Liechtenstein
-
 Liibanon
-
 Liibüa
-
 Luksemburg
-
-Lõuna-Aafrika Vabariik
+Lõuna-Aafrika
 Lõuna-Aafrika
 Lõuna-Georgia ja Lõuna-Sandwichi saared
-
 Lõuna-Korea
-
 Lõuna-Sudaan
-
 Läti
-
 Lääne-Sahara
-
 Macau
-
-
 Madagaskar
-
 Malaisia
-
 Malawi
-
 Maldiivid
 Maldiivi
 Mali
-
 Malta
-
 Mani saar
-
-
 Maroko
-
-
 Marshalli Saared
-
 Martinique
-
 Mauritaania
-
-
 Mauritius
-
-
 Mayotte
-
-
 Mehhiko
-
 Mikroneesia
-
-
 Moldova
-
-
-
 Monaco
-
-
 Mongoolia
 mongol
-
-
 Montenegro
-
-
 Montserrat
-
-
 Mosambiik
-
-
 Myanmar
-
-
-
 Namiibia
-
-
 Nauru
-
-
 Nepal
-
-
-
 Nicaragua
-
-
 Nigeeria
-
-
 Niger
-
-
 Niue
-
-
 Norfolk
-
-
 Norra
-
-
 Omaan
-
-
 Paapua Uus-Guinea
-
-
-
 Pakistan
-
-
 Palestiina
-
-
 Panama
-
-
 Paraguay
-
-
-
 Peruu
-
-
 Pitcairn
-
-
 Poola
 poolakas
-
 Portugal
-
-
 Prantsuse Guajaana
-
-
 Prantsuse Lõunaalad
 –
-
 Prantsuse Polüneesia
-
-
 Prantsusmaa
-
 Prantsuse
 Puerto Rico
-
-
 Põhja-Korea
-
-
 Põhja-Makedoonia
-
-
-
 Põhja-Mariaanid
-
 Põhja-Mariaani
 Réunion
-
-
 Roheneemesaared
-
-
-
 Rootsi
-
-
 Rumeenia
-
-
 Rwanda
-
-
 Saalomoni Saared
-
-
 Saint-Barthélemy
-
-
 Saint Helena
-
-
 Saint Kitts ja Nevis
-
-
 Saint Lucia
-
-
 Saint-Martin
-
-
 Saint-Pierre ja Miquelon
-
-
 Saint Vincent ja Grenadiinid
-
-
 Saksamaa
-
 Saksa
 Sambia
-
-
 Samoa
-
-
 San Marino
-
-
 São Tomé ja Príncipe
-
-
 Saudi Araabia
-
-
 Seišellid
-
 Seišelli
 Senegal
-
-
 Serbia
-
-
 Sierra Leone
-
-
 Singapur
-
-
 Sint Maarten
-
-
 Slovakkia
 slovakk
 Slovaki
@@ -1712,147 +1030,61 @@ Sloveenia
 sloveen
 Sloveeni
 Somaalia
-
 Somaali
 Soome
-
-
 Sri Lanka
-
-
 Sudaan
-
-
 Suriname
-
-
 Suurbritannia
 britt
-
-
-
 Briti
  Inglise
 Svaasimaa
 svaasi
-
-
 Svaasi
 Svalbard
-
-
-
 Süüria
-
-
 Šveits
-
-
-
 Zimbabwe
-
-
 Taani
-
-
 Tadžikistan
 tadžikk
-
 Tadžiki
 Tai
-
- tai
-
-
 Taiwan
-
-
 Tansaania
-
-
 Togo
-
-
 Tokelau
-
-
 Tonga
-
-
 Trinidad ja Tobago
-
-
 Tšaad
-
-
 Tšehhi
 tšehh
-
 Tšiili
-
-
 Tuneesia
-
-
 Turks ja Caicos
-
-
 Tuvalu
 tuvalu
-
 Türgi
-
-
 Türkmenistan
 türkmeen
-
 Türkmeeni
 Uganda
-
-
 Ukraina
-
-
 Ungari
-
-
 Uruguay
-
-
-
 USA Neitsisaared
-
-
 Usbekistan
 usbekk
-
 Usbeki
 Uus-Kaledoonia
-
-
 Uus-Meremaa
-
-
 Valgevene
-
-
 Vanuatu
-
-
 Vatikan
-
-
 Venemaa
-
 Vene
 Venezuela
-
-
-
 Vietnam
-
-
 Wallis ja Futuna
-
-
 Ühendriikide hajasaared

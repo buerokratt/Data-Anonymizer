@@ -11,7 +11,7 @@ def train(id):
         main()
     except Exception as e:
         print(e)
-        logger.info(e)
+        logger.error(e)
     logger.info("training ended")
-    return json.dumps({'message':'started training', 'code':'SUCCESS'})
+    return json.dumps({'Message':'Started training', 'code':'SUCCESS'})
 

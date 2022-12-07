@@ -24,5 +24,6 @@ COPY . ./
 
 EXPOSE 5001
 
-CMD ["gunicorn", "--bind", ":5001", "--timeout", "900", "accept_request:app"]
+#
+CMD ["gunicorn", "accept_request:app", "--bind", ":5001", "--timeout", "900", "--log-file", "/app/logs/gunicorn.log" , "--log-level" , "DEBUG" ]
 #CMD ["python3", "accept_request.py"]

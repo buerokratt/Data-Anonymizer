@@ -21,6 +21,7 @@ services:
       - redis
     volumes:
       - ./celery/logs:/app/logs
+      - ./anonymise/trained_model:/app/training/trained_model
 
   web:
     image: anonymise
@@ -31,6 +32,9 @@ services:
       - redis
     ports:
       - 5001:5001
+    volumes:
+      - ./anonymise/trained_model:/app/training/trained_model
+      - ./anonymise/logs:/app/logs
 
   test:
     image: test

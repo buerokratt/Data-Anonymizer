@@ -5,5 +5,5 @@ protobuf==3.20.1
 flask==1.1.4
 markupsafe==2.0.1
 exrex
-estnltk==1.6.9.1b0
+estnltk==1.7.0
 gunicorn
