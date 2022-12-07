@@ -3,6 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import DrawerIcon from "../assets/Drawer.svg";
 import { useTranslation } from "react-i18next";
 import Drawer from "./Drawer";
+import { useState } from "react";
 
 const Container = styled.div`
   background: #0000e6;
@@ -61,9 +62,10 @@ const NavigationItem = styled(Link)`
 function Header() {
   const location = useLocation();
   const { t } = useTranslation("common");
+  const [drawerOpen, setDrawerOpen] = useState(false);
   return (
     <>
-      <Drawer />
+      <Drawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       <Container>
         <Heading>{t("header.title")}</Heading>
         <NavigationItems>
