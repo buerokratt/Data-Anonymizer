@@ -154,4 +154,4 @@ Add [Anonymizer Service](anonymisation_internal), docker-compose configurations 
 
 https://github.com/buerokratt/Data-Anonymizer/issues/66
 
-Add Ruuter [DSL File](Ruuter/DSL/POST/annotate_corpora.yml) to pre-label list of corpora sentences and a [ReSQL](Resql/templates/production/get_latest_corpora.sql) query to get full corpora. The annotation endpoint (/annotate_corpora) in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).
+Add Ruuter DSL Files to to [pre-label list of corpora sentences](Ruuter/DSL/POST/annotate_corpora.yml) and [get prelabelling status](Ruuter/DSL/GET/prelabelling_status.yml), and a [ReSQL](Resql/templates/production/get_latest_corpora.sql) query to get full corpora. The annotation endpoint (/annotate_corpora) in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).
