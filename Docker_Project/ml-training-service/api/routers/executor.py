@@ -15,6 +15,10 @@ def init_routes(app, executor_maker):
         elif state == 'Standby':
             executor.start()
             logging.info('Executor on standby found. Starting job.')
+        elif state == 'Failed':
+            executor = executor_maker()
+            executor.start()
+            logging.info('Failed executor found. Starting a new job, but you should check why the executor failed.')
         else:
             logging.info('Job in progress. Executor working.')
             return {"message": "Job in progress. Wait until done.", "status": state}

@@ -15,3 +15,12 @@ __pycache__/
 .idea/
 
 /venv/
+
+# Test files
+tests/data/models
+dev.json
+train.json
+test.json
+labels.txt.bk
+models/training
+models/model_artifacts

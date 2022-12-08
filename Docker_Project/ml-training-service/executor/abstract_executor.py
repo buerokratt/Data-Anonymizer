@@ -22,6 +22,9 @@ class AbstractExecutor(mp.Process):
 
     def _predict(self):
         raise NotImplementedError
+    
+    def _train_model(self):
+        raise NotImplementedError
 
     def set_state(self, state: str):
         # Suggested values for state: 'Getting data', 'Preprocessing', 'Transforming', 'Writing results', 'Done'.

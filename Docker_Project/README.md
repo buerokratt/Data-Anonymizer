@@ -119,4 +119,4 @@ Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) 
 
 https://github.com/buerokratt/Data-Anonymizer/issues/65
 
-Add [Model Training Service](ml-long-process-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/POST/train.yml).
+Add [Model Training Service](ml-training-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/GET/training_status.yml).
