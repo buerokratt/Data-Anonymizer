@@ -89,6 +89,18 @@ const annotateCorpora = async () => {
   }
 };
 
+const fetchPreLabellingStatus = async (taskId) => {
+  try {
+    let response = await fetch(
+      `${API_URL}/prelabelling_status?taskId=${taskId}`
+    );
+    response = await response.json();
+    return response.response;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const createRegex = async (regex, entity) => {
   try {
     let response = await fetch(`${API_URL}/regex`, {
@@ -157,4 +169,5 @@ export {
   deleteRegex,
   createRegex,
   createEntity,
+  fetchPreLabellingStatus,
 };

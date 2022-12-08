@@ -22,6 +22,7 @@ import CopyIcon from "../assets/Copy.svg";
 import LoopIcon from "../assets/Loop.svg";
 import {
   uploadCorpus,
+  fetchPreLabellingStatus,
   startTraining,
   fetchTrainingStatus,
   annotateCorpora,
@@ -574,6 +575,36 @@ function Treening() {
   const [tableData, setTableData] = useState([]);
   const { t } = useTranslation("common");
 
+  const annotateCorporaAndPollStatus = async () => {
+    let response = await annotateCorpora();
+    notification.info({
+      description: "Prelabelling started. Please wait...",
+      placement: "bottomLeft",
+      icon: <div />,
+      closeIcon: <div />,
+    });
+    let timer = setInterval(() => {
+      fetchPreLabellingStatus(response.task_id).then((status) => {
+        if (status.task_status === "SUCCESS") {
+          clearInterval(timer);
+          notification.info({
+            description: "Prelabelling successfully completed!",
+            placement: "bottomLeft",
+            icon: <div />,
+            closeIcon: <div />,
+          });
+          setTimeout(
+            () =>
+              window
+                .open("https://ria-label-studio.mindtitan.com/", "_blank")
+                .focus(),
+            1000
+          );
+        }
+      });
+    }, 5000);
+  };
+
   const deleteRegexRecord = async (record) => {
     let response = await deleteRegex(record.id);
     if (response === "success") {
@@ -627,10 +658,11 @@ function Treening() {
 
   useEffect(() => {
     if (uploadingState === 4) {
-      setInterval(() => {
+      let timer = setInterval(() => {
         fetchTrainingStatus().then((status) => {
-          if (status.status === "Done" || status.status === "Standby") {
+          if (["Failed", "Done", "Standby"].includes(status.status)) {
             setUploadingState(1);
+            clearInterval(timer);
           }
         });
       }, 10000);
@@ -639,7 +671,7 @@ function Treening() {
 
   useEffect(() => {
     fetchTrainingStatus().then((status) => {
-      if (status.status !== "Done" && status.status !== "Standby") {
+      if (!["Failed", "Done", "Standby"].includes(status.status)) {
         setUploadingState(4);
       }
     });
@@ -787,7 +819,7 @@ function Treening() {
     reader.onload = async (e) => {
       try {
         setUploadingState(2);
-        let corpus = e.target.result.split("\n");
+        let corpus = e.target.result.split("\n").filter((x) => x !== "");
         let corpusId = uuidv4();
         let totalChunks = corpus.length / 100;
         let currentChunk = 0;
@@ -969,7 +1001,7 @@ function Treening() {
               {t("trainingPage.or")}
             </UploadText>
             <ThemeButton2
-              onClick={() => annotateCorpora()}
+              onClick={annotateCorporaAndPollStatus}
               disabled={uploadingState === 4}
               style={{ marginRight: 16 }}
             >
