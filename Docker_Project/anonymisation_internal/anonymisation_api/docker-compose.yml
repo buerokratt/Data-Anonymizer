@@ -1,8 +1,6 @@
 version: "3.4"
 
-
 services:
-
   redis:
     image: redis
     build:
@@ -10,7 +8,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 6378:6378
-
 
   worker:
     image: worker
@@ -44,5 +41,14 @@ services:
     depends_on:
       - web
       - worker
-    command: ["bash", "wait-for-it.sh", "-t", "600", "http://0.0.0.0:5001",  "--", "pytest", "test_api.py"]
-
+    command:
+      [
+        "bash",
+        "wait-for-it.sh",
+        "-t",
+        "600",
+        "http://0.0.0.0:5001",
+        "--",
+        "pytest",
+        "test_api.py",
+      ]

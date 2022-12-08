@@ -1,6 +1,6 @@
 from anonymise import predict_ne
 from flask import Flask, request, jsonify, make_response
-from tasks import train
+from tasks import train, annotate_corpora_task
 import logging
 import traceback
 import json
@@ -8,6 +8,7 @@ import requests
 from random import choice
 from string import ascii_uppercase
 from worker import celery
+from celery.result import AsyncResult
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
@@ -75,10 +76,10 @@ def predict(data=None):
     for text in texts:
         try:
             anonymised_text, pseudonymised_text, mapping, tokenized_text = predict_ne(
-            text=text,
+            orig_text=text,
             tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds,
             disabled_entities=disabled_entities, do_detokenize=detokenize)
-            outputs.append({"sisendtekst": tokenized_text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
+            outputs.append({"sisendtekst": text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
                         "pseudonümiseeritud_tekst": pseudonymised_text})
         except Exception as e:
 
@@ -91,52 +92,19 @@ def predict(data=None):
 
 @app.route("/annotate_corpora", methods=["POST", "GET"])
 def annotate_corpora():
-    try:
-        app.logger.info("Annotating Corpora")
-        r = requests.post(url = 'http://resql:8082/get_latest_corpora')
-        orig_texts = r.json()
-        texts = [x['rawText'] for x in orig_texts]
-        outputs = predict({
-            "pseudonymise": True,
-            "texts": texts,
-            "thresholds": {
-                "Nimi": 2
-            },
-            "tokenize": True,
-            "truecase": True
-        })
-        result = []
-        for index, output in enumerate(outputs):
-            res = {"sentences_annotations": [], "annotate_existing_task": False, "id": orig_texts[index]["id"], "corpora_id": orig_texts[index]["corporaId"] }
-            curr_index = 0
-            for i, word in enumerate(output["Mapping"]):
-                len_word = len(word['Algne'])
-                if word['Tag'] != 'O':
-                    res['sentences_annotations'].append({
-                        "id": ''.join(choice(ascii_uppercase) for x in range(10)),
-                        "from_name": "label",
-                        "origin": "manual",
-                        "to_name": "text",
-                        "type": "labels",
-                        "value": {
-                            "start": curr_index,
-                            "end": curr_index + len_word,
-                            "labels": [word['Tag'].split("_")[0]],
-                            "text": word['Algne']
-                        }
-                    })
-                next_curr_index = len_word + 1
-                try:
-                    curr_index+=(next_curr_index if output["sisendtekst"][curr_index + next_curr_index] == output["Mapping"][i+1]['Algne'][0] else len_word)
-                except Exception as e:
-                    curr_index+=len_word
-            res['sentences_annotations'] = json.dumps(res['sentences_annotations'])
-            result.append(res)
-        requests.post(url = 'http://resql:8082/upsert_corpora_task/batch', json={"queries": result})
-        return make_response(jsonify({"message": "success"}), 200)
-    except Exception as e:
-        print('error')
-        print(e)
+    task = annotate_corpora_task.delay()
+    return jsonify({"Message": 'Annotation started', "task_id": task.id }), 200
+
+@app.route("/prelabelling_status", methods=["POST"])
+def get_prelabelling_status():
+    task_id = request.get_json().get('task_id')
+    task_result = AsyncResult(task_id)
+    result = {
+        "task_id": task_id,
+        "task_status": task_result.status,
+        "task_result": task_result.result
+    }
+    return jsonify(result), 200
 
 @app.route("/train", methods=["POST"])
 def train_model():

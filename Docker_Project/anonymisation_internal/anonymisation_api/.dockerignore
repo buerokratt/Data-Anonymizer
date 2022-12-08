@@ -1,3 +1,4 @@
 redis/
 classification/
 training/model
+**/models

@@ -61,6 +61,27 @@ accuracy:  99.44%; precision:  81.39%; recall:  89.71%; FB1:  85.35
              Nimi: precision:  86.14%; recall:  90.01%; FB1:  88.03  743
 </pre>
 
+
+Results on Ria dataset (test set): 
+
+<pre>
+processed 31371 tokens with 2124 phrases; found: 2339 phrases; correct: 1746.
+accuracy:  85.20%; (non-O)
+accuracy:  97.21%; precision:  74.65%; recall:  82.20%; FB1:  78.24
+             DATE: precision:  60.80%; recall:  71.33%; FB1:  65.64  176
+            EVENT: precision:  47.83%; recall:  65.67%; FB1:  55.35  92
+              GPE: precision:  84.21%; recall:  87.11%; FB1:  85.63  361
+              LOC: precision:  59.13%; recall:  60.18%; FB1:  59.65  115
+            MONEY: precision:  24.24%; recall:  57.14%; FB1:  34.04  33
+              ORG: precision:  72.19%; recall:  78.04%; FB1:  75.00  320
+              PER: precision:  93.42%; recall:  93.71%; FB1:  93.56  638
+          PERCENT: precision:  72.73%; recall:  88.89%; FB1:  80.00  22
+             PROD: precision:  51.94%; recall:  62.21%; FB1:  56.61  206
+             TIME: precision:  46.67%; recall:  63.64%; FB1:  53.85  30
+            TITLE: precision:  72.54%; recall:  87.46%; FB1:  79.30  346
+
+</pre>
+
 ## Confusion matrix 
 
 ### Results on New NER dataset
