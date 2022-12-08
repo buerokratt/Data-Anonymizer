@@ -214,6 +214,26 @@ def get_expression_company(companies):
     string += ')(?=[.|,|;|:|\s|!|?]|$)'
     return string
 
+def map_indeces(orig_text, text):
+    #[(orig_token, text_token, start_i, end_i), (jne)]
+    mapping = []
+    lower_orig_text = orig_text.lower()
+    for token in text.split():
+        token_lower = token.lower()
+        if token_lower in ["+", '.', '?', ')', '(', '/', '\\', '<', ':', '>', ']', "["]:
+            token_lower = "\\" + token_lower
+        expression = rf"{token_lower}"
+
+        for match in re.finditer(expression, lower_orig_text):
+            start, end = match.span()
+            found = orig_text[start:end]
+            mapping.append((found, token, start, end))
+            lower_orig_text = "X"*(end) + lower_orig_text[end:]
+            break
+
+    return mapping
+
+
 
 def find_companies(lemma_text, text, confs):
     dic = {}

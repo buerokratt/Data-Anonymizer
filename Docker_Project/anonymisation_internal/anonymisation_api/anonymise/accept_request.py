@@ -1,8 +1,10 @@
 from anonymise import predict_ne
 from flask import Flask, request, jsonify, make_response
-from tasks import train
+from tasks import train, annotate_corpora_task
 import logging
 import traceback
+from worker import celery
+from celery.result import AsyncResult
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
@@ -70,10 +72,10 @@ def predict(data=None):
     for text in texts:
         try:
             anonymised_text, pseudonymised_text, mapping, tokenized_text = predict_ne(
-            text=text,
+            orig_text=text,
             tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds,
             disabled_entities=disabled_entities, do_detokenize=detokenize)
-            outputs.append({"sisendtekst": tokenized_text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
+            outputs.append({"sisendtekst": text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
                         "pseudonümiseeritud_tekst": pseudonymised_text})
         except Exception as e:
 
@@ -83,6 +85,22 @@ def predict(data=None):
     app.logger.debug("Anonymisation ended.")
 
     return outputs if data else make_response(jsonify(outputs), 200)
+
+@app.route("/annotate_corpora", methods=["POST", "GET"])
+def annotate_corpora():
+    task = annotate_corpora_task.delay()
+    return jsonify({"Message": 'Annotation started', "task_id": task.id }), 200
+
+@app.route("/prelabelling_status", methods=["POST"])
+def get_prelabelling_status():
+    task_id = request.get_json().get('task_id')
+    task_result = AsyncResult(task_id)
+    result = {
+        "task_id": task_id,
+        "task_status": task_result.status,
+        "task_result": task_result.result
+    }
+    return jsonify(result), 200
 
 @app.route("/train", methods=["POST"])
 def train_model():

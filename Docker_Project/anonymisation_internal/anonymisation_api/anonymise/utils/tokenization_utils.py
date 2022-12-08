@@ -21,4 +21,4 @@ def detokenize(text):
     # kellaajad 18:18 JA 18.18 ehk siis kõik nr-te vahelised asjad
     text = re.sub(r'\s(?=[.,:!?\'\"])', '', text)
     text = re.sub(r'(?<=[0-9][.:-])\s(?=[0-9])', '', text)
-    return text.capitalize()
+    return text

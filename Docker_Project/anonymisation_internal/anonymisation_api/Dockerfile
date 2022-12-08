@@ -24,6 +24,7 @@ COPY anonymise/worker.py /app
 COPY anonymise/tasks.py /app
 
 RUN mkdir -p /app/utils
+COPY anonymise/utils/__init__.py /app/utils
 COPY anonymise/utils/utils.py /app/utils
 COPY anonymise/utils/pseudonymisation_utils.py /app/utils
 COPY anonymise/utils/tokenization_utils.py /app/utils
@@ -33,7 +34,8 @@ RUN mkdir -p /app/gazetteers
 #RUN mkdir -p /app/models
 #COPY anonymise/models /app/models
 COPY anonymise/gazetteers /app/gazetteers
+COPY anonymise/gazetteers /gazetteers
 RUN mkdir -p /app/logs
 WORKDIR /app
 
-CMD ["celery", "-A","tasks",  "worker", "-l", "INFO","-f", "/app/logs/celery.log"]
+CMD ["celery", "-A","tasks",  "worker", "--pool", "solo", "-l", "INFO","-f", "/app/logs/celery.log"]

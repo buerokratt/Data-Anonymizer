@@ -357,7 +357,7 @@ def generate_number(entity):
     return entity1
 
 
-def pseudonymization(text, entities):
+def pseudonymization(text, entities, index_mapping):
     tokenizer = WhiteSpaceTokensTagger()
     vabamorf_tagger = VabamorfTagger(input_words_layer='tokens')
     t = Text(text)
@@ -379,9 +379,12 @@ def pseudonymization(text, entities):
         span_form = span.text
         pos = span.partofspeech[0]
         new_ent = ""
+        indexes = index_mapping[i]
         if ent in ('[Telefoninr]', '[Autonumber]', '[IBAN]', '[Email]', '[Parool]', '[Isikukood]', '[Kaardinr]',
                    '[Isikudokumendinr]', '[Muu]', '[Dokumendinr]'):
-            if previous != ent:
+            if previous == ent:
+                new_ent = ''
+            else:
                 ent_formatted = ent[1:-1]
                 if counts.get(ent_formatted) is None:
                     counts[ent_formatted] = 1
@@ -396,8 +399,8 @@ def pseudonymization(text, entities):
                     counts[ent_formatted] += 1
                     counts[form] = count
                 tagged_text.append(ent_formatted + '_' + str(count))
-                mappings.append({'Algne': span.text, 'Asendatud': new_ent,
-                                 'Tag': ent_formatted + '_' + str(count)})
+                mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+                                 'Tag': ent_formatted + '_' + str(count), 'start_i':indexes[2], 'end_i': indexes[3]})
 
 
         elif 'Nimi' in ent:
@@ -435,9 +438,9 @@ def pseudonymization(text, entities):
                 count = str(counts.get(previous_name))
             else:
                 counts['Nimi'] += 1
-            mappings.append({'Algne': span.text,
+            mappings.append({'Algne': indexes[0],
                              'Asendatud': new_ent.capitalize(),
-                             'Tag': 'Nimi_' + count})
+                             'Tag': 'Nimi_' + count,'start_i':indexes[2], 'end_i': indexes[3] })
             if random_name not in counts.keys():
                 counts[random_name] = int(count)
 
@@ -452,6 +455,9 @@ def pseudonymization(text, entities):
                 count, j = 1, 1
                 collected_words = [span.lemma[0]]
                 collected_forms = [span.text]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -460,6 +466,8 @@ def pseudonymization(text, entities):
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.lemma[0])
                         collected_forms.append(last_span.text)
+                        initial_words.append(index_mapping[i+j][0])
+                        end = index_mapping[i+j][3]
                         count += 1
                         j += 1
                     else:
@@ -490,8 +498,8 @@ def pseudonymization(text, entities):
                     counts['Asutus'] = 1
                 count = str(counts.get(random_company)) if random_company in counts.keys() else str(
                     counts.get('Asutus'))
-                mappings.append({'Algne': ' '.join(collected_forms), 'Asendatud': new_ent.capitalize(),
-                                 'Tag': 'Asutus_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                                 'Tag': 'Asutus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Asutus_' + count)
                 if random_company not in counts.keys():
                     counts[random_company] = int(count)
@@ -507,6 +515,9 @@ def pseudonymization(text, entities):
                 j = 1
                 collected_words = [span.text]
                 collected_lemmas = [span.lemma[0]]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -515,6 +526,8 @@ def pseudonymization(text, entities):
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
                         collected_lemmas.append(last_span.lemma[0])
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -540,8 +553,8 @@ def pseudonymization(text, entities):
                     counts['Aadress'] = 1
                 count = str(counts.get(random_address)) if random_address in counts.keys() else str(
                     counts.get('Aadress'))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent.capitalize(),
-                                 'Tag': 'Aadress_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                                 'Tag': 'Aadress_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Aadress_' + count)
                 if random_address not in counts.keys():
                     counts[random_address] = int(count)
@@ -557,6 +570,9 @@ def pseudonymization(text, entities):
                 last_span = span
                 j = 1
                 collected_words = [span.text]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -564,6 +580,8 @@ def pseudonymization(text, entities):
                     if next_ent == '[I-Sündmus]':
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -589,8 +607,8 @@ def pseudonymization(text, entities):
                 if counts.get('Sündmus') is None:
                     counts['Sündmus'] = 1
                 count = str(counts.get(random_event)) if random_event in counts.keys() else str(counts.get('Sündmus'))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent,
-                                 'Tag': 'Sündmus_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                                 'Tag': 'Sündmus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Sündmus_' + count)
 
                 if random_event not in counts.keys():
@@ -605,6 +623,9 @@ def pseudonymization(text, entities):
                 j = 1
                 collected_words = [span.text]
                 collected_lemmas = [span.lemma[0]]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -613,6 +634,8 @@ def pseudonymization(text, entities):
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
                         collected_lemmas.append(last_span.lemma[0])
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -638,8 +661,8 @@ def pseudonymization(text, entities):
                 if counts.get('GPE') is None:
                     counts['GPE'] = 1
                 count = str(counts.get(random_gpe)) if random_gpe in counts.keys() else str(counts.get('GPE'))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent.capitalize(),
-                                 'Tag': 'GPE_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                                 'Tag': 'GPE_' + count,  'start_i': start, 'end_i': end})
                 tagged_text.append('GPE_' + count)
                 if random_gpe not in counts.keys():
                     counts[random_gpe] = int(count)
@@ -652,8 +675,11 @@ def pseudonymization(text, entities):
             else:
                 cleaned_entity = ent.replace('[B-', '').replace(']', '')
                 j = 1
+                initial_words = [indexes[0]]
                 collected_words = [span.text]
                 last_span = t.morph_analysis[i]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -661,6 +687,8 @@ def pseudonymization(text, entities):
                     if next_ent == ent.replace('B-', 'I-'):
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -690,17 +718,20 @@ def pseudonymization(text, entities):
                 if counts.get(cleaned_entity) is None:
                     counts[cleaned_entity] = 1
                 count = str(counts.get(cleaned_entity))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent,
-                                 'Tag': cleaned_entity + '_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                                 'Tag': cleaned_entity + '_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append(cleaned_entity + '_' + count)
 
         elif 'Toode' in ent:
-            if  ent.startswith('[I-'):
+            if ent.startswith('[I-'):
                 new_ent = ''
             else:
 
                 j = 1
                 collected_words = [span.text]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -708,6 +739,8 @@ def pseudonymization(text, entities):
                     if next_ent == ent.replace('B-', 'I-'):
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -728,8 +761,8 @@ def pseudonymization(text, entities):
                 if counts.get('Toode') is None:
                     counts['Toode'] = 1
                 count = str(counts.get(random_prod)) if random_prod in counts.keys() else str(counts.get('Toode'))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent,
-                                 'Tag': 'Toode_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                                 'Tag': 'Toode_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Toode_' + count)
                 if random_prod not in counts.keys():
                     counts[random_prod] = int(count)
@@ -744,6 +777,9 @@ def pseudonymization(text, entities):
                 last_span = span
                 j = 1
                 collected_words = [span.text]
+                initial_words = [indexes[0]]
+                start = indexes[2]
+                end = indexes[3]
                 while True:
                     if i + j >= len(entities):
                         break
@@ -751,6 +787,8 @@ def pseudonymization(text, entities):
                     if next_ent == '[I-Tiitel]':
                         last_span = t.morph_analysis[i + j]
                         collected_words.append(last_span.text)
+                        initial_words.append(index_mapping[i + j][0])
+                        end = index_mapping[i + j][3]
                         j += 1
                     else:
                         break
@@ -776,8 +814,8 @@ def pseudonymization(text, entities):
                 if counts.get('Tiitel') is None:
                     counts['Tiitel'] = 1
                 count = str(counts.get(random_title)) if random_title in counts.keys() else str(counts.get('Tiitel'))
-                mappings.append({'Algne': ' '.join(collected_words), 'Asendatud': new_ent,
-                                 'Tag': 'Tiitel_' + count})
+                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                                 'Tag': 'Tiitel_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Tiitel_' + count)
                 if random_title not in counts.keys():
                     counts[random_title] = int(count)
@@ -788,8 +826,8 @@ def pseudonymization(text, entities):
 
         else:
             new_ent = ent
-            mappings.append({'Algne': span.text, 'Asendatud': new_ent,
-                             'Tag': 'O'})
+            mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+                             'Tag': 'O', 'start_i':indexes[2], 'end_i': indexes[3]})
             tagged_text.append(span.text)
         if new_ent != '':
             new_text.append(new_ent.strip())
