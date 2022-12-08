@@ -14,18 +14,18 @@ class LocalTestExecutor(AbstractExecutor):
     def run(self):
         self.set_state('Getting data')
         self.data = self.data_src.read_data('key')
-        time.sleep(3)
+        time.sleep(1)
         self.set_state('Preprocessing')
         self._process_data()
-        time.sleep(3)
+        time.sleep(1)
 
         self.set_state('Transforming')
         self._predict()
-        time.sleep(3)
+        time.sleep(1)
 
         self.set_state('Writing results')
         self.data_dst.write_data('key', self.results)
-        time.sleep(3)
+        time.sleep(1)
         
         self.set_state('Done')
         return 0
