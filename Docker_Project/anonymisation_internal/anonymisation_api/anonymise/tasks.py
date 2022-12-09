@@ -99,17 +99,18 @@ def annotate_corpora_task(self):
             logger.info(output)
             for i, word in enumerate(output["Mapping"]):
                 len_word = len(word['Algne'])
-                if word['Tag'] != 'O':
+                if word['Tag'] != 'O' or word.get('regex_entity_tag'):
                     res['sentences_annotations'].append({
                         "id": ''.join(choice(ascii_uppercase) for x in range(10)),
                         "from_name": "label",
-                        "origin": "manual"  ,
+                        "origin": "manual",
+                        "is_prelabelled": True,
                         "to_name": "text",
                         "type": "labels",
                         "value": {
                             "start": word['start_i'],
                             "end": word['end_i'],
-                            "labels": [word['Tag'].split("_")[0]],
+                            "labels": [word.get('regex_entity_tag')] if word.get('regex_entity_tag') else [word['Tag'].split("_")[0]],
                             "text": word['Algne']
                         }
                     })

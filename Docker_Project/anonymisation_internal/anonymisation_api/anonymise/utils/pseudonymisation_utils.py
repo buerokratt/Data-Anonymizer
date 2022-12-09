@@ -826,8 +826,15 @@ def pseudonymization(text, entities, index_mapping):
 
         else:
             new_ent = ent
+            regex_entity_tag = None
+            try:
+                is_regex_ent = re.search(r"^\[([A-Za-z0-9_]+)\]$", new_ent)
+                if is_regex_ent:
+                    regex_entity_tag = is_regex_ent.group(1)
+            except:
+                pass
             mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
-                             'Tag': 'O', 'start_i':indexes[2], 'end_i': indexes[3]})
+                             'Tag': 'O', 'regex_entity_tag': regex_entity_tag, 'start_i':indexes[2], 'end_i': indexes[3]})
             tagged_text.append(span.text)
         if new_ent != '':
             new_text.append(new_ent.strip())

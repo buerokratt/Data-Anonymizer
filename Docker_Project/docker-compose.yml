@@ -92,6 +92,7 @@ services:
     volumes:
       - ./celery/logs:/app/logs
       - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
+      - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
 
   web:
     image: anonymise
