@@ -41,13 +41,15 @@ def convert_to_iob(annotations: list, pos_dict: dict) -> None:
 
 def prepare_annotation(element: dict) -> list:
     sentence_text = element.get('rawText', '')
-    annotations = element.get('predictions', '')
+    annotations = element.get('predictions', '').replace('false', 'False')
     try:
         annotations = ast.literal_eval(annotations)
     except ValueError as e:
         logging.warning(f'Malformed prediction data. Discarding element with id {element["id"]}')
         return []
-    annotations = [x['value'] for x in annotations]
+    annotations = [x['value'] for x in annotations if not x.get('is_prelabelled')]
+    if not annotations:
+        logging.warning(f'No manual annotations found. Discarding element with id {element["id"]}')
     annotations = clear_overlaps(annotations)
     pos_dict = {}
     doc = nlp(sentence_text)
