@@ -24,6 +24,12 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/annotate
 curl -X "POST" "http://localhost:8080/annotate_corpora"
 ```
 
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/prelabelling_status.yml
+
+```
+curl "http://localhost:8080/prelabelling_status"
+```
+
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_latest_corpora.sql
 
 ```

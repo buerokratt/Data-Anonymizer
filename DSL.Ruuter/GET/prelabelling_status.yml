@@ -1,0 +1,10 @@
+get_status:
+  call: http.post
+  args:
+    url: http://web:5001/prelabelling_status
+    body:
+      task_id: ${incoming.params.taskId}
+  result: request_response
+
+return:
+  return: ${request_response.response.body}
