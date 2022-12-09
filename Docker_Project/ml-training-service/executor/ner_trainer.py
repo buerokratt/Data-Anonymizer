@@ -59,8 +59,7 @@ class NERTrainer(AbstractExecutor):
     def _validate_elem(self, elem):
         sentence_text = elem.get('rawText')
         annotations = elem.get('predictions')
-        prelabelled = elem.get('is_prelabelled')
-        return sentence_text and annotations and not prelabelled
+        return sentence_text and annotations
 
     def _process_data(self):
         self.data = [elem for elem in self.data if self._validate_elem(elem)]
