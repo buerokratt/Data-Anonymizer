@@ -6,6 +6,8 @@ https://github.com/buerokratt/Data-Anonymizer/issues/61
 
 Set up [Ruuter](Ruuter/) instance with a [docker-compose](docker-compose.yml) configuration.
 
+Always run ```docker-compose up -d``` to start all docker containers.
+
 ### Set up ReSQL instance
 
 https://github.com/buerokratt/Data-Anonymizer/issues/62
@@ -141,3 +143,4 @@ cd Upload_Corpora_Git_Script
 npm install
 GIT_OWNER="<GIT_OWNER_ID>" GIT_REPO="<GIT_REPO_ID>" GIT_TOKEN="<GIT_PERSONAL_ACCESS_TOKEN>" API_URL="<RUUTER_URL>" node index.js
 ```
+
