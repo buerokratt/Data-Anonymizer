@@ -372,7 +372,7 @@ function Anonymizer() {
     setOutputText(response?.[0]?.pseudonümiseeritud_tekst);
     let tagIndex = 0;
     response?.[0]?.Mapping.map((x) => {
-      if (x.Tag !== "O") {
+      if (x.Tag !== "O" || x.regex_entity_tag) {
         x.tagIndex = tagIndex;
         tagIndex++;
       }
@@ -422,14 +422,14 @@ function Anonymizer() {
                   }}
                 >
                   {pseudonymisedWords.map((x) =>
-                    x.Tag === "O" ? (
+                    x.Tag === "O" && !x.regex_entity_tag ? (
                       <div>{x.Algne}&nbsp;</div>
                     ) : (
                       <>
                         <KeywordTag
                           color={tagColors[x.tagIndex % tagColors.length]}
                           text={x.Algne}
-                          keyword={x.Tag?.split("_")?.[0]}
+                          keyword={x.regex_entity_tag ? x.regex_entity_tag : x.Tag?.split("_")?.[0]}
                         />
                         &nbsp;
                       </>
