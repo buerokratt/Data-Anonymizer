@@ -2,6 +2,7 @@ import re
 from collections import defaultdict
 from flask import Flask
 import logging
+import requests
 app = Flask(__name__)
 gunicorn_logger = logging.getLogger('gunicorn.error')
 app.logger.handlers = gunicorn_logger.handlers
@@ -326,6 +327,9 @@ def find_regex_entities(text, text_lemmatized, confs):
     regex_entities.update(find_match_split(text, EMAIL_REGEX, EMAIL_ENT))
     regex_entities.update(find_match(text, CAR_NR_REGEX, CAR_NR_ENT))
     regex_entities.update(find_ad(text, confs))
+    r = requests.post(url = 'http://resql:8082/list_regex')
+    for regex_record in r.json():
+        regex_entities.update(find_match(text, regex_record.get('regex'), regex_record.get('entity')))
     return regex_entities
 
 
