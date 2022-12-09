@@ -521,9 +521,15 @@ export class LSFWrapper {
     const serializedAnnotation = this.prepareData(annotation);
 
     Object.assign(serializedAnnotation, extraData);
+    let taskSource = JSON.parse(task.source);
 
     await this.saveUserLabels();
+    serializedAnnotation["result"] = serializedAnnotation["result"].map((x) => {
+      let oldRecord = taskSource?.annotations?.[0]?.result?.find((y) => y.id === x.id);
 
+      if (oldRecord?.is_prelabelled) x.is_prelabelled = true;
+      return x;
+    });
     const result = await this.withinLoadingState(async () => {
       let myobj = {
         id: task.id,
