@@ -31,17 +31,23 @@ import {
   createRegex,
   getEntities,
   createEntity,
+  getCorporaInfo,
+  addCorporaInfo,
+  getTrainedCorporaInfo,
 } from "../RestService";
 import { useTranslation } from "react-i18next";
 
-function uuidv4() {
-  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
-    (
-      c ^
-      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-    ).toString(16)
-  );
-}
+const getFormattedDate = (d) =>
+  `${d.getDate().toString().padStart(2, "0")}.${d
+    .getMonth()
+    .toString()
+    .padStart(2, "0")}.${d.getFullYear().toString().padStart(2, "0")} ${d
+    .getHours()
+    .toString()
+    .padStart(2, "0")}:${d.getMinutes().toString().padStart(2, "0")}:${d
+    .getSeconds()
+    .toString()
+    .padStart(2, "0")}`;
 
 const { TextArea } = Input;
 
@@ -573,6 +579,8 @@ function Treening() {
   const [selectedEntity, setSelectedEntity] = useState(null);
   const [entities, setEntities] = useState([]);
   const [tableData, setTableData] = useState([]);
+  const [corporaInfo, setCorporaInfo] = useState(null);
+  const [trainedCorporaInfo, setTrainedCorporaInfo] = useState(null);
   const { t } = useTranslation("common");
 
   const annotateCorporaAndPollStatus = async () => {
@@ -662,6 +670,9 @@ function Treening() {
         fetchTrainingStatus().then((status) => {
           if (["Failed", "Done", "Standby"].includes(status.status)) {
             setUploadingState(1);
+            getTrainedCorporaInfo().then((res) =>
+              setTrainedCorporaInfo(res[0])
+            );
             clearInterval(timer);
           }
         });
@@ -685,6 +696,12 @@ function Treening() {
       setTableData(tableDataRef.current);
     });
     getEntities().then(setEntities);
+    getCorporaInfo().then((res) => {
+      setCorporaInfo(res[0]);
+      if (res.length === 0) return;
+      else if (!res[0].trainedAt) setUploadingState(3);
+    });
+    getTrainedCorporaInfo().then((res) => setTrainedCorporaInfo(res[0]));
   }, []);
 
   const tableDataRef = useRef(tableData);
@@ -820,19 +837,24 @@ function Treening() {
       try {
         setUploadingState(2);
         let corpus = e.target.result.split("\n").filter((x) => x !== "");
-        let corpusId = uuidv4();
         let totalChunks = corpus.length / 100;
         let currentChunk = 0;
         setUploadProgress(0);
-        const timestamp = new Date(Date.now()).toISOString();
+        const corpusInfo = (await addCorporaInfo(file.name, file.size))?.[0];
+        setCorporaInfo({
+          ...corpusInfo,
+          sourceFileName: file.name,
+          sourceFileSize: file.size,
+          created_at: corpusInfo.createdAt,
+        });
         for (let i = 0; i < corpus.length; i += 100) {
           let chunk = corpus.slice(i, i + 100);
           chunk = {
             tasks: chunk.map((sentence) => ({
               raw_text: sentence,
-              corpora_id: corpusId,
+              corpora_id: corpusInfo.corporaId,
               is_private: true,
-              created_at: timestamp,
+              created_at: corpusInfo.createdAt,
             })),
           };
           if (chunk.tasks.length) await uploadCorpus(chunk);
@@ -922,9 +944,17 @@ function Treening() {
       <UploadSection>
         <Title>{t("trainingPage.title")}</Title>
         <Description>
-          Mudel<FileTag>public-model-2022-11-03.ext</FileTag>on treenitud
-          korpusel<FileTag>public-corpus-2022-11-03.ext</FileTag>11.10.2022
-          12:46:26
+          {trainedCorporaInfo?.trainedAt ? (
+            <>
+              Mudel failinimega
+              <FileTag>{trainedCorporaInfo?.sourceFileName}</FileTag>
+              on treenitud{" "}
+              {trainedCorporaInfo?.trainedAt &&
+                getFormattedDate(new Date(trainedCorporaInfo.trainedAt))}
+            </>
+          ) : (
+            t("trainingPage.usePublicModel")
+          )}
         </Description>
         {uploadingState === 4 ? (
           <UploadingETAContainer>
@@ -932,9 +962,7 @@ function Treening() {
             <UploadHeading>
               {t("trainingPage.trainingInProgress")}
             </UploadHeading>
-            <UploadDescription>
-              private-corpus-2022-11-03-11-11-11.ext
-            </UploadDescription>
+            <UploadDescription>{corporaInfo?.sourceFileName}</UploadDescription>
             <ETA>
               {t("trainingPage.ETA")}: 15 {t("trainingPage.seconds")}
             </ETA>
@@ -967,13 +995,14 @@ function Treening() {
               <UploadAttachmentInfo>
                 <UploadAttachmentInfoColumns>
                   <div>
-                    <UploadText>{file.name}</UploadText>
+                    <UploadText>{corporaInfo?.sourceFileName}</UploadText>
                     <FileStatus>
                       {t("trainingPage.uploadSuccessButton")}
                     </FileStatus>
                   </div>
                   <UploadText>
-                    {Math.round((file.size / 1000000) * 100) / 100}{" "}
+                    {Math.round((corporaInfo?.sourceFileSize / 1000000) * 100) /
+                      100}{" "}
                     {t("trainingPage.mb")}
                   </UploadText>
                   <img

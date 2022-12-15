@@ -10,6 +10,26 @@ const listRegex = async () => {
   }
 };
 
+const getCorporaInfo = async () => {
+  try {
+    let response = await fetch(`${API_URL}/corpora_info`);
+    response = await response.json();
+    return response.response;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const getTrainedCorporaInfo = async () => {
+  try {
+    let response = await fetch(`${API_URL}/trained_corpora_info`);
+    response = await response.json();
+    return response.response;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const deleteRegex = async (id) => {
   try {
     let response = await fetch(`${API_URL}/delete_regex?id=${id}`);
@@ -33,6 +53,26 @@ const getEntities = async () => {
 const fetchTrainingStatus = async () => {
   try {
     let response = await fetch(`${API_URL}/training_status`);
+    response = await response.json();
+    return response.response;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const addCorporaInfo = async (fileName, fileSize) => {
+  try {
+    let response = await fetch(`${API_URL}/corpora_info`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        source_file_name: fileName,
+        source_file_size: fileSize,
+      }),
+    });
     response = await response.json();
     return response.response;
   } catch (err) {
@@ -170,4 +210,7 @@ export {
   createRegex,
   createEntity,
   fetchPreLabellingStatus,
+  getCorporaInfo,
+  addCorporaInfo,
+  getTrainedCorporaInfo,
 };
