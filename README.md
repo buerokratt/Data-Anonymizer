@@ -7,16 +7,30 @@ https://github.com/buerokratt/Data-Anonymizer/issues/59
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.sql
 
 ```
+
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.yml
 
 ```
+
 ```
 
 ### Upload private corpus to the database
 
 https://github.com/buerokratt/Data-Anonymizer/issues/69
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_corpora_info.sql
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/insert_corpora_info" --data '{"source_file_name": "korpus.txt", "source_file_size": "42323"}'
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/corpora_info.yml
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/corpora_info" --data '{"source_file_name": "korpus.txt", "source_file_size": "42323"}'
+```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_corpora_task.sql
 
