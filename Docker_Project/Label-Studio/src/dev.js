@@ -9,7 +9,7 @@ const LS_ACCESS_TOKEN = process.env.LS_ACCESS_TOKEN;
 export const initDevApp = async (DataManager) => {
   const gatewayAPI = API_GATEWAY ?? "http://localhost:8081/api";
   const useExternalSource = !!gatewayAPI;
-  let projectResponse = await fetch(`${API_GATEWAY}/project`);
+  let projectResponse = await fetch(`${API_GATEWAY}/corpora_info`);
 
   projectResponse = await projectResponse.json();
   const dm = new DataManager({
