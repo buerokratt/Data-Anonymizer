@@ -27,7 +27,7 @@ class NERTrainer(AbstractExecutor):
 
             self.set_state('Getting data')
             self.data = self.data_src.read_data()
-            
+            corpora_id = self.data[0].get("corporaId") if len(self.data) > 0 else None
             self.set_state('Preprocessing')
             self._process_data()
             if not self.data:
@@ -41,6 +41,7 @@ class NERTrainer(AbstractExecutor):
             self.data_dst.put_model(local_path=f'{config.get_local_model_dir()}/model_artifacts', model_name='bert_new')
             
             self.set_state('Done')
+            self.data_src.write_data(corpora_id)
             return 0
         except Exception as e:
             logging.error(f'Training failed: {str(e)}')
@@ -93,7 +94,8 @@ class ReSQLSource(AbstractDatabase):
         r = requests.post(f"{config.get_resql_url()}/get_latest_corpora")
         return r.json()
 
-    def write_data(self):
+    def write_data(self, corpora_id):
+        requests.post(url = f"{config.get_resql_url()}/upsert_corpora_info", json={"corpora_id": corpora_id})
         pass
 
 
