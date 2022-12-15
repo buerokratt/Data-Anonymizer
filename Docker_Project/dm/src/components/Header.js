@@ -3,7 +3,6 @@ import { useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import DrawerIcon from "../assets/Drawer.svg";
 import Drawer from "./Drawer";
-import { useState } from "react";
 
 const Container = styled.div`
   background: #0000e6;
@@ -75,7 +74,6 @@ const EnglishText = styled.div`
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
-  const [drawerOpen, setDrawerOpen] = useState(false);
   return (
     <>
       <Drawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
