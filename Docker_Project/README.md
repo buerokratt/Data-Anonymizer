@@ -119,7 +119,7 @@ Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) 
 
 https://github.com/buerokratt/Data-Anonymizer/issues/65
 
-Add [Model Training Service](ml-training-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/POST/train.yml).
+Add [Model Training Service](ml-training-service), [docker-compose configuration](docker-compose.yml#L63) and Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/POST/train.yml). Also add a [Ruuter DSL File](Ruuter/DSL/POST/update_corpora_info.yml) and [Resql Query](Resql/templates/production/upsert_corpora_info.sql) to update a corpora info record [after training is done](ml-training-service/executor/ner_trainer.py#L98).
 
 ### Anonymize/pseudonymize a sentence
 
