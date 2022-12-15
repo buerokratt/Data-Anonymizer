@@ -24,4 +24,5 @@ Add [Resql Query](Resql/templates/production/create_schema.sql) and a [bash scri
 
 https://github.com/buerokratt/Data-Anonymizer/issues/69
 
-Add [Ruuter DSL File](Ruuter/DSL/POST/corpora.yml) and [Resql Query](Resql/templates/production/insert_corpora_task.sql) to create tasks in bulk (upload corpora).
+- Add [Ruuter DSL File](Ruuter/DSL/POST/corpora_info.yml) and [Resql Query](Resql/templates/production/insert_corpora_info.sql) to create a corpora info record.
+- Add [Ruuter DSL File](Ruuter/DSL/POST/corpora.yml) and [Resql Query](Resql/templates/production/insert_corpora_task.sql) to create tasks in bulk (upload corpora).
