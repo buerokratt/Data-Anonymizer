@@ -24,6 +24,7 @@
         "uploadAgainButton": "ASENDA FAIL",
         "uploadSuccessButton": "Fail üles laetud",
         "mb": "MB",
+        "usePublicModel": "Hetkel on kasutusel avalik mudel, sest privaatset mudelit ei ole treenitud.",
         "trainingButton": "ALUSTA KOHESELT TREENIMIST",
         "or": "või",
         "preAnnotateButton": "EELMÄRGENDA KORPUS",
