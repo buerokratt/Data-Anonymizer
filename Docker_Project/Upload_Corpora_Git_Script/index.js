@@ -13,7 +13,7 @@ async function downloadCorpusAndUploadToGit() {
   try {
     let page = 1;
     let result = [];
-    let responseProject = await axios.get(`${url}/project`);
+    let responseProject = await axios.get(`${url}/corpora_info`);
     let corporaId = responseProject.data.response[0].corporaId;
     while (true) {
       let response = await axios.get(`${url}/tasks`, {
