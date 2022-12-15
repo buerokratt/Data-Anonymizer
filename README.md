@@ -7,12 +7,14 @@ https://github.com/buerokratt/Data-Anonymizer/issues/59
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.sql
 
 ```
+
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.yml
 
 ```
-``` 
+
+```
 
 ### Show list of sentences
 
@@ -42,3 +44,14 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/task.yml
 curl "http://localhost:8080/task?id=931986&project=c25d0570-dc99-46d6-afb7-80ad46439b3c"
 ```
 
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_corpora_info.sql
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/get_corpora_info"
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/corpora_info.yml
+
+```
+curl "http://localhost:8080/corpora_info"
+```
