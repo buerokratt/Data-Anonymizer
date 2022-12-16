@@ -534,7 +534,6 @@ export class LSFWrapper {
       let myobj = {
         id: task.id,
         sentences_annotations: JSON.stringify(serializedAnnotation["result"]),
-        annotate_existing_task: false,
       };
 
       return this.datamanager.apiCall(
