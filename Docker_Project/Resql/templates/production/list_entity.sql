@@ -1,1 +1,1 @@
-select * from Entity;
+select name, description from Entity;
