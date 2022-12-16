@@ -1,0 +1,48 @@
+version: "3.9"
+services:
+  ruuter:
+    container_name: ruuter
+    build:
+      context: ./Ruuter/
+    volumes:
+      - ./Ruuter/DSL:/DSL
+    ports:
+      - 8081:8080
+  resql:
+    container_name: resql
+    image: spring-boot
+    build:
+      context: ./Resql
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./Resql/:/src/app
+    environment:
+      - JDBC_URL=jdbc:postgresql://db-test:5433/ria-db
+      - PING_ENDPOINT=http://localhost:8082/healthz
+      - STARTUP_ENDPONT=http://localhost:8082/create_test_schema
+    entrypoint:
+      - /src/app/entrypoint.sh
+
+  db-test:
+    container_name: db-test
+    image: postgres
+    restart: always
+    expose:
+      - "5433"
+    ports:
+      - "5433:5433"
+    environment:
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
+      - POSTGRES_DB=ria-db
+      - POSTGRES_PORT=5433
+    command: -p 5433
+
+  testing-framework:
+    container_name: testing-framework
+    tty: true
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./testing-framework
