@@ -167,3 +167,12 @@ cd Upload_Corpora_Git_Script
 npm install
 GIT_OWNER="<GIT_OWNER_ID>" GIT_REPO="<GIT_REPO_ID>" GIT_TOKEN="<GIT_PERSONAL_ACCESS_TOKEN>" API_URL="<RUUTER_URL>" node index.js
 ```
+
+### Create tests for the back end
+
+https://github.com/buerokratt/Data-Anonymizer/issues/102
+
+- Add [Testing Framework](testing-framework) to run E2E Ruuter & Resql Tests.
+- Add separate [docker-compose file](docker-compose.test.yml) to run test instances of resql, ruuter, db and the framework itself.
+- Add [file](docker_test_run.sh) to pause running production resql & ruuter containers, start test containers, run tests and resume the production containers after succssful execution.
+  To execute testing suite, run `./docker_test_run.sh`.
