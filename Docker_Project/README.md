@@ -176,6 +176,26 @@ In this system Search is implemented through Regexes, as exactly matching a word
 The end user can customize this functionality by adding their own regex requiring exactly matching one of a number of elements in a list. For example a regex for matching workdays:  
 ```(?:^|(?<=[.|,|;|:|\s|!|?]))(esmaspäev|teisipäev|kolmapäev|neljapäev|reede)(?=[.|,|;|:|\s|!|?]|$)```
 
+### Machine-learning-based NER models
+
+https://github.com/buerokratt/Data-Anonymizer/issues/77
+
+The system uses 4 separate machine learning based models for performing Named Entity Recognition (NER) on the input text. These entities are used in downstream tasks for anonymization and pseudonymization. The models are hosted on [Huggingface](https://huggingface.co/buerokratt)
+1. bert-truecaser - fixes casing in a sentence as wrong casing can have significant impact on downstream machine learning tasks.
+2. ner_old - base NER model, trained on wikipedia data, recognizing 3 entities: person, organization, location.
+3. ner_new - fine-tuned NER model, trained additionally on manually labelled data, recognizing 11 entities: person, organization, location, product, date, time, event, money, percentage, title, geopolitical entity.
+4. ner_gdpr - fine-tuned NER model, trained additionally on manually labelled data, recognizing the same 11 entities as ner_new, but trained on a different data set.
+
+Each model has its strengths and weaknesses and they are combined in this system so that they would cover each others weaknesses and recognize the entities as well as possible while remaining as specific as possible.  
+Generally the 4th model takes precedence as it is the most accurate on the full set of entities. If it found nothing, the 3rd model's results take precendece. This is important and the 3rd model is the one that can be fine-tuned with manually labelled data.  
+
+The system expects the models to be in the following directories:
+1. /models/bert-truecaser  
+2. /models/bert_old
+3. /models/bert_new
+4. /models/gdpr_model
+
+
 ### Create tests for the back end
 
 https://github.com/buerokratt/Data-Anonymizer/issues/102
