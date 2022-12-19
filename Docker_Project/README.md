@@ -195,6 +195,18 @@ The system expects the models to be in the following directories:
 3. /models/bert_new
 4. /models/gdpr_model
 
+### Entity Recognition models based on regular expressions (regex)
+
+https://github.com/buerokratt/Data-Anonymizer/issues/78
+
+Where possible and useful, the system uses regular expressions (regexes) to find specific entities that have a well defined pattern, such as URLs, email addresses, phone numbers, etc. A lot of regexes have been pogrammed into the system during development, but it is possible for the end user to add their own patterns for entities so that the system would also find those in text.  
+The system expects the new regular expression to follow [Python's re module specification](https://docs.python.org/3/library/re.html). Nothing special here.  
+
+Some examples of the regexes used in the system:  
+- Addresses: `")((\s*(tänav|tee|rada|põik|maantee|tn|mnt|pst|puiestee)\s*[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?)|(\s(tänav|tee|põik|maantee|tn|mnt|pst|puiestee|rada))|(\s[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?))(?=[.|,|;|:|\s|!|?]|$)"`  
+- Urls: `"(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])"`  
+
+The regexes defined and generated can be seen in `./Docker_Project/anonymisation_internal/anonymisation_api/anonymise/utils/utils.py`
 
 ### Create tests for the back end
 
