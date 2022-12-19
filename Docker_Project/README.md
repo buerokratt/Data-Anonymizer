@@ -166,6 +166,14 @@ npm install
 GIT_OWNER="<GIT_OWNER_ID>" GIT_REPO="<GIT_REPO_ID>" GIT_TOKEN="<GIT_PERSONAL_ACCESS_TOKEN>" API_URL="<RUUTER_URL>" node index.js
 ```
 
+### Entity Recognition models based on search engine
+
+https://github.com/buerokratt/Data-Anonymizer/issues/76
+
+In this system Search is implemented through Regexes, as exactly matching a word is a case of matching regular expressions. For example the system uses multiple lists of entities to find street names, organizations, people, countries, etc. in text. The lists used can be seen in `./Docker_Project/anonymisation_internal/anonymisation_api/anonymise/gazetteers`.  
+The end user can customize this functionality by adding their own regex requiring exactly matching one of a number of elements in a list. For example a regex for matching workdays:  
+```(?:^|(?<=[.|,|;|:|\s|!|?]))(esmaspäev|teisipäev|kolmapäev|neljapäev|reede)(?=[.|,|;|:|\s|!|?]|$)```
+
 ### Create tests for the back end
 
 https://github.com/buerokratt/Data-Anonymizer/issues/102
