@@ -199,16 +199,6 @@ accuracy:  96.19%; precision:  88.06%; recall:  48.62%; FB1:  62.65
              Nimi: precision:  95.53%; recall:  66.19%; FB1:  78.20  582
 </pre>
 
-Results on elisa test dataset: 
-<pre>
-processed 94935 tokens with 1633 phrases; found: 1785 phrases; correct: 1306.
-accuracy:  86.30%; (non-O)
-accuracy:  99.26%; precision:  73.17%; recall:  79.98%; FB1:  76.42
-          Aadress: precision:  72.80%; recall:  80.98%; FB1:  76.67  386
-           Asutus: precision:  67.31%; recall:  84.87%; FB1:  75.08  725
-             Nimi: precision:  79.67%; recall:  75.53%; FB1:  77.55  674
-</pre>
-
 Output covered entities results: 
 
 <pre>
@@ -221,7 +211,7 @@ accuracy:  99.44%; precision:  81.39%; recall:  89.71%; FB1:  85.35
 </pre>
 
 
-Results on Ria dataset (test set): 
+Results on RIA dataset (test set): 
 
 <pre>
 processed 31371 tokens with 2124 phrases; found: 2339 phrases; correct: 1746.
