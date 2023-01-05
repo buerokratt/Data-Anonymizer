@@ -1,0 +1,8 @@
+annotate_corpora:
+  call: http.post
+  args:
+    url: http://web:5001/annotate_corpora
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
