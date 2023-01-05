@@ -16,6 +16,28 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.ym
 curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/regex" --data '{"regex": "test", "entity": "NAME"}'
 ```
 
+### Automatically pre-label uploaded corpus
+
+https://github.com/buerokratt/Data-Anonymizer/issues/66
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/annotate_corpora.yml
+
+```
+curl -X "POST" "http://localhost:8080/annotate_corpora"
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/prelabelling_status.yml
+
+```
+curl "http://localhost:8080/prelabelling_status"
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_latest_corpora.sql
+
+```
+curl -X "POST" "http://localhost:8082/get_latest_corpora"
+```
+
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_entity.sql
 
 ```
@@ -53,5 +75,3 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/create_schema.
 ```
 curl -X "POST" "http://localhost:8082/create_schema"
 ```
-
-
