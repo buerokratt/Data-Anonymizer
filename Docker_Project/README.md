@@ -71,7 +71,7 @@ Add [Ruuter DSL File](Ruuter/DSL/POST/annotate.yml) and [Resql Query](Resql/temp
 
 https://github.com/buerokratt/Data-Anonymizer/issues/45
 
-Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](Label-Studio/.env.defaults). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.
+Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](Label-Studio/.env.defaults). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/resources/application.yml#L27) for Ruuter.
 
 ### Setup React Application for Data Management Frontend Application
 
@@ -156,10 +156,10 @@ https://github.com/buerokratt/Data-Anonymizer/issues/102
 - Add separate [docker-compose file](docker-compose.test.yml) to run test instances of resql, ruuter, db and the framework itself.
 - Add [file](docker_test_run.sh) to pause running production resql & ruuter containers, start test containers, run tests and resume the production containers after succssful execution.
   To execute testing suite, run `./docker_test_run.sh`.
-  
-### Evaluation results 
 
-Results on RIA dataset (test set): 
+### Evaluation results
+
+Results on RIA dataset (test set):
 
 <pre>
 processed 31371 tokens with 2124 phrases; found: 2339 phrases; correct: 1746.
