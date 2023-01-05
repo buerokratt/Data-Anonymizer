@@ -7,51 +7,71 @@ https://github.com/buerokratt/Data-Anonymizer/issues/59
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_regex.sql
 
 ```
-
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/insert_regex" --data '{"regex": "test", "entity": "NAME"}'
 ```
 
 https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/regex.yml
 
 ```
-
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/regex" --data '{"regex": "test", "entity": "NAME"}'
 ```
 
-### Show list of sentences
+### Automatically pre-label uploaded corpus
 
-https://github.com/buerokratt/Data-Anonymizer/issues/46
+https://github.com/buerokratt/Data-Anonymizer/issues/66
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_corpora.sql
-
-```
-curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/get_corpora" --data '{"where_condition": "corpora_id = '\''c25d0570-dc99-46d6-afb7-80ad46439b3c'\''", "sort_condition": "Corpora_Tasks.\"id\" DESC", "page": "1", "page_size": "30"}'
-```
-
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/tasks.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/annotate_corpora.yml
 
 ```
-curl "http://localhost:8080/tasks?page=1&page_size=30&where_condition=corpora_id%20=%20%27c25d0570-dc99-46d6-afb7-80ad46439b3c%27&sort_condition=Corpora_Tasks."id"+DESC"
+curl -X "POST" "http://localhost:8080/annotate_corpora"
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_task.sql
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/prelabelling_status.yml
 
 ```
-curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/get_task" --data '{"corpora_id": "c25d0570-dc99-46d6-afb7-80ad46439b3c", "id": 931986}'
+curl "http://localhost:8080/prelabelling_status"
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/task.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_latest_corpora.sql
 
 ```
-curl "http://localhost:8080/task?id=931986&project=c25d0570-dc99-46d6-afb7-80ad46439b3c"
+curl -X "POST" "http://localhost:8082/get_latest_corpora"
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/get_corpora_info.sql
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_entity.sql
 
 ```
-curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/get_corpora_info"
+curl -X "POST" "http://localhost:8082/list_entity"
 ```
 
-https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/corpora_info.yml
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/entity.yml
 
 ```
-curl "http://localhost:8080/corpora_info"
+curl "http://localhost:8080/entity"
+```
+
+### Add new entity
+
+https://github.com/buerokratt/Data-Anonymizer/issues/89
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/insert_entity.sql
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8082/insert_entity" --data '{"name": "NAME", "description": "Name of a person"}'
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/entity.yml
+
+```
+curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/entity" --data '{"name": "NAME", "description": "Name of a person"}'
+```
+
+### Describe Data Model for Application
+
+https://github.com/buerokratt/Data-Anonymizer/issues/75
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/create_schema.sql
+
+```
+curl -X "POST" "http://localhost:8082/create_schema"
 ```
