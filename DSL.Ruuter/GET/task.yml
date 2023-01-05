@@ -1,0 +1,11 @@
+get_task:
+  call: http.post
+  args:
+    url: http://resql:8082/get_task
+    body:
+      id: ${parseInt(incoming.params.id)}
+      corpora_id: ${incoming.params.project}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body[0]}
