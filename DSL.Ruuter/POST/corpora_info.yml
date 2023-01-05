@@ -1,0 +1,11 @@
+insert_corpora_info:
+  call: http.post
+  args:
+    url: http://resql:8082/insert_corpora_info
+    body:
+      source_file_name: ${incoming.body.source_file_name}
+      source_file_size: ${incoming.body.source_file_size}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
