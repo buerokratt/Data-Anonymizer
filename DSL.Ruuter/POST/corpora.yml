@@ -1,0 +1,10 @@
+insert_corpora_task:
+  call: http.post
+  args:
+    url: http://resql:8082/insert_corpora_task/batch
+    body:
+      queries: ${incoming.body.tasks}
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
