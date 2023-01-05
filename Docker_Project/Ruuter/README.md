@@ -1,3 +1,9 @@
+> PS! Ruuter of this repo is currently in a state of "functionally working, but **not ready for use in production**"!
+>
+> Although we are building new functionalities of Bürokratt based on Ruuter 2.0, we aren't using them in production until penetration tests have been run on Ruuter. This is planned for Q1 in 2023.
+>
+> There are currently (some serious) security issues that we are aware of.
+
 # Ruuter
 - Java 17, Gradle
 
@@ -9,7 +15,7 @@ See configuration [here](./samples/CONFIGURATION.md)
 
 ## Docker
 
-To run the application using docker run:
+To run the application using Docker, run:
 
 ```
 docker-compose up -d
