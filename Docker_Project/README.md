@@ -59,4 +59,4 @@ https://github.com/buerokratt/Data-Anonymizer/issues/47
 
 - Add [Ruuter DSL File](Ruuter/DSL/GET/tasks.yml) and [Resql Query](Resql/templates/production/get_corpora.sql) to list corpora tasks based on pagination and filters.
 - Add [Ruuter DSL File](Ruuter/DSL/GET/task.yml) and [Resql Query](Resql/templates/production/get_task.sql) to get a particular task detail.
-- Add [Ruuter DSL File](Ruuter/DSL/GET/project.yml) and [Resql Query](Resql/templates/production/project.sql) to get latest corpora id.
+- Add [Ruuter DSL File](Ruuter/DSL/GET/corpora_info.yml) and [Resql Query](Resql/templates/production/get_corpora_info.sql) to get latest corpora info.
