@@ -1,0 +1,9 @@
+delete_regex:
+  call: http.post
+  args:
+    url: http://resql:8082/delete_regex
+    body:
+      id: ${parseInt(incoming.params.id)}
+
+return_value:
+  return: "success"
