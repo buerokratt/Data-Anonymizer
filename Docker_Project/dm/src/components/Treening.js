@@ -953,7 +953,7 @@ function Treening() {
                 getFormattedDate(new Date(trainedCorporaInfo.trainedAt))}
             </>
           ) : (
-            "Hetkel on kasutusel avalik mudel, sest privaatset mudelit ei ole treenitud."
+            t("trainingPage.usePublicModel")
           )}
         </Description>
         {uploadingState === 4 ? (
