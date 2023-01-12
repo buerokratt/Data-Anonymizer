@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "sqlms.datasources",
+      "type": "java.util.List",
+      "sourceType": "rig.sqlms.datasource.DataSourceConfiguration",
+      "sourceMethod": "readProperties()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
