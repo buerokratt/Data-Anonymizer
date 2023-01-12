@@ -1,0 +1,42 @@
+application:
+  config-path: ${user.dir}/DSL
+  stopInCaseOfException: true
+  logging:
+    displayRequestContent: false
+    displayResponseContent: false
+  incomingRequests:
+    allowedMethodTypes: [POST, GET]
+    headers:
+      header: value
+  httpCodesAllowList: [200, 201, 202]
+  defaultDslInCaseOfException:
+    dsl: default-dsl
+    requestType: "POST"
+    body:
+      someVal: "Hello World"
+    query:
+      anotherVal: 123
+  finalResponse:
+    dslWithResponseHttpStatusCode: 200
+    dslWithoutResponseHttpStatusCode: 300
+  httpPost:
+    headers:
+      Content-Type: "application/json"
+  maxStepRecursions: 10
+  CORS:
+    allowedOrigins:
+      [
+        "https://test.buerokratt.ee",
+        "https://admin.test.buerokratt.ee/",
+        "https://tim.test.buerokratt.ee/",
+        "https://ria-label-studio.mindtitan.com/",
+        "https://ria-data-management.mindtitan.com/",
+      ]
+
+spring:
+  application:
+    name: ruuter
+
+logging:
+  level:
+    root: INFO

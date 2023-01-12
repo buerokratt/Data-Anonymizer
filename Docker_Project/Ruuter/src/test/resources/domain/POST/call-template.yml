@@ -1,0 +1,12 @@
+call_template:
+  template: template-to-call
+  requestType: post
+  body:
+    element1: ${incoming.body.element1}
+    element2: "2.0"
+  query:
+    element2: ${incoming.params.element2}
+  result: templateResult
+
+return_value:
+  return: ${templateResult + " " + incoming.body.element3}

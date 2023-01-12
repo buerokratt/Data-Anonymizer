@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  ruuter:
+    container_name: ruuter
+    build:
+      context: ./Ruuter/
+    volumes:
+      - ./Ruuter/DSL:/DSL
+    ports:
+      - 8080:8080
