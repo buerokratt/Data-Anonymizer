@@ -35,6 +35,7 @@ import {
   addCorporaInfo,
   getTrainedCorporaInfo,
 } from "../RestService";
+import { useTranslation } from "react-i18next";
 
 const getFormattedDate = (d) =>
   `${d.getDate().toString().padStart(2, "0")}.${d
@@ -580,6 +581,7 @@ function Treening() {
   const [tableData, setTableData] = useState([]);
   const [corporaInfo, setCorporaInfo] = useState(null);
   const [trainedCorporaInfo, setTrainedCorporaInfo] = useState(null);
+  const { t } = useTranslation("common");
 
   const annotateCorporaAndPollStatus = async () => {
     let response = await annotateCorpora();
@@ -615,7 +617,7 @@ function Treening() {
     let response = await deleteRegex(record.id);
     if (response === "success") {
       notification.info({
-        description: "Regexi muster eemaldatud",
+        description: t("trainingPage.regexRemovedText"),
         placement: "bottomLeft",
         icon: <div />,
         closeIcon: <div />,
@@ -654,7 +656,7 @@ function Treening() {
       tableDataRef.current = tempData;
       setCreateRegexText("");
       notification.info({
-        description: "Regexi muster salvestatud!",
+        description: t("trainingPage.regexSavedText"),
         placement: "bottomLeft",
         icon: <div />,
         closeIcon: <div />,
@@ -708,7 +710,7 @@ function Treening() {
     {
       dataIndex: "muster",
       key: "muster",
-      title: "MUSTER",
+      title: t("trainingPage.regexTableColumn"),
       width: 331,
       render(text, record, index) {
         return {
@@ -734,7 +736,11 @@ function Treening() {
           ),
         };
       },
-      title: () => <div style={{ marginLeft: 20 }}>OLEMI NIMETUS</div>,
+      title: () => (
+        <div style={{ marginLeft: 20 }}>
+          {t("trainingPage.regexEntityColumn")}
+        </div>
+      ),
       width: 202,
       dataIndex: "nimetus",
       key: "nimetus",
@@ -754,7 +760,7 @@ function Treening() {
                 onClick={() => {
                   navigator.clipboard.writeText(record.muster);
                   notification.info({
-                    description: "Regexi muster kopeeritud",
+                    description: t("trainingPage.regexCopiedText"),
                     placement: "bottomLeft",
                     icon: <div />,
                     closeIcon: <div />,
@@ -762,7 +768,7 @@ function Treening() {
                 }}
               >
                 <img src={CopyIcon} style={{ marginRight: 8 }} />
-                Kopeeri
+                {t("trainingPage.copyText")}
               </RegexModalAction>
               <div style={{ marginLeft: 8 }} />
               {record.confirmingDelete ? (
@@ -780,7 +786,7 @@ function Treening() {
                       deleteRegexRecord(record);
                     }}
                   >
-                    KINNITA
+                    {t("trainingPage.confirm")}
                   </ThemeButton3>
                   <ThemeButton4
                     onClick={() => {
@@ -794,7 +800,7 @@ function Treening() {
                       tableDataRef.current = tempData;
                     }}
                   >
-                    TÜHISTA
+                    {t("trainingPage.cancel")}
                   </ThemeButton4>
                 </ConfirmDeleteRegexContainer>
               ) : (
@@ -814,7 +820,7 @@ function Treening() {
                   }}
                 >
                   <img src={CloseRedIcon} style={{ marginRight: 8 }} />
-                  Eemalda
+                  {t("trainingPage.remove")}
                 </RegexModalAction>
               )}
             </RegexModalActions>
@@ -878,7 +884,7 @@ function Treening() {
           setEntityText("");
           setEntityDescription("");
         }}
-        title={"Lisa uus olem"}
+        title={t("trainingPage.addEntityModalTitle")}
         open={entityModalOpened}
         footer={
           <ThemeButton
@@ -890,21 +896,23 @@ function Treening() {
               setEntityDescription("");
             }}
           >
-            SALVESTA
+            {t("trainingPage.saveButton")}
           </ThemeButton>
         }
       >
-        <InputHeading>Olemi nimi</InputHeading>
+        <InputHeading>{t("trainingPage.entityName")}</InputHeading>
         <AddEntityInput
           value={entityText}
           onChange={(ev) => setEntityText(ev.target.value)}
-          placeholder={"Sisesta"}
+          placeholder={t("trainingPage.enterInputPlaceholder")}
         />
-        <InputHeading style={{ marginTop: 12 }}>Olemi kirjeldus</InputHeading>
+        <InputHeading style={{ marginTop: 12 }}>
+          {t("trainingPage.entityDescription")}
+        </InputHeading>
         <RegexTextArea
           value={entityDescription}
           onChange={(ev) => setEntityDescription(ev.target.value)}
-          placeholder={"Sisesta"}
+          placeholder={t("trainingPage.enterInputPlaceholder")}
         />
       </Modal>
 
@@ -914,11 +922,11 @@ function Treening() {
         width={866}
         close
         onCancel={() => setRegexModalOpened(false)}
-        title={"Lisatud regexi mustrite nimekiri"}
+        title={t("trainingPage.regexModalTitle")}
         open={regexModalOpened}
         footer={
           <ThemeButton onClick={() => setRegexModalOpened(false)}>
-            SULGE
+            {t("trainingPage.regexModalClose")}
           </ThemeButton>
         }
       >
@@ -934,7 +942,7 @@ function Treening() {
       </Modal>
       <GithubSection />
       <UploadSection>
-        <Title>lae üles uus korpus</Title>
+        <Title>{t("trainingPage.title")}</Title>
         <Description>
           {trainedCorporaInfo?.trainedAt ? (
             <>
@@ -945,33 +953,41 @@ function Treening() {
                 getFormattedDate(new Date(trainedCorporaInfo.trainedAt))}
             </>
           ) : (
-            "Hetkel on kasutusel avalik mudel, sest privaatset mudelit ei ole treenitud."
+            t("trainingPage.usePublicModel")
           )}
         </Description>
         {uploadingState === 4 ? (
           <UploadingETAContainer>
             <img src={LoopIcon} />
-            <UploadHeading>Treenimine käsil</UploadHeading>
+            <UploadHeading>
+              {t("trainingPage.trainingInProgress")}
+            </UploadHeading>
             <UploadDescription>
               private-corpus-2022-11-03-11-11-11.ext
             </UploadDescription>
-            <ETA>ETA: 15 seconds</ETA>
-            <TrainingStatus>
-              Hetkel käib treening. Uusi treeninguid ei saa käivitada.
-            </TrainingStatus>
+            <ETA>
+              {t("trainingPage.ETA")}: 15 {t("trainingPage.seconds")}
+            </ETA>
+            <TrainingStatus>{t("trainingPage.trainingStatus")}</TrainingStatus>
           </UploadingETAContainer>
         ) : (
           <UploadContainer>
             <img src={UploadIcon} />
-            <UploadHeading>Vali fail arvutist või lohista siia</UploadHeading>
-            <UploadDescription>Faili suuruse piirang 50MB</UploadDescription>
+            <UploadHeading>{t("trainingPage.uploadTitle")}</UploadHeading>
+            <UploadDescription>
+              {t("trainingPage.uploadDescription")}
+            </UploadDescription>
             {uploadingState === 2 && (
               <Progress strokeColor="#0000F0" percent={uploadProgress} />
             )}
             {uploadingState < 4 ? (
               <Upload showUploadList={false} beforeUpload={handleUpload}>
                 <ThemeButton disabled={uploadingState === 2}>
-                  {uploadingState < 3 ? "VALI FAIL" : "ASENDA FAIL"}
+                  {t(
+                    uploadingState < 3
+                      ? "trainingPage.uploadButton"
+                      : "trainingPage.uploadAgainButton"
+                  )}
                 </ThemeButton>{" "}
               </Upload>
             ) : (
@@ -982,12 +998,14 @@ function Treening() {
                 <UploadAttachmentInfoColumns>
                   <div>
                     <UploadText>{corporaInfo?.sourceFileName}</UploadText>
-                    <FileStatus>Fail üles laetud</FileStatus>
+                    <FileStatus>
+                      {t("trainingPage.uploadSuccessButton")}
+                    </FileStatus>
                   </div>
                   <UploadText>
                     {Math.round((corporaInfo?.sourceFileSize / 1000000) * 100) /
                       100}{" "}
-                    MB
+                    {t("trainingPage.mb")}
                   </UploadText>
                   <img
                     style={{ marginRight: 4, transform: "rotate(270deg)" }}
@@ -1008,15 +1026,17 @@ function Treening() {
               }}
               disabled={uploadingState === 4}
             >
-              ALUSTA KOHESELT TREENIMIST
+              {t("trainingPage.trainingButton")}
             </ThemeButton>
-            <UploadText style={{ marginRight: 16 }}>või</UploadText>
+            <UploadText style={{ marginRight: 16 }}>
+              {t("trainingPage.or")}
+            </UploadText>
             <ThemeButton2
               onClick={annotateCorporaAndPollStatus}
               disabled={uploadingState === 4}
               style={{ marginRight: 16 }}
             >
-              EELMÄRGENDA KORPUS
+              {t("trainingPage.preAnnotateButton")}
             </ThemeButton2>
             <ThemeButton2
               onClick={() =>
@@ -1026,45 +1046,49 @@ function Treening() {
               }
               disabled={uploadingState === 4}
             >
-              MÄRGENDA TÄIENDAVALT KÄSITSI"
+              {t("trainingPage.openLabellingPage")}
             </ThemeButton2>
           </ThemeButtonContainer>
         )}
       </UploadSection>
       <RegexSection>
-        <Title>lisa uus Regexi muster</Title>
+        <Title>{t("trainingPage.regexSectionTitle")}</Title>
         <Description style={{ display: "block" }}>
-          Regexi kasutamise kohta loe infot <BrandLink>siit lingilt.</BrandLink>
+          {t("trainingPage.regexSectionDescription")}{" "}
+          <BrandLink>{t("trainingPage.regexSectionDescriptionLink")}</BrandLink>
         </Description>
 
         <RegexAreaContainer>
           <RegexAreaSection>
-            <InputHeading>Regex muster</InputHeading>
+            <InputHeading>{t("trainingPage.regexInputLabel")}</InputHeading>
             <RegexTextArea
               value={createRegexText}
               onChange={(ev) => setCreateRegexText(ev.target.value)}
               rows={10}
             />
             <RegexNotationText>
-              Regex kasutab POSIX notatsiooni
+              {t("trainingPage.regexNotation")}
             </RegexNotationText>
             <ThemeButtonContainer>
               <ThemeButton
                 disabled={!createRegexText || !selectedEntity}
                 onClick={createRegexRecord}
               >
-                SALVESTA MUSTER
+                {t("trainingPage.saveRegexButton")}
               </ThemeButton>
             </ThemeButtonContainer>
           </RegexAreaSection>
+          {/* <TextAreaGap /> */}
           <EntitySection>
-            <InputHeading>Olemi valik</InputHeading>
+            <InputHeading>
+              {t("trainingPage.entitySelectionLabel")}
+            </InputHeading>
             <SelectEntity
               menuItemSelectedIcon={<img src={CheckIcon} />}
               suffixIcon={<img src={DropdownIcon} />}
               value={selectedEntity}
               onChange={setSelectedEntity}
-              placeholder="Tee valik"
+              placeholder={t("trainingPage.selectEntityPlaceholder")}
             >
               {entities.map((entity) => (
                 <Select.Option value={entity.name} />
@@ -1073,10 +1097,10 @@ function Treening() {
             <ThemeButtonContainer>
               <ThemeButton onClick={() => setEntityModalOpened(true)}>
                 <img style={{ marginRight: 8 }} src={AddIcon} />
-                LISA UUS OLEM
+                {t("trainingPage.createEntityButton")}
               </ThemeButton>
               <ThemeButton2 onClick={() => setRegexModalOpened(true)}>
-                AVA REGEXITE NIMEKIRI
+                {t("trainingPage.openRegexModal")}
               </ThemeButton2>
             </ThemeButtonContainer>
           </EntitySection>

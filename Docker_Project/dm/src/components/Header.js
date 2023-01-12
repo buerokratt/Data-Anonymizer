@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
-import { useState } from "react";
 import DrawerIcon from "../assets/Drawer.svg";
+import { useTranslation } from "react-i18next";
 import Drawer from "./Drawer";
+import { useState } from "react";
 
 const Container = styled.div`
   background: #0000e6;
@@ -58,40 +59,29 @@ const NavigationItem = styled(Link)`
   color: #ffffff;
 `;
 
-const VerticalLine = styled.div`
-  border-left: 3px white solid;
-  margin-right: 72px;
-`;
-
-const EnglishText = styled.div`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #ffffff;
-`;
-
 function Header() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation("common");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   return (
     <>
       <Drawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
       <Container>
-        <Heading drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}>
-          bürokrati anonüümija
-        </Heading>
+        <Heading>{t("header.title")}</Heading>
         <NavigationItems>
           <NavigationItem to={"/"} selected={location.pathname === "/"}>
-            Anonüümija
+            {t("header.anonymizer")}
           </NavigationItem>
           <NavigationItem
             to={"/treening"}
             selected={location.pathname === "/treening"}
           >
-            Treenija
+            {t("header.training")}
           </NavigationItem>
-          <NavigationItem style={{ marginRight: 10 }}>Github</NavigationItem>
+          <NavigationItem style={{ marginRight: 10 }}>
+            {t("header.github")}
+          </NavigationItem>
         </NavigationItems>
         <NavigationItemsDrawerToggle
           onClick={() => setDrawerOpen(true)}

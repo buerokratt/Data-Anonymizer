@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useLocation, Link } from "react-router-dom";
+import { useState } from "react";
 import CloseIcon from "../assets/close_white.svg";
+import { useTranslation } from "react-i18next";
 
 const Container = styled.div`
   visibility: ${(props) => (props.drawerOpen ? "visible" : "hidden")};
@@ -67,10 +69,11 @@ const NavigationItem = styled(Link)`
 
 function Drawer({ drawerOpen, setDrawerOpen }) {
   const location = useLocation();
+  const { t } = useTranslation("common");
   return (
     <Container drawerOpen={drawerOpen}>
       <DrawerHeaderRow>
-        <Heading>bürokrati anonüümija</Heading>
+        <Heading>{t("header.title")}</Heading>
         <NavigationItemsDrawerToggle
           onClick={() => setDrawerOpen(false)}
           src={CloseIcon}
@@ -82,7 +85,7 @@ function Drawer({ drawerOpen, setDrawerOpen }) {
           to={"/"}
           selected={location.pathname === "/"}
         >
-          Anonüümija
+          {t("header.anonymizer")}
         </NavigationItem>
       </DrawerRow>
       <DrawerRow>
@@ -91,12 +94,12 @@ function Drawer({ drawerOpen, setDrawerOpen }) {
           to={"/treening"}
           selected={location.pathname === "/treening"}
         >
-          Treening
+          {t("header.training")}
         </NavigationItem>
       </DrawerRow>
       <DrawerRow>
         <NavigationItem onClick={() => setDrawerOpen(false)}>
-          Github
+          {t("header.github")}
         </NavigationItem>
       </DrawerRow>
     </Container>
