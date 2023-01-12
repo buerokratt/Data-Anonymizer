@@ -1,0 +1,1 @@
+select Regex_Entity.id, Regex_Entity.entity, Regex_Entity.regex from Regex_Entity join (select Regex_Entity."id", max(Regex_Entity."created_at") as most_recent_record from Regex_Entity group by id) p ON (Regex_Entity.id = p.id and Regex_Entity.created_at = p.most_recent_record) where Regex_Entity.active = True;
