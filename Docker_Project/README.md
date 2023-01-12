@@ -149,3 +149,9 @@ As a result one of the four models in the system will be fine-tuned and the old 
 https://github.com/buerokratt/Data-Anonymizer/issues/64
 
 Add [Anonymizer Service](anonymisation_internal), docker-compose configurations and Ruuter [DSL File](Ruuter/DSL/POST/pseudonymise.yml) to pseudonymise a sentence. The prediction endpoint in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py). Relevant models should be placed inside [models folder](anonymisation_internal/anonymisation_api/anonymise/models/).
+
+### Automatically pre-label uploaded corpus
+
+https://github.com/buerokratt/Data-Anonymizer/issues/66
+
+Add Ruuter DSL Files to to [pre-label list of corpora sentences](Ruuter/DSL/POST/annotate_corpora.yml) and [get prelabelling status](Ruuter/DSL/GET/prelabelling_status.yml), and a [ReSQL](Resql/templates/production/get_latest_corpora.sql) query to get full corpora. The annotation endpoint (/annotate_corpora) in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py).
