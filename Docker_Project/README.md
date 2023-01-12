@@ -174,23 +174,25 @@ https://github.com/buerokratt/Data-Anonymizer/issues/76
 
 In this system Search is implemented through Regexes, as exactly matching a word is a case of matching regular expressions. For example the system uses multiple lists of entities to find street names, organizations, people, countries, etc. in text. The lists used can be seen in `./Docker_Project/anonymisation_internal/anonymisation_api/anonymise/gazetteers`.  
 The end user can customize this functionality by adding their own regex requiring exactly matching one of a number of elements in a list. For example a regex for matching workdays:  
-```(?:^|(?<=[.|,|;|:|\s|!|?]))(esmaspäev|teisipäev|kolmapäev|neljapäev|reede)(?=[.|,|;|:|\s|!|?]|$)```
+`(?:^|(?<=[.|,|;|:|\s|!|?]))(esmaspäev|teisipäev|kolmapäev|neljapäev|reede)(?=[.|,|;|:|\s|!|?]|$)`
 
 ### Machine-learning-based NER models
 
 https://github.com/buerokratt/Data-Anonymizer/issues/77
 
 The system uses 4 separate machine learning based models for performing Named Entity Recognition (NER) on the input text. These entities are used in downstream tasks for anonymization and pseudonymization. The models are hosted on [Huggingface](https://huggingface.co/buerokratt)
+
 1. bert-truecaser - fixes casing in a sentence as wrong casing can have significant impact on downstream machine learning tasks.
 2. ner_old - base NER model, trained on wikipedia data, recognizing 3 entities: person, organization, location.
 3. ner_new - fine-tuned NER model, trained additionally on manually labelled data, recognizing 11 entities: person, organization, location, product, date, time, event, money, percentage, title, geopolitical entity.
 4. ner_gdpr - fine-tuned NER model, trained additionally on manually labelled data, recognizing the same 11 entities as ner_new, but trained on a different data set.
 
 Each model has its strengths and weaknesses and they are combined in this system so that they would cover each others weaknesses and recognize the entities as well as possible while remaining as specific as possible.  
-Generally the 4th model takes precedence as it is the most accurate on the full set of entities. If it found nothing, the 3rd model's results take precendece. This is important and the 3rd model is the one that can be fine-tuned with manually labelled data.  
+Generally the 4th model takes precedence as it is the most accurate on the full set of entities. If it found nothing, the 3rd model's results take precendece. This is important and the 3rd model is the one that can be fine-tuned with manually labelled data.
 
 The system expects the models to be in the following directories:
-1. /models/bert-truecaser  
+
+1. /models/bert-truecaser
 2. /models/bert_old
 3. /models/bert_new
 4. /models/gdpr_model
@@ -200,11 +202,12 @@ The system expects the models to be in the following directories:
 https://github.com/buerokratt/Data-Anonymizer/issues/78
 
 Where possible and useful, the system uses regular expressions (regexes) to find specific entities that have a well defined pattern, such as URLs, email addresses, phone numbers, etc. A lot of regexes have been pogrammed into the system during development, but it is possible for the end user to add their own patterns for entities so that the system would also find those in text.  
-The system expects the new regular expression to follow [Python's re module specification](https://docs.python.org/3/library/re.html). Nothing special here.  
+The system expects the new regular expression to follow [Python's re module specification](https://docs.python.org/3/library/re.html). Nothing special here.
 
-Some examples of the regexes used in the system:  
-- Addresses: `")((\s*(tänav|tee|rada|põik|maantee|tn|mnt|pst|puiestee)\s*[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?)|(\s(tänav|tee|põik|maantee|tn|mnt|pst|puiestee|rada))|(\s[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?))(?=[.|,|;|:|\s|!|?]|$)"`  
-- Urls: `"(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])"`  
+Some examples of the regexes used in the system:
+
+- Addresses: `")((\s*(tänav|tee|rada|põik|maantee|tn|mnt|pst|puiestee)\s*[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?)|(\s(tänav|tee|põik|maantee|tn|mnt|pst|puiestee|rada))|(\s[1-9]([0-9]{1,2}[a-z]?)?(\s*-\s*[0-9]{1,3})?))(?=[.|,|;|:|\s|!|?]|$)"`
+- Urls: `"(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])"`
 
 The regexes defined and generated can be seen in `./Docker_Project/anonymisation_internal/anonymisation_api/anonymise/utils/utils.py`
 
@@ -216,3 +219,25 @@ https://github.com/buerokratt/Data-Anonymizer/issues/102
 - Add separate [docker-compose file](docker-compose.test.yml) to run test instances of resql, ruuter, db and the framework itself.
 - Add [file](docker_test_run.sh) to pause running production resql & ruuter containers, start test containers, run tests and resume the production containers after succssful execution.
   To execute testing suite, run `./docker_test_run.sh`.
+
+### Evaluation results
+
+Results on RIA dataset (test set):
+
+<pre>
+processed 31371 tokens with 2124 phrases; found: 2339 phrases; correct: 1746.
+accuracy:  85.20%; (non-O)
+accuracy:  97.21%; precision:  74.65%; recall:  82.20%; FB1:  78.24
+             DATE: precision:  60.80%; recall:  71.33%; FB1:  65.64  176
+            EVENT: precision:  47.83%; recall:  65.67%; FB1:  55.35  92
+              GPE: precision:  84.21%; recall:  87.11%; FB1:  85.63  361
+              LOC: precision:  59.13%; recall:  60.18%; FB1:  59.65  115
+            MONEY: precision:  24.24%; recall:  57.14%; FB1:  34.04  33
+              ORG: precision:  72.19%; recall:  78.04%; FB1:  75.00  320
+              PER: precision:  93.42%; recall:  93.71%; FB1:  93.56  638
+          PERCENT: precision:  72.73%; recall:  88.89%; FB1:  80.00  22
+             PROD: precision:  51.94%; recall:  62.21%; FB1:  56.61  206
+             TIME: precision:  46.67%; recall:  63.64%; FB1:  53.85  30
+            TITLE: precision:  72.54%; recall:  87.46%; FB1:  79.30  346
+
+</pre>
