@@ -185,3 +185,19 @@ https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/POST/annotate
 ```
 curl -H "Content-Type: application/json" -X "POST" "http://localhost:8080/annotate?project=097afbed-761e-4ede-b7d4-97cafdadc488" --data '{"id":932021,"annotated_text":"text","sentences_annotations":"[{\"value\":{\"start\":44,\"end\":48,\"text\":\"2343\",\"labels\":[\"Aadress\"]},\"id\":\"AFPMDbFSpq\",\"from_name\":\"label\",\"to_name\":\"text\",\"type\":\"labels\",\"origin\":\"manual\"}]","annotate_existing_task":false,"project":"097afbed-761e-4ede-b7d4-97cafdadc488"}'
 ```
+
+### View list of Regex patterns added by user
+
+https://github.com/buerokratt/Data-Anonymizer/issues/60
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Resql/list_regex.sql
+
+```
+curl -X "POST" "http://localhost:8082/list_regex"
+```
+
+https://github.com/buerokratt/Data-Anonymizer/blob/main/DSL.Ruuter/GET/regex.yml
+
+```
+curl "http://localhost:8080/regex"
+```
