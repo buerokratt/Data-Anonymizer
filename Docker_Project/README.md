@@ -102,3 +102,9 @@ Add UI Component for [Anonymizer](dm/src/components/Anonymizer.js) Page.
 https://github.com/buerokratt/Data-Anonymizer/issues/96
 
 Add UI Component for [Training](dm/src/components/Treening.js) Page.
+
+### UI Backend API Integration
+
+https://github.com/buerokratt/Data-Anonymizer/issues/97
+
+Add [Services](dm/src/RestService.js) to call Backend REST APIs, integrate Anonymizer and Training Pages, and add website url of this application to list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.

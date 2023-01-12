@@ -5,6 +5,7 @@ import KeywordTag from "./KeywordTag";
 import GithubSection from "./GithubSection";
 import CloseIcon from "../assets/close.svg";
 import RightIcon from "../assets/Right_Icon.svg";
+import { pseudonymiseText, getEntities } from "../RestService";
 
 function pickTextColorBasedOnBgColorAdvanced(bgColor, lightColor, darkColor) {
   var color = bgColor.charAt(0) === "#" ? bgColor.substring(1, 7) : bgColor;
@@ -341,6 +342,18 @@ function Anonymizer() {
     },
   ];
 
+  useEffect(() => {
+    getEntities().then((x) =>
+      setEntities(
+        x.map((entity, index) => ({
+          vaartus: entity.name,
+          kirjeldus: entity.description,
+          color: entityColors[index % entityColors.length],
+        }))
+      )
+    );
+  }, []);
+
   const downloadTxtFile = () => {
     const element = document.createElement("a");
     const file = new Blob([outputText], { type: "text/plain" });
@@ -359,7 +372,7 @@ function Anonymizer() {
     setOutputText(response?.[0]?.pseudonümiseeritud_tekst);
     let tagIndex = 0;
     response?.[0]?.Mapping.map((x) => {
-      if (x.Tag !== "O") {
+      if (x.Tag !== "O" || x.regex_entity_tag) {
         x.tagIndex = tagIndex;
         tagIndex++;
       }
@@ -409,14 +422,14 @@ function Anonymizer() {
                   }}
                 >
                   {pseudonymisedWords.map((x) =>
-                    x.Tag === "O" ? (
+                    x.Tag === "O" && !x.regex_entity_tag ? (
                       <div>{x.Algne}&nbsp;</div>
                     ) : (
                       <>
                         <KeywordTag
                           color={tagColors[x.tagIndex % tagColors.length]}
                           text={x.Algne}
-                          keyword={x.Tag?.split("_")?.[0]}
+                          keyword={x.regex_entity_tag ? x.regex_entity_tag : x.Tag?.split("_")?.[0]}
                         />
                         &nbsp;
                       </>
