@@ -59,3 +59,17 @@ services:
       - /usr/src/app/my-app/node_modules
     ports:
       - "8002:8002"
+
+  ml-service:
+    container_name: ml-service
+    image: ml-service
+    build:
+      context: ./ml-training-service/
+      dockerfile: Dockerfile
+    restart: always
+    env_file: ./ml-training-service/sample.env
+    entrypoint: '/bin/sh -c "uvicorn main:app --host 0.0.0.0 --port $${API_PORT}"'
+    volumes:
+      - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
+    ports:
+      - 8000:8000

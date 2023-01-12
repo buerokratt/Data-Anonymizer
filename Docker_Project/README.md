@@ -114,3 +114,32 @@ Add [Services](dm/src/RestService.js) to call Backend REST APIs, integrate Anony
 https://github.com/buerokratt/Data-Anonymizer/issues/79
 
 Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) packages, add [translations](dm/src/translations/et.json), and transform all text in the UI utilize the translations. Languages can be modfied [here](dm/src/index.js#L10).
+
+### Train a custom model
+
+https://github.com/buerokratt/Data-Anonymizer/issues/65
+
+- Add [Model Training Service](ml-training-service) and a [docker-compose configuration](docker-compose.yml#L63).
+- Add Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/GET/training_status.yml).
+- Add a [Ruuter DSL File](Ruuter/DSL/POST/update_corpora_info.yml) and [Resql Query](Resql/templates/production/upsert_corpora_info.sql) to update a corpora info record [after training is done](ml-training-service/executor/ner_trainer.py#L98).
+- Add a [Ruuter DSL File](Ruuter/DSL/GET/trained_corpora_info.yml) and [Resql Query](Resql/templates/production/get_trained_corpora_info.sql) to get latest trained corpora details.
+
+The system allows for fine-tuning one of the NER models with additional data to adapt the model to a specific domain. Machine learning models are quite context sensitive so it is possible that in a specific domain the performance decreases and it can be improved by manually labelling additional data and teaching the model to recognize entities better in this new context.
+
+#### Requirements for data
+
+The data used for training the model must meet the following criteria:
+
+1. Diversity - the data chosen for training should cover the variation in actual usage scenario as completely as possible. The best way to do this is label an immense amount of data, but as this is often not feasible, the sample labelled should be chosen at random from a diverse set of in-domain documents.
+2. Volume - there needs to be a sufficient amount of data to train the model on. Because the amount required depends on a number of factors, it is not possible to say exactly how much is enough, but a rough estimate can be given. For a model with the complexity of the ones used here, more than 200 samples should be labeled - the more the better.
+3. Accuracy - quality beats quantity in machine learning in most cases and it is especially true in the case of fine-tuning with a small amount of data. The data should be labelled correctly or the machine will learn to repeat the mistakes.
+
+#### Process
+
+1. Select a sample of data for labelling
+2. Upload the corpus from the UI
+3. Label the corpus manually in the labelling interface
+4. Start training the model
+
+Training time depends on the volume of data and your hardware. It scales about linearly with the nr of CPU cores available and the volume of data.  
+As a result one of the four models in the system will be fine-tuned and the old version replaces with the new, just trained one.

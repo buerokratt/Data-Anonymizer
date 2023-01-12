@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  model-trainer:
+    image: model-trainer
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always
+    env_file: sample.env
+    volumes:
+      - ${MODEL_DIR}:/models
+    entrypoint: "/bin/sh -c \"uvicorn main:app --host ${API_HOST} --port ${API_PORT}\""

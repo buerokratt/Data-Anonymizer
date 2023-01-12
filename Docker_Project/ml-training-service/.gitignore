@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Unit test / coverage reports
+.pytest_cache/
+
+# VSCode IDE
+.vscode/
+
+# Log files
+*.log
+
+# JetBrains IDE
+.idea/
+
+/venv/
+
+# Test files
+tests/data/models
+dev.json
+train.json
+test.json
+labels.txt.bk
+models/training
+models/model_artifacts
