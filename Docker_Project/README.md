@@ -26,3 +26,9 @@ https://github.com/buerokratt/Data-Anonymizer/issues/69
 
 - Add [Ruuter DSL File](Ruuter/DSL/POST/corpora_info.yml) and [Resql Query](Resql/templates/production/insert_corpora_info.sql) to create a corpora info record.
 - Add [Ruuter DSL File](Ruuter/DSL/POST/corpora.yml) and [Resql Query](Resql/templates/production/insert_corpora_task.sql) to create tasks in bulk (upload corpora).
+
+### View list of Regex patterns added by user
+
+https://github.com/buerokratt/Data-Anonymizer/issues/60
+
+Add [Ruuter DSL File](Ruuter/DSL/GET/regex.yml) and [Resql Query](Resql/templates/production/list_regex.sql) to list regex patterns.
