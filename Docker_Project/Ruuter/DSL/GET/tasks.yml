@@ -1,0 +1,13 @@
+list_task_by_corpora_id:
+  call: http.post
+  args:
+    url: http://resql:8082/get_corpora
+    body:
+      page: ${incoming.params.page}
+      page_size: ${incoming.params.page_size}
+      where_condition: ${incoming.params.where_condition}
+      sort_condition: ${incoming.params.sort_condition}
+  result: request_response
+
+return:
+  return: ${request_response.response.body}
