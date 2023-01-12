@@ -1,0 +1,19 @@
+{
+  "name": "testing-framework",
+  "version": "1.0.0",
+  "description": "### Set up Ruuter instance",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 15000 ruuter.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
