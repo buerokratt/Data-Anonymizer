@@ -1,1 +1,0 @@
-select corpora_id from corpora_tasks order by id desc limit 1;

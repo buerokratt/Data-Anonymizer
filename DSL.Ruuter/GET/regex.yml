@@ -1,0 +1,8 @@
+list_regex:
+  call: http.post
+  args:
+    url: http://resql:8082/list_regex
+  result: request_response
+
+return_value:
+  return: ${request_response.response.body}
