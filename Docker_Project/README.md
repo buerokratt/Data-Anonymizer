@@ -143,3 +143,9 @@ The data used for training the model must meet the following criteria:
 
 Training time depends on the volume of data and your hardware. It scales about linearly with the nr of CPU cores available and the volume of data.  
 As a result one of the four models in the system will be fine-tuned and the old version replaces with the new, just trained one.
+
+### Anonymize/pseudonymize a sentence
+
+https://github.com/buerokratt/Data-Anonymizer/issues/64
+
+Add [Anonymizer Service](anonymisation_internal), docker-compose configurations and Ruuter [DSL File](Ruuter/DSL/POST/pseudonymise.yml) to pseudonymise a sentence. The prediction endpoint in Anonymizer Service can be found [here](anonymisation_internal/anonymisation_api/anonymise/accept_request.py). Relevant models should be placed inside [models folder](anonymisation_internal/anonymisation_api/anonymise/models/).
