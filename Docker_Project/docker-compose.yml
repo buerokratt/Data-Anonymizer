@@ -42,7 +42,20 @@ services:
       dockerfile: Dockerfile
       context: ./Label-Studio
     volumes:
-       - ./Label-Studio:/usr/src/app/my-app
-       - /usr/src/app/my-app/node_modules
+      - ./Label-Studio:/usr/src/app/my-app
+      - /usr/src/app/my-app/node_modules
     ports:
       - "5000:5000"
+
+  data-management-client:
+    container_name: data-management-client
+    tty: true
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./dm
+    volumes:
+      - ./dm:/usr/src/app/my-app
+      - /usr/src/app/my-app/node_modules
+    ports:
+      - "8002:8002"
