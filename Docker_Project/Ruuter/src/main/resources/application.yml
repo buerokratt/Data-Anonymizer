@@ -26,6 +26,8 @@ application:
   CORS:
     allowedOrigins:
       [
+        "http://localhost:8002",
+        "http://localhost:5000",
         "https://test.buerokratt.ee",
         "https://admin.test.buerokratt.ee/",
         "https://tim.test.buerokratt.ee/",

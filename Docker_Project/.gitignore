@@ -1,3 +1,4 @@
 **/logs/
 **/node_modules
 Upload_Corpora_Git_Script/sha.txt
+Docker_Project/Label-Studio/.env.defaults

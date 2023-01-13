@@ -71,13 +71,13 @@ Add [Ruuter DSL File](Ruuter/DSL/POST/annotate.yml) and [Resql Query](Resql/temp
 
 https://github.com/buerokratt/Data-Anonymizer/issues/45
 
-Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](Label-Studio/.env.defaults). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/java/ee/buerokratt/ruuter/controller/DslController.java#L28) for Ruuter.
+Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](docker-compose.yml#L43). The website url for this application should be added list of [whitelisted urls](Ruuter/src/main/resources/application.yml#L27) for Ruuter.
 
 ### Setup React Application for Data Management Frontend Application
 
 https://github.com/buerokratt/Data-Anonymizer/issues/93
 
-Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration.
+Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](docker-compose.yml#L58).
 
 ### Define routes for Anonymizer and Training Pages
 
@@ -241,3 +241,10 @@ accuracy:  97.21%; precision:  74.65%; recall:  82.20%; FB1:  78.24
             TITLE: precision:  72.54%; recall:  87.46%; FB1:  79.30  346
 
 </pre>
+
+### Deployment should happen with docker-compose up command
+
+https://github.com/buerokratt/Data-Anonymizer/issues/145
+
+- To deploy project with default environment variables run `docker-compose up -d`.
+- Backend (Ruuter Application) url could be configured on [Label Studio Client](docker-compose.yml#L43) and [Data Management Client](docker-compose.yml#L58) docker configs. The website urls for Label Studio and Data Management Frontends application could be added to list of [whitelisted urls](Ruuter/src/main/resources/application.yml#L27) for Ruuter Application.
