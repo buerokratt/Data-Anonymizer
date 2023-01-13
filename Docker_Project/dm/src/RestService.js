@@ -1,4 +1,4 @@
-const API_URL = "https://ria-ruuter.mindtitan.com";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const listRegex = async () => {
   try {

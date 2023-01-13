@@ -16,30 +16,6 @@ const listIncludes = (list, id) => {
   return index >= 0;
 };
 
-const resolve = (path, obj=self, separator='.') => {
-  var properties = Array.isArray(path) ? path : path.split(separator);
-
-  return properties.reduce((prev, curr) => prev?.[curr], obj);
-};
-
-const performOperation = (filter, fieldValue) => {
-  const operator = filter.operator;
-  const value = filter.value;
-
-  if (operator === 'equal') return fieldValue === value;
-  else if (operator === 'not_equal') return fieldValue !== value;
-  else if (operator === 'less') return fieldValue < value;
-  else if (operator === 'greater') return fieldValue > value;
-  else if (operator === 'less_or_equal') return fieldValue <= value;
-  else if (operator === 'greater_or_equal') return fieldValue >= value;
-  else if (operator === 'in') return fieldValue >= value.min && fieldValue <= value.max;
-  else if (operator === 'not_in') return !(fieldValue >= value.min && fieldValue <= value.max);
-  else if (operator === 'empty') return [1, 'true', true].includes(value) ? fieldValue === undefined || fieldValue === null : fieldValue !== null && fieldValue !== undefined;
-  else if (operator === 'contains') return fieldValue.toLowerCase().includes(value.toLowerCase());
-  else if (operator === 'not_contains') return !fieldValue.toLowerCase().includes(value.toLowerCase());
-  else if (operator === 'regex') return fieldValue.match(new RegExp(value));
-};
-
 const fieldMappingDict = {
   'data.text': `Corpora_Tasks."raw_text"`,
   'id': `Corpora_Tasks."id"`,
@@ -60,7 +36,7 @@ const getClauseForWhereCondition = (filter) => {
   const fieldType = filter.type;
 
   if (fieldType === 'Datetime' && operator !== 'empty') {
-    if (operator === 'in' || operator == 'not_in') {
+    if (operator === 'in' || operator === 'not_in') {
       fieldValue = {
         max: `timestamp '${fieldValue.max}'`,
         min: `timestamp '${fieldValue.min}'`,
@@ -295,7 +271,7 @@ export const DataStore = (
           whereCondition = interactionParams?.data?.filters?.items.reduce((acc, curr, index) => {
             const clause = getClauseForWhereCondition(curr);
 
-            if (index != 0) acc += ` ${interactionParams?.data?.filters?.conjunction?.toUpperCase()} `;
+            if (index !== 0) acc += ` ${interactionParams?.data?.filters?.conjunction?.toUpperCase()} `;
             return acc + clause;
           } , `${whereCondition} AND `);
         }
@@ -347,35 +323,6 @@ export const DataStore = (
             });
           }
           data = result;
-          // if (interactionParams?.data?.filters?.items?.length > 0) {
-          //   data.tasks = data.tasks.filter((x) => {
-          //     const elementKey = interactionParams?.data?.filters?.items[0]?.filter?.split(':')?.slice(-1)[0];
-          //     let conditionFilter = performOperation(interactionParams?.data?.filters?.items[0], resolve(elementKey, x));
-
-          //     interactionParams?.data?.filters?.items.map(item => {
-          //       const elementKey = item.filter.split(':').slice(-1)[0];
-
-          //       conditionFilter = interactionParams?.data?.filters?.conjunction === 'and' ? conditionFilter && performOperation(item, resolve(elementKey, x)) : conditionFilter || performOperation(item, resolve(elementKey, x));
-          //     });
-          //     return conditionFilter;
-          //   });
-          // }
-          // if (interactionParams?.data?.ordering?.length) {
-          //   const elementKey = interactionParams?.data?.ordering[0]?.split(':')?.slice(-1)[0];
-          //   const ascend = interactionParams?.data?.ordering[0][0] !== '-';
-
-          //   data.tasks = data.tasks.sort((a,b) => {
-          //     const type = Number.isInteger(resolve(elementKey, a)) ? 'num' : elementKey === 'completed_at' ? 'date' : 'string';
-              
-              
-          //     if (type === 'num')
-          //       return resolve(elementKey, ascend ? a : b) - resolve(elementKey, ascend ? b : a);
-          //     else if (type === 'date')
-          //       return new Date(resolve(elementKey, ascend ? a : b)) - new Date(resolve(elementKey, ascend ? b : a));
-          //     else
-          //       return resolve(elementKey, ascend ? a : b).localeCompare(resolve(elementKey, ascend ? b : a));
-          //   });
-          // }
         }
         // We cancel current request processing if request id
         // cnhaged during the request. It indicates that something
