@@ -37,6 +37,7 @@ import {
 } from "../RestService";
 import { useTranslation } from "react-i18next";
 
+const LABEL_STUDIO_URL = process.env.REACT_APP_LABEL_STUDIO_URL;
 const getFormattedDate = (d) =>
   `${d.getDate().toString().padStart(2, "0")}.${d
     .getMonth()
@@ -602,10 +603,7 @@ function Treening() {
             closeIcon: <div />,
           });
           setTimeout(
-            () =>
-              window
-                .open("https://ria-label-studio.mindtitan.com/", "_blank")
-                .focus(),
+            () => window.open(LABEL_STUDIO_URL, "_blank").focus(),
             1000
           );
         }
@@ -1039,11 +1037,7 @@ function Treening() {
               {t("trainingPage.preAnnotateButton")}
             </ThemeButton2>
             <ThemeButton2
-              onClick={() =>
-                window
-                  .open("https://ria-label-studio.mindtitan.com/", "_blank")
-                  .focus()
-              }
+              onClick={() => window.open(LABEL_STUDIO_URL, "_blank").focus()}
               disabled={uploadingState === 4}
             >
               {t("trainingPage.openLabellingPage")}

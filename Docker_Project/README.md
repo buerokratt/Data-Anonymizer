@@ -77,7 +77,7 @@ Set up [Label Studio Frontend](Label-Studio/) React Application, and add docker-
 
 https://github.com/buerokratt/Data-Anonymizer/issues/93
 
-Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration. Environment Variable for Backend (Ruuter Application) should be set up [here](docker-compose.yml#L58).
+Set up [Data Management Frontend](dm/) React Application, and add docker-compose configuration. Environment Variables for [Backend (Ruuter Application)](docker-compose.yml#L58) and [Label Studio Frontend](docker-compose.yml#L59) should be configured.
 
 ### Define routes for Anonymizer and Training Pages
 
@@ -119,7 +119,7 @@ Install [i18next](dm/package.json#L10) and [react-i18next](dm/package.json#L13) 
 
 https://github.com/buerokratt/Data-Anonymizer/issues/65
 
-- Add [Model Training Service](ml-training-service) and a [docker-compose configuration](docker-compose.yml#L63).
+- Add [Model Training Service](ml-training-service) and a [docker-compose configuration](docker-compose.yml#L66).
 - Add Ruuter DSL Files to [train model](Ruuter/DSL/POST/train.yml) and [get training status](Ruuter/DSL/GET/training_status.yml).
 - Add a [Ruuter DSL File](Ruuter/DSL/POST/update_corpora_info.yml) and [Resql Query](Resql/templates/production/upsert_corpora_info.sql) to update a corpora info record [after training is done](ml-training-service/executor/ner_trainer.py#L98).
 - Add a [Ruuter DSL File](Ruuter/DSL/GET/trained_corpora_info.yml) and [Resql Query](Resql/templates/production/get_trained_corpora_info.sql) to get latest trained corpora details.
@@ -247,4 +247,4 @@ accuracy:  97.21%; precision:  74.65%; recall:  82.20%; FB1:  78.24
 https://github.com/buerokratt/Data-Anonymizer/issues/145
 
 - To deploy project with default environment variables run `docker-compose up -d`.
-- Backend (Ruuter Application) url could be configured on [Label Studio Client](docker-compose.yml#L43) and [Data Management Client](docker-compose.yml#L58) docker configs. The website urls for Label Studio and Data Management Frontends application could be added to list of [whitelisted urls](Ruuter/src/main/resources/application.yml#L27) for Ruuter Application.
+- Backend (Ruuter Application) url could be configured on [Label Studio Client](docker-compose.yml#L43) and [Data Management Client](docker-compose.yml#L58) docker configs. The website urls for Label Studio and Data Management Frontends application could be added to list of [whitelisted urls](Ruuter/src/main/resources/application.yml#L27) for Ruuter Application. Label Studio Frontend url should also be be setup as a [Data management client docker config](docker-compose.yml#L59)
