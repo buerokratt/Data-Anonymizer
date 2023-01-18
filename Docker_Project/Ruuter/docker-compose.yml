@@ -4,13 +4,16 @@ services:
     container_name: ruuter
     build:
       context: .
+      network: ruuter
     volumes:
       - ./DSL:/DSL
     ports:
       - 8080:8080
     networks:
-      - ruuter
-
+      - ruuter   
 networks:
   ruuter:
+    name: ruuter
     driver: bridge
+    driver_opts:                         
+       com.docker.network.driver.mtu: 1400
