@@ -110,3 +110,9 @@ services:
       - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
       - ./anonymisation_internal/anonymisation_api/anonymise/logs:/app/logs
       - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
