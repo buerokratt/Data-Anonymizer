@@ -5,6 +5,20 @@ long-running task (training) and redis is a backend and broker for celery.
 
 Read more about the anonymisation pipeline here: <a href="">Anonymisation pipeline README </a>.
 
+### To get models:  
+   1. Clone the repo's  
+              `git clone https://huggingface.co/buerokratt/bert-truecaser`  
+              `git clone https://huggingface.co/buerokratt/ner_old`  
+              `git clone https://huggingface.co/buerokratt/ner_new`  
+              `git clone https://huggingface.co/buerokratt/ner_gdpr`  
+   2. Rename folowing folders accordingly  
+              `mv ner_old/ bert_old`  
+              `mv ner_new/ bert_new`  
+              `mv ner_gdpr/ gdpr_model` 
+   3. Install `git lfs`
+             ``` sudo apt instal git-lfs```
+   4. Use `git lfs install` and `git lfs pull` inside every model folder to pull and update the larger files
+
 ### To run the API: 
 1. Put the models in correct folders under `anonymise/models` folder. Models needed (use the same folder name):
    1. `bert-truecaser`
