@@ -15,8 +15,11 @@ Read more about the anonymisation pipeline here: <a href="">Anonymisation pipeli
               `mv ner_old/ bert_old`  
               `mv ner_new/ bert_new`  
               `mv ner_gdpr/ gdpr_model` 
-   3. Install `git lfs`
-             ``` sudo apt instal git-lfs```
+   3. Install `git lfs`  
+   
+```
+sudo apt instal git-lfs
+```
    4. Use `git lfs install` and `git lfs pull` inside every model folder to pull and update the larger files
 
 ### To run the API: 
