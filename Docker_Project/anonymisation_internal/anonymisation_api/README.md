@@ -6,7 +6,7 @@ long-running task (training) and redis is a backend and broker for celery.
 Read more about the anonymisation pipeline here: <a href="">Anonymisation pipeline README </a>.
 
 ### To get models:  
-   1. Clone the repo's in `nonymise/models` folder
+   1. Clone the repo's in `anonymise/models` folder  
               `git clone https://huggingface.co/buerokratt/bert-truecaser`  
               `git clone https://huggingface.co/buerokratt/ner_old`  
               `git clone https://huggingface.co/buerokratt/ner_new`  
