@@ -98,7 +98,7 @@ function Drawer({ drawerOpen, setDrawerOpen }) {
         </NavigationItem>
       </DrawerRow>
       <DrawerRow>
-        <NavigationItem onClick={() => setDrawerOpen(false)}>
+        <NavigationItem to="#" onClick={() => setDrawerOpen(false)}>
           {t("header.github")}
         </NavigationItem>
       </DrawerRow>

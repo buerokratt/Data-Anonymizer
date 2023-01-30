@@ -79,7 +79,7 @@ function Header() {
           >
             {t("header.training")}
           </NavigationItem>
-          <NavigationItem style={{ marginRight: 10 }}>
+          <NavigationItem to="#" style={{ marginRight: 10 }}>
             {t("header.github")}
           </NavigationItem>
         </NavigationItems>
