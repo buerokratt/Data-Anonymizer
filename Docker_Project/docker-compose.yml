@@ -27,8 +27,7 @@ services:
       - PING_ENDPOINT=http://localhost:8082/healthz
       - STARTUP_ENDPONT=http://localhost:8082/create_schema
     networks:
-      - ananass
-
+      - anonymizer
 
   db:
     container_name: db
