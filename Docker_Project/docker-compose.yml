@@ -4,16 +4,20 @@ services:
     container_name: ruuter
     build:
       context: ./Ruuter/
+      network: host
     volumes:
       - ./Ruuter/DSL:/DSL
     ports:
       - 8080:8080
+    networks:
+      - anonymizer
 
   resql:
     container_name: resql
     image: spring-boot
     build:
       context: ./Resql
+      network: host
     ports:
       - "8082:8082"
     volumes:
@@ -22,6 +26,9 @@ services:
       - JDBC_URL=jdbc:postgresql://db:5432/ria-db
       - PING_ENDPOINT=http://localhost:8082/healthz
       - STARTUP_ENDPONT=http://localhost:8082/create_schema
+    networks:
+      - ananass
+
 
   db:
     container_name: db
@@ -31,6 +38,8 @@ services:
       - POSTGRES_PASSWORD=pass
       - POSTGRES_USER=user
       - POSTGRES_DB=ria-db
+    networks:
+      - anonymizer
 
   label-studio-client:
     container_name: label-studio-client
@@ -39,13 +48,16 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./Label-Studio
+      network: host
     environment:
-      - API_GATEWAY=http://localhost:8080
+      - API_GATEWAY=http://locahost:8080
     volumes:
       - ./Label-Studio:/usr/src/app/my-app
       - /usr/src/app/my-app/node_modules
     ports:
       - "5000:5000"
+    networks:
+      - anonymizer
 
   data-management-client:
     container_name: data-management-client
@@ -54,6 +66,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./dm
+      network: host
     environment:
       - REACT_APP_API_URL=http://localhost:8080
       - REACT_APP_LABEL_STUDIO_URL=http://localhost:5000
@@ -62,6 +75,8 @@ services:
       - /usr/src/app/my-app/node_modules
     ports:
       - "8002:8002"
+    networks:
+      - anonymizer
 
   ml-service:
     container_name: ml-service
@@ -69,6 +84,7 @@ services:
     build:
       context: ./ml-training-service/
       dockerfile: Dockerfile
+      network: host
     restart: always
     env_file: ./ml-training-service/sample.env
     entrypoint: '/bin/sh -c "uvicorn main:app --host 0.0.0.0 --port $${API_PORT}"'
@@ -76,32 +92,40 @@ services:
       - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
     ports:
       - 8000:8000
+    networks:
+      - anonymizer
 
   redis:
     image: redis
     build:
       context: ./anonymisation_internal/anonymisation_api/redis/
       dockerfile: Dockerfile
+      network: host
     ports:
       - 6378:6378
+    networks:
+      - anonymizer
 
   worker:
     image: worker
     build:
       context: ./anonymisation_internal/anonymisation_api/
       dockerfile: Dockerfile
+      network: host
     depends_on:
       - redis
     volumes:
       - ./celery/logs:/app/logs
       - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
       - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
-
+    networks:
+      - anonymizer
   web:
     image: anonymise
     build:
       context: ./anonymisation_internal/anonymisation_api/anonymise/
       dockerfile: Dockerfile
+      network: host
     depends_on:
       - redis
     ports:
@@ -110,9 +134,13 @@ services:
       - ./anonymisation_internal/anonymisation_api/anonymise/trained_model:/app/training/trained_model
       - ./anonymisation_internal/anonymisation_api/anonymise/logs:/app/logs
       - ./anonymisation_internal/anonymisation_api/anonymise/models:/models
+    networks:
+      - anonymizer
+
 
 networks:
-  default:
+  ananass:
+    name: anonymizer
     driver: bridge
-    driver_opts:
-      com.docker.network.driver.mtu: 1400
+    driver_opts:                         
+       com.docker.network.driver.mtu: 1400
