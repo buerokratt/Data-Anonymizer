@@ -138,7 +138,7 @@ services:
 
 
 networks:
-  ananass:
+  anonymizer:
     name: anonymizer
     driver: bridge
     driver_opts:                         
