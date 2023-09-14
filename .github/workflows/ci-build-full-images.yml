@@ -76,7 +76,7 @@ jobs:
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker -f $DOCKERFILE_Anonymiseworker .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiserworker
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker
 
       - name: Build and Push GUI Docker Image
         run: | 
