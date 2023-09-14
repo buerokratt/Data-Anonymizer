@@ -28,6 +28,11 @@ jobs:
           MLSTUDIO_TAG=$RELEASE-$VERSION.$BUILD.$FIX-MLstudio
           ANONYMISEWORKER_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
           ANONYMISE_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Anonymise
+          CHANGELOG_DATAMANAGEMENT=changelog-datamanagement.txt
+          CHANGELOG_LABELSTUDIO=changelog-labelstudio.txt
+          CHANGELOG_MLSTUDIO=changelog-mlstudio.txt
+          CHANGELOG_ANONYMISEWORKER=changelog-anonymiseworker.txt
+          CHANGELOG_ANONYMISE=changelog-anonymise.txt
 
           echo "RELEASE=$RELEASE" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
@@ -39,6 +44,11 @@ jobs:
           echo "MLSTUDIO_TAG=$MLSTUDIO_TAG" >> $GITHUB_ENV
           echo "ANONYMISEWORKER_TAG=$ANONYMISEWORKER_TAG" >> $GITHUB_ENV
           echo "ANONYMISE_TAG=$ANONYMISE_TAG" >> $GITHUB_ENV
+          echo "CHANGELOG_DATAMANAGEMENT=$CHANGELOG_DATAMANAGEMENT" >> $GITHUB_ENV
+          echo "CHANGELOG_LABELSTUDIO=$CHANGELOG_LABELSTUDIO" >> $GITHUB_ENV
+          echo "CHANGELOG_MLSTUDIO=$CHANGELOG_MLSTUDIO" >> $GITHUB_ENV
+          echo "CHANGELOG_ANONYMISEWORKER=$CHANGELOG_ANONYMISEWORKER" >> $GITHUB_ENV
+          echo "CHANGELOG_ANONYMISE=$CHANGELOG_ANONYMISE" >> $GITHUB_ENV
 
       - name: Login to GitHub Container Registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
@@ -75,3 +85,108 @@ jobs:
           cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
           docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG -f Dockerfile .
           docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG
+
+      - name: Configure Git - Datamanagement
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Append to Changelog - Datamanagement
+        run: |
+          echo "Version: $RELEASE.$VERSION.$BUILD.$FIX" >> Docker_Project/dm/changelog.txt
+          echo "Date: $(date)" >> Docker_Project/dm/changelog.txt
+          echo "Changes:" >> Docker_Project/dm/changelog.txt
+          # Add any relevant changes or commit messages to the changelog here
+          echo "- Added feature X to Datamanagement" >> Docker_Project/dm/changelog.txt
+          echo "- Fixed issue Y in Datamanagement" >> Docker_Project/dm/changelog.txt
+          echo "----------------------" >> Docker_Project/dm/changelog.txt
+
+      - name: Commit and Push Changelog - Datamanagement
+        run: |
+          git add Docker_Project/dm/changelog.txt
+          git commit -m "Update changelog for Datamanagement version $RELEASE.$VERSION.$BUILD.$FIX"
+          git push
+
+      - name: Configure Git - Labelstudio
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Append to Changelog - Labelstudio
+        run: |
+          echo "Version: $RELEASE.$VERSION.$BUILD.$FIX" >> Docker_Project/Label-Studio/changelog.txt
+          echo "Date: $(date)" >> Docker_Project/Label-Studio/changelog.txt
+          echo "Changes:" >> Docker_Project/Label-Studio/changelog.txt
+          # Add any relevant changes or commit messages to the changelog here
+          echo "- Added feature X to Labelstudio" >> Docker_Project/Label-Studio/changelog.txt
+          echo "- Fixed issue Y in Labelstudio" >> Docker_Project/Label-Studio/changelog.txt
+          echo "----------------------" >> Docker_Project/Label-Studio/changelog.txt
+
+      - name: Commit and Push Changelog - Labelstudio
+        run: |
+          git add Docker_Project/Label-Studio/changelog.txt
+          git commit -m "Update changelog for Labelstudio version $RELEASE.$VERSION.$BUILD.$FIX"
+          git push
+
+      - name: Configure Git - MLstudio
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Append to Changelog - MLstudio
+        run: |
+          echo "Version: $RELEASE.$VERSION.$BUILD.$FIX" >> Docker_Project/ml-training-service/changelog.txt
+          echo "Date: $(date)" >> Docker_Project/ml-training-service/changelog.txt
+          echo "Changes:" >> Docker_Project/ml-training-service/changelog.txt
+          # Add any relevant changes or commit messages to the changelog here
+          echo "- Added feature X to MLstudio" >> Docker_Project/ml-training-service/changelog.txt
+          echo "- Fixed issue Y in MLstudio" >> Docker_Project/ml-training-service/changelog.txt
+          echo "----------------------" >> Docker_Project/ml-training-service/changelog.txt
+
+      - name: Commit and Push Changelog - MLstudio
+        run: |
+          git add Docker_Project/ml-training-service/changelog.txt
+          git commit -m "Update changelog for MLstudio version $RELEASE.$VERSION.$BUILD.$FIX"
+          git push
+
+      - name: Configure Git - Anonymiseworker
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Append to Changelog - Anonymiseworker
+        run: |
+          echo "Version: $RELEASE.$VERSION.$BUILD.$FIX" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          echo "Date: $(date)" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          echo "Changes:" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          # Add any relevant changes or commit messages to the changelog here
+          echo "- Added feature X to Anonymiseworker" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          echo "- Fixed issue Y in Anonymiseworker" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          echo "----------------------" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+
+      - name: Commit and Push Changelog - Anonymiseworker
+        run: |
+          git add Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          git commit -m "Update changelog for Anonymiseworker version $RELEASE.$VERSION.$BUILD.$FIX"
+          git push
+
+      - name: Configure Git - Anonymise
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Append to Changelog - Anonymise
+        run: |
+          echo "Version: $RELEASE.$VERSION.$BUILD.$FIX" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          echo "Date: $(date)" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          echo "Changes:" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          # Add any relevant changes or commit messages to the changelog here
+          echo "- Added feature X to Anonymise" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          echo "- Fixed issue Y in Anonymise" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          echo "----------------------" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+
+      - name: Commit and Push Changelog - Anonymise
+        run: |
+          git add Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          git commit -m "Update changelog for Anonymise version $RELEASE.$VERSION.$BUILD.$FIX"
+          git push
