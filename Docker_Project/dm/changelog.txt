@@ -4,3 +4,8 @@ Changes:
 - Added feature X to Datamanagement
 - Fixed issue Y in Datamanagement
 ----------------------
+Version: PRE-ALPHA.1.1.1
+Date: Thu Sep 14 13:29:04 UTC 2023
+Changes:
+- Added mounted volumes inside the Data-Management image
+----------------------
