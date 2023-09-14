@@ -49,29 +49,29 @@ jobs:
       - name: Build and Push DM Docker Image
         run: | 
           cd Docker_Project/dm
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/datamanagement:$TAG_Datamanagement -f Dockerfile .
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/datamanagement:$TAG_Datamanagement
 
       - name: Build and Push Labelstudio Docker Image
         run: | 
           cd Docker_Project/Label-Studio
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/labelstudio:$TAG_Labelstudio -f Dockerfile .
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/labelstudio:$TAG_Labelstudio
 
       - name: Build and Push MLstudio Docker Image
         run: | 
           cd Docker_Project/ml-training-service
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/mlstudio:$TAG_MLstudio -f Dockerfile .
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/mlstudio:$TAG_MLstudio
  
       - name: Build and Push Anonymiseworker Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymiseworker:$TAG_Anonymiseworker -f Dockerfile .
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymiseworker:$TAG_Anonymiseworker
 
       - name: Build and Push Anonymise Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymise -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymise
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymise:$TAG_Anonymise -f Dockerfile .
+          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymise:$TAG_Anonymise
