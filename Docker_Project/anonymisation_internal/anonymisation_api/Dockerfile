@@ -23,6 +23,13 @@ COPY anonymise/training /app/training
 COPY anonymise/worker.py /app
 COPY anonymise/tasks.py /app
 
+# Create necessary directories
+RUN mkdir -p /app/training
+RUN mkdir -p /app/models  # Create the 'models' directory
+COPY ./celery/logs /app/logs
+COPY ./anonymisation_internal/anonymisation_api/anonymise/trained_model /app/training/trained_model
+COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
+
 RUN mkdir -p /app/utils
 COPY anonymise/utils/__init__.py /app/utils
 COPY anonymise/utils/utils.py /app/utils
