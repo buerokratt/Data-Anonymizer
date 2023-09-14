@@ -22,12 +22,18 @@ RUN pip install -r requirements.txt
 
 COPY . ./
 
+# Create necessary directories
+RUN mkdir -p /app/training/trained_model
+RUN mkdir -p /app/logs
+RUN mkdir -p /models
+
+# Copy specific directories from host machine
+COPY ./anonymisation_internal/anonymisation_api/anonymise/trained_model /app/training/trained_model
+COPY ./anonymisation_internal/anonymisation_api/anonymise/logs /app/logs
+COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
+
 EXPOSE 5001
 
-# Copy volumes
-COPY ./celery/logs /app/logs
-COPY ./anonymisation_internal/anonymisation_api/anonymise/trained_model /app/training/trained_model
-COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
 
 #
 CMD ["gunicorn", "accept_request:app", "--bind", ":5001", "--timeout", "900", "--log-file", "/app/logs/gunicorn.log" , "--log-level" , "DEBUG" ]
