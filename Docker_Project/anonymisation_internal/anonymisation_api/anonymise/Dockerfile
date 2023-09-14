@@ -24,6 +24,11 @@ COPY . ./
 
 EXPOSE 5001
 
+# Copy volumes
+COPY ./celery/logs /app/logs
+COPY ./anonymisation_internal/anonymisation_api/anonymise/trained_model /app/training/trained_model
+COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
+
 #
 CMD ["gunicorn", "accept_request:app", "--bind", ":5001", "--timeout", "900", "--log-file", "/app/logs/gunicorn.log" , "--log-level" , "DEBUG" ]
 #CMD ["python3", "accept_request.py"]
