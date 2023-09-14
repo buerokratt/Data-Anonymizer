@@ -11,30 +11,29 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
-    env:
-      RELEASE: 1
-      VERSION: 0
-      BUILD: 0
-      FIX: 1
-      LOWER_CASE_GITHUB_REPOSITORY: ${{ github.repository | replace('/', '_') | lower }}
-      DOCKERFILE_Datamanagement: ./Docker_Project/dm/Dockerfile
-      DOCKERFILE_Labelstudio: ./Docker_Project/Label-Studio/Dockerfile
-      DOCKERFILE_MLstudio: ./Docker_Project/ml-training-service/Dockerfile
-      DOCKERFILE_Anonymiseworker: ./Docker_Project/anonymisation_internal/anonymisation_api/
-      DOCKERFILE_Anonymise: ./Docker_Project/anonymisation_internal/anonymisation_api/anonymise
-      TAG_Datamanagement: $RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
-      TAG_Labelstudio: $RELEASE-$VERSION.$BUILD.$FIX-Labelstudio
-      TAG_MLstudio: $RELEASE-$VERSION.$BUILD.$FIX-MLstudio
-      TAG_Anonymiseworker: $RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
-      TAG_Anonymise: $RELEASE-$VERSION.$BUILD.$FIX-Anonymise
-      
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set environment variables
         run: |
+          RELEASE=1
+          VERSION=0
+          BUILD=0
+          FIX=1
+          GITHUB_REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | awk -F/ '{print $2}')
+          LOWER_CASE_GITHUB_REPOSITORY=$(echo "$GITHUB_REPOSITORY_NAME" | tr '[:upper:]' '[:lower:]')
+          DOCKERFILE_Datamanagement=./Docker_Project/dm/Dockerfile
+          DOCKERFILE_Labelstudio=./Docker_Project/Label-Studio/Dockerfile
+          DOCKERFILE_MLstudio=./Docker_Project/ml-training-service/Dockerfile
+          DOCKERFILE_Anonymiseworker=./Docker_Project/anonymisation_internal/anonymisation_api/
+          DOCKERFILE_Anonymise=./Docker_Project/anonymisation_internal/anonymisation_api/anonymise
+          TAG_Datamanagement=$RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
+          TAG_Labelstudio=$RELEASE-$VERSION.$BUILD.$FIX-Labelstudio
+          TAG_MLstudio=$RELEASE-$VERSION.$BUILD.$FIX-MLstudio
+          TAG_Anonymiseworker=$RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
+          TAG_Anonymise=$RELEASE-$VERSION.$BUILD.$FIX-Anonymise
+
           echo "RELEASE=$RELEASE" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "BUILD=$BUILD" >> $GITHUB_ENV
@@ -60,25 +59,25 @@ jobs:
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement -f $DOCKERFILE_Datamanagement .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement
 
-      - name: Build and Push LM Docker Image
+      - name: Build and Push Labelstudio Docker Image
         run: | 
           cd Docker_Project/Label-Studio
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio -f $DOCKERFILE_Labelstudio .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio
 
-      - name: Build and Push GUI Docker Image
+      - name: Build and Push MLstudio Docker Image
         run: | 
           cd Docker_Project/ml-training-service
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio -f $DOCKERFILE_MLstudio .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio
  
-      - name: Build and Push GUI Docker Image
+      - name: Build and Push Anonymiseworker Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker -f $DOCKERFILE_Anonymiseworker .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker
 
-      - name: Build and Push GUI Docker Image
+      - name: Build and Push Anonymise Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymise -f $DOCKERFILE_Anonymise .
