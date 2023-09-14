@@ -55,7 +55,7 @@ jobs:
 
       - name: Build and Push DM Docker Image
         run: | 
-          cd Docker_Project/dm
+          cd ./Docker_Project/dm
           docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement -f $DOCKERFILE_Datamanagement .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement
 
