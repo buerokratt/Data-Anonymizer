@@ -8,7 +8,7 @@ RUN python -c "import stanza; stanza.download('et')"
 # Create the /models directory inside the image
 RUN mkdir -p /models
 # Copy the contents of the local directory to /models
-COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
+COPY ./Docker_Project/anonymisation_internal/anonymisation_api/anonymise/models /models
 
 COPY . /app/
 
