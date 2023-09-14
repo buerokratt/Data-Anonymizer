@@ -4,3 +4,8 @@ Changes:
 - Added feature X to Labelstudio
 - Fixed issue Y in Labelstudio
 ----------------------
+Version: PRE-ALPHA.1.1.1
+Date: Thu Sep 14 13:29:05 UTC 2023
+Changes:
+- Added mounted volumes inside the Label-Studio image
+----------------------
