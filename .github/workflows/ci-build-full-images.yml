@@ -80,11 +80,11 @@ jobs:
   #        docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISEWORKER_TAG -f Dockerfile .
   #        docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISEWORKER_TAG
 
-      - name: Build and Push Anonymise Docker Image
-        run: | 
-          cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
-          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG -f Dockerfile .
-          docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG
+  #    - name: Build and Push Anonymise Docker Image
+  #      run: | 
+  #        cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
+  #        docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG -f Dockerfile .
+  #        docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG
 
       - name: Configure Git - Datamanagement
         run: |
