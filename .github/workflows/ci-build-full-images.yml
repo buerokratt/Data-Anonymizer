@@ -16,7 +16,7 @@ jobs:
       VERSION: 0
       BUILD: 0
       FIX: 1
-      LOWER_CASE_GITHUB_REPOSITORY: ${{ github.repository | lower }}
+      LOWER_CASE_GITHUB_REPOSITORY: ${{ github.repository | replace('/', '_') | lower }}
       DOCKERFILE_Datamanagement: ./Docker_Project/dm/Dockerfile
       DOCKERFILE_Labelstudio: ./Docker_Project/Label-Studio/Dockerfile
       DOCKERFILE_MLstudio: ./Docker_Project/ml-training-service/Dockerfile
