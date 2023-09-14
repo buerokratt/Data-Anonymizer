@@ -68,11 +68,11 @@ jobs:
  #         docker image build --tag ghcr.io/buerokratt/data-anonymizer:$LABELSTUDIO_TAG -f Dockerfile .
  #         docker push ghcr.io/buerokratt/data-anonymizer:$LABELSTUDIO_TAG
 
-      - name: Build and Push MLstudio Docker Image
-        run: | 
-          cd Docker_Project/ml-training-service
-          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG -f Dockerfile .
-          docker push ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG
+ #     - name: Build and Push MLstudio Docker Image
+ #       run: | 
+ #         cd Docker_Project/ml-training-service
+ #         docker image build --tag ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG -f Dockerfile .
+ #         docker push ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG
  
       - name: Build and Push Anonymiseworker Docker Image
         run: | 
