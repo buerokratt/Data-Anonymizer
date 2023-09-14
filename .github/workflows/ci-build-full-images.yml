@@ -20,7 +20,7 @@ jobs:
           RELEASE=PRE-ALPHA
           VERSION=1
           BUILD=0
-          FIX=1
+          FIX=2
           GITHUB_REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | awk -F/ '{print $2}')
           LOWER_CASE_GITHUB_REPOSITORY=$(echo "$GITHUB_REPOSITORY_NAME" | tr '[:upper:]' '[:lower:]')
           DATAMANAGEMENT_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
@@ -97,8 +97,7 @@ jobs:
           echo "Date: $(date)" >> Docker_Project/dm/changelog.txt
           echo "Changes:" >> Docker_Project/dm/changelog.txt
           # Add any relevant changes or commit messages to the changelog here
-          echo "- Added feature X to Datamanagement" >> Docker_Project/dm/changelog.txt
-          echo "- Fixed issue Y in Datamanagement" >> Docker_Project/dm/changelog.txt
+          echo "- Added mounted volumes inside the Data-Management image" >> Docker_Project/dm/changelog.txt
           echo "----------------------" >> Docker_Project/dm/changelog.txt
 
       - name: Commit and Push Changelog - Datamanagement
@@ -118,8 +117,8 @@ jobs:
           echo "Date: $(date)" >> Docker_Project/Label-Studio/changelog.txt
           echo "Changes:" >> Docker_Project/Label-Studio/changelog.txt
           # Add any relevant changes or commit messages to the changelog here
-          echo "- Added feature X to Labelstudio" >> Docker_Project/Label-Studio/changelog.txt
-          echo "- Fixed issue Y in Labelstudio" >> Docker_Project/Label-Studio/changelog.txt
+          echo "- Added mounted volumes inside the Label-Studio image" >> Docker_Project/Label-Studio/changelog.txt
+          
           echo "----------------------" >> Docker_Project/Label-Studio/changelog.txt
 
       - name: Commit and Push Changelog - Labelstudio
@@ -139,7 +138,7 @@ jobs:
           echo "Date: $(date)" >> Docker_Project/ml-training-service/changelog.txt
           echo "Changes:" >> Docker_Project/ml-training-service/changelog.txt
           # Add any relevant changes or commit messages to the changelog here
-          echo "- Added feature X to MLstudio" >> Docker_Project/ml-training-service/changelog.txt
+          echo "- Added mounted volumes inside the MLstudio image" >> Docker_Project/ml-training-service/changelog.txt
           echo "- Fixed issue Y in MLstudio" >> Docker_Project/ml-training-service/changelog.txt
           echo "----------------------" >> Docker_Project/ml-training-service/changelog.txt
 
@@ -160,8 +159,8 @@ jobs:
           echo "Date: $(date)" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
           echo "Changes:" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
           # Add any relevant changes or commit messages to the changelog here
-          echo "- Added feature X to Anonymiseworker" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
-          echo "- Fixed issue Y in Anonymiseworker" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          echo "- Added mounted volumes inside the  Anonymiseworker image" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
+          
           echo "----------------------" >> Docker_Project/anonymisation_internal/anonymisation_api/changelog.txt
 
       - name: Commit and Push Changelog - Anonymiseworker
@@ -181,8 +180,8 @@ jobs:
           echo "Date: $(date)" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
           echo "Changes:" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
           # Add any relevant changes or commit messages to the changelog here
-          echo "- Added feature X to Anonymise" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
-          echo "- Fixed issue Y in Anonymise" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+          echo "- Added mounted volumes inside the Anonymise image" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
+         
           echo "----------------------" >> Docker_Project/anonymisation_internal/anonymisation_api/anonymise/changelog.txt
 
       - name: Commit and Push Changelog - Anonymise
