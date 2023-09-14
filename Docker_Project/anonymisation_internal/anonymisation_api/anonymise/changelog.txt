@@ -4,3 +4,8 @@ Changes:
 - Added feature X to Anonymise
 - Fixed issue Y in Anonymise
 ----------------------
+Version: PRE-ALPHA.1.1.1
+Date: Thu Sep 14 13:29:08 UTC 2023
+Changes:
+- Added mounted volumes inside the Anonymise image
+----------------------
