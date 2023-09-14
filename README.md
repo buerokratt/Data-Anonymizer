@@ -1,4 +1,4 @@
-## Functionalities     
+## Functionalities      
 
 ### Add new Regex pattern to the database
 
