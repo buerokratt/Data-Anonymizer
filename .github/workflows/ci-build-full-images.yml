@@ -19,8 +19,8 @@ jobs:
         run: |
           RELEASE=PRE-ALPHA
           VERSION=1
-          BUILD=0
-          FIX=2
+          BUILD=1
+          FIX=1
           GITHUB_REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | awk -F/ '{print $2}')
           LOWER_CASE_GITHUB_REPOSITORY=$(echo "$GITHUB_REPOSITORY_NAME" | tr '[:upper:]' '[:lower:]')
           DATAMANAGEMENT_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
