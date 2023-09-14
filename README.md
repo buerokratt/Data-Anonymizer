@@ -1,5 +1,5 @@
 ## Functionalities         
- 
+  
 ### Add new Regex pattern to the database 
 
 https://github.com/buerokratt/Data-Anonymizer/issues/59
