@@ -28,9 +28,9 @@ RUN mkdir -p /app/logs
 RUN mkdir -p /models
 
 # Copy specific directories from host machine
-COPY ./anonymisation_internal/anonymisation_api/anonymise/trained_model /app/training/trained_model
-COPY ./anonymisation_internal/anonymisation_api/anonymise/logs /app/logs
-COPY ./anonymisation_internal/anonymisation_api/anonymise/models /models
+COPY ./trained_model /app/training/trained_model
+COPY ./logs /app/logs
+COPY ./models /models
 
 EXPOSE 5001
 
