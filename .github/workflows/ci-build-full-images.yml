@@ -23,25 +23,25 @@ jobs:
           FIX=1
           GITHUB_REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | awk -F/ '{print $2}')
           LOWER_CASE_GITHUB_REPOSITORY=$(echo "$GITHUB_REPOSITORY_NAME" | tr '[:upper:]' '[:lower:]')
-          TAG_Datamanagement=$RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
-          TAG_Labelstudio=$RELEASE-$VERSION.$BUILD.$FIX-Labelstudio
-          TAG_MLstudio=$RELEASE-$VERSION.$BUILD.$FIX-MLstudio
-          TAG_Anonymiseworker=$RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
-          TAG_Anonymise=$RELEASE-$VERSION.$BUILD.$FIX-Anonymise
+          DATAMANAGEMENT_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
+          LABELSTUDIO_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Labelstudio
+          MLSTUDIO_TAG=$RELEASE-$VERSION.$BUILD.$FIX-MLstudio
+          ANONYMISEWORKER_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
+          ANONYMISE_TAG=$RELEASE-$VERSION.$BUILD.$FIX-Anonymise
 
           echo "RELEASE=$RELEASE" >> $GITHUB_ENV
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "BUILD=$BUILD" >> $GITHUB_ENV
           echo "FIX=$FIX" >> $GITHUB_ENV
           echo "LOWER_CASE_GITHUB_REPOSITORY=$LOWER_CASE_GITHUB_REPOSITORY" >> $GITHUB_ENV
-          echo "TAG_Datamanagement=$TAG_Datamanagement" >> $GITHUB_ENV
-          echo "TAG_Labelstudio=$TAG_Labelstudio" >> $GITHUB_ENV
-          echo "TAG_MLstudio=$TAG_MLstudio" >> $GITHUB_ENV
-          echo "TAG_Anonymiseworker=$TAG_Anonymiseworker" >> $GITHUB_ENV
-          echo "TAG_Anonymise=$TAG_Anonymise" >> $GITHUB_ENV
+          echo "DATAMANAGEMENT_TAG=$DATAMANAGEMENT_TAG" >> $GITHUB_ENV
+          echo "LABELSTUDIO_TAG=$LABELSTUDIO_TAG" >> $GITHUB_ENV
+          echo "MLSTUDIO_TAG=$MLSTUDIO_TAG" >> $GITHUB_ENV
+          echo "ANONYMISEWORKER_TAG=$ANONYMISEWORKER_TAG" >> $GITHUB_ENV
+          echo "ANONYMISE_TAG=$ANONYMISE_TAG" >> $GITHUB_ENV
 
       - name: Login to GitHub Container Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
 
       - name: Check Dockerfile Path (Debug)
         run: ls -l Docker_Project/dm
@@ -49,29 +49,29 @@ jobs:
       - name: Build and Push DM Docker Image
         run: | 
           cd Docker_Project/dm
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/datamanagement:$TAG_Datamanagement -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/datamanagement:$TAG_Datamanagement
+          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$DATAMANAGEMENT_TAG -f Dockerfile .
+          docker push ghcr.io/buerokratt/data-anonymizer:$DATAMANAGEMENT_TAG
 
       - name: Build and Push Labelstudio Docker Image
         run: | 
           cd Docker_Project/Label-Studio
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/labelstudio:$TAG_Labelstudio -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/labelstudio:$TAG_Labelstudio
+          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$LABELSTUDIO_TAG -f Dockerfile .
+          docker push ghcr.io/buerokratt/data-anonymizer:$LABELSTUDIO_TAG
 
       - name: Build and Push MLstudio Docker Image
         run: | 
           cd Docker_Project/ml-training-service
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/mlstudio:$TAG_MLstudio -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/mlstudio:$TAG_MLstudio
+          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG -f Dockerfile .
+          docker push ghcr.io/buerokratt/data-anonymizer:$MLSTUDIO_TAG
  
       - name: Build and Push Anonymiseworker Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymiseworker:$TAG_Anonymiseworker -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymiseworker:$TAG_Anonymiseworker
+          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISEWORKER_TAG -f Dockerfile .
+          docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISEWORKER_TAG
 
       - name: Build and Push Anonymise Docker Image
         run: | 
           cd Docker_Project/anonymisation_internal/anonymisation_api/anonymise
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymise:$TAG_Anonymise -f Dockerfile .
-          docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}/anonymise:$TAG_Anonymise
+          docker image build --tag ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG -f Dockerfile .
+          docker push ghcr.io/buerokratt/data-anonymizer:$ANONYMISE_TAG
