@@ -17,8 +17,8 @@ jobs:
 
       - name: Set environment variables
         run: |
-          RELEASE=1
-          VERSION=0
+          RELEASE=PRE-ALPHA
+          VERSION=1
           BUILD=0
           FIX=1
           GITHUB_REPOSITORY_NAME=$(echo $GITHUB_REPOSITORY | awk -F/ '{print $2}')
