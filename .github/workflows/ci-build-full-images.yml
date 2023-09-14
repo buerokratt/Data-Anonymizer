@@ -41,7 +41,7 @@ jobs:
           echo "TAG_Anonymise=$TAG_Anonymise" >> $GITHUB_ENV
 
       - name: Login to GitHub Container Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
 
       - name: Check Dockerfile Path (Debug)
         run: ls -l Docker_Project/dm
