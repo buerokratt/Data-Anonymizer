@@ -25,7 +25,7 @@ jobs:
       TAG_Datamanagement: $RELEASE-$VERSION.$BUILD.$FIX-Datamanagement
       TAG_Labelstudio: $RELEASE-$VERSION.$BUILD.$FIX-Labelstudio
       TAG_MLstudio: $RELEASE-$VERSION.$BUILD.$FIX-MLstudio
-      TAG_Anonymiserworker: $RELEASE-$VERSION.$BUILD.$FIX-Anonymiserworker
+      TAG_Anonymiseworker: $RELEASE-$VERSION.$BUILD.$FIX-Anonymiseworker
       TAG_Anonymise: $RELEASE-$VERSION.$BUILD.$FIX-Anonymise
       
 
@@ -48,7 +48,7 @@ jobs:
           echo "TAG_Datamanagement=$TAG_Datamanagement" >> $GITHUB_ENV
           echo "TAG_Labelstudio=$TAG_Labelstudio" >> $GITHUB_ENV
           echo "TAG_MLstudio=$TAG_MLstudio" >> $GITHUB_ENV
-          echo "TAG_Anonymiserworker=$TAG_Anonymiserworker" >> $GITHUB_ENV
+          echo "TAG_Anonymiseworker=$TAG_Anonymiseworker" >> $GITHUB_ENV
           echo "TAG_Anonymise=$TAG_Anonymise" >> $GITHUB_ENV
 
       - name: Login to GitHub Container Registry
@@ -57,29 +57,29 @@ jobs:
       - name: Build and Push DM Docker Image
         run: | 
           cd /Docker_Project/dm
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_DM -f $DOCKERFILE_Datamanagement .
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement -f $DOCKERFILE_Datamanagement .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Datamanagement
 
       - name: Build and Push LM Docker Image
         run: | 
           cd /Docker_Project/Label-Studio
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_LM -f $DOCKERFILE_Labelstudio .
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio -f $DOCKERFILE_Labelstudio .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Labelstudio
 
       - name: Build and Push GUI Docker Image
         run: | 
           cd /Docker_Project/ml-training-service
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_GUI -f $DOCKERFILE_MLstudio .
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio -f $DOCKERFILE_MLstudio .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_MLstudio
  
       - name: Build and Push GUI Docker Image
         run: | 
           cd /Docker_Project/anonymisation_internal/anonymisation_api/
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_GUI -f $DOCKERFILE_Anonymiserworker .
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiseworker -f $DOCKERFILE_Anonymiseworker .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymiserworker
 
       - name: Build and Push GUI Docker Image
         run: | 
           cd /Docker_Project/anonymisation_internal/anonymisation_api/anonymise
-          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_GUI -f $DOCKERFILE_Anonymise .
+          docker image build --tag ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymise -f $DOCKERFILE_Anonymise .
           docker push ghcr.io/${LOWER_CASE_GITHUB_REPOSITORY}:$TAG_Anonymise
