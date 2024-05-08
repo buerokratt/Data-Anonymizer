@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "chai-http": "^4.3.0",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.2"
   },
   "devDependencies": {
     "chai": "^4.3.7",
