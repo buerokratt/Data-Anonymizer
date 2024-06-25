@@ -1,5 +1,5 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
-anyio==3.6.2
+anyio==4.4.0
 attrs==22.1.0
 certifi==2022.9.24
 charset-normalizer==2.1.1
