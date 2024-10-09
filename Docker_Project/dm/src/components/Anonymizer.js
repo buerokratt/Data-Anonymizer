@@ -147,6 +147,7 @@ const AnonymizerTextCardContainer = styled.div`
 const AnonymizerTextCard = styled(Card)`
   // flex: 1;
   // min-width: 328px;
+  overflow-wrap: anywhere;
   cursor: text;
   overflow: scroll;
   flex-direction: row;
@@ -427,7 +428,11 @@ function Anonymizer() {
                         <KeywordTag
                           color={tagColors[x.tagIndex % tagColors.length]}
                           text={x.Algne}
-                          keyword={x.regex_entity_tag ? x.regex_entity_tag : x.Tag?.split("_")?.[0]}
+                          keyword={
+                            x.regex_entity_tag
+                              ? x.regex_entity_tag
+                              : x.Tag?.split("_")?.[0]
+                          }
                         />
                         &nbsp;
                       </>
