@@ -1,0 +1,9 @@
+delete_corpora_info:
+  call: http.post
+  args:
+    url: http://resql:8082/delete_corpora_info
+    body:
+      corpora_id: ${incoming.params.id}
+
+return_value:
+  return: "success"

@@ -10,6 +10,7 @@ import {
   Upload,
   Progress,
 } from "antd";
+import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import GithubSection from "./GithubSection";
 import UploadIcon from "../assets/upload.svg";
@@ -28,6 +29,7 @@ import {
   annotateCorpora,
   listRegex,
   deleteRegex,
+  deleteCorporaInfo,
   createRegex,
   getEntities,
   createEntity,
@@ -522,9 +524,9 @@ const Description = styled.div`
   gap: 4px;
 `;
 
-const BrandLink = styled.span`
-  color: #0000f0;
-  text-decoration: underline;
+const BrandLink = styled(Link)`
+  color: #0000f0 !important;
+  text-decoration: underline !important;
 `;
 
 const FileTag = styled(Tag)`
@@ -627,6 +629,19 @@ function Treening() {
     }
   };
 
+  const deleteCorpora = async () => {
+    let response = await deleteCorporaInfo(corporaInfo?.corporaId);
+    if (response === "success") {
+      notification.info({
+        description: t("trainingPage.deleteTrainingFile"),
+        placement: "bottomLeft",
+        icon: <div />,
+        closeIcon: <div />,
+      });
+      setUploadingState(1);
+    }
+  };
+
   const createEntityRecord = async () => {
     const response = await createEntity(entityText, entityDescription);
     if (response === "success") {
@@ -666,7 +681,7 @@ function Treening() {
     if (uploadingState === 4) {
       let timer = setInterval(() => {
         fetchTrainingStatus().then((status) => {
-          if (["Failed", "Done", "Standby"].includes(status.status)) {
+          if (["Failed", "Done", "Standby"].includes(status?.status)) {
             setUploadingState(1);
             getTrainedCorporaInfo().then((res) =>
               setTrainedCorporaInfo(res[0])
@@ -680,9 +695,9 @@ function Treening() {
 
   useEffect(() => {
     fetchTrainingStatus().then((status) => {
-      if (!["Failed", "Done", "Standby"].includes(status.status)) {
-        setUploadingState(4);
-      }
+      // if (!["Failed", "Done", "Standby"].includes(status?.status)) {
+      //   setUploadingState(4);
+      // }
     });
     listRegex().then((regexes) => {
       tableDataRef.current = regexes.map((regexRecord) => ({
@@ -1006,7 +1021,12 @@ function Treening() {
                     {t("trainingPage.mb")}
                   </UploadText>
                   <img
-                    style={{ marginRight: 4, transform: "rotate(270deg)" }}
+                    onClick={deleteCorpora}
+                    style={{
+                      marginRight: 4,
+                      transform: "rotate(270deg)",
+                      cursor: "pointer",
+                    }}
                     src={CloseIcon}
                   />
                 </UploadAttachmentInfoColumns>
@@ -1049,7 +1069,13 @@ function Treening() {
         <Title>{t("trainingPage.regexSectionTitle")}</Title>
         <Description style={{ display: "block" }}>
           {t("trainingPage.regexSectionDescription")}{" "}
-          <BrandLink>{t("trainingPage.regexSectionDescriptionLink")}</BrandLink>
+          <BrandLink
+            to="https://github.com/buerokratt/Data-Anonymizer/blob/main/GUIDE.md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("trainingPage.regexSectionDescriptionLink")}
+          </BrandLink>
         </Description>
 
         <RegexAreaContainer>

@@ -79,7 +79,12 @@ function Header() {
           >
             {t("header.training")}
           </NavigationItem>
-          <NavigationItem to="#" style={{ marginRight: 10 }}>
+          <NavigationItem
+            to="https://github.com/buerokratt/Data-Anonymizer/blob/main/README.md"
+            style={{ marginRight: 10 }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("header.github")}
           </NavigationItem>
         </NavigationItems>
