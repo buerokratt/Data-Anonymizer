@@ -40,6 +40,16 @@ const deleteRegex = async (id) => {
   }
 };
 
+const deleteCorporaInfo = async (id) => {
+  try {
+    let response = await fetch(`${API_URL}/delete_corpora_info?id=${id}`);
+    response = await response.json();
+    return response.response;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const getEntities = async () => {
   try {
     let response = await fetch(`${API_URL}/entity`);
@@ -213,4 +223,5 @@ export {
   getCorporaInfo,
   addCorporaInfo,
   getTrainedCorporaInfo,
+  deleteCorporaInfo,
 };
