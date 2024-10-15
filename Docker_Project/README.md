@@ -137,7 +137,7 @@ The data used for training the model must meet the following criteria:
 #### Process
 
 1. Select a sample of data for labelling
-2. Upload the corpus from the UI
+2. Upload the corpus from the UI. Corpus is a simple text file containing sentences split by new lines ([Sample Corpus](korpus.txt)).
 3. Label the corpus manually in the labelling interface
 4. Start training the model
 
