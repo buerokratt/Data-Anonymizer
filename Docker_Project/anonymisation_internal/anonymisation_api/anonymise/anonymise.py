@@ -79,14 +79,14 @@ def predict_ne(orig_text: str, tokenize: bool, truecase: bool, do_pseudonymisati
             mapping1 = {}
             pseudo_text = text.split()
         for map in mapping1:
-            algne = map["Algne"]
+            algne = map["word"]
             if map["Tag"] == 'O':
                 asendatud = algne
             else:
                 asendatud = map["Tag"]
             tag = map["Tag"]
             mapping.append(
-                {"Algne": algne, "Asendatud": asendatud, "Tag": tag, "start_i": map["start_i"], "end_i": map["end_i"]})
+                {"word": algne, "pseudonymised_word": asendatud, "Tag": tag, "start_i": map["start_i"], "end_i": map["end_i"]})
 
     if do_detokenize:
         return detokenize(' '.join(anonymised_text)), detokenize(

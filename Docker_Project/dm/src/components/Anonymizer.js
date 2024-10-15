@@ -371,7 +371,7 @@ function Anonymizer() {
     setPseudonymisedWords([]);
     let response = await pseudonymiseText(inputText);
     setShowAnonymizedText(true);
-    setOutputText(response?.[0]?.pseudonümiseeritud_tekst);
+    setOutputText(response?.[0]?.pseudonymised_text);
     let tagIndex = 0;
     response?.[0]?.Mapping.map((x) => {
       if (x.Tag !== "O" || x.regex_entity_tag) {

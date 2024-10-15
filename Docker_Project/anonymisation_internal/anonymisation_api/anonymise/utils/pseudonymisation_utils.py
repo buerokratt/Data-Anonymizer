@@ -399,7 +399,7 @@ def pseudonymization(text, entities, index_mapping):
                     counts[ent_formatted] += 1
                     counts[form] = count
                 tagged_text.append(ent_formatted + '_' + str(count))
-                mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+                mappings.append({'word': indexes[0], 'pseudonymised_word': new_ent,
                                  'Tag': ent_formatted + '_' + str(count), 'start_i':indexes[2], 'end_i': indexes[3]})
 
 
@@ -438,8 +438,8 @@ def pseudonymization(text, entities, index_mapping):
                 count = str(counts.get(previous_name))
             else:
                 counts['Nimi'] += 1
-            mappings.append({'Algne': indexes[0],
-                             'Asendatud': new_ent.capitalize(),
+            mappings.append({'word': indexes[0],
+                             'pseudonymised_word': new_ent.capitalize(),
                              'Tag': 'Nimi_' + count,'start_i':indexes[2], 'end_i': indexes[3] })
             if random_name not in counts.keys():
                 counts[random_name] = int(count)
@@ -498,7 +498,7 @@ def pseudonymization(text, entities, index_mapping):
                     counts['Asutus'] = 1
                 count = str(counts.get(random_company)) if random_company in counts.keys() else str(
                     counts.get('Asutus'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent.capitalize(),
                                  'Tag': 'Asutus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Asutus_' + count)
                 if random_company not in counts.keys():
@@ -553,7 +553,7 @@ def pseudonymization(text, entities, index_mapping):
                     counts['Aadress'] = 1
                 count = str(counts.get(random_address)) if random_address in counts.keys() else str(
                     counts.get('Aadress'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent.capitalize(),
                                  'Tag': 'Aadress_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Aadress_' + count)
                 if random_address not in counts.keys():
@@ -607,7 +607,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get('Sündmus') is None:
                     counts['Sündmus'] = 1
                 count = str(counts.get(random_event)) if random_event in counts.keys() else str(counts.get('Sündmus'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Sündmus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Sündmus_' + count)
 
@@ -661,7 +661,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get('GPE') is None:
                     counts['GPE'] = 1
                 count = str(counts.get(random_gpe)) if random_gpe in counts.keys() else str(counts.get('GPE'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent.capitalize(),
                                  'Tag': 'GPE_' + count,  'start_i': start, 'end_i': end})
                 tagged_text.append('GPE_' + count)
                 if random_gpe not in counts.keys():
@@ -718,7 +718,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get(cleaned_entity) is None:
                     counts[cleaned_entity] = 1
                 count = str(counts.get(cleaned_entity))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': cleaned_entity + '_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append(cleaned_entity + '_' + count)
 
@@ -761,7 +761,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get('Toode') is None:
                     counts['Toode'] = 1
                 count = str(counts.get(random_prod)) if random_prod in counts.keys() else str(counts.get('Toode'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Toode_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Toode_' + count)
                 if random_prod not in counts.keys():
@@ -814,7 +814,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get('Tiitel') is None:
                     counts['Tiitel'] = 1
                 count = str(counts.get(random_title)) if random_title in counts.keys() else str(counts.get('Tiitel'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Tiitel_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Tiitel_' + count)
                 if random_title not in counts.keys():
@@ -833,7 +833,7 @@ def pseudonymization(text, entities, index_mapping):
                     regex_entity_tag = is_regex_ent.group(1)
             except:
                 pass
-            mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+            mappings.append({'word': indexes[0], 'pseudonymised_word': new_ent,
                              'Tag': 'O', 'regex_entity_tag': regex_entity_tag, 'start_i':indexes[2], 'end_i': indexes[3]})
             tagged_text.append(span.text)
         if new_ent != '':
