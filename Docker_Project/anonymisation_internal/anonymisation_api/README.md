@@ -42,12 +42,12 @@ To anonymise text, you can use following command:
    `$ wget -S --header="Accept-Encoding: gzip, deflate" --header='Accept-Charset: UTF-8' --header='Content-Type: application/json'  --post-data '{"texts":["Tartus laupäev 23.07. KAOTATUD suur summa raha heleroosas peegelpinnaga helkivas lukuga kosmeetikakotis, kas Ringtee 7 majas/maja ees,K-Rauta ehituspoes/parklas kell 17-18 vahel. Iga info vajalik,kes ka nägi kedagi sellist kotti millalgi maast üles võtmas või kes teab kedagi, kes alates laupäevast on ootamatult rikastunud ja võis nendes kohtades liikuda, palun anna teada. Korralik vaevatasu ausale tagastajale ja leidjani viiva info jagajale! Tel. +372 55596739"], "tokenize":true, "truecase":true, "pseudonymise":true, "thresholds":{}}'  http://0.0.0.0:5001/predict`
 
 ### Output 
-Output of the API is a list of dictionaries containing keys `Mapping`, `anonümiseeritud_tekst`, `pseudonümiseeritud_tekst` and `sisendtekst`.
-`Mapping` contains list of words (from the input text), each word is represented as a dictionary containing keys: `Algne`, `Asendatud` and `Tag`. 
-`Algne` is the word from the initial input text. `Asendatud` is the pseudonymised text if pseudonymisation is set to True, otherwise it is the same as the `Tag`. 
+Output of the API is a list of dictionaries containing keys `Mapping`, `anonymised_text`, `pseudonymised_text` and `input_text`.
+`Mapping` contains list of words (from the input text), each word is represented as a dictionary containing keys: `word`, `pseudonymised_word` and `Tag`. 
+`word` is the word from the initial input text. `pseudonymised_word` is the pseudonymised text if pseudonymisation is set to True, otherwise it is the same as the `Tag`. 
 `Tag` is the assigned entity to the word. 
-`anonümiseeritud_tekst` is anonymised text, where each detected entity is covered with the detected entity. `pseudonümiseeritud_tekst` is pseudonymised text, where each detected entity is replaced with random entity. 
-If pseudonymisation is set to false then the `pseudonümiseeritud_tekst` contains text where detected entities are covered with entity names. 
+`anonymised_text` is anonymised text, where each detected entity is covered with the detected entity. `pseudonymised_text` is pseudonymised text, where each detected entity is replaced with random entity. 
+If pseudonymisation is set to false then the `pseudonymised_text` contains text where detected entities are covered with entity names. 
 
 where each found entity is masked with the entity name. 
 The output of the example command would be: 
@@ -95,72 +95,73 @@ and `tokenize:false` (all other inputs are not specified) then the output would 
     {
         "Mapping": [
             {
-                "Algne": "Rahapesu",
-                "Asendatud": "rahapesu",
+                "word": "Rahapesu",
+                "pseudonymised_word": "rahapesu",
                 "Tag": "O",
                 "end_i": 8,
                 "start_i": 0
             },
             {
-                "Algne": "on",
-                "Asendatud": "on",
+                "word": "on",
+                "pseudonymised_word": "on",
                 "Tag": "O",
                 "end_i": 11,
                 "start_i": 9
             },
             {
-                "Algne": "valdkond,",
-                "Asendatud": "valdkond,",
+                "word": "valdkond,",
+                "pseudonymised_word": "valdkond,",
                 "Tag": "O",
                 "end_i": 21,
                 "start_i": 12
             },
             {
-                "Algne": "mille",
-                "Asendatud": "mille",
+                "word": "mille",
+                "pseudonymised_word": "mille",
                 "Tag": "O",
                 "end_i": 27,
                 "start_i": 22
             },
             {
-                "Algne": "osakaal",
-                "Asendatud": "osakaal",
+                "word": "osakaal",
+                "pseudonymised_word": "osakaal",
                 "Tag": "O",
                 "end_i": 35,
                 "start_i": 28
             },
             {
-                "Algne": "Eesti-Soome",
-                "Asendatud": "Kiviõli",
+                "word": "Eesti-Soome",
+                "pseudonymised_word": "Kiviõli",
                 "Tag": "GPE_1",
                 "end_i": 47,
                 "start_i": 36
             },
             {
-                "Algne": "vahelises",
-                "Asendatud": "vahelises",
+                "word": "vahelises",
+                "pseudonymised_word": "vahelises",
                 "Tag": "O",
                 "end_i": 57,
                 "start_i": 48
             },
             {
-                "Algne": "kuritegevuses",
-                "Asendatud": "kuritegevuses",
+                "word": "kuritegevuses",
+                "pseudonymised_word": "kuritegevuses",
                 "Tag": "O",
                 "end_i": 71,
                 "start_i": 58
             },
             {
-                "Algne": "kasvab.",
-                "Asendatud": "kasvab.",
+                "word": "kasvab.",
+                "pseudonymised_word": "kasvab.",
                 "Tag": "O",
                 "end_i": 79,
                 "start_i": 72
             }
         ],
-        "anonümiseeritud_tekst": "Rahapesu on valdkond, mille osakaal [b-gpe] vahelises kuritegevuses kasvab.",
-        "pseudonümiseeritud_tekst": "Rahapesu on valdkond, mille osakaal kiviõli vahelises kuritegevuses kasvab.",
-        "sisendtekst": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab."
+        "anonymised_text": "Rahapesu on valdkond, mille osakaal [b-gpe] vahelises kuritegevuses kasvab.",
+        "pseudonymised_text": "Rahapesu on valdkond, mille osakaal kiviõli vahelises kuritegevuses kasvab.",
+        "input_text": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab."
+    }
 ]`
 
 
@@ -180,86 +181,86 @@ and `truecase:false` (all other inputs are not specified)  then the output would
     {
         "Mapping": [
             {
-                "Algne": "Rahapesu",
-                "Asendatud": "Rahapesu",
+                "word": "Rahapesu",
+                "pseudonymised_word": "Rahapesu",
                 "Tag": "Rahapesu_1",
                 "end_i": 8,
                 "start_i": 0
             },
             {
-                "Algne": "on",
-                "Asendatud": "on",
+                "word": "on",
+                "pseudonymised_word": "on",
                 "Tag": "O",
                 "end_i": 11,
                 "start_i": 9
             },
             {
-                "Algne": "valdkond",
-                "Asendatud": "valdkond",
+                "word": "valdkond",
+                "pseudonymised_word": "valdkond",
                 "Tag": "O",
                 "end_i": 20,
                 "start_i": 12
             },
             {
-                "Algne": ",",
-                "Asendatud": ",",
+                "word": ",",
+                "pseudonymised_word": ",",
                 "Tag": "O",
                 "end_i": 21,
                 "start_i": 20
             },
             {
-                "Algne": "mille",
-                "Asendatud": "mille",
+                "word": "mille",
+                "pseudonymised_word": "mille",
                 "Tag": "O",
                 "end_i": 27,
                 "start_i": 22
             },
             {
-                "Algne": "osakaal",
-                "Asendatud": "osakaal",
+                "word": "osakaal",
+                "pseudonymised_word": "osakaal",
                 "Tag": "O",
                 "end_i": 35,
                 "start_i": 28
             },
             {
-                "Algne": "Eesti-Soome",
-                "Asendatud": "Kiviõli",
+                "word": "Eesti-Soome",
+                "pseudonymised_word": "Kiviõli",
                 "Tag": "GPE_1",
                 "end_i": 47,
                 "start_i": 36
             },
             {
-                "Algne": "vahelises",
-                "Asendatud": "vahelises",
+                "word": "vahelises",
+                "pseudonymised_word": "vahelises",
                 "Tag": "O",
                 "end_i": 57,
                 "start_i": 48
             },
             {
-                "Algne": "kuritegevuses",
-                "Asendatud": "kuritegevuses",
+                "word": "kuritegevuses",
+                "pseudonymised_word": "kuritegevuses",
                 "Tag": "O",
                 "end_i": 71,
                 "start_i": 58
             },
             {
-                "Algne": "kasvab",
-                "Asendatud": "kasvab",
+                "word": "kasvab",
+                "pseudonymised_word": "kasvab",
                 "Tag": "O",
                 "end_i": 78,
                 "start_i": 72
             },
             {
-                "Algne": "R",
-                "Asendatud": ".",
+                "word": "R",
+                "pseudonymised_word": ".",
                 "Tag": "O",
                 "end_i": 1,
                 "start_i": 0
             }
         ],
-        "anonümiseeritud_tekst": "Rahapesu on valdkond, mille osakaal [b-gpe] vahelises kuritegevuses kasvab.",
-        "pseudonümiseeritud_tekst": "Rahapesu on valdkond, mille osakaal kiviõli vahelises kuritegevuses kasvab.",
-        "sisendtekst": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab."
+        "anonymised_text": "Rahapesu on valdkond, mille osakaal [b-gpe] vahelises kuritegevuses kasvab.",
+        "pseudonymised_text": "Rahapesu on valdkond, mille osakaal kiviõli vahelises kuritegevuses kasvab.",
+        "input_text": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab."
     }
 ]
 `
@@ -281,86 +282,86 @@ and `pseudonymise:false` (all other inputs are not specified) then the output wo
     {
         "Mapping": [
             {
-                "Algne": "Rahapesu",
-                "Asendatud": "Rahapesu",
+                "word": "Rahapesu",
+                "pseudonymised_word": "Rahapesu",
                 "Tag": "O",
                 "end_i": 8,
                 "start_i": 0
             },
             {
-                "Algne": "on",
-                "Asendatud": "on",
+                "word": "on",
+                "pseudonymised_word": "on",
                 "Tag": "O",
                 "end_i": 11,
                 "start_i": 9
             },
             {
-                "Algne": "valdkond",
-                "Asendatud": "valdkond",
+                "word": "valdkond",
+                "pseudonymised_word": "valdkond",
                 "Tag": "O",
                 "end_i": 20,
                 "start_i": 12
             },
             {
-                "Algne": ",",
-                "Asendatud": ",",
+                "word": ",",
+                "pseudonymised_word": ",",
                 "Tag": "O",
                 "end_i": 21,
                 "start_i": 20
             },
             {
-                "Algne": "mille",
-                "Asendatud": "mille",
+                "word": "mille",
+                "pseudonymised_word": "mille",
                 "Tag": "O",
                 "end_i": 27,
                 "start_i": 22
             },
             {
-                "Algne": "osakaal",
-                "Asendatud": "osakaal",
+                "word": "osakaal",
+                "pseudonymised_word": "osakaal",
                 "Tag": "O",
                 "end_i": 35,
                 "start_i": 28
             },
             {
-                "Algne": "Eesti-Soome",
-                "Asendatud": "GPE_1",
+                "word": "Eesti-Soome",
+                "pseudonymised_word": "GPE_1",
                 "Tag": "GPE_1",
                 "end_i": 47,
                 "start_i": 36
             },
             {
-                "Algne": "vahelises",
-                "Asendatud": "vahelises",
+                "word": "vahelises",
+                "pseudonymised_word": "vahelises",
                 "Tag": "O",
                 "end_i": 57,
                 "start_i": 48
             },
             {
-                "Algne": "kuritegevuses",
-                "Asendatud": "kuritegevuses",
+                "word": "kuritegevuses",
+                "pseudonymised_word": "kuritegevuses",
                 "Tag": "O",
                 "end_i": 71,
                 "start_i": 58
             },
             {
-                "Algne": "kasvab",
-                "Asendatud": "kasvab",
+                "word": "kasvab",
+                "pseudonymised_word": "kasvab",
                 "Tag": "O",
                 "end_i": 78,
                 "start_i": 72
             },
             {
-                "Algne": ".",
-                "Asendatud": ".",
+                "word": ".",
+                "pseudonymised_word": ".",
                 "Tag": "O",
                 "end_i": 78,
                 "start_i": 79
             }
         ],
-        "anonümiseeritud_tekst": "rahapesu on valdkond, mille osakaal [B-GPE] vahelises kuritegevuses kasvab.",
-        "pseudonümiseeritud_tekst": "Rahapesu on valdkond, mille osakaal GPE_1 vahelises kuritegevuses kasvab.",
-        "sisendtekst": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab ."
+        "anonymised_text": "rahapesu on valdkond, mille osakaal [B-GPE] vahelises kuritegevuses kasvab.",
+        "pseudonymised_text": "Rahapesu on valdkond, mille osakaal GPE_1 vahelises kuritegevuses kasvab.",
+        "input_text": "Rahapesu on valdkond, mille osakaal Eesti-Soome vahelises kuritegevuses kasvab ."
     }
 ]`
 

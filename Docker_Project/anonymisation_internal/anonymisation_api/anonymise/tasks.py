@@ -12,7 +12,7 @@ logger = get_task_logger(__name__)
 
 def predict(request_obj):
     """
-    :return: {"sisendtekst": text, "Mapping": dict , "anonümiseeritud tekst": text, "pseudonümiseeritud tekst":text}
+    :return: {"input_text": text, "Mapping": dict , "anonymised_text": text, "pseudonymised_text":text}
     """
     if "texts" not in request_obj.keys():
         return {"Message": "'texts' not in request."}
@@ -70,8 +70,8 @@ def predict(request_obj):
         orig_text=text,
         tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds,
         disabled_entities=disabled_entities, do_detokenize=detokenize)
-        outputs.append({"sisendtekst": text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
-                    "pseudonümiseeritud_tekst": pseudonymised_text})
+        outputs.append({"input_text": text, "Mapping": mapping, "anonymised_text": anonymised_text,
+                    "pseudonymised_text": pseudonymised_text})
     # app.logger.debug("Anonymisation ended.")
 
     return outputs
@@ -116,7 +116,7 @@ def annotate_corpora_task(self):
                     })
                 # next_curr_index = len_word + 1
                 # try:
-                #     curr_index+=(next_curr_index if output["sisendtekst"][curr_index + next_curr_index] == output["Mapping"][i+1]['Algne'][0] else len_word)
+                #     curr_index+=(next_curr_index if output["input_text"][curr_index + next_curr_index] == output["Mapping"][i+1]['Algne'][0] else len_word)
                 # except Exception as e:
                 #     curr_index+=len_word
             res['sentences_annotations'] = json.dumps(res['sentences_annotations'])

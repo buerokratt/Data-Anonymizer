@@ -319,7 +319,15 @@ def find_ne(text, thresholds):
         tag2 = token2  # vana ner ?
         tag3 = token3  # uus ner?
 
-        if 'Asutus' in tag3:
+        if len(set([tag1, tag2, tag3])) == 2:
+            #assign tag to the set element that appears two times
+            if [tag1, tag2, tag3].count(tag1) == 2:
+                tag = tag1
+            elif [tag1, tag2, tag3].count(tag2) == 2:
+                tag = tag2
+            else:
+                tag = tag3
+        elif 'Asutus' in tag3:
             tag = tag3
         elif tag3 != 'O':
             tag = tag3
