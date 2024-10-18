@@ -15,7 +15,7 @@ app.logger.setLevel(gunicorn_logger.level)
 @app.route("/predict", methods=["POST"])
 def predict(data=None):
     """
-    :return: {"sisendtekst": text, "Mapping": dict , "anonümiseeritud tekst": text, "pseudonümiseeritud tekst":text}
+    :return: {"input_text": text, "Mapping": dict , "anonymised_text": text, "pseudonymised_text":text}
     """
     request_obj = data if data else request.get_json()
     if "texts" not in request_obj.keys():
@@ -75,8 +75,8 @@ def predict(data=None):
             orig_text=text,
             tokenize=tokenize, truecase=truecase, do_pseudonymisation=pseudonymise, thresholds=thresholds,
             disabled_entities=disabled_entities, do_detokenize=detokenize)
-            outputs.append({"sisendtekst": text, "Mapping": mapping, "anonümiseeritud_tekst": anonymised_text,
-                        "pseudonümiseeritud_tekst": pseudonymised_text})
+            outputs.append({"input_text": text, "Mapping": mapping, "anonymised_text": anonymised_text,
+                        "pseudonymised_text": pseudonymised_text})
         except Exception as e:
 
             app.logger.debug("Error occurred : {}, in input: {}".format(e, text) )

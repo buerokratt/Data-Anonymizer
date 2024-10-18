@@ -16,8 +16,8 @@ def test_predict_simple():
     response = r.text
     res = json.loads(response)
     assert len(res) == 1
-    assert res[0].get('sisendtekst') == "Mu email on peeter@gmail.com"
-    assert res[0].get('anonümiseeritud_tekst') == "mu email on [Email]"
+    assert res[0].get('input_text') == "Mu email on peeter@gmail.com"
+    assert res[0].get('anonymised_text') == "mu email on [Email]"
     assert 'Mapping' in res[0].keys()
 
 

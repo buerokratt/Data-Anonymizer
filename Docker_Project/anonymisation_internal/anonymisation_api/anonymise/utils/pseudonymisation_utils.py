@@ -73,22 +73,22 @@ def generate_address(entity):
         town = text.addresses['ASULA'][0][0]
         borough = text.addresses['MAAKOND'][0][0]
         if street != '':
-            new_street = random.choice(random.choice(list(STREETS.values()))).capitalize()
-            uncovered_words = uncovered_words.replace(street, new_street)
+            new_street = random.choice(random.choice(list(STREETS.values())))
+            uncovered_words = uncovered_words.replace(street, '')
             entity = entity.replace(street, new_street)
             already_covered.add(new_street)
         if house != '':
-            new_house = re.sub(r'[1-9]', r'[0-9]', house)
-            uncovered_words = uncovered_words.replace(house, new_house)
+            new_house = re.sub(r'[1-9]',lambda _:str(random.randint(1,10)), house)
+            uncovered_words = uncovered_words.replace(house, '')
             entity = entity.replace(house, new_house)
         if town != '':
-            new_town = random.choice(TOWNS).capitalize()
-            uncovered_words = uncovered_words.replace(town, new_town)
+            new_town = random.choice(TOWNS)
+            uncovered_words = uncovered_words.replace(town, '')
             entity = entity.replace(town, new_town)
             already_covered.add(new_town)
         if borough != '':
-            new_borough = random.choice(BOROUGHS).capitalize()
-            uncovered_words = uncovered_words.replace(borough, new_borough)
+            new_borough = random.choice(BOROUGHS)
+            uncovered_words = uncovered_words.replace(borough, '')
             entity = entity.replace(borough, new_borough)
             already_covered.add(new_borough)
     random_county = None
@@ -97,7 +97,7 @@ def generate_address(entity):
         if ' ' + ent.lower() + ' ' in entity.lower() and ent not in already_covered:
             detected_ent = ent
             already_covered.add(detected_ent)
-            random_ent = random.choice(COUNTRIES).capitalize()
+            random_ent = random.choice(COUNTRIES)
             already_covered.add(random_ent)
             entity = entity.replace(detected_ent, random_ent).strip()
             uncovered_words = uncovered_words.replace(entity, '')
@@ -109,7 +109,7 @@ def generate_address(entity):
         if ' ' + county + ' ' in entity and county not in already_covered:
             detected_county = county
             already_covered.add(detected_county)
-            random_county = random.choice(COUNTIES).capitalize()
+            random_county = random.choice(COUNTIES)
             already_covered.add(random_county)
             entity = entity.replace(detected_county, random_county).strip()
 
@@ -122,7 +122,7 @@ def generate_address(entity):
         if ' ' + ent + ' ' in entity and ent not in already_covered:
             detected_ent = ent
             already_covered.add(detected_ent)
-            random_ent = random.choice(MUNICIPALITIES).capitalize()
+            random_ent = random.choice(MUNICIPALITIES)
             already_covered.add(random_ent)
             entity = entity.replace(detected_ent, random_ent).strip()
             uncovered_words = uncovered_words.replace(detected_ent, '')
@@ -134,7 +134,7 @@ def generate_address(entity):
         if ' ' + ent + ' ' in entity and ent not in already_covered:
             detected_ent = ent
             already_covered.add(detected_ent)
-            random_ent = random.choice(TOWN_PARTS).capitalize()
+            random_ent = random.choice(TOWN_PARTS)
             already_covered.add(random_ent)
             entity = entity.replace(detected_ent, random_ent).strip()
             uncovered_words = uncovered_words.replace(detected_ent, '')
@@ -146,7 +146,7 @@ def generate_address(entity):
         if ' ' + ent + ' ' in entity and ent not in already_covered:
             detected_ent = ent
             already_covered.add(detected_ent)
-            random_ent = random.choice(BOROUGHS).capitalize()
+            random_ent = random.choice(BOROUGHS)
             already_covered.add(random_ent)
             entity = entity.replace(detected_ent, random_ent).strip()
             uncovered_words = uncovered_words.replace(detected_ent, '')
@@ -159,7 +159,7 @@ def generate_address(entity):
     for city in TOWNS:
         if ' ' + city + ' ' in entity and city != random_county and city not in already_covered:
             detected_city = city
-            random_city = random.choice(TOWNS).capitalize()
+            random_city = random.choice(TOWNS)
             entity = entity.replace(detected_city, random_city).strip()
             already_covered.add(random_city)
             already_covered.add(detected_city)
@@ -184,7 +184,7 @@ def generate_address(entity):
             if (' ' + street + ' ' in entity and street != random_city and street not in already_covered):
                 detected_street = street
                 random_street = random.choice(
-                    random.choice(list(STREETS.values()))).strip().capitalize()
+                    random.choice(list(STREETS.values()))).strip()
                 entity = entity.replace(detected_street, random_street)
                 already_covered.add(detected_street)
                 already_covered.add(random_street)
@@ -209,7 +209,7 @@ def generate_address(entity):
                     detected_street = street
                     already_covered.add(detected_street)
                     random_street = random.choice(
-                        random.choice(list(STREETS.values()))).capitalize()
+                        random.choice(list(STREETS.values())))
                     already_covered.add(random_street)
                     uncovered_words = uncovered_words.replace(detected_street, '')
                     entity = entity.replace(detected_street, random_street)
@@ -229,7 +229,7 @@ def generate_address(entity):
         if ' ' + village + ' ' in entity and village not in already_covered:
             detected_village = village
             already_covered.add(detected_village)
-            random_village = random.choice(VILLAGES).capitalize()
+            random_village = random.choice(VILLAGES)
             entity = entity.replace(detected_village, random_village)
             already_covered.add(random_village)
 
@@ -239,26 +239,10 @@ def generate_address(entity):
 
             break
 
-    length = len(re.sub("[^0-9]", "", entity))
     uncovered_words = re.sub(r'[0-9]', '', uncovered_words)
-    uncovered_words = re.sub(r'[.,:!?\'\"]', '', uncovered_words)
-    pattern = r'[0-9]'
-    new_ent = deepcopy(entity)
-    entity1 = ""
-    for i in range(length):
+    uncovered_words = re.sub(r'[.,:!?\'\"\-]', '', uncovered_words)
 
-        random_number = str(random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9]))
-        new_ent = re.sub(pattern, random_number, new_ent, 1)
-        if i == 0:
-            entity1 = new_ent[:new_ent.index(random_number) + 1]
-            new_ent = new_ent[new_ent.index(random_number) + 1:]
-        else:
-            if new_ent.index(random_number) != 0:
-                entity1 = entity1 + new_ent[: new_ent.index(random_number)]
-            part = new_ent[new_ent.index(random_number):new_ent.index(random_number) + 1]
-            new_ent = new_ent[new_ent.index(random_number) + 1:]
-            entity1 = entity1 + part
-
+    entity1 = re.sub(r'[1-9]',lambda _:str(random.randint(1,10)), entity)
     if entity1 != "":
         entity = entity1
     if uncovered_words.strip() != "":
@@ -399,7 +383,7 @@ def pseudonymization(text, entities, index_mapping):
                     counts[ent_formatted] += 1
                     counts[form] = count
                 tagged_text.append(ent_formatted + '_' + str(count))
-                mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+                mappings.append({'word': indexes[0], 'pseudonymised_word': new_ent,
                                  'Tag': ent_formatted + '_' + str(count), 'start_i':indexes[2], 'end_i': indexes[3]})
 
 
@@ -428,7 +412,7 @@ def pseudonymization(text, entities, index_mapping):
                 entity_mapping[span_form] = random_name
 
             new_ent = synthesize(random_name, form, partofspeech=pos)
-            new_ent = random_name.capitalize() if new_ent == [] else new_ent[0].capitalize()
+            new_ent = random_name if new_ent == [] else new_ent[0]
             if counts.get('Nimi') is None:
                 counts['Nimi'] = 1
             count = str(counts.get('Nimi'))
@@ -438,8 +422,8 @@ def pseudonymization(text, entities, index_mapping):
                 count = str(counts.get(previous_name))
             else:
                 counts['Nimi'] += 1
-            mappings.append({'Algne': indexes[0],
-                             'Asendatud': new_ent.capitalize(),
+            mappings.append({'word': indexes[0],
+                             'pseudonymised_word': new_ent,
                              'Tag': 'Nimi_' + count,'start_i':indexes[2], 'end_i': indexes[3] })
             if random_name not in counts.keys():
                 counts[random_name] = int(count)
@@ -493,12 +477,12 @@ def pseudonymization(text, entities, index_mapping):
                         new_ent = beginning_words + ' ' + new_ent[0].strip()
                     else:
                         new_ent = new_ent[0].strip()
-                new_ent = new_ent.capitalize()
+                #new_ent = new_ent
                 if counts.get('Asutus') is None:
                     counts['Asutus'] = 1
                 count = str(counts.get(random_company)) if random_company in counts.keys() else str(
                     counts.get('Asutus'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Asutus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Asutus_' + count)
                 if random_company not in counts.keys():
@@ -545,15 +529,15 @@ def pseudonymization(text, entities, index_mapping):
                 new_ent = synthesize(word, form, partofspeech=pos)
 
                 if not new_ent:
-                    new_ent = random_address.capitalize()
+                    new_ent = random_address
                 else:
-                    new_ent = ' '.join(splitted[:-1]).capitalize() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
-                        0].capitalize()
+                    new_ent = ' '.join(splitted[:-1]) + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
+                        0]
                 if counts.get('Aadress') is None:
                     counts['Aadress'] = 1
                 count = str(counts.get(random_address)) if random_address in counts.keys() else str(
                     counts.get('Aadress'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Aadress_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Aadress_' + count)
                 if random_address not in counts.keys():
@@ -600,14 +584,14 @@ def pseudonymization(text, entities, index_mapping):
                 new_ent = synthesize(word, form, partofspeech=pos)
 
                 if not new_ent:
-                    new_ent = random_event.capitalize()
+                    new_ent = random_event
                 else:
-                    new_ent = ' '.join(splitted[:-1]).capitalize() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
-                        0].capitalize()
+                    new_ent = ' '.join(splitted[:-1]) + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
+                        0]
                 if counts.get('Sündmus') is None:
                     counts['Sündmus'] = 1
                 count = str(counts.get(random_event)) if random_event in counts.keys() else str(counts.get('Sündmus'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Sündmus_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Sündmus_' + count)
 
@@ -654,14 +638,14 @@ def pseudonymization(text, entities, index_mapping):
                 new_ent = synthesize(word, form, partofspeech=pos)
 
                 if not new_ent:
-                    new_ent = random_gpe.capitalize()
+                    new_ent = random_gpe
                 else:
-                    new_ent = ' '.join(splitted[:-1]).capitalize() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
-                        0].capitalize()
+                    new_ent = ' '.join(splitted[:-1]) + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
+                        0]
                 if counts.get('GPE') is None:
                     counts['GPE'] = 1
                 count = str(counts.get(random_gpe)) if random_gpe in counts.keys() else str(counts.get('GPE'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent.capitalize(),
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'GPE_' + count,  'start_i': start, 'end_i': end})
                 tagged_text.append('GPE_' + count)
                 if random_gpe not in counts.keys():
@@ -718,7 +702,7 @@ def pseudonymization(text, entities, index_mapping):
                 if counts.get(cleaned_entity) is None:
                     counts[cleaned_entity] = 1
                 count = str(counts.get(cleaned_entity))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': cleaned_entity + '_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append(cleaned_entity + '_' + count)
 
@@ -754,14 +738,14 @@ def pseudonymization(text, entities, index_mapping):
                 new_ent = synthesize(word, form, partofspeech=pos)
 
                 if not new_ent:
-                    new_ent = random_prod.capitalize()
+                    new_ent = random_prod
                 else:
-                    new_ent = ' '.join(splitted[:-1]).capitalize() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
-                        0].capitalize()
+                    new_ent = ' '.join(splitted[:-1]) + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
+                        0]
                 if counts.get('Toode') is None:
                     counts['Toode'] = 1
                 count = str(counts.get(random_prod)) if random_prod in counts.keys() else str(counts.get('Toode'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Toode_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Toode_' + count)
                 if random_prod not in counts.keys():
@@ -807,14 +791,14 @@ def pseudonymization(text, entities, index_mapping):
                 new_ent = synthesize(word, form, partofspeech=pos)
 
                 if not new_ent:
-                    new_ent = random_title.capitalize()
+                    new_ent = random_title.lower()
                 else:
-                    new_ent = ' '.join(splitted[:-1]).capitalize() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
-                        0].capitalize()
+                    new_ent = ' '.join(splitted[:-1]).lower() + ' ' + new_ent[0] if len(splitted) > 1 else new_ent[
+                        0].lower()
                 if counts.get('Tiitel') is None:
                     counts['Tiitel'] = 1
                 count = str(counts.get(random_title)) if random_title in counts.keys() else str(counts.get('Tiitel'))
-                mappings.append({'Algne': ' '.join(initial_words), 'Asendatud': new_ent,
+                mappings.append({'word': ' '.join(initial_words), 'pseudonymised_word': new_ent,
                                  'Tag': 'Tiitel_' + count, 'start_i': start, 'end_i': end})
                 tagged_text.append('Tiitel_' + count)
                 if random_title not in counts.keys():
@@ -833,12 +817,18 @@ def pseudonymization(text, entities, index_mapping):
                     regex_entity_tag = is_regex_ent.group(1)
             except:
                 pass
-            mappings.append({'Algne': indexes[0], 'Asendatud': new_ent,
+            mappings.append({'word': indexes[0], 'pseudonymised_word': new_ent,
                              'Tag': 'O', 'regex_entity_tag': regex_entity_tag, 'start_i':indexes[2], 'end_i': indexes[3]})
             tagged_text.append(span.text)
         if new_ent != '':
             new_text.append(new_ent.strip())
             previous = ent if ent.startswith('[') and ent.endswith(']') else 'O'
         i += 1
+    new_text = ' '.join(new_text)
+    capitalize_first_word = lambda s: s and s[0].upper() + s[1:] if s else s
+    new_text = capitalize_first_word(new_text)
+    tagged_text = ' '.join(tagged_text)
+    tagged_text = capitalize_first_word(tagged_text)
 
-    return ' '.join(new_text).capitalize().split(), tagged_text, mappings
+
+    return new_text.split(), tagged_text.split(), mappings
