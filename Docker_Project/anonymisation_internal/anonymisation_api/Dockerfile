@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.13-slim
 
 RUN pip install celery
 RUN pip install flask
