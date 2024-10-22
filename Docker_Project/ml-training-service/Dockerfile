@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.13-slim
 
 COPY requirements.txt /tmp/requirements.txt
 RUN  pip3 install -r /tmp/requirements.txt
