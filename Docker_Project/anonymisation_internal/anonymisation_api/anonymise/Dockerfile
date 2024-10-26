@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.13-slim
 
 
 RUN apt-get -y update && apt-get install -y unixodbc-dev gcc g++ &&\
