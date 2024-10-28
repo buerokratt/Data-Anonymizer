@@ -196,7 +196,8 @@ const devServer = () => {
     devServer: {
       compress: true,
       allowedHosts: "all",
-      hot: true,
+      hot: false,
+      liveReload: false,
       port: 9000,
       static: {
         directory: path.join(__dirname, "public"),
