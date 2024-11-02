@@ -7,3 +7,4 @@ markupsafe==2.0.1
 exrex
 estnltk==1.7.0
 gunicorn
+werkzeug>=3.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
