@@ -570,6 +570,13 @@ const TrainingStatus = styled.div`
   margin-bottom: 4px;
 `;
 
+const DeleteCorporaButton = styled.img`
+  margin-right: 4px;
+  transform: rotate(270deg);
+  ${(props) => props.disabled ? "" : "cursor: pointer;"} 
+  ${(props) => props.disabled ? "opacity: 0.5;" : ""}
+`
+
 function Treening() {
   const [entityModalOpened, setEntityModalOpened] = useState(false);
   const [entityText, setEntityText] = useState("");
@@ -630,6 +637,8 @@ function Treening() {
   };
 
   const deleteCorpora = async () => {
+    if (!corporaInfo) return;
+    if (corporaInfo.countt === 1) return;
     let response = await deleteCorporaInfo(corporaInfo?.corporaId);
     if (response === "success") {
       notification.info({
@@ -637,6 +646,11 @@ function Treening() {
         placement: "bottomLeft",
         icon: <div />,
         closeIcon: <div />,
+      });
+      getCorporaInfo().then((res) => {
+        if (res.length === 0) return;
+        else if (!res[0].trainedAt) setUploadingState(3);
+        setCorporaInfo(res[0]);
       });
       setUploadingState(1);
     }
@@ -859,6 +873,7 @@ function Treening() {
           sourceFileName: file.name,
           sourceFileSize: file.size,
           created_at: corpusInfo.createdAt,
+          countt: (corporaInfo?.countt || 0) + 1,
         });
         for (let i = 0; i < corpus.length; i += 100) {
           let chunk = corpus.slice(i, i + 100);
@@ -1020,14 +1035,11 @@ function Treening() {
                       100}{" "}
                     {t("trainingPage.mb")}
                   </UploadText>
-                  <img
+                  <DeleteCorporaButton
+                    title={t("trainingPage.deleteCorporaButtonTitle")}
                     onClick={deleteCorpora}
-                    style={{
-                      marginRight: 4,
-                      transform: "rotate(270deg)",
-                      cursor: "pointer",
-                    }}
                     src={CloseIcon}
+                    disabled={corporaInfo.countt === 1}
                   />
                 </UploadAttachmentInfoColumns>
               </UploadAttachmentInfo>

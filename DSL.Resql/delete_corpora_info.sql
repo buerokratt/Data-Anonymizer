@@ -1,1 +1,1 @@
-insert into Corpora_Info (corpora_id, source_file_name, source_file_size, trained_at, active) select corpora_id, source_file_name, source_file_size, trained_at, False from Corpora_Info where corpora_id = :corpora_id ORDER BY created_at DESC limit 1;
+update Corpora_Info set active = FALSE where corpora_id = :corpora_id;

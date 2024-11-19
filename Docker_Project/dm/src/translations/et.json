@@ -59,7 +59,8 @@
     "ETA": "Lõpuni jäänud",
     "seconds": "sekundit",
     "trainingStatus": "Hetkel käib treening. Uusi treeninguid ei saa käivitada.",
-    "deleteTrainingFile": "eemalda treeningfail"
+    "deleteTrainingFile": "eemalda treeningfail",
+    "deleteCorporaButtonTitle": "Kui eemaldad enda üles laetud faili, kasutab süsteem vaikimisi versiooni"
   },
   "githubSection": {
     "text": "Täisfunktsionaalse rakenduse kasutamiseks tõmba endale alla täisversioon meie",

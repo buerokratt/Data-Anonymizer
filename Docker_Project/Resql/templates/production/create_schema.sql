@@ -1,5 +1,5 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE TABLE IF NOT EXISTS Corpora_Info (corpora_id VARCHAR, source_file_name varchar, source_file_size varchar, created_at timestamp NOT NULL DEFAULT NOW(), trained_at timestamp, active BOOLEAN DEFAULT TRUE);
+CREATE TABLE IF NOT EXISTS Corpora_Info (corpora_id VARCHAR PRIMARY KEY, source_file_name varchar, source_file_size varchar, created_at timestamp NOT NULL DEFAULT NOW(), trained_at timestamp, active BOOLEAN DEFAULT TRUE);
 CREATE TABLE IF NOT EXISTS Entity (name varchar NOT NULL UNIQUE, description varchar NULL);
 CREATE TABLE IF NOT EXISTS Regex_Entity (id SERIAL, regex varchar NOT NULL, entity varchar NOT NULL, active BOOLEAN DEFAULT TRUE, created_at timestamp NOT NULL DEFAULT NOW());
 CREATE TABLE IF NOT EXISTS Corpora_Tasks (id SERIAL, corpora_id VARCHAR, is_private BOOLEAN, raw_text VARCHAR, sentences_annotations JSON, created_at timestamp NOT NULL DEFAULT NOW());
