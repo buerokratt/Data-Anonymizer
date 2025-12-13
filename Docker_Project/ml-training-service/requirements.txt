@@ -23,7 +23,7 @@ starlette==0.20.4
 tenacity==8.1.0
 tomli==2.0.1
 typing_extensions==4.4.0
-urllib3==1.26.12
+urllib3==2.6.0
 uvicorn==0.19.0
 nltk
 estnltk
@@ -37,3 +37,4 @@ torch
 seqeval
 pytest-env
 requests-mock
+fonttools>=4.61.0 # not directly required, pinned by Snyk to avoid a vulnerability
